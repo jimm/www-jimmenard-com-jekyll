@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<title>KeyMaster: Introduction</title>
+</head>
+<body background="images/gradient_bg.gif">
+
+<table width=600 border=0 cellpadding=0 cellspacing="0">
+	<tr>
+		<td align=LEFT width=95 valign="TOP"> <img src="images/KeyMaster.gif" width=32 height=32
+		align="bottom" alt="[Logo]" border=0> </td>
+		<td align=right width=495><font size="+6"><b>Introduction</b></font> <br>																																																						
+			<hr>
+		</td>
+	</tr>
+	<tr>
+		<td valign="TOP" width="100">
+			<font size="-2">
+			<p><a href="index.html">Contents</a></p>
+			<p>Introduction</p>
+			<p><a href="getting_started.html">Getting Started</a></p>
+			<p><a href="components.html">Components</a></p>
+			<p><a href="main_menu.html">Main Menu</a></p>
+			<p><a href="windows.html">Windows</a></p>
+			<p><a href="movement.html">Movement</a></p>
+			<p><a href="patches.html">Patches</a></p>
+			<p><a href="editing.html">Editing</a></p>
+			<p><a href="sysex.html">SysEx Librarian</a></p>
+			<p><a href="misc.html">Miscellaneous</a></p>
+			<p><a href="ideas.html">Ideas</a></p>
+			<p><a
+				href="midi_ref.html">MIDI Reference</a></p>
+			<p><a href="release.html">Release Notes</a></p>
+			</font>
+		</td>
+		<td valign="TOP" width="500"><a name="TOC">
+			<h1>Table of Contents</h1>
+			</a>
+			<dl>
+				<dt><a href="#Welcome">Welcome</a></dt>
+				<dt><a href="#GetHelp">Getting Help</a></dt>
+				<dt><a href="#Conventions">Conventions Used in This Manual</a></dt>
+			</dl>
+			<i>Back to the <a href="index.html">main Table of Contents</a>.</i>
+			<hr>
+			<!-- **************************************************************** -->
+			<blockquote> <i>Welcome. Welcome. Welcome.</i><br>
+				<br>
+				- The entire Ig Nobel awards ceremony welcoming speech </blockquote>
+			<hr>
+			<a name="Welcome">
+			<h1>Welcome</h1>
+			</a> <strong>KeyMaster</strong> gives you extensive control over any
+			MIDI setup. It takes care of program changes and keyboard splits,
+			and it also allows any MIDI controller to transmit over all sixteen
+			MIDI channels.
+			<p> With <strong>KeyMaster</strong> a performer can split controlling
+				keyboards, layer MIDI channels, transpose them, send program changes
+				and System Exclusive messages, limit controller and velocity values,
+				and much more. At the stomp of a footswitch (or any other MIDI
+				event), an entire MIDI system can be totally reconfigured.
+			<p> <strong>KeyMaster</strong> stores any number of
+				<a href="components.html#Songs"><em>songs</em></a> in memory.
+				Each song can contain a
+				list of <a href="components.html#Patches"><em>patches</em></a> that
+				contain different commands such as program changes, keyboard splits,
+				volume changes, MIDI controller filters and MIDI channel transpositions.
+			<p> <a href="components.html#Chains"><em>Chains</em></a> are lists of
+				songs. You can use these as "set lists" for live performance or
+				in the studio.
+			<p> Any MIDI controller can <a href="windows.html#MoveTrig">trigger
+				a move</a> to the next or previous patch.
+			<p> <strong>KeyMaster</strong> has a software
+				<a href="main_menu.html#panic">Panic Button</a> that will
+				turn off any stuck notes.
+
+<!-- outdated functionality; perhaps reintroduce it later?
+<p>Some older MIDI devices do not respond to a MIDI sustain pedal
+command. <strong>KeyMaster</strong> has a way to simulate this action by
+"saving" note off commands while the sustain pedal is down and sending them
+all when it is released.
+-->
+			<p> You can create <a href="components.html#MIDIMsgs"><em>programmable
+				MIDI messages</em></a>
+				that you can play back at the touch of a keyboard key or send
+				from within a song.
+			<p> <a href="components.html#Instruments"><em>Instruments</em></a> have
+				names, and you tell <strong>KeyMaster</strong> the MIDI port to
+				which they are connected, and what MIDI channels the instrument
+				transmits and receives.
+			<p> <!--
+To make it easier to enter information, <strong>KeyMaster</strong> allows
+you to name all of your instruments.
+and all program change numbers of each instrument.You may then refer to these
+items by name instead of by number at any time.<p>
+-->
+			<hr>
+			<a name="GetHelp">
+			<h1>Getting Help</h1>
+			</a> Select "Help..." from the <a href="main_menu.html">main menu</a>
+			to open the on-line documentation.
+			<p> You can click on the keyboard icon at the top of each page to
+				go back to the table of contents.
+			<p>
+			<hr>
+			<a name="Conventions">
+			<h1>Conventions Used in This Manual</h1>
+			</a> Hexadecimal (base 16) numbers are written in the form <code>0xFF</code>.
+			<p> Command characters (those characters gotten by holding down the
+				Alt key and another key at the same time) are written as Alt-E
+				or Alt-F. Control keys (Control and key) are written as ^N or
+				^V.
+			<p> Characters are often displayed in single quotes (<i>e.g.</i>,
+				'a' or 'F') and text in double quotes (<i>e.g.</i>, "Hi there").
+				You should not type the quotes.
+			<p>
+			<hr>
+			<font size="-1">Back to the <a href="index.html">main Table of Contents</a>.<br>
+			<i>Contents &copy; 1995 - 2000 by <a href="mailto:jim@jimmenard.com">Jim Menard</a>;
+			All Rights Reserved.</i> </font> </td>
+	</tr>
+</table>
+</body>
+</html>

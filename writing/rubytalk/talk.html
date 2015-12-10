@@ -1,0 +1,1222 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 99.1 release (March 30, 1999)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<!-- hand-modified by Jim Menard -->
+<HTML>
+<HEAD>
+<TITLE>talk</TITLE>
+<META NAME="description" CONTENT="talk">
+<META NAME="keywords" CONTENT="talk">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.1 release">
+
+<style type="text/css">
+<!--
+
+.comment { color: #990000 }
+
+/* Century Schoolbook font is very similar to Computer Modern Math: cmmi */
+.MATH    { font-family: "Century Schoolbook", serif; }
+.MATH I  { font-family: "Century Schoolbook", serif; font-shape: italic }
+.BOLDMATH { font-family: "Century Schoolbook", serif; font-weight: bold }
+
+/* implement both fixed-size and relative sizes */
+SMALL.XTINY		{ font-size : xx-small }
+SMALL.TINY		{ font-size : x-small  }
+SMALL.SCRIPTSIZE	{ font-size : smaller  }
+SMALL.FOOTNOTESIZE	{ font-size : small    }
+SMALL.SMALL		{  }
+BIG.LARGE		{  }
+BIG.XLARGE		{ font-size : large    }
+BIG.XXLARGE		{ font-size : x-large  }
+BIG.HUGE		{ font-size : larger   }
+BIG.XHUGE		{ font-size : xx-large }
+
+/* heading styles */
+H1		{  }
+H2		{  }
+H3		{  }
+H4		{  }
+H5		{  }
+
+/* mathematics styles */
+DIV.displaymath		{ }	/* math displays */
+TD.eqno			{ }	/* equation-number cells */
+
+
+/* document-specific styles come next */
+-->
+</style>
+
+</HEAD>
+
+<BODY >
+
+<P>
+ 
+<DIV ALIGN="CENTER">
+</DIV>
+<DIV ALIGN="CENTER"><FONT SIZE="+3"><B>Ruby, an Introduction</B></FONT>
+<BR>
+Jim Menard, <TT>jim@jimmenard.com</TT>
+<BR>
+July 10, 2001
+
+</DIV>
+
+<P>
+ 
+<BR>
+
+<H2><A NAME="SECTION00010000000000000000">
+Contents</A>
+</H2>
+<!--Table of Contents-->
+
+<UL>
+<LI><A NAME="tex2html26"
+ HREF="talk.html">Contents</A>
+<LI><A NAME="tex2html27"
+ HREF="talk.html#SECTION00020000000000000000">Introductions</A>
+<UL>
+<LI><A NAME="tex2html28"
+ HREF="talk.html#SECTION00021000000000000000">Me</A>
+<LI><A NAME="tex2html29"
+ HREF="talk.html#SECTION00022000000000000000">Ruby</A>
+</UL>
+<LI><A NAME="tex2html30"
+ HREF="talk.html#SECTION00030000000000000000">Why Ruby?</A>
+<UL>
+<LI><A NAME="tex2html31"
+ HREF="talk.html#SECTION00031000000000000000">Why Not?</A>
+</UL>
+<LI><A NAME="tex2html32"
+ HREF="talk.html#SECTION00040000000000000000">Language Features</A>
+<LI><A NAME="tex2html33"
+ HREF="talk.html#SECTION00050000000000000000">Comparison With Other Languages</A>
+<UL>
+<LI><A NAME="tex2html34"
+ HREF="talk.html#SECTION00051000000000000000">Java</A>
+<LI><A NAME="tex2html35"
+ HREF="talk.html#SECTION00052000000000000000">Perl</A>
+<LI><A NAME="tex2html36"
+ HREF="talk.html#SECTION00053000000000000000">Smalltalk</A>
+<LI><A NAME="tex2html37"
+ HREF="talk.html#SECTION00054000000000000000">Python</A>
+</UL>
+<LI><A NAME="tex2html38"
+ HREF="talk.html#SECTION00060000000000000000">Code Examples</A>
+<UL>
+<LI><A NAME="tex2html39"
+ HREF="talk.html#SECTION00061000000000000000">A class with a few simple methods</A>
+<LI><A NAME="tex2html40"
+ HREF="talk.html#SECTION00062000000000000000">Iterating over a collection</A>
+<LI><A NAME="tex2html41"
+ HREF="talk.html#SECTION00063000000000000000">Reading a file</A>
+<LI><A NAME="tex2html42"
+ HREF="talk.html#SECTION00064000000000000000">Parsing XML</A>
+</UL>
+<LI><A NAME="tex2html43"
+ HREF="talk.html#SECTION00070000000000000000">Practical Ruby Experience</A>
+<LI><A NAME="tex2html44"
+ HREF="talk.html#SECTION00080000000000000000">Tools</A>
+<LI><A NAME="tex2html45"
+ HREF="talk.html#SECTION00090000000000000000">Advantages and Disadvantages</A>
+<UL>
+<LI><A NAME="tex2html46"
+ HREF="talk.html#SECTION00091000000000000000">Advantages</A>
+<LI><A NAME="tex2html47"
+ HREF="talk.html#SECTION00092000000000000000">Disadvantages</A>
+</UL>
+<LI><A NAME="tex2html48"
+ HREF="talk.html#SECTION000100000000000000000">Resources</A>
+</UL>
+<!--End of Table of Contents--> 
+
+<P>
+
+<P>
+
+<H1><A NAME="SECTION00020000000000000000">
+Introductions</A>
+</H1>
+
+<P>
+
+<H2><A NAME="SECTION00021000000000000000">
+Me</A>
+</H2>
+<I>``But enough about me ...what do <I>you</I> think about me?''</I>
+
+<H2><A NAME="SECTION00022000000000000000">
+Ruby</A>
+</H2>
+A pure-OO scripting language
+
+<H3><A NAME="SECTION00022100000000000000">
+History and Pedigree</A>
+</H3>
+
+<UL>
+<LI>Developed by Yukihiro ``Matz'' Matsumoto</LI>
+<LI>Looking for OO scripting language; goal to be better than Perl</LI>
+<LI>Perl too messy (a ``Swiss Army chain saw''), Python not OO enough</LI>
+<LI>Take Smalltalk, make file based w/familiar syntax, add best features
+of many other languages (regular expressions, iterators), abstract many
+features into classes (<TT>Regexp</TT>) and mixin modules
+(<TT>Enumerable</TT>)</LI>
+<LI>Released 1993, hit USA 2000</LI>
+<LI>More popular than Python in Japan</LI>
+</UL>
+
+<P>
+
+<H1><A NAME="SECTION00030000000000000000">
+Why Ruby?</A>
+</H1>
+
+<P>
+
+<UL>
+<LI>Simple: easy to learn and maintain</LI>
+<LI>Powerful</LI>
+<LI>Language stays out of your way</LI>
+<LI>Rich libraries</LI>
+<LI>Rapid development</LI>
+<LI>Helpful community (1-hour turnaround from matz)</LI>
+<LI>Open Source</LI>
+<LI>Fun</LI>
+</UL>
+
+<P>
+
+<H2><A NAME="SECTION00031000000000000000">
+Why Not?</A>
+</H2>
+
+<P>
+
+<UL>
+<LI>Performance (though rivals Perl and Python; can wrap or be wrapped by
+C code)</LI>
+<LI>Lack of frameworks (e-commerce; only one which is immature)</LI>
+<LI>Current internal standards</LI>
+<LI>Cross-platform GUIs (Tk, Qt, Gnome) not widely accepted</LI>
+<LI>Threading model</LI>
+</UL>
+
+<P>
+
+<H1><A NAME="SECTION00040000000000000000">
+Language Features</A>
+</H1>
+
+<P>
+There are too many to list. I'll try anyway.
+
+<P>
+
+<UL>
+<LI>Simple, consistent syntax; Principle of Least Surprise (POLS): things
+work the way you expect them to, with few special cases or exceptions</LI>
+<LI>Dynamically typed/late binding (don't need to declare variable types;
+can change your design without changing types everywhere; decisions deferred
+until run time)</LI>
+<LI>Everything an object or a method (even operators are methods)</LI>
+<LI>Single inheritance with mixin modules (name space, method
+implementation) and object-specific methods</LI>
+<LI>Blocks and closures
+<PRE>
+
+     1	array = [1, 2, 3]
+     2	x = 5
+     3	array.collect! { | elem | elem + x }
+     4	p array                          <span class="comment"># =&gt; [6, 7, 8]</span>
+</PRE></LI>
+<LI>Enumeration extracted into a mixin module available to all classes
+and independent of the language syntax
+    (<TT>each</TT>, <TT>each_with_index</TT>, <TT>sort</TT>,
+    <TT>collect</TT>, <TT>detect</TT>, <TT>reject</TT>, <TT>select</TT>,
+    <TT>entries</TT>, <TT>find</TT>, <TT>grep</TT>,
+    <TT>include?</TT>, <TT>map</TT>, <TT>max</TT>, <TT>reject</TT>, more)
+<PRE>
+
+     1	array.each { | elem | puts elem }
+     2	hash.each { | key, val | puts "#{key} =&gt; #{val}" }
+     3	file.each { | line | puts line }
+     4	array.each_with_index { | elem, i |
+     5	    puts "array[#{i}] = #{elem}"
+     6	}
+     7	array.include?(42)
+</PRE></LI>
+<LI>Ranges
+<PRE>
+
+     1	(0 .. 9).each { | i | sum += i }
+     2	('a' .. 'z').each { | str | puts str }
+     3	(0 ... array.size).each { | i | puts array[i] }
+</PRE></LI>
+<LI>Metaclasses</LI>
+<LI>Introspection (reflection)</LI>
+<LI>Method aliasing</LI>
+<LI>Garbage collection</LI>
+<LI>Exception handling</LI>
+<LI>C integration</LI>
+<LI>Simple naming conventions: <TT>@instanceVar</TT>,
+<TT>@@classVar</TT>, <TT>$global</TT>, <TT>CONSTANT</TT>, 
+<TT>everythingElse</TT></LI>
+<LI>Loadable extension libraries (if OS allows)</LI>
+<LI>OS-independent threading</LI>
+<LI>Portable
+
+<UL>
+<LI>Linux, most *NIX</LI>
+<LI>Macintosh (OS 9 and OS X)</LI>
+<LI>BeOS</LI>
+<LI>OS/2</LI>
+<LI>DOS, Windows 95/98/NT/2K
+  
+<UL>
+<LI>Install Shield</LI>
+<LI>console and non-console</LI>
+<LI>relies on Cygwin libs (bundled with Install Shield distribution)</LI>
+<LI><TT>Win32OLE</TT> (Windows Automation, properties, named arguments)
+    <PRE>
+
+   1 ie = WIN32OLE.new('InternetExplorer.Application')
+   2 ie.visible = true
+   3 ie.gohome
+</PRE></LI>
+<LI>Can access any function in any DLL</LI>
+<LI>Ask me for code to access an ODBC database and a client/server for
+remote ODBC access from any box running Ruby
+  </LI>
+</UL></LI>
+</UL></LI>
+<LI>Libraries (see Tools below)</LI>
+<LI>Security (levels of safety using <TT>$SAFE</TT>;
+<TT>taint</TT>/<TT>untaint</TT>/<TT>freeze</TT>)</LI>
+<LI>Internationalization (I18N) and multilingualization (M17N);
+<TT>String</TT> class supports UTF and Kanji; whole system will in next
+major release</LI>
+</UL>
+
+<P>
+
+<H1><A NAME="SECTION00050000000000000000">
+Comparison With Other Languages</A>
+</H1>
+
+<P>
+Much of this section is stolen from the Ruby site (see References below).
+
+<P>
+
+<H2><A NAME="SECTION00051000000000000000">
+Java</A>
+</H2>
+
+<UL>
+<LI>Ruby is interpreted</LI>
+<LI>Everything is an object (no int/Integer distinction)</LI>
+<LI>Modules used to share implementations between classes</LI>
+<LI>Variables and expressions not statically typed</LI>
+<LI>Ruby's mixin modules similar to Java interfaces, but provide method
+implementation</LI>
+<LI>Less verbose; for example:
+  
+<UL>
+<LI>Reading lines from a file
+  <PRE>
+
+     1	<span class="comment">// ================</span>
+     2	<span class="comment">// Java</span>
+     3	
+     4	import java.io.*;
+     5	
+     6	try {
+     7	    BufferedReader in =
+     8	        new BufferedReader(new FileReader(fileName));
+     9	    String line;
+    10	    while ((line = in.readLine()) != null) {
+    11	        <span class="comment">// Use the line...</span>
+    12	    }
+    13	}
+    14	catch (FileNotFoundException fnfe) {
+    15	    System.err.println(fnfe.toString());
+    16	}
+    17	catch (IOException ioe) {
+    18	    System.err.println(ioe.toString());
+    19	}
+    20	
+    21	<span class="comment"># ================</span>
+    22	<span class="comment"># Ruby</span>
+    23	
+    24	begin
+    25	    IO.foreach(fileName) { | line |
+    26	        <span class="comment"># Use the line...</span>
+    27	    }
+    28	rescue
+    29	    $stderr.puts $!
+    30	end
+</PRE></LI>
+</UL></LI>
+</UL>
+
+<P>
+
+<H2><A NAME="SECTION00052000000000000000">
+Perl</A>
+</H2>
+
+<UL>
+<LI>Ruby is easier to learn, use, and maintain</LI>
+<LI>No $@% code (in Ruby, `<TT>@</TT>' and `<TT>$</TT>' denote
+    variable scope, not type)</LI>
+<LI>Ruby's default scoping rules obviate need for `<TT>my</TT>'</LI>
+<LI>Ruby copies many good things from Perl: extended regular expressions,
+    <TT>$_</TT> shortcuts, and more</LI>
+</UL>
+
+<P>
+
+<H2><A NAME="SECTION00053000000000000000">
+Smalltalk</A>
+</H2>
+
+<UL>
+<LI>Ruby is file based</LI>
+<LI>Ruby syntax more familiar</LI>
+<LI>Only primitive IDEs so far</LI>
+</UL>
+
+<P>
+
+<H2><A NAME="SECTION00054000000000000000">
+Python</A>
+</H2>
+
+<UL>
+<LI>Ruby uses conservative statement structure, using `<TT>end</TT>'</LI>
+<LI>`<TT>self.</TT>' not necessary; Ruby's instance variables prefixed by 
+    `<TT>@</TT>'</LI>
+<LI>Python separates types and classes; Ruby treats them the same</LI>
+<LI>Python types are more limited
+
+<UL>
+<LI>No inheritance/subclassing</LI>
+<LI>Cannot add methods to existing types</LI>
+</UL></LI>
+<LI>Ruby has a better (or ``real'') closure feature.</LI>
+<LI>Object attributes are not accessible by default in Ruby.</LI>
+<LI>Ruby converts small integers and long integers automatically.</LI>
+<LI>Ruby does not have tuples</LI>
+<LI>Ruby has more natural operator overloading</LI>
+<LI>Ruby uses mark-and-sweep GC, unlike Python's ref-counting GC (this
+ means no INCREF, DECREF required for extensions)</LI>
+<LI>Extensions for Ruby written in C/C++ can easily define Ruby classes</LI>
+<LI>Ruby has a loop abstraction using block; e.g.
+<PRE>
+
+     1	10.times do
+     2	    <span class="comment"># ...</span>
+     3	end
+</PRE></LI>
+<LI>You can define your own arbitrary iterator.</LI>
+<LI>Ruby's block for method can be used more than iterator; e.g.
+<PRE>
+
+     1	mutex.synchronize do
+     2	     <span class="comment"># .. critical process ..</span>
+     3	end
+</PRE></LI>
+<LI>Ruby provides method combination using `<TT>super</TT>'.</LI>
+<LI>Ruby is often faster than Python.</LI>
+</UL>
+
+<P>
+
+<H1><A NAME="SECTION00060000000000000000">
+Code Examples</A>
+</H1>
+
+<P>
+Here we have four code examples. The first three are relatively simple
+``textbook'' examples that perform the same task in Java, C++, Smalltalk,
+Perl, and Ruby. The last is a slightly more complex example in Ruby only.
+
+<P>
+The Smalltalk code below was written using Squeak, a free implementation of
+Smalltalk. Sorry, but there are no Python examples. I don't know that
+language well enough. <I>ObPython: ``My hovercraft is full of eels.''</I>
+
+<P>
+
+<H2><A NAME="SECTION00061000000000000000">
+A class with a few simple methods</A>
+</H2>
+
+<P>
+The first example defines the same class in five different languages. In
+each, we define the class, create an instance, and print the string
+representation of the instance.
+
+<P>
+The example class is a <TT>Song</TT>. It has has a constructor, two
+instance variables, accessor methods (``getters'' and ``setters''), and a
+method for representing instances as strings.
+
+<P>
+<PRE>
+
+     1	<span class="comment">// ================</span>
+     2	<span class="comment">// Java</span>
+     3	
+     4	public class Song {
+     5	
+     6	    protected String name;
+     7	    protected int lengthInSeconds;
+     8	
+     9	    Song(String name, int len) {
+    10	        this.name = name;
+    11	        lengthInSeconds = len;
+    12	    }
+    13	
+    14	    public String getName() { return name; }
+    15	    public void setName(String str) { name = str; }
+    16	
+    17	    public int getLengthInSeconds()
+    18	        { return lengthInSeconds; }
+    19	    public void setLengthInSeconds(int secs)
+    20	        { lengthInSeconds = secs; }
+    21	
+    22	    public String toString() {
+    23	        return name + " (" + lengthInSeconds + " seconds)"
+    24	    }
+    25	
+    26	    <span class="comment">// Create and print</span>
+    27	    public void main(String[] args) {
+    28	        s = new Song("name", 60);
+    29	        System.out.println(s);
+    30	    }
+    31	}
+    32	
+    33	<span class="comment">// ================</span>
+    34	<span class="comment">// C++</span>
+    35	
+    36	<span class="comment">// Song.h</span>
+    37	#ifndef Song_h
+    38	#define Song_h
+    39	
+    40	#include &lt;iostream&gt;
+    41	#include &lt;string&gt;
+    42	
+    43	class Song {
+    44	public:
+    45	    Song(const char * nameStr = 0, int len = 0)
+    46	        : name(nameStr ? nameStr : ""), 
+    47	          lengthInSeconds(len) {}
+    48	
+    49	    <span class="comment">// The default copy constructor, destructor, and</span>
+    50	    <span class="comment">// operator= are all acceptable. I'm glad, 'cause</span>
+    51	    <span class="comment">// it's a pain to have to write them.</span>
+    52	
+    53	    const char * getName() const { return name.data(); }
+    54	    void setName(const char *str) { name = str; }
+    55	
+    56	    int getLengthInSeconds() const
+    57	        { return lengthInSeconds; }
+    58	    void setLengthInSeconds(int len)
+    59	        { lengthInSeconds = len; }
+    60	
+    61	protected:
+    62	    string name;
+    63	    int lengthInSeconds;
+    64	
+    65	    friend ostream &amp;
+    66	        operator&lt;&lt;(ostream &amp;out, const Song &amp;s);
+    67	};
+    68	
+    69	ostream &amp; operator&lt;&lt;(ostream &amp;out, const Song &amp;s) {
+    70	    return out &lt;&lt; s.name &lt;&lt; " ("
+    71	               &lt;&lt; s.lengthInSeconds &lt;&lt; " seconds)";
+    72	}
+    73	
+    74	#endif Song_h
+    75	
+    76	<span class="comment">// Song.cpp</span>
+    77	#include "Song.h"
+    78	
+    79	main()
+    80	{
+    81	    Song s("name", 60);
+    82	    cout &lt;&lt; s &lt;&lt; endl;
+    83	}
+    84	
+    85	<span class="comment">" ================"</span>
+    86	<span class="comment">" Smalltalk"</span>
+    87	
+    88	Object subclassNamed: #Song
+    89	    instanceVariables: 'name lengthInSeconds'
+    90	    classVariables: ''
+    91	<span class="comment">"..."</span>
+    92	
+    93	name
+    94	    ^ name
+    95	
+    96	name: aString
+    97	    name := aString
+    98	
+    99	lengthInSeconds
+   100	    ^ lengthInSeconds
+   101	
+   102	lengthInSeconds: aNumber
+   103	    lengthInSeconds := aNumber
+   104	
+   105	printOn: aStream
+   106	    aStream nextPutAll: name.
+   107	    aStream nextPut: $(.
+   108	    aStream nextPutAll: lengthInSeconds printString.
+   109	    aStream nextPutAll: ') seconds'
+   110	
+   111	<span class="comment">"Create and print a song.</span>
+   112	<span class="comment">Copy this code into a workspace and execute it."</span>
+   113	s := Song new name: 'name'; lengthInSeconds: 60.
+   114	Transcript show: s asString; cr.
+   115	
+   116	<span class="comment"># ================</span>
+   117	<span class="comment"># Perl</span>
+   118	
+   119	package Song;
+   120	
+   121	sub new {
+   122	    my($class, $name, $len) = @_;
+   123	    my $self = {};
+   124	    $self-&gt;{'name'} = $name;
+   125	    $self-&gt;{'lengthInSeconds'} = $len;
+   126	    bless $self, class;
+   127	    return $self;
+   128	}
+   129	
+   130	sub name {
+   131	    my($self) = shift;
+   132	    if (@_) { $self-&gt;{'name'} = shift }
+   133	    return $self-&gt;{'name'};
+   134	}
+   135	
+   136	sub lengthInSeconds {
+   137	    my($self) = shift;
+   138	    if (@_) { $self-&gt;{'lengthInSeconds'} = shift }
+   139	    return $self-&gt;{'lengthInSeconds'};
+   140	}
+   141	
+   142	sub toString {
+   143	    my($self) = shift;
+   144	    return $self-&gt;name() . "(" . $self-&gt;lengthInSeconds()
+   145	        . ") seconds";
+   146	}
+   147	
+   148	<span class="comment"># Create and print</span>
+   149	$s = Song-&gt;new('name', 60);
+   150	print $s-&gt;toString() . "\n";
+   151	
+   152	<span class="comment"># ================</span>
+   153	<span class="comment"># Ruby</span>
+   154	
+   155	class Song
+   156	
+   157	    <span class="comment"># Not only declare instance variables (which is</span>
+   158	    <span class="comment"># unnecessary) but also create accessor methods</span>
+   159	    <span class="comment"># (getters and setters). "attr_reader" creates</span>
+   160	    <span class="comment"># just getters and "attr_writer" creates just</span>
+   161	    <span class="comment"># setters.</span>
+   162	    attr_accessor :name, :lengthInSeconds
+   163	
+   164	    <span class="comment"># The constructor, sort of. This method is called</span>
+   165	    <span class="comment"># by the class method "new".</span>
+   166	    def initialize(name, len)
+   167	        @name = name
+   168	        @lengthInSeconds = len
+   169	    end
+   170	
+   171	    def to_s
+   172	        return "#{name} (#{lengthInSeconds} seconds)"
+   173	    end
+   174	end
+   175	
+   176	<span class="comment"># Create and print. Only run this code if this file</span>
+   177	<span class="comment"># is being executed directly, else ignore it.</span>
+   178	if $0 == __FILE__
+   179	    s = Song.new('name', 60)
+   180	    puts s
+   181	end
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00062000000000000000">
+Iterating over a collection</A>
+</H2>
+
+<P>
+In this example we will create a linear collection of <TT>Song</TT>
+instances, add a song, and iterate over the collection.
+
+<P>
+The Java version uses the J2EE collection classes. The C++ version uses the
+Standard Template Library (STL) for its vector and iterator classes.
+
+<P>
+<PRE>
+
+     1	<span class="comment">// ================</span>
+     2	<span class="comment">// Java</span>
+     3	
+     4	import java.util.*;
+     5	
+     6	ArrayList songs = new ArrayList();
+     7	songs.add(new Song("name", 60));
+     8	
+     9	for (Iterator iter = songs.iterator(); iter.hasNext(); ) {
+    10	    Song s = (Song)iter.next();        <span class="comment">// Yuck!</span>
+    11	    <span class="comment">// Do something with s...</span>
+    12	}
+    13	
+    14	<span class="comment">// ================</span>
+    15	<span class="comment">// C++</span>
+    16	
+    17	#include &lt;vector&gt;
+    18	#include "Song.h"
+    19	
+    20	main()
+    21	{
+    22	    vector&lt;Song&gt; songs;
+    23	    songs.push_back(Song("name", 60));
+    24	
+    25	    vector&lt;Song&gt;::iterator iter(songs.begin());
+    26	    for (; iter != songs.end(); ++iter) {
+    27	        Song s = *iter;
+    28	        <span class="comment">// Do something with s...</span>
+    29	    }
+    30	}
+    31	
+    32	<span class="comment">" ================"</span>
+    33	<span class="comment">" Smalltalk"</span>
+    34	
+    35	songs := OrderedCollection new.
+    36	songs add: (Song new name: 'name'; lengthInSeconds: 60).
+    37	songs do: [ :s |
+    38	    <span class="comment">"Do something with s..."</span>
+    39	].
+    40	
+    41	<span class="comment"># ================</span>
+    42	<span class="comment"># Perl</span>
+    43	
+    44	@songs = ();
+    45	push(@songs, Song-&gt;new("name", 60));
+    46	foreach $s (@songs) {
+    47	    <span class="comment"># Do something with $s...</span>
+    48	}
+    49	
+    50	<span class="comment"># ================</span>
+    51	<span class="comment"># Ruby</span>
+    52	
+    53	songs = []
+    54	songs &lt;&lt; Song.new("name", 60)
+    55	songs.each { | s |
+    56	    <span class="comment"># Do something with s...</span>
+    57	}
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00063000000000000000">
+Reading a file</A>
+</H2>
+
+<P>
+In this example, we will manipulate a comma-delimited data file by opening
+it, reading each line, separating each line into columns, and printing the
+columns as a SQL INSERT statement.
+
+<P>
+For simplicity's sake, we will assume that the data does not contain any
+comma characters. This code does handle ``empty'' columns (two consecutive
+commas). Because of this, we often can't use the most obvious or clean
+solution (for example, a <TT>StringTokenizer</TT> in Java or
+<TT>strtok()</TT> in C++).
+
+<P>
+I have Ruby, Perl, and Smalltalk classes that handle Excel comma- and
+tab-delimited data--quotes and all--that are yours for the asking. A mini
+state machine is necessary to handle the quotes and delimiter chars
+properly.
+
+<P>
+<PRE>
+
+     1	<span class="comment">// ================</span>
+     2	<span class="comment">// Java</span>
+     3	
+     4	import java.io.*;
+     5	import java.util.*;
+     6	
+     7	public class DataFileReader {
+     8	
+     9	public static void main(String[] args) {
+    10	    DataFileReader dfr = new DataFileReader();
+    11	    dfr.readFile(args[0]);
+    12	}
+    13	
+    14	public void readFile(String fileName) {
+    15	    try {
+    16	        BufferedReader in =
+    17	            new BufferedReader(new FileReader(fileName));
+    18	        String line;
+    19	        while ((line = in.readLine()) != null) {
+    20	            Collection list = splitIntoColumns(line);
+    21	            printAsInsertStatements(list);
+    22	        }
+    23	    }
+    24	    catch (FileNotFoundException fnfe) {
+    25	        System.err.println(fnfe.toString());
+    26	    }
+    27	    catch (IOException ioe) {
+    28	        System.err.println(ioe.toString());
+    29	    }
+    30	}
+    31	
+    32	public Collection splitIntoColumns(String line) {
+    33	    ArrayList array = new ArrayList();
+    34	
+    35	    <span class="comment">// Using StringTokenizer here is almost useless. It</span>
+    36	    <span class="comment">// either skips or returns multiple adjacent commas,</span>
+    37	    <span class="comment">// but doesn't report the emptiness between as empty</span>
+    38	    <span class="comment">// data columns.</span>
+    39	    int pos = line.indexOf(",");
+    40	    while (pos != -1) {
+    41	        array.add(line.substring(0, pos));
+    42	        line = line.substring(pos + 1);
+    43	        pos = line.indexOf(",");
+    44	    }
+    45	    if (line.length() &gt; 0)
+    46	        array.add(line);
+    47	
+    48	    return array;
+    49	}
+    50	
+    51	public void printAsInsertStatements(Collection list) {
+    52	    System.out.print("insert into table values (\n\t");
+    53	    boolean first = true;
+    54	
+    55	    Iterator iter = list.iterator();
+    56	    while (iter.hasNext()) {
+    57	        String col = (String)iter.next();
+    58	
+    59	        if (first) first = false;
+    60	        else System.out.print(",\n\t");
+    61	
+    62	        System.out.print("'" + col + "'");
+    63	    }
+    64	    System.out.println("\n)");
+    65	}
+    66	
+    67	}
+    68	
+    69	<span class="comment">// ================</span>
+    70	<span class="comment">// C++</span>
+    71	
+    72	#include &lt;string&gt;
+    73	#include &lt;iostream&gt;
+    74	#include &lt;fstream&gt;
+    75	#include &lt;vector&gt;
+    76	
+    77	static const int BUFSIZ = 1024;
+    78	
+    79	vector&lt;string&gt; splitIntoColumns(char *line);
+    80	void printAsInsertStatements(vector&lt;string&gt; &amp;list);
+    81	
+    82	void
+    83	main(int argc, char *argv[])
+    84	{
+    85	    ifstream in(argv[1]);
+    86	    char line[BUFSIZ];
+    87	    while (!in.eof()) {
+    88	        in.getline(line, BUFSIZ);
+    89	        if (strlen(line) == 0)
+    90	            break;
+    91	        vector&lt;string&gt; list = splitIntoColumns(line);
+    92	        printAsInsertStatements(list);
+    93	    }
+    94	}
+    95	
+    96	vector&lt;string&gt;
+    97	splitIntoColumns(char *line)
+    98	{
+    99	    vector&lt;string&gt; list;
+   100	
+   101	    <span class="comment">// Using strtok() here is useless. It skips multiple</span>
+   102	    <span class="comment">// adjacent commas and doesn't report the emptyness</span>
+   103	    <span class="comment">// between as empty data columns.</span>
+   104	    char *nextComma = index(line, ',');
+   105	    while (nextComma != 0) {
+   106	        list.push_back(string(line, nextComma - line));
+   107	        line = nextComma + 1;
+   108	        nextComma = index(line, ',');
+   109	    }
+   110	    if (strlen(line) &gt; 0)
+   111	        list.push_back(string(line));
+   112	
+   113	    return list;
+   114	}
+   115	
+   116	void
+   117	printAsInsertStatements(vector&lt;string&gt; &amp;list)
+   118	{
+   119	    cout &lt;&lt; "insert into table values (" &lt;&lt; endl &lt;&lt; "\t";
+   120	    bool first = true;
+   121	
+   122	    vector&lt;string&gt;::iterator iter(list.begin());
+   123	    for ( ; iter != list.end(); ++iter) {
+   124	        string col = *iter;
+   125	
+   126	        if (first) first = false;
+   127	        else cout &lt;&lt; "," &lt;&lt; endl &lt;&lt; "\t";
+   128	
+   129	        cout &lt;&lt; "'" &lt;&lt; col &lt;&lt; "'";
+   130	    }
+   131	    cout &lt;&lt; endl &lt;&lt; ")" &lt;&lt; endl;
+   132	}
+   133	
+   134	
+   135	<span class="comment">" ================"</span>
+   136	<span class="comment">" Smalltalk"</span>
+   137	
+   138	Object subclass: #DataFileReader
+   139	    instanceVariableNames: ''
+   140	    classVariableNames: ''
+   141	    poolDictionaries: ''
+   142	    category: 'Jim-Utils'
+   143	
+   144	readFile: fileName
+   145	    | inStream outStream list |
+   146	    inStream :=
+   147	        CrLfFileStream readOnlyFileNamed: fileName.
+   148	    outStream :=
+   149	        FileStream newFileNamed: fileName, '.out'.
+   150	    [inStream atEnd] whileFalse: [
+   151	        list := self parseNextLine: inStream.
+   152	        self output: list onStream: outStream.
+   153	    ].
+   154	
+   155	parseNextLine: aStream
+   156	    <span class="comment">"Read columns in line and shove them into a list.</span>
+   157	     <span class="comment">Return the list."</span>
+   158	    | list line lineStream |
+   159	    list := OrderedCollection new. <span class="comment">"Create empty list."</span>
+   160	    line := aStream nextLine. <span class="comment">"Read line from input file."</span>
+   161	
+   162	    <span class="comment">"Read columns in line and shove into list."</span>
+   163	    lineStream := ReadStream on: line
+   164	                           from: 1
+   165	                             to: line size.
+   166	    [lineStream atEnd] whileFalse: [
+   167	        list add: (lineStream upTo: $,).
+   168	    ].
+   169	    ^ list
+   170	
+   171	output: list onStream: outStream
+   172	    <span class="comment">"Output insert statement."</span>
+   173	    outStream nextPutAll: 'insert into table values (
+   174	    '''.
+   175	    list do: [ :col |
+   176	        outStream nextPutAll: col
+   177	    ] separatedBy: [
+   178	        outStream nextPutAll: ''',
+   179	    '''.
+   180	    ].
+   181	    outStream nextPutAll: '''
+   182	)
+   183	'.
+   184	
+   185	<span class="comment">"Finally, create and use one of these suckers. Type</span>
+   186	 <span class="comment">this in a workspace, select it, and choose 'do it'.</span>
+   187	 <span class="comment">Actually, this code can be anywhere, including in</span>
+   188	 <span class="comment">a comment. Just select it and execute it."</span>
+   189	DataFileReader new readFile: 'foo.dat'.
+   190	
+   191	<span class="comment"># ================</span>
+   192	<span class="comment"># Perl</span>
+   193	
+   194	<span class="comment">#! /usr/bin/perl</span>
+   195	
+   196	open(FILE, $ARGV[0]) ;
+   197	while (($line = &lt;FILE&gt;) ne '') {
+   198	    chomp($line);
+   199	    print "insert into table values (\n\t'";
+   200	    print join("',\n\t'", split(/,/, $line));
+   201	    print "',\n)\n";
+   202	}
+   203	close(FILE);
+   204	
+   205	<span class="comment"># ================</span>
+   206	<span class="comment"># Ruby</span>
+   207	
+   208	<span class="comment">#! /usr/local/bin/ruby</span>
+   209	
+   210	<span class="comment"># File is a subclass of IO. "foreach" is a class method</span>
+   211	<span class="comment"># that opens the file, executes the block of code once</span>
+   212	<span class="comment"># for each line, and closes the file.</span>
+   213	IO.foreach(ARGV[0]) { | line |
+   214	    line.chomp!()
+   215	    puts "insert into table values ("
+   216	    print "\t'"
+   217	    print line.split(/,/).join("',\n\t'")
+   218	    puts "'\n)"
+   219	}
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00064000000000000000">
+Parsing XML</A>
+</H2>
+
+<P>
+This final example is Ruby-only. It shows a ``real'' script performing a
+slightly more complex task: parsing XML and capturing and printing any
+errors returned by the parser. The XML isn't processed by this script.
+
+<P>
+This is one of the example scripts that comes with NQXML.
+
+<P>
+<PRE>
+
+     1	<span class="comment">#! /usr/bin/env ruby</span>
+     2	<span class="comment">#</span>
+     3	<span class="comment"># usage: parseTestStream.rb file_or_directory</span>
+     4	<span class="comment">#</span>
+     5	<span class="comment"># This script runs the streaming parser over the specified</span>
+     6	<span class="comment"># file or all .xml files within the specified directory.</span>
+     7	<span class="comment">#</span>
+     8	<span class="comment"># If an NQXML::ParserError is seen, an error message is</span>
+     9	<span class="comment"># printed and parsing stops.</span>
+    10	<span class="comment">#</span>
+    11	
+    12	<span class="comment"># Start looking for NQXML classes in the directory above</span>
+    13	<span class="comment"># this one. This forces us to use the local copy of NQXML,</span>
+    14	<span class="comment"># even if there is a previously installed version out</span>
+    15	<span class="comment"># there somewhere. (Since this script comes as an example</span>
+    16	<span class="comment"># with NQXML, we want to make sure we are using the latest</span>
+    17	<span class="comment"># version that's right here, not one previously installed</span>
+    18	<span class="comment"># elsewhere.)</span>
+    19	$LOAD_PATH[0, 0] = '..'
+    20	
+    21	require 'nqxml/streamingparser'
+    22	
+    23	def testParser(file)
+    24	    print "Parsing file #{file}..."
+    25	    $stdout.flush()
+    26	    file = File.open(file, 'r')
+    27	    parser = NQXML::StreamingParser.new(file)
+    28	    begin
+    29	        <span class="comment"># Just let parser run through the XML</span>
+    30	        parser.each { | entity | }
+    31	    rescue NQXML::ParserError =&gt; ex
+    32	          puts "\n  NQXML parser error, line #{ex.line}" +
+    33	            " column #{ex.column}: #{$!}"
+    34	        return
+    35	    rescue
+    36	        puts "\n  Non-parser error: #{$!}"
+    37	        return
+    38	    ensure
+    39	        <span class="comment"># An "ensure" is like Java's "finally" clause:</span>
+    40	        <span class="comment"># No matter what happens, this code gets executed.</span>
+    41	        <span class="comment"># Instead of using an "ensure" we could have used</span>
+    42	        <span class="comment"># a block as an argument to File.open. At the end</span>
+    43	        <span class="comment"># of the block the file would have been closed</span>
+    44	        <span class="comment"># automagically.</span>
+    45	        file.close() unless file.nil?
+    46	    end
+    47	    puts 'OK'
+    48	end
+    49	
+    50	<span class="comment"># Start of main code</span>
+    51	
+    52	<span class="comment"># If we have a command-line argument, grab it and</span>
+    53	<span class="comment"># remove the trailing slash (if any). If no argument</span>
+    54	<span class="comment"># is specified, use '.' (the current directory).</span>
+    55	DIR = ARGV[0] ? ARGV[0].gsub(/\/$/, '') : '.'
+    56	
+    57	if File.directory?(DIR)
+    58	    Dir.entries(DIR).each { | f |
+    59	        testParser("#{DIR}/#{f}") if f =~ /\.xml$/
+    60	    }
+    61	else
+    62	    testParser(DIR)
+    63	end
+</PRE>
+
+<P>
+
+<H1><A NAME="SECTION00070000000000000000">
+Practical Ruby Experience</A>
+</H1>
+
+<P>
+
+<UL>
+<LI>Two minutes to light bulb, two days to fanatical zealot</LI>
+<LI>Data massagers (from Perl to Ruby)</LI>
+<LI>Job Editor (Apache, mod_ruby, eRuby)</LI>
+<LI>NQXML (RubyUnit)</LI>
+<LI>XMLRPC (1/2 day to implement)</LI>
+<LI>Mecha</LI>
+<LI>RuBoids (KDE, OpenGL)</LI>
+<LI>ICE test syndicator/subscriber (coding from specs)</LI>
+</UL>
+
+<P>
+
+<H1><A NAME="SECTION00080000000000000000">
+Tools</A>
+</H1>
+
+<P>
+
+<UL>
+<LI>Socket and networking classes (HTTP, FTP, SMTP, POP)</LI>
+<LI>XML (NQXML (pure Ruby), XMLParser (wrapper around
+James Clark's ``expat'' library))</LI>
+<LI>Web (mod_ruby &amp; eRuby)</LI>
+<LI>SOAP and XMLRPC</LI>
+<LI><TT>Singleton</TT>, <TT>Delegator</TT> and more support common OO
+design patterns</LI>
+<LI><TT>Mutex</TT> and <TT>ConditionVariable</TT> (in addition to
+<TT>Thread::critical=</TT>)</LI>
+<LI>RubyUnit (supports XP and test-first methodologies)</LI>
+<LI>Win32</LI>
+<LI>Databases (Oracle, PostgreSQL, MySQL, MS SQL Server through Win32)</LI>
+<LI>Frameworks (IOWA, Facet)</LI>
+<LI>GUI (Tk, KDE, Gnome, OpenGL, curses)</LI>
+<LI>Distributed objects (around 200 lines of Ruby), Rinda</LI>
+<LI>irb</LI>
+<LI>Debugger</LI>
+<LI>RDTool (like Perl's POD)</LI>
+<LI>SWIG</LI>
+</UL>
+
+<P>
+
+<H1><A NAME="SECTION00090000000000000000">
+Advantages and Disadvantages</A>
+</H1>
+
+<P>
+
+<H2><A NAME="SECTION00091000000000000000">
+Advantages</A>
+</H2>
+
+<UL>
+<LI>Powerful language with simple, consistent syntax</LI>
+<LI>Easy to learn, especially if you already know Perl, Python, or
+Smalltalk (only slightly less so if you know Java, C++, or Objective-C)</LI>
+<LI>Mature (seven years old)</LI>
+<LI>Rich libraries</LI>
+<LI>Helpful community</LI>
+<LI>Easy to install</LI>
+</UL>
+
+<P>
+
+<H2><A NAME="SECTION00092000000000000000">
+Disadvantages</A>
+</H2>
+
+<UL>
+<LI>Not well known; not many installations (but remember when you had to
+ fight to use Perl, Java, or C++?)</LI>
+<LI>RAA not yet as big or automated as CPAN</LI>
+<LI>Docs still sparse (or in Japanese)</LI>
+<LI>One book (more on the way)</LI>
+<LI>Threads implementation not native</LI>
+<LI>Few experienced coders</LI>
+</UL>
+
+<P>
+
+<H1><A NAME="SECTION000100000000000000000">
+Resources</A>
+</H1>
+
+<P>
+
+<UL>
+<LI>This talk, as PDF and HTML:
+<a href="http://www.jimmenard.com/writing/rubytalk/"><tt>http://www.jimmenard.com/writing/rubytalk/</tt></a></LI>
+<LI>Ruby home page: <a href="http://www.ruby-lang.org/en/"><TT>http://www.ruby-lang.org/en/</TT></a></LI>
+<LI>Ruby Application Archive (RAA): 
+<BR>
+<a
+href="http://raa.ruby-lang.org/"><TT>http://www.ruby-lang.org/en/raa.html</TT></a>
+(This URL is updated in this HTML version but not the other versions of
+this talk; older URL in other versions of this document are redirected to
+this one.)</LI>
+<LI>``Programming Ruby'' by David Thomas &amp; Andrew Hunt, Addison Wesley
+    Longman (this book is online and is published under the Open
+    Publication license): 
+<BR>
+    <a href="http://www.pragmaticprogrammer.com/ruby/"><TT>http://www.pragmaticprogrammer.com/ruby/</TT></a></LI>
+<LI><I>Ruby: a new language
+<BR>
+Introducing the latest open source gem from Japan</I>: 
+<BR>
+    <a href="http://www-106.ibm.com/developerworks/library/ruby.html"><TT>http://www-106.ibm.com/developerworks/library/ruby.html</TT></a></LI>
+<LI>Ruby Central: <a href="http://www.rubycentral.com/"><TT>http://www.rubycentral.com/</TT></a></LI>
+<LI>Ruby Cookbook: <a href="http://www.rubycookbook.org/"><TT>http://www.rubycookbook.org/</TT></a></LI>
+<LI>Ruby Garden: <a href="http://www.rubygarden.org/"><TT>http://www.rubygarden.org/</TT></a></LI>
+<LI><a href="news:comp.lang.ruby"><TT>comp.lang.ruby</TT></a> </LI>
+<LI>Mailing lists</LI>
+<LI>Squeak (free Smalltalk): <a href="http://www.squeak.org/"><TT>http://www.squeak.org/</TT></a></LI>
+<LI>NQXML: <a href="http://nqxml.sourceforge.net/"><TT>http://nqxml.sourceforge.net/</TT></a></LI>
+<LI>Me: Jim Menard, <a href="mailto:jim@jimmenard.com"><TT>jim@jimmenard.com</TT></a>,
+    <a href="http://www.jimmenard.com/"><TT>http://www.jimmenard.com/</TT></a></LI>
+</UL>
+
+<P>
+
+<H1><A NAME="SECTION000110000000000000000">
+About this document ...</A>
+</H1>
+ <P>
+This document was generated using the
+<A HREF="http://www-dsed.llnl.gov/files/programs/unix/latex2html/manual/"><STRONG>LaTeX</STRONG>2<tt>HTML</tt></A> translator Version 99.1 release (March 30, 1999)
+<P>
+Copyright &#169; 1993, 1994, 1995, 1996,
+<A HREF="http://cbl.leeds.ac.uk/nikos/personal.html">Nikos Drakos</A>, 
+Computer Based Learning Unit, University of Leeds.
+<BR>
+Copyright &#169; 1997, 1998, 1999,
+<A HREF="http://www.maths.mq.edu.au/~ross/">Ross Moore</A>, 
+Mathematics Department, Macquarie University, Sydney.
+<P>
+The command line arguments were: <BR>
+ <STRONG>latex2html</STRONG> <TT>-no_navigation -split 0 talk.tex</TT>
+<P>
+The translation was initiated by  on 2001-07-13
+<BR><HR>
+<ADDRESS>
+<I></I>
+<BR><I>2001-07-13</I>
+</ADDRESS>
+</BODY>
+</HTML>

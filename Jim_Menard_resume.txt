@@ -1,0 +1,233 @@
+			      James J. Menard
+                           Fairfield, Connecticut
+         e: jim@jimmenard.com, h: (203) 254-2755, c: (646) 206-4054
+
+
+EXPERIENCE:
+
+Principal Engineer                              Chloe + Isabel, 2015 - Present
+    
+    Senior member of technology team.
+
+Sr. Dir. of Engineering and Architecture, Science             AIG, 2014 - 2015
+    
+    Lead  and grow  a  team of  developers focused  on  rapid prototyping  and
+    development of new applications that bring evidence-based decision making,
+    innovation, and analytics (big data) to multiple business lines.
+
+VP of Engineering                                         nRelate, 2013 - 2014
+
+    Led, grew, and improved the technology platform and processes at a company
+    that dynamically recommends and serves  four billion related article links
+    and ad impressions a month  across over 100,000 sites. Created development
+    life cycle, project management, and  QA processes for software development
+    and  operations  teams.  Removed  operational single  points  of  failure.
+    Improved  system uptime,  reliability, and  fault tolerance.  Led R&D  and
+    architectural  redesign   and  replacement  of  core   systems  with  more
+    appropriate,   scalable  technologies.   Lead  data   center  and   server
+    infrastructure redesign and migration.
+
+Principal Engineer                               General Assembly, 2012 - 2013
+
+    Senior member of development team. Prototype and implement new systems and
+    research  technologies. Created CMS  and implemented  e-commerce financial
+    systems.
+
+Director of Technology                                     ideeli, 2011 - 2012
+
+    Provide technical guidance, R&D, support, and mentorship for ideeli's core
+    technology  platform and the  team. Technical  lead for  multiple projects
+    including development  of A/B testing framework and  replacement of credit
+    card   vendor.   Created   prototype   rules  engine   implementation   of
+    personalization engine. Acted as mentor for developers by teaching courses
+    and reviewing code.
+
+Brain AI/Rules Lead                Kaplan Test Prep and Admissions 2009 - 2011
+
+    Led  and managed  team responsible  for building  technology  platform for
+    taxonomy-based  modeling   of  student  knowledge   and  customized  study
+    recommendation,  using business  rules engine,  custom code,  and AI-based
+    algorithms. Designed  and deployed beta version  of software; subsequently
+    built and led team delivering scalable technology platform that will serve
+    as basis for future Kaplan  products. Acted as liaison with business users
+    and subject matter  experts, managing frequently-changing requirements and
+    product  goals. Oversaw  selection of  rules engine  vendor and  design of
+    technology   platform.   Managed    internal,   vendor,   and   consultant
+    deliverables.
+
+Consultant                                                    Independent 2009
+
+    Completely  redesigned, rebuilt,  and deployed  the back  end  and content
+    management of the Web site of  a well-know Nickelodeon kid's TV show along
+    with its  content management and user-generated  content workflow systems.
+    The site has over 4 million registered users, serves over 270 terabytes of
+    data monthly, and  is available in 18 languages.  Responsible for choosing
+    the technology  and designing, implementing, and  delivering the software.
+    The site runs on Amazon's EC2 and uses Ruby on Rails.
+
+Ruby and Rails Implementation Engineer	                    10gen, 2008 - 2009
+
+    Implemented  Ruby  language and  framework  support  for  the 10gen  cloud
+    computing platform using JRuby,  Java, and server-side JavaScript. Created
+    database and runtime  environment adapters in Java and  Ruby to allow Ruby
+    on Rails and other Ruby frameworks  to use the Babble app server and Mongo
+    schema-free distributed database. Implemented the ability for Ruby code to
+    call and  be called  by code  in other languages.  Developed a  Ruby Mongo
+    Object/Relational Mapper  (ORM) framework, an  ActiveRecord Mongo adapter,
+    CGI session and logging database storage, a grid file storage wrapper, and
+    more. Wrote a  pure-Ruby Mongo driver and Ruby and  Clojure examples for a
+    Java driver.  Enhanced Babble app  server and JavaScript  libraries. Wrote
+    extensive unit tests. Presented talks at conferences and user groups.
+
+Senior Director of Technology                            iAmplify, 2006 - 2008
+
+    Assumed leadership of  tech team when VP of  Engineering left the company.
+    Designed, implemented, documented, and  deployed new and improved features
+    for  company's core software  platform, public  and private  Web services,
+    financial  and  sales   reports,  software  deployment  tools,  e-commerce
+    enhancements, video  feeds, branded Web  sites, and more.  Redesigned core
+    technology  platform and  implemented core  subsystems. Helped  select new
+    production  hosting facility  and planned  and led  production  server and
+    software  transfer.  Led   e-commerce  vendor  selection.  Introduced  new
+    technologies  such as  Subversion,  Ruby,  and Rails  to  team. Fixed  MP3
+    encoding  problems and  many  other  technical issues.  Acted  as DBA  and
+    sysadmin. Met  with potential clients and partners  as company's technical
+    representative.  Performed R&D.  Took part  in VC  due  diligence process.
+
+Open Source Project Leader                       Active Endpoints, 2004 - 2005
+
+    Project leader  and community advocate  for ActiveBPEL's open  source BPEL
+    engine. Liaison  between Active Endpoints  and the open  source community.
+    Managed  developer relations, code  releases, and  Web site.  Created code
+    samples  and  tutorials.  Taught  BPEL  Essentials  course.  Created  BPEL
+    certification exam. Provided developer support.
+
+Consultant                                            Independent, 2001 - 2005
+
+    o Redesigned   and   implemented   Preclick's   PhotoWiki.   Designed  and
+      implemented  the Instant  Photo Messaging  server and  prototype client.
+      Member of Preclick Technical Advisory Board.
+
+    o For Expert Foods, added Amazon interface, bug tracking system, and
+      source code control.
+
+    o For Warner Music Group, selected and installed an Open Source guaranteed
+      file delivery mechanism and worked on design of an E-commerce system.
+
+    o For Variagenics, added features to genetics sample tracking system.
+
+    o For Sotheby's, helped rebuild mainframe apps in Java.
+
+    o For 3Path, selected and installed an Open Source reporting system.
+
+    o For the Information and Content Exchange (ICE) Authoring Group,
+      developed two Open Source ICE reference implementations.
+
+    o As an independent, developed multiple Open Source projects and published
+      "Building Applications With Berkeley  DB Java Edition" and "Introduction
+      to Ruby for Mac OS X".
+
+Chief Technology Officer                Strategic Legal Resources, 2000 - 2001
+
+    Founding member  of startup executive  team tasked with  technical vision,
+    prototype,  implementation, and  delivery of  a B2C  Web  service. Through
+    mergers and  acquisitions, took responsibility for  infrastructure of $20M
+    company.  Enabled   expansion  from  three  offices   to  six.  Evaluated,
+    integrated,  consolidated, and replaced  disparate front-  and back-office
+    systems. Created  new VPN, email, and financial  systems. Managed desktop,
+    server, and Web site support.
+
+Vice President, Application Engineering                 Sotheby's, 1999 - 2000
+
+    Designed and implemented SOTHEBYS.COM  b2b and b2c E-commerce auction site
+    subsystems.  Coordinated   internal  and  contract   technical  resources.
+    Increased site  performance tenfold. Worked with business  users to derive
+    and simplify  business and auction  rules. Evaluated new  technologies and
+    developed prototypes. Acted as mentor to technology team.
+
+Director of Technology                      New Media Productions, 1998 - 1999
+
+    Managed, directed, and grew  the technology department. Designed reference
+    and framework architectures. Prepared  and presented technical designs and
+    work estimates. Introduced structured design and development practices.
+
+Associate Director                  Cambridge Technology Partners, 1996 - 1998
+
+Project Leader, Macintosh Development
+                                 MCI/News Corp. Internet Ventures, 1995 - 1996
+
+Software Engineer                                  Bolt Beranek & Newman, 1995
+
+Associate                                       Marble Associates, 1993 - 1994
+
+Senior Software Project Engineer                Xerox Corporation, 1988 - 1992
+
+Systems Analyst/Programmer and Administrator
+                           Strong Memorial Hospital Cancer Center, 1983 - 1988
+
+
+PUBLICATIONS AND PRESENTATIONS:
+
+    "Ruby in the Clouds", presented at RubyConf 2008.
+
+    "Ruby on Rails - An Introduction", online, presented to NY CTO Club,
+    July 2006.
+
+    "Building Applications With Berkeley DB Java Edition", Java Developer's
+    Journal, September 2004.
+
+    "Unit Testing With OCUnit", O'Reilly's MacDevCenter, April 2004.
+
+    "Alternate Data Storage Technologies", online, presented to NY CTO Club,
+    April 2004.
+
+    "Introduction to Ruby for Mac OS X", MacTech, March 2003 cover article.
+
+    "Ruby, an Introduction", online, presented to NY CTO Club, July 2001.
+
+
+TECHNICAL SKILLS:
+
+Languages
+    Java, Ruby, Python, Scala, PHP, JavaScript, Bash, Lisp, Smalltalk,
+      Objective-C, Perl, C, C++, Assembly
+    Acquainted with: Clojure, Erlang, Elixir, Haskell, Fortran, Pascal
+
+Operating Systems
+    Unix (Linux, BSD, Solaris, etc.), Mac OS X, MacOS, Nextstep, BeOS, DOS,
+    Windows, VMS
+
+Databases
+    MySQL, PostgreSQL, Oracle, MongoDB, Sybase, Informix
+
+Frameworks and Tools
+    JRuby, Ruby on Rails, Sinatra, J2EE, Spring, Hibernate, Tapestry,
+    Cayenne, JSP, Servlets, JDBC, Ant, Maven, JUnit/XUnit, RMI, CORBA,
+    (X)HTML, CSS, AJAX, XML, XML-RPC, SOAP, WSDL, BPEL, ICE, Apache, Tomcat,
+    WebLogic, Prevayler, LaTeX, Yaws, Erlyweb, more
+
+
+EDUCATION:
+
+University of Rochester, Bachelor of Arts - May, 1983
+    Major: Mathematics, with a concentration in Computer Science
+				       
+
+PROFESSIONAL ORGANIZATIONS:
+
+New York CTO Club
+Connecticut CTO Club
+
+
+INDEPENDENT PROJECTS:
+
+PatchMaster: MIDI processing and patching system
+DataVision: Cross-platform graphical database reporting tool
+NQXML: XML parser written in Ruby
+Rice: Information and Content Exchange (ICE) protocol reference
+      implementation in Ruby
+TwICE: ICE protocol reference implementation in Java
+midilib: Pure-Ruby MIDI file and event manipulation library
+Bangkok: Ruby chess game replayer with music generation capability
+KeyMaster: Real-time MIDI performance software
+Squeak (Smalltalk) PostgreSQL interface

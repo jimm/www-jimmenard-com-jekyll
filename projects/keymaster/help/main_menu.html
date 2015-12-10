@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<title>KeyMaster: Main Menu</title>
+</head>
+<body background="images/gradient_bg.gif">
+<table width=600 border=0 cellpadding=0 cellspacing="0">
+	<tr>
+		<td align=LEFT width=95 valign="TOP"> <img src="images/KeyMaster.gif" width=32 height=32
+		align="bottom" alt="[Logo]" border=0> </td>
+		<td align=right width=495><font size="+6"><b>The Main Menu</b></font> <br>
+		    <hr>
+		</td>
+	</tr>
+	<tr>
+		<td valign="TOP" width="100">
+			<font size="-2">
+			<p><font size="-2"><a href="index.html">Contents</a></font></p>
+			<p><a href="introduction.html"><font size="-2">Introduction</font></a></p>
+			<p><a href="getting_started.html">Getting
+				Started</a></font></p>
+			<p><font size="-2"><a href="components.html">Components</a></font></p>
+			<p><font size="-2">Main Menu</font></p>
+			<p><font size="-2"><a href="windows.html">Windows</a></font></p>
+			<p><font size="-2"><a href="movement.html">Movement</a></font></p>
+			<p><font size="-2"><a href="patches.html">Patches</a></font></p>
+			<p><font size="-2"><a href="editing.html">Editing</a></font></p>
+			<p><font size="-2"><a href="sysex.html">SysEx Librarian</a></font></p>
+			<p><font size="-2"><a href="misc.html">Miscellaneous</a></font></p>
+			<p><font size="-2"><a href="ideas.html">Ideas</a></font></p>
+			<p><font size="-2"><a
+				href="midi_ref.html">MIDI Reference</a></font></p>
+			<p><font size="-2"><a href="release.html">Release Notes</a></font></p>
+		</td>
+		<td valign="TOP" width="500"><a name="TOC"></a> <a name="TOC">
+			<h1>Table of Contents</h1>
+			</a>
+			<dl>
+				<dt><a href="#intro">Introduction</a></dt>
+				<dt><a href="#about">About KeyMaster...</a></dt>
+				<dt><a href="#help">Help...</a></dt>
+				<dt><a href="#find">Find...</a></dt>
+				<dt><a href="#movement">Movement</a></dt>
+				<dt><a href="#resend">Resend Current Patch</a></dt>
+				<dt><a href="#panic">All Notes Off</a></dt>
+				<dt><a href="#prefs">Preferences...</a></dt>
+				<dt><a href="#quit">Quit</a></dt>
+			</dl>
+			<i>Back to the <a href="index.html">main Table of Contents</a>.</i>
+			<hr>
+			<!-- **************************************************************** -->
+			<blockquote> <i>Spam, spam, spam, spam, spam, baked beans, and spam.</i><br>
+				<br>
+				- Monty Python </blockquote>
+			<h3>Introduction</h3>
+			In every window's menu bar, clicking on the small <strong>KeyMaster</strong>
+			icon displays an application-wide main menu.
+			<p>
+			<a name="about">
+			<h3>About KeyMaster...</h3>
+			</a> Opens the "about box".
+			<p>
+			<a name="help">
+			<h3>Help...</h3>
+			</a> Opens this on-line documentation, using the preferred application
+			for HTML documents.
+			<p> If <strong>KeyMaster</strong> gets confused about where the help
+				file is, it will ask you to find the file by opening a file panel.
+				When you select the help file, the application will remember the
+				new help file location. The help file, "index.html", is normally
+				found in the help folder inside the <strong>KeyMaster</strong>
+				folder).
+			<p>
+			<a name="find">
+			<h3>Find...</h3>
+			</a> Opens the <a href="windows.html#Find">Find window</a>, from which
+			you can search for chains, songs, patches, instruments, and MIDI messages.
+			<p> A popup menu lets you select what kind of object to find: chain,
+				song, patch, instrument, or message. The "Open" button opens the
+				editor window for the object that is found. The "Goto" button
+				makes the found chain, song, patch, or message the current one.
+				This button is disabled when you select "Instrument".
+			<p> When you type a name into the Find window, remember that (a) you
+				can type any unique name prefix, and (b) case doesn't matter.
+			<p>
+			<a name="movement">
+			<h3>Movement</h3>
+			</a> The movement menu items let you move between chains, songs, and
+			patches. There are four groups of menu items. Each group is the same,
+			except for the targets: chains, songs, patches, and MIDI messages.
+			<p>
+			<h4>First/Previous/Next/Last</h4>
+			<blockquote>
+				<p>Makes the first, previous, next, or last object the current
+					one. See the Movement sections's <a href="movement.html#Introduction">Introduction</a>
+					for the meaning of "current."</p>
+			</blockquote>
+			<p>
+			<a name="resend">
+			<h3>Resend Current Patch</h3>
+			</a> Sends the current patch's exit MIDI Message, then send its enter
+			MIDI Message.
+			<p> The shortcut for this menu item is Alt-SPACE.
+			<p>
+			<a name="panic">
+			<h3>All Notes Off</h3>
+			</a> This is the "Panic Button". It sends the MIDI all-notes-off message
+			to all MIDI channels on both MIDI output ports.
+			<p> The shortcut for this menu item is Alt-`.
+			<p>
+			<a name="prefs">
+			<h3>Preferences...</h3>
+			</a> Opens a dialog box that lets you set <strong>KeyMaster</strong>
+			preferences, including the shortcut keys for "Movement" menu items.
+			For more information see the section on the <a href="windows.html#Preferences">Preferences
+			window</a>.
+			<p>
+			<a name="quit">
+			<h3>Quit</h3>
+			</a> Quit? Why quit?
+			<p> If the currently open document has been changed, you are asked
+				if you want to save the document before quitting. If it has not
+				changed but you have selected the "Ask About Quitting" preference
+				in the <a
+href="windows.html#Preferences">Preferences window</a>, then you are asked if
+				you want to quit.
+			<p>
+			<hr>
+			<font size="-1">Back to the <a href="index.html">main Table of Contents</a>.<br>
+			<i>Contents &copy; 1995 - 2000 by <a href="mailto:jim@jimmenard.com">Jim Menard</a>;
+			All Rights Reserved.</i> </font> </td>
+	</tr>
+</table>
+</body>
+</html>

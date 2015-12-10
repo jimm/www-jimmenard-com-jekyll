@@ -1,0 +1,264 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<title>KeyMaster: Patches</title>
+</head>
+<body background="images/gradient_bg.gif">
+
+<table width=600 border=0 cellpadding=0 cellspacing="0">
+	<tr>
+		<td align=LEFT width=95 valign="TOP"> <img src="images/KeyMaster.gif" width=32 height=32
+		align="bottom" alt="[Logo]" border=0> </td>
+		<td align=right width=495><font size="+6"><b>Patches</b></font> <br>																					
+			<hr>
+		</td>
+	</tr>
+	<tr>
+		<td valign="TOP" width="100">
+			<font size="-2">
+			<p><font size="-2"><a href="index.html">Contents</a></font></p>
+			<p><font size="-2"><a href="introduction.html">Introduction</a></font></p>
+			<p><font size="-2"><a href="getting_started.html">Getting Started</a></font></p>
+			<p><font size="-2"><a href="components.html">Components</a></font></p>
+			<p><font size="-2"><a href="main_menu.html">Main Menu</a></font></p>
+			<p><font size="-2"><a href="windows.html">Windows</a></font></p>
+			<p><font size="-2"><a href="movement.html">Movement</a></font></p>
+			<p><font size="-2">Patches</font></p>
+			<p><font size="-2"><a href="editing.html">Editing</a></font></p>
+			<p><font size="-2"><a href="sysex.html">SysEx Librarian</a></font></p>
+			<p><font size="-2"><a href="misc.html">Miscellaneous</a></font></p>
+			<p><font size="-2"><a href="ideas.html">Ideas</a></font></p>
+			<p><font size="-2"><a
+				href="midi_ref.html">MIDI Reference</a></font></p>
+			<p><font size="-2"><a href="release.html">Release Notes</a></font></p>
+		</font></td>
+		<td valign="TOP" width="500"><a name="TOC"></a> <a name="TOC"> 
+			<h1>Table of Contents</h1>
+			</a> 
+			<dl> 
+				<dt><a href="#Patches">Patches</a></dt>
+				<dt><a href="#PE">Patch Elements</a></dt>
+				<dl> 
+					<dt><a href="#kinds">Kinds of Patch Elements</a></dt>
+					<dt><a href="#manip">Manipulating Patch Elements</a></dt>
+					<dt><a href="#edit">Editing Patch Elements</a></dt>
+					<dt><a href="#PEList">List of Patch Elements, 
+						With Explanations</a></dt>
+					<dl>
+						<dt><a href="#PEInput">MIDI Input</a></dt>
+						<dt><a href="#PEOutput">MIDI Output</a></dt>
+						<dt><a href="#PESplitter">Splitter</a></dt>
+						<dt><a href="#PEFilter">Filter</a></dt>
+						<dt><a href="#PETransposer">Transposer</a></dt>
+						<dt><a href="#PEControllerLimiter">Controller Limiter</a></dt>
+						<dt><a href="#PERangeLimiter">Range Limiter</a></dt>
+						<dt><a href="#PEChannelizer">Channelizer</a></dt>
+						<dt><a href="#PETrigger">Trigger</a></dt>
+					</dl>
+				</dl>
+				<dt><a href="#EEMessages">Enter/Exit Messages</a></dt>
+				<dl> 
+					<dt><a href="#EEMessageEdit">Editing Messages</a></dt>
+				</dl>
+			</dl>
+			<i>Back to the <a href="index.html">main Table of Contents</a>.</i> 
+			<hr>
+			<!-- **************************************************************** --> 
+			<blockquote><i> A wandering minstrel I -<br>
+				A thing of threads and patches,<br>
+				Of ballads, songs and snatches,<br>
+				And dreamy lullaby!</i><br>
+				<br>
+				- Sir William Gilbert, <cite>The Mikado</cite> </blockquote>
+			<p> 
+			<hr>
+			<a name="Patches"> 
+			<h1>Patches</h1>
+			</a> A patch is a group of MIDI pathways on which sit <em>patch elements</em> 
+			that can modify the MIDI data. The simplest pathway connects one MIDI 
+			device directly to another. 
+			<p> <i>&lt;<strong>illustration</strong>&gt;</i> 
+			<p> You can drag MIDI instruments onto a patch window, and drag various 
+				patch elements in between the instruments. To edit each patch 
+				element, 
+			<p> A patch also has an <em>enter message</em> and an <em>exit message</em>. 
+				These messages can contain any MIDI data like patch changes, note 
+				messages (for those looong drones), and sysex messages. 
+			<p> 
+			<hr>
+			<a name="PE"> 
+			<h1>Patch Elements</h1>
+			</a> 
+			<p> A patch element represents a MIDI input, a MIDI output, a filter 
+				that can change the MIDI data, or a trigger that can react to 
+				specific MIDI data. See the <a href="EE List">list of patch elements</a> 
+				below for detailed descriptions of each one. To add a patch element 
+				to a patch window, drag one from the Elements window. To delete 
+				a patch element from a patch, select it and then select "Delete" 
+				from the "Edit" or pop-up menu. You can also select it and then 
+				hit the Backspace or Delete key. </p>
+			<a name="kinds"> 
+			<h2>Kinds of Patch Elements</h2>
+			</a> 
+			<p>Patch elements come in two flavors: filters and inputs/outputs. 
+				Filters accept MIDI data, manipulate it, and pass it on. Inputs, 
+				outputs, and triggers act as MIDI data sources or destinations.</p>
+			<a name="manip"> 
+			<h2>Manipulating Patch Elements</h2>
+			</a> 
+			<p>MIDI inputs and outputs and triggers can be dragged from the Elements 
+				window anywhere onto a patch window. Dragging a MIDI input automatically 
+				adds a MIDI output. Dragging a MIDI output or a trigger automatically 
+				adds a MIDI input. 
+			<p> All other patch elements can be dragged from the Elements window 
+				between any two other patch elements. 
+			<p> To make a new output for a splitter, drag a patch element to the 
+				bottom of the splitter. 
+			<p>If you have selected the preference &quot;Automatically open editor 
+				windows&quot;, the appropriate editor window will open as soon 
+				as you drag an element onto the patch window. 
+			<p> 
+			<a name="edit"> 
+			<h2>Editing Patch Elements</h2>
+			</a> 
+			<p>To edit a patch element, double-click it. Alternately, you can 
+				select it and choose "Open" from the "Patch" menu, or click on 
+				the patch element using the secondary mouse button and select 
+				"Open" from the pop-up menu. 
+			<p> Opening a patch edit window does not make that patch the current 
+				patch. 
+			<p> 
+			<p> To apply the changes you have entered, click the "Apply" button. 
+				This does not close the editor window. Closing the window without 
+				clicking "Apply" leaves the element unchanged. 
+			<p> 
+			<a name="EE List"> 
+			<h2>List of Patch Elements, With Explanations</h2>
+			</a> 
+			<h3>MIDI Input</h3>
+			<blockquote> 
+				<p>A MIDI Input represents a single MIDI controller. It is associated 
+					with a single MIDI instrument. A MIDI Input can only be associated 
+					with instruments that are controllers (as defined by the instrument's 
+					"Is Controller" setting).</p>
+			</blockquote>
+			<p> 
+			<h3>MIDI Output</h3>
+			<blockquote> 
+				<p>A MIDI Output represents a single MIDI instrument. </p>
+				<p> If a MIDI Output patch receives any data that is not on any 
+					channel that its instrument recognizes, the data will be changed 
+					to be on the lowest MIDI channel that the instrument does 
+					recognize.</p>
+				<p> As an example, say that you have an input instrument that 
+					broadcasts on channel 12 connected to an output instrument 
+					that is listening on channels 3, 4, and 5. The MIDI data coming 
+					in on channel 12 will be changed, when it gets to the output 
+					instrument, to channel 3.</p>
+			</blockquote>
+			<p> 
+			<h3>Splitter</h3>
+			<blockquote> 
+				<p>A Splitter splits MIDI data into multiple streams. Drag other 
+					patch elements onto any output. To add a new output, drag 
+					a patch element to the bottom of a splitter. </p>
+			</blockquote>
+			<p> 
+			<h3>Filter</h3>
+			<blockquote> 
+				<p>Filters out MIDI controllers, pitch bend, and pressure messages. 
+					For example, you can let pitch bend messages go to some instruments 
+					but not others.</p>
+			</blockquote>
+			<p> 
+			<h3>Transposer</h3>
+			<blockquote> 
+				<p>Transposes all notes and polyphonic pressure (aftertouch) messages. 
+					Select down or up, octave jump, and interval jump. </p>
+			</blockquote>
+			<p> 
+			<h3>Controller Limiter</h3>
+			<blockquote> 
+				<p>Limits a specific MIDI controller on a set of MIDI channels. 
+					Enter controller number and low and high controller values. 
+				</p>
+				<p> For most controllers, you will want to keep the "Always Pass 
+					Through Zero" check box checked.</p>
+			</blockquote>
+			<p> 
+			<h3>Range Limiter</h3>
+			<blockquote> 
+				<p>Limits note and channel pressure messages to a specified range. 
+				</p>
+				<p> Useful, along with a splitter, for sending some notes to one 
+					MIDI Output or Trigger and other notes to another MIDI Output. 
+					Different Range Limiter's ranges can overlap, so you can layer 
+					instruments.</p>
+			</blockquote>
+			<p> 
+			<h3>Channelizer</h3>
+			<blockquote> 
+				<p>Changes the channel of MIDI data. Any data that comes in on 
+					any one of the specified input MIDI channels is sent out on 
+					<em>all</em> of the output channels. </p>
+			</blockquote>
+			<p> 
+			<h3>Trigger</h3>
+			<blockquote> 
+				<p>Triggers things when other things happen. You can select the 
+					action (what happens) and the trigger (what kicks off the 
+					action).</p>
+				<p>A trigger can be attached to a MIDI source or it can appear 
+					by itself. When it's by itself, certain triggers (like note 
+					values) are disabled. To add a trigger to a patch by itself, 
+					drag the trigger icon into the patch window. To add a trigger 
+					to a MIDI source, drag the trigger icon onto the output of 
+					a MIDI source. One common way to add a trigger is to drag 
+					a MIDI keyboard onto the patch, delete the MIDI output that 
+					is automatically attatched to it, and then dragging a trigger 
+					onto the keyboard's output.</p>
+				<p>The things that can act as triggers are:</p>
+				<ul>
+					<li>Note on or note off<font size="-1"><sup>*</sup></font></li>
+					<li>MIDI controller hitting a particular value<font size="-1"><sup>*</sup></font></li>
+					<li>Program change<font size="-1"><sup>*</sup></font></li>
+					<li>Realtime message<font size="-1"><sup>*</sup></font></li>
+					<li>System message<font size="-1"><sup>*</sup></font></li>
+					<li>Entering the patch<font size="-1"></font></li>
+					<li>Exiting the patch<font size="-1"></font></li>
+				</ul>
+				<p><font size="-1">* These items are only available if the trigger 
+					appears attached to a MIDI source.</font></p>
+				<p>Actions include:</p>
+				<ul>
+					<li>Go to another patch (you can drag songs and patches into 
+						the name fields that appear in the trigger's editor window) 
+					</li>
+					<li>Play a MIDI file</li>
+					<li>Play a sound file</li>
+				</ul>
+			</blockquote>
+			<hr>
+			<a name="EEMessages"> 
+			<h1>Enter/Exit Messages</h1>
+			</a> An enter or exit message is the same as an ordinary <a
+href="components.html#MIDIMsgs">programmable MIDI message</a> - it's a bunch of 
+			MIDI data. Every patch has an <i>enter message</i> that gets sent 
+			when the patch is first entered, and an <i>exit message</i> that is 
+			sent when the patch is left. 
+			<p> 
+			<a name="EEMessageEdit"> 
+			<h2>Editing Messages</h2>
+			</a> To open a message, select "Enter Message..." or "Exit Message..." 
+			from the Edit menu. 
+			<p> For more information, see <a href="editing.html#Messages">Editing 
+				Messages</a>. 
+			<p> 
+			<hr>
+			<font size="-1">Back to the <a href="index.html">main Table of Contents</a>.<br>
+			<i>Contents &copy; 1995 - 2000 by <a href="mailto:jim@jimmenard.com">Jim Menard</a>; 
+			All Rights Reserved.</i> </font></td>
+	</tr>
+</table>
+</body>
+</html>

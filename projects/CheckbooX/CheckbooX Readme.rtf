@@ -1,0 +1,102 @@
+{\rtf1\mac\ansicpg10000\cocoartf102
+{\fonttbl\f0\fswiss\fcharset77 Helvetica-Bold;\f1\fswiss\fcharset77 Helvetica;\f2\fswiss\fcharset77 Helvetica-Oblique;
+}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc
+
+\f0\b\fs40 \cf0 CheckbooX\
+
+\f1\b0\fs24 Jim Menard, jim@jimmenard.com\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+\cf0 \
+
+\f0\b\fs30 Introduction\
+
+\f1\b0\fs24 \
+CheckbooX ("checkbooks") mimics the register included with your checkbook. It automatically balances your account.\
+\
+When you get your bank statement, you can click a check mark next to each item that's on your statement. Clicking the check mark on the lower right of the window causes the balance to display only checked items. That way, you can see how much money the bank thinks you have.\
+\
+The checkbook data is stored as XML. Amounts are stored in pennies, to avoid rounding errors.\
+\
+
+\f0\b\fs30 Hints\
+
+\f1\b0\fs24 \
+Transfer the current balance from your paper checkbook as an entry called "Starting Balance". Check it off.\
+\
+The first new entry you create after opening CheckbooX automatically enters today's date.\
+\
+Every new entry you create after the first copies the date of the previous entry.\
+\
+When you first open CheckbooX, the date column is just wide enough to display the month and day, but not the year. Widen the column to see the year.\
+\
+You can find checkbook entries by description, date, check number, or amount.\
+\
+You can hide already-marked entries by selecting "Hide Checkmarked" from the Entries menu. Display them by selecting "Show Checkmarked". (When checkmarked entries are hidden, a bug prevents you from properly marking un-marked entries.)\
+\
+
+\f0\b\fs30 To Do\
+
+\f1\b0\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li140\fi-140\ql\qnatural
+\cf0 \'a5 More comments in code.\
+\'a5 Example checkbook file.\
+\'a5 Auto-complete descriptions.\
+\'a5 Support cut/copy/paste of checkbook entries.\
+\'a5 Undo/redo.\
+\'a5 Add "Duplicate" Edit menu item. Make date of item today's date.\
+\'a5 When show/hide check marked entries, scroll to selected item. If none, scroll to end.\
+\'a5 Automatic scheduled deductions.\
+\'a5 When a new entry is created, if the previous entry was a check then copy the check number and add one. (Preference?)\
+\'a5 Categories.\
+\'a5 Tax deduction flag.\
+\'a5 Ignore returns in table view.\
+\'a5 Display total withdrawals.\
+\'a5 Display categories.\
+\'a5 Display by-month values for same types.\
+\'a5 Documentation.\
+\'a5 By-month summaries.\
+\'a5 Print? Format?\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+\cf0 \
+
+\f0\b\fs30 Bugs\
+
+\f1\b0\fs24 \
+\'a5 When marked entries are hidden, marking an un-marked entry does not make it disappear, nor does its check box stay marked. The item is marked, though.\
+\
+
+\f0\b\fs30 Compiling and Testing\
+
+\f1\b0\fs24 \
+CheckbooX comes with source code and an Xcode project. There are two targets: the application target and a unit testing target.\
+\
+In order to compile the testing target you will need to download and install OCUnit from http://sente.epfl.ch/software/ocunit/. You will also have to edit TestCheckbook.m and TestFind.m and fix the absolute file paths  in the #defines at the top of those files. If anyone can tell me how to make those paths relative, 
+\f2\i please
+\f1\i0  let me know.\
+\
+
+\f0\b\fs30 License\
+
+\f1\b0\fs24 \
+CheckbooX is copyrighted free software by Jim Menard and is released under the Apache Software License, Version 1.1. A copy of this license is available at <http://www.apache.org/LICENSE.txt>.\
+\
+Copyright \'a9 2003-2004 Jim Menard (jim@jimmenard.com).\
+\
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\ql\qnatural
+\cf0 Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.\
+\
+Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.\
+\
+The end-user documentation included with the redistribution, if any, must include the following acknowledgment: "This product includes software developed by Jim Menard (jim@jimmenard.com)." Alternately, this acknowledgment may appear in the software itself, if and wherever such third-party acknowledgments normally appear.\
+\
+The names "CheckbooX'" and "Jim Menard" must not be used to endorse or promote products derived from this software without prior written permission. For written permission, please contact jim@jimmenard.com.\
+\
+Products derived from this software may not be called "CheckbooX", nor may "CheckbooX" appear in their name, without prior written permission of Jim Menard.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+\cf0     \
+THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL JIM MENARD BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\
+}

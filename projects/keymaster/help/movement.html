@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<title>KeyMaster: Movement</title>
+</head>
+<body background="images/gradient_bg.gif">
+
+<table width=600 border=0 cellpadding=0 cellspacing="0">
+	<tr>
+		<td align=LEFT width=95 valign="TOP"> <img src="images/KeyMaster.gif" width=32 height=32
+		align="bottom" alt="[Logo]" border=0> </td>
+		<td align=right width=495><font size="+6"><b>Movement</b></font> <br>																								
+			<hr>
+		</td>
+	</tr>
+	<tr>
+		<td valign="TOP" width="100">
+			<font size="-2">
+			<p><font size="-2"><a href="index.html">Contents</a></font></p>
+			<p><a href="introduction.html"><font size="-2">Introduction</font></a></p>
+			<p><a href="getting_started.html">Getting
+				Started</a></font></p>
+			<p><font size="-2"><a href="components.html">Components</a></font></p>
+			<p><font size="-2"><a href="main_menu.html">Main Menu</a></font></p>
+			<p><font size="-2"><a href="windows.html">Windows</a></font></p>
+			<p><font size="-2">Movement</font></p>
+			<p><font size="-2"><a href="patches.html">Patches</a></font></p>
+			<p><font size="-2"><a href="editing.html">Editing</a></font></p>
+			<p><font size="-2"><a href="sysex.html">SysEx Librarian</a></font></p>
+			<p><font size="-2"><a href="misc.html">Miscellaneous</a></font></p>
+			<p><font size="-2"><a href="ideas.html">Ideas</a></font></p>
+			<p><font size="-2"><a
+				href="midi_ref.html">MIDI Reference</a></font></p>
+			<p><font size="-2"><a href="release.html">Release Notes</a></font></p>
+		</td>
+		<td valign="TOP" width="500"><a name="TOC"></a> <a name="TOC">
+			<h1>Table of Contents</h1>
+			</a>
+			<dl>
+				<dt><a href="#Introduction">Introduction</a></dt>
+				<dt><a href="#KeyMouse">Moving via the Keyboard and Mouse</a></dt>
+				<dt><a href="#MoveTrig">Movement Triggers</a></dt>
+				<dt><a href="#ProgGotos">Programmable Goto Keys</a></dt>
+			</dl>
+			<i>Back to the <a href="index.html">main Table of Contents</a>.</i>
+			<hr>
+			<!-- **************************************************************** -->
+			<blockquote> <i>An object at rest cannot be stopped!</i><br>
+				<br>
+				- The Evil Midnight Bomber What Bombs At Midnight </blockquote>
+			<p>
+			<hr>
+			<a name="Introduction">
+			<h1>Introduction</h1>
+			</a> Moving from <a href="patches.html#Patches">patch</a> to patch
+			is what <strong>KeyMaster</strong> is all about. Patches configure
+			your MIDI setup and modify the MIDI data. Moving between patches changes
+			your system's configuration.
+			<p> The name of the <em>current patch</em> is displayed in the <a
+href="windows.html#Document">Document window</a>. It is the patch that is modifying
+				MIDI data.
+			<p> You can move from <a href="components.html#Song">song</a> to song
+				and from <a
+href="components.html#Chain">chain</a> to chain, as well. When you move to a song,
+				the first patch in the song becomes the current patch. When you
+				move to a chain, the first song in the chain becomes the current
+				song (and its patch becomes the current patch).
+			<p> You can move forward to the next patch or backward to the previous
+				patch. You can also jump forward to the last patch in a song or
+				backward to the first patch in a song. Moving forward beyond the
+				last patch in a song moves to the first patch of the next song
+				<em>in the current chain</em>, and moving backward from the first
+				patch in a song moves to the last patch of the previous song in
+				the current chain.
+			<p> Opening a patch edit window does not make that patch the current
+				patch.
+			<p> Moving to a chain, song, or patch makes it the <em>current</em>
+				or <em>active</em> chain, song, or patch. When a chain becomes
+				active, the first song is also made active. When a song is made
+				active, its first patch is made active. Nothing visible happens,
+				except that the main Document window is updated with the names
+				of the current chain, song, and patch.
+			<p>
+			<hr>
+			<a name="KeyMouse">
+			<h1>Moving via the Keyboard and Mouse</h1>
+			</a> To move from chain to chain, song to song, or patch to patch,
+			you can
+			<ul>
+				<li>Use the <a href="main_menu.html#MainMenu">movement menu items</a>
+					or their keyboard shortcuts,</li>
+				<li>Click on the movement buttons in the <a
+href="windows.html#Document">Document window</a>,</li>
+				<li>Drag a chain, song, or patch into the corresponding text field
+					in the Document window,</li>
+				<li>Type a chain, song, or patch name into the corresponding text
+					field in the Document window,</li>
+				<li>Send one of the MIDI messages for the <a href="#MoveTrig">Movement
+					Triggers</a> you have defined, or</li>
+				<li>Send a program change from a specific MIDI instrument defined,
+					again, in the Movement Triggers window.</li>
+			</ul>
+			To jump directly to a particular chain, song, or patch, you can
+			<ul>
+				<li>Open the <a href="windows.html#Find">Find window</a>, select
+					the type in the popup menu, enter a name (*), and click "Goto",</li>
+				<li>Type a name in the corresponding Document window text box,</li>
+				<li>Press a <a href="#ProgGotos">Programmable Goto Key</a>, or</li>
+				<li>Drag a song/chain/patch into the corresponding Document window
+					text box. </li>
+			</ul>
+			(*) When you type a name into the Find window or one of the Document
+			window text boxes, remember that (a) you can type any unique name
+			prefix, and (b) case doesn't matter.
+			<p>
+			<hr>
+			<a name="MoveTrig">
+			<h1>Move Triggers</h1>
+			</a> You can use MIDI data to move around, too. The Movement Trigger
+			specifies two different ways to move. Both ways listen to specific
+			MIDI channels coming from an instrument.
+			<p> First, you can specify MIDI controllers that signal when to move
+				to the next or previous patch. For example, you can tell <strong>KeyMaster</strong>
+				to move to the next patch when it receives controller 23 from
+				your DX-7, and to move to the next song when it receives controller
+				24 from MIDI channels 3 or 4 sent by your Wavestation.
+			<p> Some MIDI controllers are continuous (<i>i.e.</i>, send out all
+				values from 0 to 127), and some are discrete (send out only 0
+				and 127). Move Triggers always activate when they receive a value
+				of 127.
+			<p> The second kind of movement trigger is a program change. Any program
+				change message that is sent from the instrument you specify is
+				used to move to the next or previous patch. There are four modes:
+			<p>
+			<dl>
+				<dt>Advance to next patch</dt>
+				<dd>Move to the next patch when any program change is received.</dd>
+				<dt>Higher to next, lower to previous</dt>
+				<dd>Move to the next patch when the program change number is larger
+					than the previous one, or move to the previous patch when
+					it is smaller. The first program change you send always moves
+					forward, since <strong>KeyMaster</strong> doesn't know what
+					the previous program change number was.</dd>
+				<dt>Jump to song</dt>
+				<dd>Jump to the beginning of the <var>nth</var> song in the master
+					song list, where <var>n</var> is the program change number.</dd>
+				<dt>Do nothing</dt>
+				<dd>Don't move as a result of any program change.</dd>
+			</dl>
+			Use the <a href="windows.html#MoveTrig">Move Trigger window</a> to
+			specify the MIDI controllers you use to move, and the program change
+			instrument and MIDI channel.
+			<p>
+			<hr>
+			<a name="ProgGotos">
+			<h1>Programmable Goto Keys</h1>
+			</a> <strong>PROGRAMMABLE GOTO KEYS ARE NOT YET IMPLEMENTED.</strong>
+			<p> Jump to a song and patch with a single key stroke. You can assign
+				a patch to any of the function keys. Pressing that key makes the
+				assigned patch the current patch.
+			<p> <em>Will have a drag-and-drop editor window. User can drag patches
+				onto keys.</em>
+			<p>
+			<hr>
+			<font size="-1">Back to the <a href="index.html">main Table of Contents</a>.<br>
+			<i>Contents &copy; 1995 - 2000 by <a href="mailto:jim@jimmenard.com">Jim Menard</a>;
+			All Rights Reserved.</i></font><i></i></td>
+	</tr>
+</table>
+
+</body>
+</html>

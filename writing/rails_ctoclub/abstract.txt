@@ -1,0 +1,11 @@
+Ruby on Rails -- Is it Hot, or Is it Not?
+
+With all the buzz about Ruby on Rails, it's time to take a closer look. July's
+talk will introduce you to Ruby on Rails. We will talk about its design
+philosophy and architecture. We will see what Rails gives you out of the box
+and what it doesn't, and mention some of the add-ons that are available. Other
+topics will include integration with your existing systems, how Rails apps are
+developed, tested, and deployed, and how Rails apps handle scaling.
+
+Jim Menard is a grizzled, crusty Unix-head with over 25 years of hands-on
+development experience. Jim is Senior Director of Technology at iAmplify.

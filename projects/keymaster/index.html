@@ -1,0 +1,104 @@
+<!--#set var="pagetitle" value="KeyMaster" -->
+<!--#include virtual="/header.html"-->
+
+<p><em>Update: <a href="http://github.com/jimm/patchmaster"><b>PatchMaster</b></a>
+is the new version of KeyMaster. It's written in Ruby, and
+the <a href="https://github.com/jimm/patchmaster">Github repo</a> has all
+the source code.</em></p>
+
+<p><em>The description below is for the C64/Atari ST version of
+KeyMaster.</em></p>
+
+<p><strong>KeyMaster</strong> is no longer actively developed. What's worse,
+the code is essentially lost: I have no way of reading the C64 or Atari ST
+code any more, and I'm not sure where the BeOS code went. Some day, I hope to
+rewrite it for Linux or Mac OS X.</p>
+
+<p>Visit the old <a href="help/index.html">on-line help</a> for
+<strong>KeyMaster</strong>.</p>
+
+</ul>
+
+<p>
+<strong>KeyMaster</strong> is realtime MIDI performance software that I
+designed, wrote, evolved, and used live from 1986&ndash;1993. It allowed a
+performer to totally reconfigure his MIDI setup instantaneously while playing.
+</p>
+
+<p>
+With <strong>KeyMaster</strong> a performer can split controlling
+keyboards, layer MIDI channels, transpose them, send program changes
+and system exclusive messages, limit controller and velocity values,
+and much more.  At the stomp of a footswitch (or any other MIDI
+event), an entire MIDI system can be totally reconfigured.
+</p>
+
+<p>
+<em>Songs</em> are collections of <em>patches</em>.  A patch is a
+group of MIDI pathways on which sit <em>patch elements</em> that can
+modify the MIDI data. The simplest pathway connects one MIDI device
+directly to another. <em>Chains</em> are collections of songs, so you can step
+through a night's set without touching the computer.
+</p>
+
+<p>
+The first incarnation of <strong>KeyMaster</strong> was for the
+Commodore 64, and I later ported it to the Atari ST and finally the BeOS.
+</p>
+
+<p>
+<strong>KeyMaster</strong>'s current features:
+</p>
+
+<ul>
+<li>Split the MIDI data into multiple paths, letting you layer synths.</li>
+<li>Transpose a MIDI channel.</li>
+<li>Split a MIDI channel (limit low/high notes).</li>
+<li>Send info (patch changes, controller values, sysex, MIDI clock
+start, <i>etc.</i>)on patch
+enter and send info on patch exit.</li>
+<li>System exclusive messages can be parameterized, so a MIDI controller's
+value can be plugged into a sysex message.</li>
+<li>Display current song/patch name in a synth's display via sysex.</li>
+<li>Max/min, scaling, and inversion of values (controller, note velocity,
+aftertouch, <i>etc.</i>)</li>
+<li>When receive specified controller change, program, note, <i>etc.</i>, jump
+to next patch, totally reconfiguring the entire MIDI setup
+- new transposes, keyboard splits, program changes,
+controller/velocity limits, controller/velocity remapping, <i>etc.</i></li>
+<li>Remap controllers, within a channel or from channel to channel.</li>
+<li>Select program changes by name (currently requires hand-entry of
+non-General MIDI program names).</li>
+<li>Panic button sends all-notes-off messages on all MIDI channels.</li>
+<li>Simple sysex librarian (<em>this will probably become a separate
+application</em>).</li>
+<li>Save chains in separate files for night-to-night set changes.</li>
+</ul>
+
+<p>
+Potential new features:
+</p>
+
+<ul>
+<li>Plug-in architecture for patch elements.</li>
+<li>Trigger playback of on-disk samples during performance.</li>
+<li>Record performance to standard MIDI files (simple sequencer).</li>
+<li>Play stored MIDI sequences along with live performance.</li>
+<li>Trigger playback of sysex files.</li>
+<li>Cross-fade between two MIDI instruments.</li>
+<li>More sophisticated filtering.</li>
+<li>Multiple instruments/channels treated as one virtual instrument.</li>
+<li>Merge MIDI inputs (many-to-one).</li>
+<li>One-to-many MIDI channel mapping (via virtual instruments).</li>
+<li>Functions (A+B, A*B, <i>etc.</i>) applicable to MIDI data.</li>
+<li>Use BeOS as realtime MIDI controller (<i>e.g.</i>, via clock to a
+software LFO).</li>
+<li>Setups stored in Be's database, which will allow queries, <i>etc.</i></li>
+<li>Display MIDI input/output in realtime (good for MIDI setup debugging).</li>
+<li>Crank video-on-disk out to video output, triggered by MIDI events.</li>
+<li>Realtime generation of audio data (subtractive synthesis, additive
+synthesis, FM synthesis) triggered, modified, or played by MIDI
+data.</li>
+</ul>
+
+<!--#include virtual="/footer.html"-->

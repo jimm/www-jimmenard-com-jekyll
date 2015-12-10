@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<title>KeyMaster: Ideas</title>
+</head>
+<body background="images/gradient_bg.gif">
+
+<table width=600 border=0 cellpadding=0 cellspacing="0">
+	<tr>
+		<td align=LEFT width=95 valign="TOP"> <img src="images/KeyMaster.gif" width=32 height=32
+		align="bottom" alt="[Logo]" border=0> </td>
+		<td align=right width=495><font size="+6"><b>Ideas</b></font> <br>															
+			<hr>
+		</td>
+	</tr>
+	<tr>
+		<td valign="TOP" width="100">
+			<font size="-2">
+			<p><font size="-2"><a href="index.html">Contents</a></font></p>
+			<p><a href="introduction.html"><font size="-2">Introduction</font></a></p>
+			<p><a href="getting_started.html">Getting
+				Started</a></font></p>
+			<p><font size="-2"><a href="components.html">Components</a></font></p>
+			<p><font size="-2"><a href="main_menu.html">Main Menu</a></font></p>
+			<p><font size="-2"><a href="windows.html">Windows</a></font></p>
+			<p><font size="-2"><a href="movement.html">Movement</a></font></p>
+			<p><font size="-2"><a href="patches.html">Patches</a></font></p>
+			<p><font size="-2"><a href="editing.html">Editing</a></font></p>
+			<p><font size="-2"><a href="sysex.html">SysEx Librarian</a></font></p>
+			<p><font size="-2"><a href="misc.html">Miscellaneous</a></font></p>
+			<p><font size="-2">Ideas</font></p>
+			<p><font size="-2"><a
+				href="midi_ref.html">MIDI Reference</a></font></p>
+			<p><font size="-2"><a href="release.html">Release Notes</a></font></p>
+		</td>
+		<td valign="TOP" width="500"><a name="TOC"></a> <a name="TOC">
+			<h1>Table of Contents</h1>
+			</a>
+			<dl>
+				<dt><a href="#FirstInit">First Song as Initializer</a></dt>
+				<dt><a href="#PlayNotes">Use MIDI Data to Play Notes</a></dt>
+				<dt><a href="#Tuning">A Tuning Song</a></dt>
+				<dt><a href="#Messages">Programmable Messages</a></dt>
+			</dl>
+			<i>Back to the <a href="index.html">main Table of Contents</a>.</i>
+			<hr>
+			<!-- **************************************************************** -->
+			<blockquote><i> An invasion of armies can be resisted, but not an
+				idea whose time has come. </i><br>
+				<br>
+				- Victor Hugo </blockquote>
+			<p>
+			<hr>
+			<a name="FirstInit">
+			<h1>First Song as Initializer</h1>
+			</a> Since <strong>KeyMaster</strong> goes to the first patch of the
+			first song whenever you open a document, you might want to fill that
+			patch with commands that initialize your MIDI setup. For example,
+			in the <a
+href="patches.html#EEMessages">enter message</a> of the first patch, you could:
+			<ul>
+				<li>Send tune requests to those instruments that need them,</li>
+				<li>Set the volumes of all instruments, and</li>
+				<li>Set other controllers like pitch bend and modulation to 0.</li>
+			</ul>
+			<hr>
+			<a name="PlayNotes">
+			<h1>Use MIDI Data to Play Notes</h1>
+			</a> You can use <strong>KeyMaster</strong> to play some notes for
+			you. Use MIDI commands in a patch's enter message to play a note (note
+			on, value, velocity) then use MIDI commands in the exit message to
+			release the note.
+			<p> A MIDI note on or off message consists of two parts, note number
+				and velocity. Notes range from 0 to 127; middle C is note number
+				60 (hex 0x3C). Velocity range is 0 - 127, where 0 is the same
+				as note off.
+			<p> A note is not turned off until either a note off command is sent
+				or (on most synths) an all-notes-off command is sent.
+			<p> You can also enter note commands into a programmable MIDI message
+				and send the message from a song or by hand.
+			<p> See the <a href="midi_ref.html#TOC">MIDI reference</a> for a fuller
+				discussion of MIDI messages.
+			<p>
+			<hr>
+			<a name="Tuning">
+			<h1>A Tuning Song</h1>
+			</a> You might want to set up a song that helps you tune your instruments
+			by sending the proper program changes and entering note on and note
+			off commands that play the tuning note on different synths. (<i>Yes,
+			you actually had to tune most older synths.</i>) For example,
+			<p>
+			<h4>Patch One</h4>
+			<blockquote>
+				<p>Enter message: program changes and note-ons for reference synth
+					A and another synth (B). </p>
+				<p> Exit message: note-off for synth B. </p>
+			</blockquote>
+			<p>
+			<h4>Patch Two</h4>
+			<blockquote>
+				<p>Enter message: program change and note-on for synth C. </p>
+				<p> Exit message: note-off for synth C. </p>
+			</blockquote>
+			<p>
+			<h4>Patch Three</h4>
+			<blockquote>
+				<p>Enter message: program change and note-on for synth D. </p>
+				<p> Exit message: note-offs for synth D and reference synth A.
+				</p>
+			</blockquote>
+			<p>
+			<hr>
+			<a name="Messages">
+			<h1>Programmable Messages</h1>
+			</a> Programmable MIDI messages can be used for a number of things.
+			For example, you can have one message for each of the "start" (250,
+			hex <code>0xFA</code>), "continue" (251, hex <code>0xFB</code>), and
+			"stop" (252, hex <code>0xFC</code>) MIDI commands to control your
+			sequencer or drum machine. This turns your computer keyboard into
+			a MIDI control panel.
+			<p> You might want to have a message that resets all of your synths
+				to full volume.
+			<p> See your MIDI devices' manuals for the specific MIDI commands
+				to which each responds.
+			<p>
+			<hr>
+			<font size="-1">Back to the <a href="index.html">main Table of Contents</a>.<br>
+			<i>Contents &copy; 1995 - 2000 by <a href="mailto:jim@jimmenard.com">Jim Menard</a>;
+			All Rights Reserved.</i></font><i></i></td>
+	</tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!--#set var="pagetitle" value="Ruby Quiz 49: Lisp Game" -->
+<!--#include virtual="/header.html"-->
+
+<p>Here is my solution to Ruby Quiz 49: <a
+href="http://www.rubyquiz.com/quiz49.html">Lisp Game</a>. It consists of two
+parts: the game engine and a game description. I've called it "RADS" in homage
+to the <a href="http://www.tads.org/">TADS</a> interactive fiction engine. In
+the quiz description, James mentioned that you could take at least two
+approaches: mimic the Lisp or do it the "Ruby way". I've attempted to do the
+latter.</p>
+
+<ul>
+<li><a href="rads.rb">rads.rb</a> the engine</li>
+<li><a href="game.rb">game.rb</a> the game description and custom verbs</li>
+</ul>
+
+<p>To run this game, download both files and execute game.rb.</p>
+
+
+<h2>Features</h2>
+
+<h3>Game engine</h3>
+
+<ul>
+
+<li>Accepts inventory or i</li>
+
+<li>Accepts look or l, also accepts "look at x"</li>
+
+<li>Accepts examine or x, which prints a long description</li>
+
+<li>"it" represents the last-examined, taken, or dropped object. You can take
+it, examine it, look at it</li>
+
+<li>Short direction names (n, s, e, w, u, d)</li>
+
+<li>Accepts walk or go</li>
+
+<li>Short direction names are also verbs so you can just type "w" to go
+west</li>
+
+<li>Altername names for things ("whiskey bottle", "bottle", "whiskey")</li>
+
+<li>Decorations, which are objects that can't be taken. Try "x wizard" or
+"look at couch".</li>
+
+<li>A decoration without a short_desc won't be output as part of the room's
+description. You can examine the couch, but it won't be described separately
+because it's already part of the wizard's long description.</li>
+
+<li>Game-specific verbs are defined in the game file, not in the engine</li>
+
+<li>Any object with no "names" array defined in the initialization proc will
+have one created for it containing the short_desc</li>
+
+<li>Containment (things within other things) is implemented and contents of
+containers like the bucket will be printed, but "put in"/"take out" is not yet
+implemented.</li>
+
+</ul>
+
+
+
+<p>To do:</p>
+
+<ul>
+
+<li>Fix the fact that you can't examine the door in the garden</li>
+
+<li>Implement "put in"/"take out".</li>
+
+<li>Write a "put x in y" verb</li>
+
+<li>Understand prepositions. In addition to "splash bucket [on] wizard" and
+"dunk bucket [in] well", I'd like to allow "splash wizard with bucket".</p>
+
+</ul>
+
+<h3>Game file</h3>
+
+<ul>
+
+<li>Game-specific verbs are defined here, not as part of the RADS library</li>
+
+<li>The dunk, weld, and splash verbs take (but ignore) prepositions. Try
+"splash bucket on wizard" or "splash bucket wizard".</li>
+
+</ul>
+
+
+<p>Back to my <a href="../">Ruby Quiz solutions page</a>.</p>
+
+
+
+<!--#include virtual="/footer.html"-->

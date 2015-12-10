@@ -1,0 +1,465 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<title>KeyMaster: Windows</title>
+</head>
+<body background="images/gradient_bg.gif">
+
+<table width=600 border=0 cellpadding=0 cellspacing="0">
+	<tr>
+		<td align=LEFT width=95 valign="TOP"> <img src="images/KeyMaster.gif" width=32 height=32
+		align="bottom" alt="[Logo]" border=0> </td>
+		<td align=right width=495><font size="+6"><b>Windows</b></font> <br>																					
+			<hr>
+		</td>
+	</tr>
+	<tr>
+		<td valign="TOP" width="100">
+			<font size="-2">
+			<p><font size="-2"><a href="index.html">Contents</a></font></p>
+			<p><a href="introduction.html"><font size="-2">Introduction</font></a></p>
+			<p><font size="-2"><a href="getting_started.html">Getting
+				Started</a></font></p>
+			<p><font size="-2"><a href="components.html">Components</a></font></p>
+			<p><font size="-2"><a href="main_menu.html">Main Menu</a></font></p>
+			<p><font size="-2">Windows</font></p>
+			<p><font size="-2"><a href="movement.html">Movement</a></font></p>
+			<p><font size="-2"><a href="patches.html">Patches</a></font></p>
+			<p><font size="-2"><a href="editing.html">Editing</a></font></p>
+			<p><font size="-2"><a href="sysex.html">SysEx Librarian</a></font></p>
+			<p><font size="-2"><a href="misc.html">Miscellaneous</a></font></p>
+			<p><font size="-2"><a href="ideas.html">Ideas</a></font></p>
+			<p><font size="-2"><a
+				href="midi_ref.html">MIDI Reference</a></font></p>
+			<p><font size="-2"><a href="release.html">Release Notes</a></font></p>
+		</td>
+		<td valign="TOP" width="500"><a name="TOC"></a> <a name="TOC">
+			<h1>Table of Contents</h1>
+			</a>
+			<dl>
+				<dt><a href="#Introduction">Introduction</a></dt>
+				<dl>
+					<dt><a href="#WindowMenu">The Window Menu</a></dt>
+				</dl>
+				<dt><a href="#Document">Document Window</a>
+					<dl>
+						<dt><a href="#DocMenus">Menus</a></dt>
+					</dl>
+				<dt><a href="#ListWindows">List Windows</a>
+					<dl>
+						<dt><a href="#ListWindowMenus">Menus</a></dt>
+					</dl>
+				<dt><a href="#Patch">Patch</a>
+					<dl>
+						<dt><a href="#PatchMenus">Menus</a></dt>
+					</dl>
+				<dt><a href="#Find">Find</a>
+				<dt><a href="#Elements">Elements</a>
+				<dt><a href="#MoveTrig">Move Trigger</a>
+					<dl>
+						<dt><a href="#MoveTrigMenus">Menus</a></dt>
+					</dl>
+				<dt><a href="#Messages">Messages</a>
+				<dt><a href="#Preferences">Preferences</a>
+					<dl>
+						<dt><a href="#open">Automatically open editor windows</a>
+					</dl>
+				</dt>
+				<dl>
+					<dt><a href="#quit">Ask about quitting</a>
+					<dt><a href="#autosave">Automatically save when quitting</a>
+					<dt><a href="#ignore">Ignore active sensing</a>
+					<dt><a href="#pop">Show pop-up help</a>
+					<dt><a href="#help">Help file location</a>
+					<dt><a href="#move">Movement menu shortcut keys</a>
+				</dl>
+			</dl>
+			<i>Back to the <a href="index.html">main Table of Contents</a>.</i>
+			<hr>
+			<!-- **************************************************************** -->
+			<blockquote> <i> Factory windows are always broken.<br>
+				Somebody's always throwing bricks,<br>
+				Somebody's always heaving cinders,<br>
+				Playing ugly Yahoo tricks.<br>
+				</i><br>
+				- Vachel Lindsay, <cite>Factory Windows</cite> </blockquote>
+			<p>
+			<hr>
+			<a name="Introduction">
+			<h1>Introduction</h1>
+			</a> This section describes the different windows associated with
+			a <strong>KeyMaster</strong> document. Some windows are covered more
+			fully in the section on <a href="editing.html">Editing</a>.
+			<p>
+			<a name="WindowMenu">
+			<h3>The Window Menu</h3>
+			</a> All windows have one common menu, the "Window" menu. It contains
+			some window commands like "Stack", some windows you can only open
+			via this menu like the Messages and Instruments windows, and a list
+			of all open windows.
+			<p>
+			<ul>
+				<li>Stack</li>
+				<li>--------</li>
+				<li>Resize To Fit</li>
+				<li>Close</li>
+				<li>--------</li>
+				<li>All Chains</li>
+				<li>All Songs</li>
+				<li>Instruments</li>
+				<li>MIDI Messages</li>
+				<li>Elements</li>
+				<li>Move Trigger</li>
+				<li>--------</li>
+				<li><em>List of all open windows, with keyboard shortcuts</em></li>
+			</ul>
+			<hr>
+			<a name="Document">
+			<h1>Document Window</h1>
+			</a> The Document window displays the current chain, current song,
+			and current patch. The buttons with arrows are for moving between
+			chains, songs, and patches. See the <a href="movement.html">movement</a>
+			section for more information about moving around.
+			<p>
+			<ul>
+				<li><b>|&lt;</b> jumps to the first item,</li>
+				<li><b>&lt;</b> jumps to the previous item,</li>
+				<li><b>&gt;</b> jumps to the next item, and</li>
+				<li><b>&gt;|</b> jumps to the last item.</li>
+			</ul>
+			The "Edit" buttons open the editor window for the current chain, song,
+			or patch.
+			<p> Dragging a chain, song, or patch onto the window <!-- corresponding name text field  -->
+				or typing a name and hitting Enter makes that chain, song, or
+				patch the current one. You need not type the whole name; the shortest
+				unique beginning of the name will work. Also, you needn't worry
+				about matching upper and lower case; all name comparisons are
+				case-insensitive.
+			<p> Dragging a KeyMaster document onto the window closes the current document
+				(after asking about saving it) and opens the new one.
+			<p>
+			<a name="DocMenus">
+			<h2>Menus</h2>
+			</a>
+			<ul>
+				<li>File</li>
+				<ul>
+					<li>New File</li>
+					<li>Open File...</li>
+					<li>--------</li>
+					<li>Save</li>
+					<li>Save As...</li>
+					<li>Revert</li>
+				</ul>
+				<li>Edit</li>
+				<ul>
+					<li>Undo</li>
+					<li>--------</li>
+					<li>Cut</li>
+					<li>Copy</li>
+					<li>Paste</li>
+					<li>Select All</li>
+					<li>Clear</li>
+					<li>--------</li>
+					<li>Edit Current Patch</li>
+				</ul>
+				<li><a href="#WindowMenu">Window</a></li>
+			</ul>
+			<hr>
+			<a name="ListWindows">
+			<h1>List Windows</h1>
+			</a> There are a few windows that are all similar. They contain lists
+			of other objects. For example, the All Chains window contains the
+			list of chains, and a Song window contains a list of patches.
+			<p> The list windows are for:
+			<p>
+			<ul>
+				<li>The list of chains</li>
+				<li>The list of all songs</li>
+				<li>Chains</li>
+				<li>Songs</li>
+				<li>The list of all instruments</li>
+				<li>The list of all MIDI messages</li>
+			</ul>
+			Each of these windows has much in common. Their
+			<a href="#ListWindowMenus">menus</a> are similar. If you click the
+			secondary mouse button, a pop-up menu appears.
+			<p>
+			<h3>Opening An Item</h3>
+			<ul>
+				<p>To open or edit an item in a list window, you can:<br>
+				</p>
+				<ul>
+					<li>Double-click on an item.</li>
+					<li>Select an item, then press <strong>Enter</strong>. </li>
+					<li>Select an item, then select "Open <em>Item</em>" from
+						the "<em>Item</em>" menu.</li>
+					<li>Select an item, then use the secondary mouse button to
+						open a pop-up menu. Select "Open" from that menu.</li>
+				</ul>
+			</ul>
+			<blockquote>
+				<p>To find out how to edit an item, see the <a href="editing.html">Editing</a>
+					section of this documentation.</p>
+			</blockquote>
+			<p>
+			<h3>Creating A New Item</h3>
+			<blockquote>
+				<p>To create a new item, select "New <em>Item</em>" from the "<em>Item</em>"
+					menu. You can also select "Duplicate" from the "Edit" menu.
+				</p>
+				<p> When you create a new Song in any Chain, it is added to the
+					special "All Songs" chain as well.</p>
+			</blockquote>
+			<p>
+			<h3>Renaming An Item</h3>
+			<blockquote>
+				<p>To edit the name of a item, select "Edit <em>Item</em> Name"
+					from the "<em>Item</em>" menu. </p>
+			</blockquote>
+			<p>
+			<h3>Dragging An Item</h3>
+			<blockquote>
+				<p>You can drag an item to or from this window to various places.
+					For example, you can drag a song from one chain to another
+					to copy it, or you can drag a patch from one song to another
+					to copy it. </p>
+				<p> Dragging an item does not delete it from a list window. Dragging
+					from a list window always <em>copies</em> the item.</p>
+				<p> You can also drag a song to the "Current Song" text field
+					in the Document window and <strong>KeyMaster</strong> will
+					jump to that song. The same goes for chains and patches.</p>
+			</blockquote>
+			<p>
+			<h3>Cutting/Copying/Pasting An Item</h3>
+			<blockquote>
+				<p>The Edit menu provides Cut, Copy, Paste, Duplicate, and Delete
+					menu items. </p>
+			</blockquote>
+			<p>
+			<h3>Deleting An Item</h3>
+			<blockquote>
+				<p>You can delete an item from a list via the "Delete" item in
+					the Edit menu, or by pressing the DELETE or BACKSPACE keys.
+				</p>
+				<p> Most items are really gone when you delete them from a list
+					window. The only exception is a in a Chain window. When you
+					delete a song from any chain <em>except</em> the All Songs
+					chain, it is not gone forever; you can still see it in the
+					All Songs window. A song is only deleted if you delete it
+					from the All Songs window.</p>
+			</blockquote>
+			<p>
+			<a name="ListWindowMenus">
+			<h2>Menus</h2>
+			</a>
+			<ul>
+				<li><em>Item</em></li>
+				<ul>
+					<li>New <em>Item</em></li>
+					<li>Open <em>Item</em>...</li>
+					<li>Edit <em>Item</em> Name...</li>
+					<li>Close Window</li>
+				</ul>
+				<li>Edit</li>
+				<ul>
+					<li>Undo</li>
+					<li>Cut</li>
+					<li>Copy</li>
+					<li>Paste</li>
+					<li>Duplicate</li>
+				</ul>
+				<li><a href="#WindowMenu">Window</a></li>
+			</ul>
+			<hr>
+			<a name="Patch">
+			<h1>Patch</h1>
+			</a> For a description of patches, the Patch window, and patch element
+			editor windows, see the <a href="patches.html#Patches">Patches</a>
+			section.
+			<p>
+			<a name="PatchMenus">
+			<h2>Menus</h2>
+			</a>
+			<ul>
+				<li>Patch</li>
+				<ul>
+					<li>Resend</li>
+					<li>Open Patch Element...</li>
+					<li>Edit Patch Name...</li>
+					<li>Close</li>
+				</ul>
+				<li>Edit</li>
+				<ul>
+					<li>Undo</li>
+					<li>Cut</li>
+					<li>Copy</li>
+					<li>Paste</li>
+					<li>Delete</li>
+					<li>Entry Message...</li>
+					<li>Exit Message...</li>
+				</ul>
+				<li><a href="#WindowMenu">Window</a></li>
+			</ul>
+			<hr>
+			<a name="Find">
+			<h1>Find</h1>
+			</a> From the Find window you can open or go to (make
+			<a href="movement.html#Introduction">current</a>) a chain, song,
+			patch, instrument,
+			or MIDI message. Select the type of object you want to find in the
+			popup menu, type the name of the object, and click "Goto" or "Open".
+			<p> "Goto" does not make sense for instruments. The "Goto" button
+				will be disabled if you select "Instrument" from the popup menu.
+			<p> When you click "Goto", that object is made the active chain, song,
+				patch, or MIDI message. No windows are open, but the main Document
+				window will be updated to reflect the movement. When a chain becomes
+				active, the first song is also made active. When a song is made
+				active, its first patch is made active.
+			<p> When you click "Open", the editor window for the object you have
+				selected is opened.
+			<p> When you type a name into the Find window, remember that (a) you
+				can type any unique name prefix, and (b) case doesn't matter.
+			<p>
+			<hr>
+			<a name="Elements">
+			<h1>Elements</h1>
+			</a>
+			<p> The Elements window contains icons that represent patch elements.
+				To add a patch element to a patch, drag one of these icons into
+				an open <a href="patches.html#Patches">Patch window</a>. </p>
+			<p>The window toggles between horizontal, vertical, and square layouts
+				when you click on the zoom box in the window's title bar.</p>
+			<p> Only MIDI inputs, MIDI outputs, and triggers can be dragged onto
+				a Patch window directly. All other patch elements must be dragged
+				between two other elements.
+			<p> To make a new output for a splitter, drag a patch element to the
+				bottom of the splitter.
+			<p>
+			<hr>
+			<a name="MoveTrig">
+			<h1>Move Trigger</h1>
+			</a> The Move Trigger lets you use MIDI to move from patch to patch.
+			See <a href="movement.html#MoveTrig">Movement Triggers</a> for a
+			complete description of what they do.
+			<p> The menu field at the top of the window contains all instruments.
+				Only instruments that are controllers are enabled. Below this
+				menu is a row of check boxes, one for each MIDI channel. When
+				you select an instrument the channel check boxes are enabled for
+				those channels that the instrument sends.
+			<p> Four radio buttons let you select what happens when a program
+				change message arrives on any of the selected MIDI channels.
+			<p>
+			<ul>
+				<li>Do nothing</li>
+				<li>Advance to next patch</li>
+				<li>Higher to next, lower to previous</li>
+				<li>Jump to song</li>
+			</ul>
+			See <a href="movement.html#MoveTrig">Movement Triggers</a> for a
+			complete description of what each one means.
+			<p> Finally, two menu fields let you select which controllers will
+				signal a move to the next or previous patch.
+			<p>
+			<hr>
+			<a name="Messages">
+			<h1>Messages</h1>
+			</a> To open the list of all messages, select "Message" from the Window
+			menu of any window. This window is a <a href="#ListWindows">list window</a>.
+			<p> For information on how to edit a MIDI message, see
+			<a href="editing.html#Messages">Editing Messages</a>.
+			<p>
+			<hr>
+			<a name="Preferences">
+			<h1>Preferences</h1>
+			</a> From the Preferences window, you can change the application-wide
+			preferences.
+			<p> Open the Preferences window by selecting "Preferences" from the
+				main menu.
+			<p>
+			<ul>
+				<li><a href="#open">Automatically open editor windows</a></li>
+				<li><a href="#quit">Ask about quitting</a></li>
+				<li><a href="#autosave">Automatically save when quitting</a></li>
+				<li><a href="#ignore">Ignore active sensing</a></li>
+				<li><a href="#pop">Show pop-up help</a></li>
+				<li><a href="#help">Help file location</a></li>
+				<li><a href="#move">Movement menu shortcut keys</a></li>
+			</ul>
+			<br>
+			To save the changes you have entered, click the "Apply" button. This
+			does not close the Preferences window. Closing the window without
+			clicking "Apply" leaves the preferences unchanged.
+			<p>
+			<a name="open">
+			<h4>Automatically open editor windows</h4>
+			</a>
+			<blockquote>
+				<p> If selected, whenever you drag a Patch Element from the Elements
+					window into a Patch window, the element's editor window will
+					automatically open. </p>
+			</blockquote>
+			<p>
+			<a name="quit">
+			<h4>Ask about quitting</h4>
+			</a>
+			<blockquote>
+				<p> If selected, <strong>KeyMaster</strong> will bring up an alert
+					when you try to quit, whether by selecting the Quit command
+					in the Main Menu or by closing the document window. </p>
+			</blockquote>
+			<p>
+			<a name="autosave">
+			<h4>Automatically save when quitting</h4>
+			</a>
+			<blockquote>
+				<p> If selected, <strong>KeyMaster</strong> will automatically
+					save the current document when you quit, without asking you
+					first. </p>
+			</blockquote>
+			<p>
+			<a name="ignore">
+			<h4>Ignore active sensing</h4>
+			</a>
+			<blockquote>
+				<p> If selected, all Active Sensing bytes are ignored and are
+					not passed through. </p>
+			</blockquote>
+			<p>
+			<a name="pop">
+			<h4>Show pop-up help</h4>
+			</a>
+			<blockquote>
+				<p> If selected, pop-up help will be displayed when the mouse
+					is moved over Elements and MIDI Message Editor window
+					icons. </p>
+			</blockquote>
+			<p>
+			<a name="help">
+			<h4>Help file location</h4>
+			</a>
+			<blockquote>
+				<p> Normally, <strong>KeyMaster</strong> can find this on-line
+					help all by itself. If it gets confused, you can tell
+					<strong>KeyMaster</strong>
+					where to find the help file by clicking on the "Find Help..."
+					button. A file browser appears; find and open the "index.html"
+					help file. </p>
+			</blockquote>
+			<p>
+			<a name="move">
+			<h4>Movement menu shortcut keys</h4>
+			</a>
+			<blockquote>
+				<p> Clicking on this button brings up the movement menu shortcut
+					key editor window. </p>
+			</blockquote>
+			<p>
+			<hr>
+			<font size="-1">Back to the <a href="index.html">main Table of Contents</a>.<br>
+			<i>Contents &copy; 1995 - 2000 by <a href="mailto:jim@jimmenard.com">Jim Menard</a>;
+			All Rights Reserved.</i> </font></td>
+	</tr>
+</table>
+</body>
+</html>

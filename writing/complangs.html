@@ -1,0 +1,1775 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
+<head>
+<title>The Polyglot Programmer</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2012-04-11 14:35:56 EDT"/>
+<meta name="author" content="Jim Menard"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="org-div-home-and-up" style="text-align:right;font-size:70%;white-space:nowrap;">
+ <a accesskey="h" href="http://www.jimmenard.com/"> UP </a>
+ |
+ <a accesskey="H" href="http://www.jimmenard.com/"> HOME </a>
+</div>
+
+<h1 class="title">The Polyglot Programmer</h1>
+
+
+<p>This talk was presented to the CT CTO Club in March of 2012. These were
+  the notes myself. I don't claim they'll make sense to anybody who wasn't
+  there.</p>
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Introduction </a></li>
+<li><a href="#sec-2">2 Definitions </a></li>
+<li><a href="#sec-3">3 How to Play With a New Language </a></li>
+<li><a href="#sec-4">4 Old Busted Hotness vs. New Hotness </a></li>
+<li><a href="#sec-5">5 Smalltalk </a></li>
+<li><a href="#sec-6">6 Lisp: Common Lisp, Scheme </a></li>
+<li><a href="#sec-7">7 Forth </a></li>
+<li><a href="#sec-8">8 Assembly </a></li>
+<li><a href="#sec-9">9 Clojure </a></li>
+<li><a href="#sec-10">10 Scala </a></li>
+<li><a href="#sec-11">11 Erlang </a></li>
+<li><a href="#sec-12">12 Go </a></li>
+<li><a href="#sec-13">13 Haskell </a></li>
+<li><a href="#sec-14">14 OCaml </a></li>
+<li><a href="#sec-15">15 IO, Self </a></li>
+<li><a href="#sec-16">16 Ruby </a></li>
+<li><a href="#sec-17">17 Python </a></li>
+<li><a href="#sec-18">18 Groovy </a></li>
+<li><a href="#sec-19">19 PHP </a></li>
+<li><a href="#sec-20">20 JavaScript </a></li>
+<li><a href="#sec-21">21 CoffeeScript </a></li>
+<li><a href="#sec-22">22 Objective C </a></li>
+<li><a href="#sec-23">23 F# </a></li>
+<li><a href="#sec-24">24 Frameworks </a></li>
+<li><a href="#sec-25">25 Takeaways </a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Introduction </h2>
+<div class="outline-text-2" id="text-1">
+
+
+<blockquote>
+
+<p><i>A language that doesn't affect the way you think about programming, is not worth knowing.</i><br/>
+&ndash; Alan J. Perlis
+</p>
+</blockquote>
+
+
+
+<p class="verse">
+Ruby and Smalltalk and dynamic runtimes,<br/>
+Emacs and shell scripts and UNIX command lines,<br/>
+Macros and lambdas and networking pings,<br/>
+These are a few of my favorite things.<br/>
+&ndash; me<br/>
+</p>
+
+
+<p>
+These are my notes for a talk given to the Connecticut CTO Club on March 21,
+2012.
+</p>
+<p>
+Title of this talk should not be "Emerging Platforms and Frameworks" but
+perhaps "Playing With Languages", or "The Polyglot Programmer", or "Jim's
+completely personal, subjective look at some cool programming languages."
+I've played with some of these languages for a few days, others on and off
+for a few decades.
+</p>
+<p>
+This presentation is a subjective look at programming languages that I think
+your developers should be investigating, playing with, and learning from.
+Will look at both old, busted hotness and new hotness.
+</p>
+<p>
+Also an ultra brief mention of some frameworks and development tools for
+those languages.
+</p>
+<p>
+Why bother playing with new languages? Learning a new language helps you use
+the languages you already know even better. Helps you understand strengths
+and weaknesses. Sapir-Whorf hypothesis?
+</p>
+<p>
+See Paul Graham's <a href="http://www.paulgraham.com/avg.html">Beating the Averages</a> for an introduction to Blub.
+</p>
+
+</div>
+
+<div id="outline-container-1.1" class="outline-3">
+<h3 id="sec-1.1"><span class="section-number-3">1.1</span> Risks of Playing </h3>
+<div class="outline-text-3" id="text-1.1">
+
+
+<p>
+Big risk: prototype goes into production, as happens so often.
+</p>
+<p>
+Go ahead and use these languages in production. Most of them are very
+mature and stable. Many of them interact with or run on existing tech
+(JVM, CLR).
+</p>
+<p>
+Will you be able to find developers to support this new code and expand
+on it? Let your developers use some of these and I claim you'll be
+beating away good developers with a stick. Have only mediocre developers?
+Let them get better &mdash; or cut away dead wood that refuses to learn new
+things and keep the ones that enjoy learning and applying their new-found
+knowledge.
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Definitions </h2>
+<div class="outline-text-2" id="text-2">
+
+
+
+</div>
+
+<div id="outline-container-2.1" class="outline-3">
+<h3 id="sec-2.1"><span class="section-number-3">2.1</span> Typing </h3>
+<div class="outline-text-3" id="text-2.1">
+
+
+
+</div>
+
+<div id="outline-container-2.1.1" class="outline-4">
+<h4 id="sec-2.1.1"><span class="section-number-4">2.1.1</span> Dynamic vs. Static Typing </h4>
+<div class="outline-text-4" id="text-2.1.1">
+
+
+<ul>
+<li>
+Type checking performed at run time (dynamic) vs. compile time (static)
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-2.1.2" class="outline-4">
+<h4 id="sec-2.1.2"><span class="section-number-4">2.1.2</span> Strong vs. Weak Typing </h4>
+<div class="outline-text-4" id="text-2.1.2">
+
+
+<ul>
+<li>
+Strong: practically speaking, can't cast to another non-related type
+
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2.2" class="outline-3">
+<h3 id="sec-2.2"><span class="section-number-3">2.2</span> Meta-programming </h3>
+<div class="outline-text-3" id="text-2.2">
+
+
+<p>
+The ability to change, at run time, the way the language works (for
+example, message passing a la method_missing), the way that types behave,
+or change the way the type system behaves. Examples: method_missing,
+using Class#inherited to add methods to a class at run time.
+</p>
+<p>
+Remember: metaprogramming is jus tprogramming.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2.3" class="outline-3">
+<h3 id="sec-2.3"><span class="section-number-3">2.3</span> Functional Programming </h3>
+<div class="outline-text-3" id="text-2.3">
+
+
+<p>
+Program is a series of mathematical functions. No side effects, state, or
+mutable data.
+</p>
+<p>
+No side effects means after the execution of a function nothing else in
+the system has changed &mdash; no state changes, and to the ultimate extreme
+no input or output!
+</p>
+<p>
+Makes code easier to test and easier to verify correctness.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2.4" class="outline-3">
+<h3 id="sec-2.4"><span class="section-number-3">2.4</span> Object Orientation </h3>
+<div class="outline-text-3" id="text-2.4">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2.5" class="outline-3">
+<h3 id="sec-2.5"><span class="section-number-3">2.5</span> Actors / Agents </h3>
+<div class="outline-text-3" id="text-2.5">
+
+
+<p>
+Message passing between independently running chunks or objects.
+Autonomous individuals.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2.6" class="outline-3">
+<h3 id="sec-2.6"><span class="section-number-3">2.6</span> Parallel and Concurrent </h3>
+<div class="outline-text-3" id="text-2.6">
+
+
+<p>
+The difference doesn't matter for this talk.
+</p>
+<p>
+Concurrent code is made up of multiple streams of execution. Streams can
+communicate and interact with each other. Concurrent code <i>may</i> be
+executed in parallel. Concurrent programs may use shared memory or
+message passing to communicate between concurrent subsystems.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2.7" class="outline-3">
+<h3 id="sec-2.7"><span class="section-number-3">2.7</span> Software Transactional Memory (STM) </h3>
+<div class="outline-text-3" id="text-2.7">
+
+
+<p>
+Database transactions for memory.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2.8" class="outline-3">
+<h3 id="sec-2.8"><span class="section-number-3">2.8</span> Immutability </h3>
+<div class="outline-text-3" id="text-2.8">
+
+
+<p>
+State that can not change. Makes it easier for compilers and runtimes to
+reason about the code and what side-effects it may have, and make
+optimizations.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2.9" class="outline-3">
+<h3 id="sec-2.9"><span class="section-number-3">2.9</span> Distributed Programming </h3>
+<div class="outline-text-3" id="text-2.9">
+
+
+<p>
+Software runs on different machines but acts as if it's running on one
+machine.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2.10" class="outline-3">
+<h3 id="sec-2.10"><span class="section-number-3">2.10</span> REPL </h3>
+<div class="outline-text-3" id="text-2.10">
+
+
+<p>
+Read-Eval-Print Loop.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2.11" class="outline-3">
+<h3 id="sec-2.11"><span class="section-number-3">2.11</span> Macro </h3>
+<div class="outline-text-3" id="text-2.11">
+
+
+<p>
+Code that writes code.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2.12" class="outline-3">
+<h3 id="sec-2.12"><span class="section-number-3">2.12</span> Homoiconicity </h3>
+<div class="outline-text-3" id="text-2.12">
+
+
+<p>
+Code and data are stored in the same format. Lisp is the most famous
+example. Makes many things like code manipulation easy.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2.13" class="outline-3">
+<h3 id="sec-2.13"><span class="section-number-3">2.13</span> Pattern Matching / Destructuring </h3>
+<div class="outline-text-3" id="text-2.13">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2.14" class="outline-3">
+<h3 id="sec-2.14"><span class="section-number-3">2.14</span> More </h3>
+<div class="outline-text-3" id="text-2.14">
+
+
+<p>
+Defined below.
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> How to Play With a New Language </h2>
+<div class="outline-text-2" id="text-3">
+
+
+<ul>
+<li>
+Follow along with the tutorials, line by line
+
+</li>
+<li>
+Write a small utility
+<ul>
+<li>
+Will immediately start diving into libraries
+
+</li>
+</ul>
+</li>
+<li>
+Clone an existing small app
+<ul>
+<li>
+Almost literal transliteration from old language
+</li>
+<li>
+Iterate, improving what you've written
+<ul>
+<li>
+Start using new language features
+</li>
+<li>
+Start making better use of existing standard libraries
+</li>
+<li>
+Start using new idioms
+</li>
+</ul>
+</li>
+<li>
+At this point you'll find yourself starting to think differently
+
+</li>
+</ul>
+</li>
+<li>
+Write something larger
+<ul>
+<li>
+Ask on mailing lists
+
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Old Busted Hotness vs. New Hotness </h2>
+<div class="outline-text-2" id="text-4">
+
+
+<p>
+There's something to be said for learning a few key languages that have
+influenced the design of many others. My list:
+</p>
+<ul>
+<li>
+Assembly
+</li>
+<li>
+C
+</li>
+<li>
+Smalltalk
+</li>
+<li>
+Lisp
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Smalltalk </h2>
+<div class="outline-text-2" id="text-5">
+
+
+<p>
+Core concept: message passing between objects that have no other knowledge
+of each other. Ask another object to do something or tell you about itself.
+From biology: "cell" holds data (state) and responds to messages.
+</p>
+<p>
+Alan Kay, inventor of OO, co-developed Smalltalk as a language for
+"human-computer symbiosis" and education.
+</p>
+<p>
+Like the game of Go: small number of rules, powerful combinations. You can
+learn Smalltalk in five minutes. The standard class library, however&hellip;
+</p>
+<p>
+Coder spends 80% of time reading libraries and other code, then writes the
+one or two lines that takes advantage of all of that.
+</p>
+<p>
+Incredibly mature libraries and core classes.
+</p>
+<p>
+VM with image. Everything in memory, everything saved to disk when image is
+saved: code, objects, state. Live debugging. Debugger is an editor. Halt,
+edit, resume. Ultimate TDD.
+</p>
+<p>
+No files. Code browser and editor built in.
+</p>
+<p>
+Blocks/closures. Even "if" is implemented as message passing. <code>obj ifTrue: block</code>.
+</p>
+<p>
+Not the best for multi-developer development.
+</p>
+<p>
+REPL
+</p>
+<p>
+Free implementations: Pharo (for developers), Squeak (for experimentation
+and education), Gnu Smalltalk (file based).
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Lisp: Common Lisp, Scheme </h2>
+<div class="outline-text-2" id="text-6">
+
+
+<p>
+Two opposite ends of a spectrum. Common Lisp is the Emacs of the Lisp world.
+Scheme is the "ed" (pure, minimalist).
+</p>
+<p>
+Macros: code that writes code. Homoiconicity: code is data and vice versa.
+That means you can create or manipulate code as if it were data. Do so
+during "read time" (sort of like compile time) and you can easily write code
+that writes code.
+</p>
+<p>
+Common Lisp is a language that can be used with pretty much any style of
+programming: functional, procedural, OO (CLOS, the Common Lisp Object
+System, with classes, instances, generic functions, and multimethods with
+multiple dispatch).
+</p>
+<p>
+A few different implementations of CL: SBCL, ABCL, CLISP, CMUCL. I mainly
+use SBCL when playing with CL.
+</p>
+<p>
+REPL
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Forth </h2>
+<div class="outline-text-2" id="text-7">
+
+
+<p>
+Stack based. Again like game of "Go". Build up "words" (subroutines).
+Procedural, weakly typed.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> Assembly </h2>
+<div class="outline-text-2" id="text-8">
+
+
+<p>
+Learn how your machine really works! Understand memory and pointers like you
+never have before!
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> Clojure </h2>
+<div class="outline-text-2" id="text-9">
+
+
+
+</div>
+
+<div id="outline-container-9.1" class="outline-3">
+<h3 id="sec-9.1"><span class="section-number-3">9.1</span> List, Map, Vector, Set </h3>
+<div class="outline-text-3" id="text-9.1">
+
+
+<p>
+More syntax to support them. All implement a common supertype "sequence".
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-9.2" class="outline-3">
+<h3 id="sec-9.2"><span class="section-number-3">9.2</span> Java interoperability </h3>
+<div class="outline-text-3" id="text-9.2">
+
+
+<p>
+Runs on the JVM. Fewer parens than Java!
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-9.3" class="outline-3">
+<h3 id="sec-9.3"><span class="section-number-3">9.3</span> Functional </h3>
+<div class="outline-text-3" id="text-9.3">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-9.4" class="outline-3">
+<h3 id="sec-9.4"><span class="section-number-3">9.4</span> Sequences </h3>
+<div class="outline-text-3" id="text-9.4">
+
+
+<p>
+Unified set of functions that works on all seq-able types
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-9.5" class="outline-3">
+<h3 id="sec-9.5"><span class="section-number-3">9.5</span> Lazy </h3>
+<div class="outline-text-3" id="text-9.5">
+
+
+<p>
+Infinite lists
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-9.6" class="outline-3">
+<h3 id="sec-9.6"><span class="section-number-3">9.6</span> Recursion </h3>
+<div class="outline-text-3" id="text-9.6">
+
+
+<p>
+JVM doesn't support recursion directly (yet), so have loop/recur and
+supports trampolining.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-9.7" class="outline-3">
+<h3 id="sec-9.7"><span class="section-number-3">9.7</span> Destructuring </h3>
+<div class="outline-text-3" id="text-9.7">
+
+
+<p>
+A.k.a. pattern matching. Pull pieces out of data structures (lists).
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-9.8" class="outline-3">
+<h3 id="sec-9.8"><span class="section-number-3">9.8</span> State vs. Identity </h3>
+<div class="outline-text-3" id="text-9.8">
+
+
+<p>
+State: your age
+Identity: who you are
+</p>
+<p>
+In Clojure, identities (variables, references, actors) reference
+different descriptions of state over time.
+</p>
+<p>
+Changes in state over time can be implemented very efficiently because of
+immutability. Values are immutable, persistent data structures. Updating
+an identity does not destroy old values.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-9.9" class="outline-3">
+<h3 id="sec-9.9"><span class="section-number-3">9.9</span> Software Transactional Memory </h3>
+<div class="outline-text-3" id="text-9.9">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-9.10" class="outline-3">
+<h3 id="sec-9.10"><span class="section-number-3">9.10</span> STM </h3>
+<div class="outline-text-3" id="text-9.10">
+
+
+<ul>
+<li>
+Reference (coordinated, sync access)
+</li>
+<li>
+Atom (uncoordinated, synchronous)
+</li>
+<li>
+Agent (async, fire (pass a function) and maybe forget)
+</li>
+<li>
+Vars (thread-local)
+
+</li>
+</ul>
+
+<p>Coordinated vs. uncoordinated, synchronous vs. asynchronous.
+</p>
+<p>
+Transients let you break out of strict rules around synchronized STM
+access, for efficiency's sake.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-9.11" class="outline-3">
+<h3 id="sec-9.11"><span class="section-number-3">9.11</span> Data types </h3>
+<div class="outline-text-3" id="text-9.11">
+
+
+<p>
+Define abstract types
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-9.12" class="outline-3">
+<h3 id="sec-9.12"><span class="section-number-3">9.12</span> REPL </h3>
+<div class="outline-text-3" id="text-9.12">
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-10" class="outline-2">
+<h2 id="sec-10"><span class="section-number-2">10</span> Scala </h2>
+<div class="outline-text-2" id="text-10">
+
+
+
+</div>
+
+<div id="outline-container-10.1" class="outline-3">
+<h3 id="sec-10.1"><span class="section-number-3">10.1</span> C :: C++ -&gt; Java :: Scala </h3>
+<div class="outline-text-3" id="text-10.1">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-10.2" class="outline-3">
+<h3 id="sec-10.2"><span class="section-number-3">10.2</span> Functional, Strongly and Statically Typed </h3>
+<div class="outline-text-3" id="text-10.2">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-10.3" class="outline-3">
+<h3 id="sec-10.3"><span class="section-number-3">10.3</span> Wrappers around Java classes and primitives </h3>
+<div class="outline-text-3" id="text-10.3">
+
+
+<p>
+&hellip;so pretty efficient
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-10.4" class="outline-3">
+<h3 id="sec-10.4"><span class="section-number-3">10.4</span> Also OO, Traits </h3>
+<div class="outline-text-3" id="text-10.4">
+
+
+<p>
+Traits: methods and field definitions. Mixins. Can mix any trait into any
+class.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-10.5" class="outline-3">
+<h3 id="sec-10.5"><span class="section-number-3">10.5</span> Mutable and Immutable </h3>
+<div class="outline-text-3" id="text-10.5">
+
+
+
+</div>
+
+<div id="outline-container-10.5.1" class="outline-4">
+<h4 id="sec-10.5.1"><span class="section-number-4">10.5.1</span> Collections, by default immutable </h4>
+<div class="outline-text-4" id="text-10.5.1">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-10.5.2" class="outline-4">
+<h4 id="sec-10.5.2"><span class="section-number-4">10.5.2</span> Variables (val vs. var) </h4>
+<div class="outline-text-4" id="text-10.5.2">
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-10.6" class="outline-3">
+<h3 id="sec-10.6"><span class="section-number-3">10.6</span> Type inference </h3>
+<div class="outline-text-3" id="text-10.6">
+
+
+<ul>
+<li>
+Hindley-Milner type inference
+</li>
+<li>
+Great for simple cases
+</li>
+<li>
+Overly complex if trying to build a library or for certain types of
+Java interaction
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-10.7" class="outline-3">
+<h3 id="sec-10.7"><span class="section-number-3">10.7</span> Case Classes and Pattern Matching </h3>
+<div class="outline-text-3" id="text-10.7">
+
+
+<p>
+Pattern matching: destructuring. Used with <code>match</code> statements and case
+classes.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-10.8" class="outline-3">
+<h3 id="sec-10.8"><span class="section-number-3">10.8</span> Academic </h3>
+<div class="outline-text-3" id="text-10.8">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-10.9" class="outline-3">
+<h3 id="sec-10.9"><span class="section-number-3">10.9</span> Java interaction, .NET (CLR) "also available" </h3>
+<div class="outline-text-3" id="text-10.9">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-10.10" class="outline-3">
+<h3 id="sec-10.10"><span class="section-number-3">10.10</span> XML </h3>
+<div class="outline-text-3" id="text-10.10">
+
+
+<p>
+Useful for (X)HTML templating, I suppose.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-10.11" class="outline-3">
+<h3 id="sec-10.11"><span class="section-number-3">10.11</span> Shortcomings (IMHO) </h3>
+<div class="outline-text-3" id="text-10.11">
+
+
+<ul>
+<li>
+type system
+</li>
+<li>
+slow compiler
+</li>
+<li>
+IDE support still weak
+</li>
+<li>
+language still changing, not always backwards compatible
+</li>
+<li>
+docs not the best; books don't always cover everything you need
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-10.12" class="outline-3">
+<h3 id="sec-10.12"><span class="section-number-3">10.12</span> REPL / "Scriptable" </h3>
+<div class="outline-text-3" id="text-10.12">
+
+
+<p>
+Unix and Windows
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-10.13" class="outline-3">
+<h3 id="sec-10.13"><span class="section-number-3">10.13</span> Tool for keeping Java running so start up times are eliminated </h3>
+<div class="outline-text-3" id="text-10.13">
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-11" class="outline-2">
+<h2 id="sec-11"><span class="section-number-2">11</span> Erlang </h2>
+<div class="outline-text-2" id="text-11">
+
+
+<p>
+Developed at Ericsson for telecom. Influenced by Prolog.
+</p>
+<ul>
+<li>
+Soft real time
+</li>
+<li>
+Distributed
+</li>
+<li>
+High-availability
+
+</li>
+</ul>
+
+</div>
+
+<div id="outline-container-11.1" class="outline-3">
+<h3 id="sec-11.1"><span class="section-number-3">11.1</span> Features </h3>
+<div class="outline-text-3" id="text-11.1">
+
+
+<ul>
+<li>
+Functional: can't change var's value after assignment
+</li>
+<li>
+Distributed programming with actors
+</li>
+<li>
+Concurrency
+</li>
+<li>
+Bit and byte stream
+</li>
+<li>
+Pattern matching (destructuring)
+<ul>
+<li>
+Used on method params and in match statement
+</li>
+</ul>
+</li>
+<li>
+Tuples, Records
+</li>
+<li>
+Recursion
+</li>
+<li>
+List manipulation, great &mdash; string manipulation, not so hot
+</li>
+<li>
+REPL
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-11.2" class="outline-3">
+<h3 id="sec-11.2"><span class="section-number-3">11.2</span> Actors </h3>
+<div class="outline-text-3" id="text-11.2">
+
+
+<ul>
+<li>
+300,000 on one machine no problem
+</li>
+<li>
+Pass data and functions
+</li>
+<li>
+Uses a mailbox
+
+
+</li>
+</ul>
+
+
+<pre class="src src-erlang"><span style="color: #0000ff;">loop</span>(<span style="color: #a0522d;">State</span>)
+  <span style="color: #b22222;">%% </span><span style="color: #b22222;">...
+</span>  <span style="color: #228b22;">loop</span>(<span style="color: #a0522d;">NewState</span>).
+  <span style="color: #b22222;">%</span></pre>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-11.3" class="outline-3">
+<h3 id="sec-11.3"><span class="section-number-3">11.3</span> OTP </h3>
+<div class="outline-text-3" id="text-11.3">
+
+
+<ul>
+<li>
+Framework for Slave/Master monitoring and fail over
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-11.4" class="outline-3">
+<h3 id="sec-11.4"><span class="section-number-3">11.4</span> Mnesia </h3>
+<div class="outline-text-3" id="text-11.4">
+
+
+<ul>
+<li>
+Distributed database
+</li>
+<li>
+ACID
+</li>
+<li>
+Query using Erlang
+</li>
+<li>
+Cassandra, CouchDB
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-11.5" class="outline-3">
+<h3 id="sec-11.5"><span class="section-number-3">11.5</span> Hot code swapping </h3>
+<div class="outline-text-3" id="text-11.5">
+
+
+<ul>
+<li>
+Actors typically run in a loop, calling the loop func recursively at
+the end. If you pass in a new function that implements an improved
+version of the loop or even completely new code, your loop can call
+that function at the end, replacing the old loop with the new code.
+Voila! Hot code swapping.
+
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-12" class="outline-2">
+<h2 id="sec-12"><span class="section-number-2">12</span> Go </h2>
+<div class="outline-text-2" id="text-12">
+
+
+<p>
+A better C &mdash; systems programming language. Griesemer, Pike, and Thompson.
+Used at Google (though I hear not for that much).
+</p>
+<ul>
+<li>
+Compiled
+</li>
+<li>
+GC
+</li>
+<li>
+Concurrent
+</li>
+<li>
+Type safety and memory safety
+</li>
+<li>
+New built-in types: maps, Unicode strings, array slices, and channels
+</li>
+<li>
+Multiple value return (often used to return error code along with result)
+</li>
+<li>
+Decent standard libraries
+
+</li>
+</ul>
+
+<p>Everything passed as copies. Mostly pass references. For arrays, mostly pass
+slices.
+</p>
+<p>
+Go 1.0 just came out.
+</p>
+
+</div>
+
+<div id="outline-container-12.1" class="outline-3">
+<h3 id="sec-12.1"><span class="section-number-3">12.1</span> Interfaces and Object Model </h3>
+<div class="outline-text-3" id="text-12.1">
+
+
+<p>
+No inheritance, generic types, or method overloading.
+</p>
+<p>
+Interfaces are close to duck typing: define a set of functions. If your
+type implements those methods then you can be used wherever the interface
+is used. No need to declare that in your type, IIRC.
+</p>
+<p>
+Trick: generic collections via use of the empty interface. The type of
+the thing that implements the empty interface is kept.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-12.2" class="outline-3">
+<h3 id="sec-12.2"><span class="section-number-3">12.2</span> Channels </h3>
+<div class="outline-text-3" id="text-12.2">
+
+
+<p>
+Inter-process communications. "in" and "out" channels produce and consume
+pieces of data (characters, ints, objects). Often used with goroutines.
+</p>
+<p>
+Infinite lists, generators.
+</p>
+<p>
+Cross-machine.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-12.3" class="outline-3">
+<h3 id="sec-12.3"><span class="section-number-3">12.3</span> Goroutines </h3>
+<div class="outline-text-3" id="text-12.3">
+
+
+<p>
+Small, lightweight threads. Executed in parallel.
+</p>
+<p>
+Idiom: channel running in goroutine acting as consumer or producer.
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-13" class="outline-2">
+<h2 id="sec-13"><span class="section-number-2">13</span> Haskell </h2>
+<div class="outline-text-2" id="text-13">
+
+
+<ul>
+<li>
+Closest to pure math
+</li>
+<li>
+Types, types, types
+</li>
+<li>
+Pure functional
+</li>
+<li>
+Lazy
+</li>
+<li>
+Monads
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-14" class="outline-2">
+<h2 id="sec-14"><span class="section-number-2">14</span> OCaml </h2>
+<div class="outline-text-2" id="text-14">
+
+
+<ul>
+<li>
+"Objective Caml"
+</li>
+<li>
+Dialect of ML
+
+</li>
+</ul>
+
+</div>
+
+<div id="outline-container-14.1" class="outline-3">
+<h3 id="sec-14.1"><span class="section-number-3">14.1</span> ML </h3>
+<div class="outline-text-3" id="text-14.1">
+
+
+<ul>
+<li>
+Functional, Hindley-Milner type inference
+
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-15" class="outline-2">
+<h2 id="sec-15"><span class="section-number-2">15</span> IO, Self </h2>
+<div class="outline-text-2" id="text-15">
+
+
+<ul>
+<li>
+Prototype inheritance
+</li>
+<li>
+Slots contain values or methods
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-16" class="outline-2">
+<h2 id="sec-16"><span class="section-number-2">16</span> Ruby </h2>
+<div class="outline-text-2" id="text-16">
+
+
+<p>
+I can't say enough good about Ruby. It's how my brain works.It's my go-to
+language for almost everything. Path from thought to code is shortest and
+least painful.
+</p>
+
+</div>
+
+<div id="outline-container-16.1" class="outline-3">
+<h3 id="sec-16.1"><span class="section-number-3">16.1</span> Making Programmers Happy; Principal of Least Surprise </h3>
+<div class="outline-text-3" id="text-16.1">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-16.2" class="outline-3">
+<h3 id="sec-16.2"><span class="section-number-3">16.2</span> Duck typing </h3>
+<div class="outline-text-3" id="text-16.2">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-16.3" class="outline-3">
+<h3 id="sec-16.3"><span class="section-number-3">16.3</span> JRuby </h3>
+<div class="outline-text-3" id="text-16.3">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-16.4" class="outline-3">
+<h3 id="sec-16.4"><span class="section-number-3">16.4</span> Mirah </h3>
+<div class="outline-text-3" id="text-16.4">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-16.5" class="outline-3">
+<h3 id="sec-16.5"><span class="section-number-3">16.5</span> REPL </h3>
+<div class="outline-text-3" id="text-16.5">
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-17" class="outline-2">
+<h2 id="sec-17"><span class="section-number-2">17</span> Python </h2>
+<div class="outline-text-2" id="text-17">
+
+
+
+</div>
+
+<div id="outline-container-17.1" class="outline-3">
+<h3 id="sec-17.1"><span class="section-number-3">17.1</span> Jython </h3>
+<div class="outline-text-3" id="text-17.1">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-17.2" class="outline-3">
+<h3 id="sec-17.2"><span class="section-number-3">17.2</span> REPL </h3>
+<div class="outline-text-3" id="text-17.2">
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-18" class="outline-2">
+<h2 id="sec-18"><span class="section-number-2">18</span> Groovy </h2>
+<div class="outline-text-2" id="text-18">
+
+
+
+</div>
+
+<div id="outline-container-18.1" class="outline-3">
+<h3 id="sec-18.1"><span class="section-number-3">18.1</span> Java devs jealous of Ruby </h3>
+<div class="outline-text-3" id="text-18.1">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-18.2" class="outline-3">
+<h3 id="sec-18.2"><span class="section-number-3">18.2</span> Elvis Operator (handle nil gracefully) </h3>
+<div class="outline-text-3" id="text-18.2">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-18.3" class="outline-3">
+<h3 id="sec-18.3"><span class="section-number-3">18.3</span> REPL </h3>
+<div class="outline-text-3" id="text-18.3">
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-19" class="outline-2">
+<h2 id="sec-19"><span class="section-number-2">19</span> PHP </h2>
+<div class="outline-text-2" id="text-19">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-20" class="outline-2">
+<h2 id="sec-20"><span class="section-number-2">20</span> JavaScript </h2>
+<div class="outline-text-2" id="text-20">
+
+
+<ul>
+<li>
+Prototype inheritance
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-21" class="outline-2">
+<h2 id="sec-21"><span class="section-number-2">21</span> CoffeeScript </h2>
+<div class="outline-text-2" id="text-21">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-22" class="outline-2">
+<h2 id="sec-22"><span class="section-number-2">22</span> Objective C </h2>
+<div class="outline-text-2" id="text-22">
+
+
+<p>
+<a href="http://github.com/jimm/subjc">Subjective C</a> (check that link; is the repo name correct?)
+</p>
+<p>
+Brad Cox, classes as programmable chips that can be plugged together.
+NeXTSTEP (or NextStep, or NextSTEP, or NeXtStEp&hellip;)
+</p>
+
+</div>
+
+<div id="outline-container-22.1" class="outline-3">
+<h3 id="sec-22.1"><span class="section-number-3">22.1</span> C + Smalltalk </h3>
+<div class="outline-text-3" id="text-22.1">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-22.2" class="outline-3">
+<h3 id="sec-22.2"><span class="section-number-3">22.2</span> Protocols </h3>
+<div class="outline-text-3" id="text-22.2">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-22.3" class="outline-3">
+<h3 id="sec-22.3"><span class="section-number-3">22.3</span> Handle nil gracefully </h3>
+<div class="outline-text-3" id="text-22.3">
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-23" class="outline-2">
+<h2 id="sec-23"><span class="section-number-2">23</span> F# </h2>
+<div class="outline-text-2" id="text-23">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-24" class="outline-2">
+<h2 id="sec-24"><span class="section-number-2">24</span> Frameworks </h2>
+<div class="outline-text-2" id="text-24">
+
+
+
+</div>
+
+<div id="outline-container-24.1" class="outline-3">
+<h3 id="sec-24.1"><span class="section-number-3">24.1</span> Packaging systems </h3>
+<div class="outline-text-3" id="text-24.1">
+
+
+<ul>
+<li>
+Ruby: gems
+</li>
+<li>
+Python: eggs
+</li>
+<li>
+Perl: CPAN
+</li>
+<li>
+Groovy: ??
+</li>
+<li>
+Squeak/Pharo Smalltalk: Montecello
+</li>
+<li>
+Scala: sbaz
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-24.2" class="outline-3">
+<h3 id="sec-24.2"><span class="section-number-3">24.2</span> Building, Writing Apps </h3>
+<div class="outline-text-3" id="text-24.2">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-24.3" class="outline-3">
+<h3 id="sec-24.3"><span class="section-number-3">24.3</span> Static HTML </h3>
+<div class="outline-text-3" id="text-24.3">
+
+
+<p>
+No Framework Needed: <a href="http://37signals.com/svn/posts/3103-no-framework-needed">http://37signals.com/svn/posts/3103-no-framework-needed</a>
+37signals
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-24.4" class="outline-3">
+<h3 id="sec-24.4"><span class="section-number-3">24.4</span> Java, Scala Play </h3>
+<div class="outline-text-3" id="text-24.4">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-24.5" class="outline-3">
+<h3 id="sec-24.5"><span class="section-number-3">24.5</span> Roo for Java </h3>
+<div class="outline-text-3" id="text-24.5">
+
+
+<p>
+REPL for building Spring apps
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-24.6" class="outline-3">
+<h3 id="sec-24.6"><span class="section-number-3">24.6</span> Node.js, Backbone.js for Javascript; JQuery </h3>
+<div class="outline-text-3" id="text-24.6">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-24.7" class="outline-3">
+<h3 id="sec-24.7"><span class="section-number-3">24.7</span> Lift for Scala </h3>
+<div class="outline-text-3" id="text-24.7">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-24.8" class="outline-3">
+<h3 id="sec-24.8"><span class="section-number-3">24.8</span> sbt for Scala </h3>
+<div class="outline-text-3" id="text-24.8">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-24.9" class="outline-3">
+<h3 id="sec-24.9"><span class="section-number-3">24.9</span> Scala Pre-forking JVM?? </h3>
+<div class="outline-text-3" id="text-24.9">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-24.10" class="outline-3">
+<h3 id="sec-24.10"><span class="section-number-3">24.10</span> CL Hunchentoot </h3>
+<div class="outline-text-3" id="text-24.10">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-24.11" class="outline-3">
+<h3 id="sec-24.11"><span class="section-number-3">24.11</span> Clojure web app dev still open </h3>
+<div class="outline-text-3" id="text-24.11">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-24.12" class="outline-3">
+<h3 id="sec-24.12"><span class="section-number-3">24.12</span> lein and cake for Clojure </h3>
+<div class="outline-text-3" id="text-24.12">
+
+
+<ul>
+<li>
+lein for project management (dependencies, building)
+</li>
+<li>
+cake for pre-forking and more
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-24.13" class="outline-3">
+<h3 id="sec-24.13"><span class="section-number-3">24.13</span> Erlang Yaws (?), MochiWeb, webmachine (on top of MochiWeb) </h3>
+<div class="outline-text-3" id="text-24.13">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-24.14" class="outline-3">
+<h3 id="sec-24.14"><span class="section-number-3">24.14</span> Go ? </h3>
+<div class="outline-text-3" id="text-24.14">
+
+
+<p>
+There are a few, but I've read that if you use them you're doing it
+wrong. The standard library includes HTTP servers, templating, and more.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-24.15" class="outline-3">
+<h3 id="sec-24.15"><span class="section-number-3">24.15</span> Ruby: Rails, Sinatra, more. Rack </h3>
+<div class="outline-text-3" id="text-24.15">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-24.16" class="outline-3">
+<h3 id="sec-24.16"><span class="section-number-3">24.16</span> Groovy: Grails, Gradle (build) </h3>
+<div class="outline-text-3" id="text-24.16">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-24.17" class="outline-3">
+<h3 id="sec-24.17"><span class="section-number-3">24.17</span> Python: ??? </h3>
+<div class="outline-text-3" id="text-24.17">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-24.18" class="outline-3">
+<h3 id="sec-24.18"><span class="section-number-3">24.18</span> PHP: Zend, Kohana </h3>
+<div class="outline-text-3" id="text-24.18">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-24.19" class="outline-3">
+<h3 id="sec-24.19"><span class="section-number-3">24.19</span> Smalltalk: Seaside </h3>
+<div class="outline-text-3" id="text-24.19">
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-25" class="outline-2">
+<h2 id="sec-25"><span class="section-number-2">25</span> Takeaways </h2>
+<div class="outline-text-2" id="text-25">
+
+
+<ul>
+<li>
+Play
+
+</li>
+<li>
+Learn to think different
+
+</li>
+<li>
+Playing with new languages improves your ability to use the languages you
+use now
+</li>
+</ul>
+</div>
+</div>
+<div id="postamble">
+<p class="author"> Author: Jim Menard
+<a href="mailto:jim@jimmenard.com">&lt;jim@jimmenard.com&gt;</a>
+</p>
+<p class="date"> Date: 2012-04-11 14:35:56 EDT</p>
+<p class="creator">HTML generated by org-mode 6.33x in emacs 23</p>
+</div>
+</div>
+</body>
+</html>

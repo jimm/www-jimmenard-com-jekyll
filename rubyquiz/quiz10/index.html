@@ -1,0 +1,222 @@
+<!--#set var="pagetitle" value="Ruby Quiz 10: Crosswords" -->
+<!--#include virtual="/header.html"-->
+
+<p>Here is my solution to Ruby Quiz 10: <a
+href="http://www.rubyquiz.com/quiz10.html">Crosswords</a>. Jump down to the <a
+href="#solution">solution</a> or the <a href="#data">test data</a>.</p>
+
+<p>Back to my <a href="../">Ruby Quiz solutions page</a>.</p>
+
+
+
+<h2 id="solution">Solution</h2>
+
+<pre>
+<span class='rb-com'>#! /usr/bin/env ruby</span>
+
+class <span class='rb-kon'>Cell</span>
+
+    <span class='rb-kon'>WIDTH</span> = 6
+    <span class='rb-kon'>HEIGHT</span> = 4
+
+    attr_accessor :neighbors        <span class='rb-com'># Hash, key=:left, :right, :top, :bottom</span>
+
+    def <span class='rb-def'>Cell.from_char</span>(c)
+        return c == <span class='rb-str'>'_'</span> ? WhiteCell.new : BlackCell.new
+    end
+
+    def <span class='rb-def'>initialize</span>
+        @neighbors = {}
+    end
+
+    def <span class='rb-def'>print_border_at</span>(row, col, paper)
+        x = col * (Cell::<span class='rb-kon'>WIDTH</span> - 1)
+        y = row * (Cell::<span class='rb-kon'>HEIGHT</span> - 1)
+
+        <span class='rb-com'># corners</span>
+        paper[y][x] =
+            paper[y][x+Cell::<span class='rb-kon'>WIDTH</span>-1] =
+            paper[y+Cell::<span class='rb-kon'>HEIGHT</span>-1][x] =
+            paper[y+Cell::<span class='rb-kon'>HEIGHT</span>-1][x+Cell::<span class='rb-kon'>WIDTH</span>-1] = <span class='rb-str'>'+'</span>
+
+        <span class='rb-com'># top and bottom</span>
+        (Cell::<span class='rb-kon'>WIDTH</span>-2).times { | j | paper[y][x+1+j] = <span class='rb-str'>'-'</span> }
+        (Cell::<span class='rb-kon'>WIDTH</span>-2).times { | j | paper[y+Cell::<span class='rb-kon'>HEIGHT</span>-1][x+1+j] = <span class='rb-str'>'-'</span> }
+
+        <span class='rb-com'># sides</span>
+        (Cell::<span class='rb-kon'>HEIGHT</span> - 2).times { | i |
+            paper[y+1+i][x] = <span class='rb-str'>'|'</span>
+            paper[y+1+i][x+Cell::<span class='rb-kon'>WIDTH</span>-1] = <span class='rb-str'>'|'</span>
+        }
+    end
+
+end
+
+class <span class='rb-kon'>WhiteCell</span> &lt; <span class='rb-kon'>Cell</span>
+    attr_accessor :clue_number
+
+    def <span class='rb-def'>black?</span>
+        return false
+    end
+
+    def <span class='rb-def'>needs_clue_number?</span>
+        return ((@neighbors[:left].nil? || @neighbors[:left].black?) &amp;&amp;
+                !@neighbors[:right].nil? &amp;&amp; !@neighbors[:right].black?) ||
+               ((@neighbors[:top].nil? || @neighbors[:top].black?) &amp;&amp;
+                !@neighbors[:bottom].nil? &amp;&amp; !@neighbors[:bottom].black?)
+    end
+
+    def <span class='rb-def'>print_at</span>(row, col, paper)
+        print_border_at(row, col, paper)
+
+        if @clue_number
+            x = col * (Cell::<span class='rb-kon'>WIDTH</span> - 1)
+            y = row * (Cell::<span class='rb-kon'>HEIGHT</span> - 1)
+            s = @clue_number.to_s
+            s.split(//).each_with_index { | char, i |
+                paper[y+1][x+1+i] = char
+            }
+        end
+    end
+end
+
+class <span class='rb-kon'>BlackCell</span> &lt; <span class='rb-kon'>Cell</span>
+
+    def <span class='rb-def'>initialize</span>
+        super
+        @fill_char = <span class='rb-str'>'#'</span>
+    end
+
+    def <span class='rb-def'>black?</span>
+        return true
+    end
+
+    def <span class='rb-def'>hidden?</span>
+        return @hidden
+    end
+
+    def <span class='rb-def'>needs_clue_number?</span>
+        return false
+    end
+
+    def <span class='rb-def'>hide</span>
+        return if hidden?
+        @hidden = true
+        @fill_char = <span class='rb-str'>' '</span>
+        @neighbors.each_value { | cell | cell.hide if cell &amp;&amp; cell.black? }
+    end
+
+    def <span class='rb-def'>print_at</span>(row, col, paper)
+        return if hidden?
+
+        print_border_at(row, col, paper)
+
+        <span class='rb-com'># fill center</span>
+        x = col * (Cell::<span class='rb-kon'>WIDTH</span> - 1)
+        y = row * (Cell::<span class='rb-kon'>HEIGHT</span> - 1)
+         (Cell::<span class='rb-kon'>HEIGHT</span>-2).times { | i |
+            (Cell::<span class='rb-kon'>WIDTH</span>-2).times { | j | paper[y+1+i][x+1+j] = <span class='rb-str'>'#'</span> }
+        }
+    end
+
+    def <span class='rb-def'>print_scanline</span>(i)
+        print @fill_char * (Cell::<span class='rb-kon'>WIDTH</span> - 1)
+    end
+
+    def <span class='rb-def'>print_bottom</span>
+        print_scanline(0)
+    end
+
+    def <span class='rb-def'>print_right_wall</span>
+        print @fill_char
+    end
+end
+
+class <span class='rb-kon'>Puzzle</span>
+
+    def <span class='rb-def'>initialize</span>(io)
+        read_picture(io)
+        introduce_neighbors()
+        hide_outer_black()
+        assign_clue_numbers()
+    end
+
+    def <span class='rb-def'>read_picture</span>(io)
+        @cells = []
+        io.each_with_index { | line, i |
+            line = line.chomp.gsub(/[^x_]/i, '')
+            @cells[i] = []
+            line.split(//).each { | c | @cells[i] &lt;&lt; Cell.from_char(c) }
+        }
+    end
+
+    def <span class='rb-def'>introduce_neighbors</span>
+        @cells.each_with_index { | row, i |
+            row.each_with_index { | cell, j |
+                cell.neighbors[:left] = @cells[i][j-1] unless j == 0
+                cell.neighbors[:right] = @cells[i][j+1]
+                cell.neighbors[:top] = @cells[i-1][j] unless i == 0
+                cell.neighbors[:bottom] = @cells[i+1][j] if @cells[i+1]
+            }
+        }
+    end
+
+    def <span class='rb-def'>hide_outer_black</span>
+        @cells.first.each { | cell | cell.hide if cell.black? }
+        @cells.last.each { | cell | cell.hide if cell.black? }
+        @cells.each { | row |
+            row.first.hide if row.first.black?
+            row.last.hide if row.last.black?
+        }
+    end
+
+    def <span class='rb-def'>assign_clue_numbers</span>
+        clue_number = 1
+        @cells.each_with_index { | row, i |
+            row.each_with_index { | cell, j |
+                if cell.needs_clue_number?
+                    cell.clue_number = clue_number
+                    clue_number += 1
+                end
+            }
+        }
+    end
+
+    def <span class='rb-def'>print</span>
+        paper = blank_paper
+        @cells.each_with_index { | row, row_num |
+            row.each_with_index { | cell, col_num |
+                cell.print_at(row_num, col_num, paper)
+            }
+        }
+        paper.each { | scanline | puts scanline.join }
+    end
+
+    def <span class='rb-def'>blank_paper</span>
+        width = @cells[0].size * (Cell::<span class='rb-kon'>WIDTH</span> - 1) + 10
+        height = @cells.size * (Cell::<span class='rb-kon'>HEIGHT</span> - 1) + 10
+        paper = []
+        height.times { paper &lt;&lt; (<span class='rb-str'>' '</span> * width).split(//) }
+        return paper
+    end
+
+end
+
+Puzzle.new(ARGF).print
+</pre>
+
+
+
+<h2 id="data">Test Data</h2>
+
+<pre>
+X _ _ _ _ X X
+_ _ X _ _ _ _
+_ _ _ _ X _ _
+_ X _ _ X X X
+_ _ _ X _ _ _
+X _ _ _ _ _ X
+</pre>
+
+
+<!--#include virtual="/footer.html"-->

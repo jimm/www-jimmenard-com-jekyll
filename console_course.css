@@ -1,0 +1,19 @@
+#table-of-contents {
+  border: 1pt solid #AEBDCC;
+  background-color: #F3F5F7;
+  padding-top: 0.25em;
+  padding-bottom: 1em;
+}
+
+#table-of-contents a:link { color: black; }
+#table-of-contents a:visited { color: black; }
+#table-of-contents a:active { color: black; }
+#table-of-contents a:hover { color: black; }
+
+h2 {
+  background-color: #c33;
+  border: 1px solid black;
+  color: white;
+  margin-top: 2em;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+}

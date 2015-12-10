@@ -1,0 +1,93 @@
+<!--#set var="pagetitle" value="Squeak PostgreSQL" -->
+<!--#include virtual="/header.html"-->
+
+<p>Here is a <a href="http://www.postgresql.org/">PostgreSQL</a> database
+interface for <a href="http://www.squeak.org/">Squeak</a>, a wonderful
+Smalltalk implementation. In the spring of 2005, Leonardo Cecchi (<a
+href="mailto:l.cecchi@mind-informatica.com">l.cecchi@mind-informatica.com</a>)
+greatly improved upon the code by fixing some bugs, adding <a
+href="http://www.exept.de/exept/english/Smalltalk/frame_uebersicht.html">SmalltalkX</a>
+compatability, and creating SUnit tests.</p>
+
+<p>See the class comments for <code>PSQLClient</code> and the class methods
+<code>PSQLClient class>>example1</code> and <code>PSQLClient
+class>>example2</code>.</p>
+
+<h2>Files</h2>
+
+<ul>
+<li><a href="Jim-PostgreSQL-Config.st">Jim-PostgreSQL-Config.st</a>
+    (1k)</li>
+<li><a href="Jim-PostgreSQL-Backend.st">Jim-PostgreSQL-Backend.st</a>
+    (16k)</li>
+<li><a href="Jim-PostgreSQL-Frontend.st">Jim-PostgreSQL-Frontend.st</a>
+    (8k)</li>
+<li><a href="Jim-PostgreSQL.st">Jim-PostgreSQL.st</a>
+    (23k) (<i>Updated 2006-01-07</i>)</li>
+<li><a href="Jim-PostgreSQL-Test.st">Jim-PostgreSQL-Test.st</a>
+    (10k)</li>
+</ul>
+
+<h2>Installing</h2>
+
+<p>File-in the following files in the order they are listed above (config,
+back end, front end, PostgreSQL, and test).</p>
+
+<p>Edit <code>PSQLConfiguration class>>initialize</code> to reflect your
+version of Smalltalk (<code>#smalltalkx</code> or <code>#squeak</code>), then
+run that method.</p>
+
+<h2>Testing</h2>
+
+<p>Before running the unit tests, make sure to read the comments in
+<code>PSQLTestConfiguration class>>documentation</code>. They tell you what
+table you need to create in your test database and how to tell the tests
+which database to use.</p>
+
+
+<h2>News</h2>
+
+<dl>
+
+<dt>2006-01-07</dt>
+
+<dd>Fixed PSQLClient>>authenticate code that checks response to password
+command, thanks to Jess Balint (<a
+href="mailto:jbalint@gmail.com">jbalint@gmail.com</a>).</dd>
+
+<dt>2005-06-26</dt>
+
+<dd>
+Bug fixes and improvements by Leonardo Cecchi (<a
+href="mailto:l.cecchi@mind-informatica.com">l.cecchi@mind-informatica.com</a>).
+He has added SmalltalkX compatability and SUnit tests. </dd>
+
+<dt>2003-07-11</dt>
+
+<dd>
+This update adds the missing method
+<code>PSQLBMNoticeResponse>>message</code>. It also adds new messages
+<code>PSQLClient>>query:onError:onNotice:</code> and
+<code>PSQLClient>>query:onNotice:</code>. Either block may be
+<code>nil</code>. The default error block calls <code>Object>>error</code>:
+and the default notice block calls <code>Object>>inform:</code>. Thanks to
+Guillaume Pothier &lt;gpothier at free.fr&gt; for the suggestions that led
+to these changes.</dd>
+
+<dt>2003-05-09</dt>
+
+<dd>
+This update adds user error handling. The new method
+<code>PSQLClient>>query:onError:</code> takes a block that gets called when
+something goes wrong. The block is passed the error message string. </dd>
+
+</dl>
+
+<h2>License</h2>
+
+<p>This Squeak PostgreSQL database interface is Copyright &copy;
+2005&ndash;2006 by Jim Menard. It is copyrighted free software released under
+the Apache Software License, Version 2.0, a copy of which may be found at <a
+href="http://www.apache.org/LICENSE.txt">http://www.apache.org/LICENSE.txt</a>.</p>
+
+<!--#include virtual="/footer.html"-->

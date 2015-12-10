@@ -1,0 +1,122 @@
+<!--#set var="pagetitle" value="MIDI Through" -->
+<!--#include virtual="/header.html"-->
+
+<!-- // Introduction -->
+<h1>Introduction</h1>
+
+<p>
+<strong>MIDI Through</strong> does what it says. It connects your BeOS
+computer's MIDI outputs to its MIDI inputs and to the internal MIDI synth.
+You can turn off or on the connections between each MIDI input and output.
+By default, all inputs are connected to all outputs and to the MIDI synth.
+</p>
+
+<!-- // MIDI Port Window -->
+<h1>MIDI Port Window</h1>
+
+<center><img src="images/MT.gif" alt="[MIDI Port Window]"
+width="184" height="303" /></center>
+
+<p>
+To turn the connection between a MIDI input and a MIDI output on or off,
+click the corresponding check box. The current port connection settings
+are saved whenever you quit <strong>MIDI Through</strong>
+</p>
+
+<p>
+The panic button sends all-notes-off messages on all MIDI channels to
+all MIDI output ports. Even if a MIDI output is not connected to any
+MIDI inputs, the all-notes-off message is still sent to that output.
+</p>
+
+
+
+<!-- // Internal MIDI Synth Window -->
+<h1>Internal MIDI Synth Window</h1>
+
+<center><img src="images/MS.gif" width="272" height="188"
+alt="[Internal MIDI Synth Window]" /></center>
+
+<p>
+The Internal Synth window displays a program name popup menu and
+a volume slider for each MIDI channel. You can select programs and
+adjust the volume of each channel.
+</p>
+
+<p>
+When you send a MIDI program change or volume command, the corresponding
+popup menu or slider is updated.
+</p>
+
+<p>
+The General MIDI spec defines channel 10 as the drum channel. At first
+glance it may seem unnecessary to provide a program change popup menu
+for channel 10.
+However, not all synths are General MIDI and many treat channel 10 the
+same as any other MIDI channel.
+</p>
+
+
+
+<!-- // Application Menu -->
+<h1>Application Menu</h1>
+
+<p>
+The application menu appears in all <strong>MIDI Through</strong> windows.
+It contains items that let you display an incredibly
+boring About Box, open this online help, and quit the application.
+</p>
+
+<p>
+The current port connection settings are saved whenever you quit
+<strong>MIDI Through</strong>.
+</p>
+
+
+
+<!-- // MIDI Menu -->
+<h1>MIDI Menu</h1>
+
+<p>
+The <strong>MIDI</strong> menu's single item, Panic, does the same thing
+the Panic button in the main window does. The keyboard shortcut for this
+command is <tt>Alt-Space</tt>.
+</p>
+
+
+<!-- // Notes -->
+<h1>Notes</h1>
+
+<p>Changes in this latest revision:</p>
+<ul>
+	<li>Remember and restore the two windows' positions.
+		Thanks to Jon Watte for his libprefs library.</li>
+	<li>The application menu (to the left of the MIDI menu) now displays
+		the application icon.</li>
+	<li>The BeOS internal MIDI synth is initialized in a separate thread.
+		What does this mean to you? Quicker startup times.</li>
+</ul>
+
+<p> When playing the internal MIDI synth, there is a horrible
+delay. Jon Watte says, &quot;The culprit is the Audio Kit. It has a minimum
+latency of one buffer, which is about 25 ms; typically you'll see latencies
+two or three times that number. This is a function of the BeBox hardware,
+and there's nothing you can do about it&quot;</p>
+
+<p>
+The number of MIDI in and out ports that <strong>MIDI Through</strong> handles
+is currently fixed. There is no way for the program to find out how many
+MIDI in and out ports your computer has.
+</p>
+
+<p>
+I can't figure out how to get an application to exclusively launch,
+<em>i.e.</em>, only launch one copy even if you double-click its icon
+more than once. So...don't do that!
+</p>
+
+<p>
+I <em>hate</em> the pseudo-word "thru."
+</p>
+
+<!--#include virtual="/footer.html"-->

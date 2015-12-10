@@ -1,0 +1,95 @@
+.header {
+   background-color: #400fa0;
+}
+
+.header h1 {
+   font-size: 6em;
+   margin: 0;
+}
+
+.header table tr td {
+   padding-left: 2em;
+   valign: top;
+}
+
+td.headpic {
+   background-image: url("images/flag.jpg");
+   width: 250px;
+}
+
+.header .preznum {
+   font-size: 2em;
+}
+
+.preznum {
+   margin-top: 0.5em;
+   margin-bottom: 0.5em;
+}
+
+table {
+   border-collapse: collapse;
+}
+
+.content {
+   height: 100%;
+}
+
+.toc, .rhs {
+   color: white;
+   background-color: #a81f1f;
+   margin-top: -3em;
+   padding: 2em;
+   width: 12%;
+   height: 100%;
+}
+
+.toc ul, .rhs ul {
+   list-style: none;
+}
+
+.toc ul li {
+   padding-bottom: 0.75em;
+}
+
+.toc a:link, .toc a:visited, .toc a:hover, .toc a:active {
+   color: white;
+   text-decoration: none;
+   margin: -2em;
+}
+
+.maintext {
+   width: 56%;
+   float: center;
+   padding-left: 22%;
+   text-align: justify;
+}
+
+.toc h1, .rhs h1 {
+   font-size: 1.5em;
+}
+
+.toc {
+   float: left;
+}
+
+.rhs {
+   float: right;
+}
+
+blockquote {
+   font-style: italic;
+   background: #eee;
+   padding: 1em;
+}
+
+.pimg1 {
+   float: left;
+   padding-right: 1em;
+   height: 150px;
+}
+
+.pimg2 {
+   float: right;
+   padding-left: 1em;
+   height: 150px;
+}

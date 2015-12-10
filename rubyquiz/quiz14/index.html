@@ -1,0 +1,112 @@
+<!--#set var="pagetitle" value="Ruby Quiz 14: LCD Numbers" -->
+<!--#include virtual="/header.html"-->
+
+<p>Here is my solution to Ruby Quiz 14: <a
+href="http://www.rubyquiz.com/quiz14.html">LCD Numbers</a>.</p>
+
+<p>Back to my <a href="../">Ruby Quiz solutions page</a>.</p>
+
+
+
+<h2 id="solution">Solution</h2>
+
+<pre>
+<span class='rb-com'>#! /usr/bin/env ruby
+#
+# usage: lcd.rb [-s size] digits
+#
+# Seven-segment "LCD" display of digits.
+
+# Describe each digit with the chars used to display each segment. Segments
+# are ordered top to bottom, left to right.
+#
+#   0
+#  1 2
+#   3
+#  4 5
+#   6</span>
+<span class='rb-kon'>LCD</span> = [<span class='rb-str'>"-|| ||-"</span>,             <span class='rb-com'># 0</span>
+       <span class='rb-str'>"  |  | "</span>,             <span class='rb-com'># 1</span>
+       <span class='rb-str'>"- |-| -"</span>,             <span class='rb-com'># 2</span>
+       <span class='rb-str'>"- |- |-"</span>,             <span class='rb-com'># 3</span>
+       <span class='rb-str'>" ||- | "</span>,             <span class='rb-com'># 4</span>
+       <span class='rb-str'>"-| - |-"</span>,             <span class='rb-com'># 5</span>
+       <span class='rb-str'>"-| -||-"</span>,             <span class='rb-com'># 6</span>
+       <span class='rb-str'>"- |  | "</span>,             <span class='rb-com'># 7</span>
+       <span class='rb-str'>"-||-||-"</span>,             <span class='rb-com'># 8</span>
+       <span class='rb-str'>"-||- |-"</span>              <span class='rb-com'># 9</span>
+]
+
+class <span class='rb-kon'>LcdDisplay</span>
+
+  def <span class='rb-def'>initialize</span>(size)
+    @size = size
+    @display = []
+    num_rows = @size * 2 + 3
+    num_rows.times { | row | @display[row] = <span class='rb-str'>""</span> }
+  end
+
+  def <span class='rb-def'>display</span>(digit_string)
+    digit_string.split(//).each { | d | append_to_display(d) }
+    @display.each { | row | puts row }
+  end
+
+  def <span class='rb-def'>append_to_display</span>(digit_char)
+    append_space() unless @display[0].empty?
+    segments = <span class='rb-kon'>LCD</span>[digit_char.to_i]
+
+    row = 0
+    vertical(segments[0,1], row)
+    row += 1
+    @size.times {
+      horizontal(segments[1,1], row)
+      inner_space(row)
+      horizontal(segments[2,1], row)
+      row += 1
+    }
+    vertical(segments[3,1], row)
+    row += 1
+    @size.times {
+      horizontal(segments[4,1], row)
+      inner_space(row)
+      horizontal(segments[5,1], row)
+      row += 1
+    }
+    vertical(segments[6,1], row)
+  end
+
+  def <span class='rb-def'>append_space</span>
+    @display.each { | row | row &lt;&lt; <span class='rb-str'>' '</span> }
+  end
+
+  def <span class='rb-def'>vertical</span>(segment_char, row)
+    @display[row] &lt;&lt; <span class='rb-str'>' '</span> + (segment_char * @size) + <span class='rb-str'>' '</span>
+  end
+
+  def <span class='rb-def'>horizontal</span>(segment_char, row)
+    @display[row] &lt;&lt; segment_char
+  end
+
+  def <span class='rb-def'>inner_space</span>(row)
+    @display[row] &lt;&lt; <span class='rb-str'>' '</span> * @size
+  end
+
+end
+
+<span class='rb-com'># ================================================================
+# main
+# ================================================================</span>
+
+if __FILE__ == $0
+  size = 2
+  arg_index = 0
+  if ARGV[0] == <span class='rb-str'>'-s'</span>
+    size = ARGV[1].to_i
+    arg_index += 2
+  end
+
+  LcdDisplay.new(size).display(ARGV[arg_index])
+end
+</pre>
+
+<!--#include virtual="/footer.html"-->

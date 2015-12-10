@@ -1,0 +1,67 @@
+==================================================================
+https://keybase.io/jimm
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://www.jimmenard.com
+  * I am jimm (https://keybase.io/jimm) on keybase.
+  * I have a public key with fingerprint 2BFF 5920 1EDF 9AF3 E6B5  CF39 8B63 03CC BABB 828B
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "2bff59201edf9af3e6b5cf398b6303ccbabb828b",
+            "host": "keybase.io",
+            "key_id": "8b6303ccbabb828b",
+            "kid": "0101e12cdc31c32eb55e9d8f06ca4d3dca694d8de2ff99eb50bfd32068d8e0ab0dce0a",
+            "uid": "d9cc8f9c0c038598e717d3d9ac7dc119",
+            "username": "jimm"
+        },
+        "service": {
+            "hostname": "www.jimmenard.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1431656894,
+    "expire_in": 157680000,
+    "prev": "6039bf19708f81699491b4a97c292e6103ed15605d5fe956b8643531f1bd964f",
+    "seqno": 5,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.8
+Comment: https://keybase.io/crypto
+
+yMIeAnicbZJbSFRBGMd3zUQls6CiCwUdulFqZ85tzyyVFhra1SyJNN3O3OxUu2c7
+u95aVulCJRZUBtEVH0qNSIjqpaQypYsSvRiUpGGkRRDmQ5mY1Byxt+blY77///+b
++YZpT5rkSnQPJ/UOFt+p73R3tq4tdeXn73oUEZBFKgVvRNhPxwszAyXUDtpmICx4
+BQkxpkJJBJQwaDCZakjFTIY60mRRxhgZCOmSjoQUYa8VchIcg4wQTTMt3uMbn0l4
+9z/+/eOCCDgbSJhgGWBZokhVKSQ6EzVsKEQm2NCgQnRCJcYg5LKIGJElUdOJTkUD
+iQTzwnGl4zgCMdYZxCIWZV2FOvUAD6dAA3sIBgA6xhC1A4afcvc+0+8XoikC75SZ
+mDrjO1NMqOXl5WmOgwYMm6Rhy8/DQdsKW9g6wOW94XDQ66TDlcFxO0W+CZAPmQHC
+35EHyqgdMq2A4AXcicOmQwaKDDRV06GSItCKoGlTn+k4VI+mi3w5x9AyjtREGSIG
+oEfUmQ40CBUIkGJAD5agRDUgypQAVRNVojIKVQ3pmiKrMmAAEagpTHBGOxiwBK/K
+r2mUcGTILAkY4VKbCtGnT3bHutyJrrjJMc5PcCUmTPv3P9oy4123u4v6X+c20M+r
+Qy/nvolWzBhaUE+NJS2rFrm9vdH+5Be1M31NcZuSzr/Jnjlc/nz4YkLWha1LC38e
+ac6J5CZPKe6uUUaTtni2VTff3z68rulxuLDzWHpMX9XJs3OWHW8cvaeea4TfO/wX
+44VLH2vyJCNn8dXc1OqNeTUrpp75VJRx+f1ox9Gi6f2t7QPRkhZra/fcvoK6jOct
+3wpCb+ffuNI2paw4/d3ITz3a3zZ2auWJ6MPg8p7W3t+bWfb7yI7Ue/M+ZB2qGrj2
+K/30zoUv7MjgrCuxYGBDUUPu0IPrPX+Mrkt3Sd1Y1avani8/Dq/pM559a1yvCq3u
+ylsjmbO/ppTuudn1FwYtMf4=
+=HxUC
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jimm
+
+==================================================================

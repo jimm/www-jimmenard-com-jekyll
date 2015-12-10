@@ -1,0 +1,992 @@
+<!--#set var="pagetitle" value="Alternate Data Storage Technologies" -->
+<!--#include virtual="/header.html"-->
+
+<div class="article-title">
+	Alternate Data Storage Technologies
+</div>
+<div class="article-subtitle">
+	When the Relational Hammer Whacks Your Thumb
+</div>
+<div class="article-author">
+	Jim Menard, <a href="mailto:jim@jimmenard.com">jim@jimmenard.com</a>
+</div>
+
+<!-- TOC -->
+<a href='#e1'>Agenda</a><br/>
+<a href='#e2'>Justification</a><br/>
+<a href='#e3'>Cast of Characters</a><br/>
+<a href='#e4'>Data Storage Decision Factors</a><br/>
+<a href='#e5'>Relational Databases</a><br/>
+<a href='#e6'>Object Databases</a><br/>
+<a href='#e7'>Object-Relational Mapping</a><br/>
+<a href='#e8'>DBM Databases</a><br/>
+<a href='#e9'>In-Memory Databases</a><br/>
+<a href='#e10'>Images</a><br/>
+<a href='#e11'>Flat Files</a><br/>
+<a href='#e12'>ISAM</a><br/>
+<a href='#e13'>Resources</a><br/>
+
+
+<p>This talk was presented to the NYC CTO Club on April 14th, 2004.</p>
+
+<p>Update: <a
+href="http://radar.oreilly.com/archives/2006/05/brian_aker_of_mysql_responds.html">Database
+War Stories</a> is an excellent series of articles describing real-life
+problems and solutions. The link is to the last article, which contains links
+to the other articles in the series.</p>
+
+<!-- ================================================================ -->
+<a id='e1'/>
+<h1>Agenda</h1>
+
+<ul>
+<li>Explore non-relational data storage</li>
+<li>Discuss advantages and disadvantages</li>
+<li>Hear stories</li>
+<li>Collect questions; report back to group</li>
+</ul>
+
+<p>These online notes will be updated based upon feedback received during the
+presentation.</p>
+
+<!-- ================================================================ -->
+<a id='e2'/>
+<h1>Justification</h1>
+
+<blockquote>
+<p>"As far as I've seen, once those XML worms eat into your brain, it's hard
+to ever get anything practical done again. To an XML person, every nail looks
+like a thumb. Or something like that."<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&ndash; fejj on advogato.org</p>
+</blockquote>
+
+<p>Know your options and your tools.</p>
+
+<p>Update: Astute reader <a href="mailto:cjs@cynic.net">Curt Sampson</a>
+points out, "[T]he relational model is in no way a data <em>storage</em>
+technique, but is a data <em>modelling</em> technique. It's entirely
+orthogonal to something such as in-memory storage versus disk storage, for
+both relational and non-relational models, you have the choice of in-memory or
+not-in-memory storage."</p>
+
+<p>Curt is, of course, entirely correct. I mean the term "data storage" not in
+its technical sense but in the sense of a broad approach to modeling, storing,
+and retrieving data. The talk was given to a room full of CTOs and
+senior-level technology managers, not database architects. I opened with an
+informal introduction that hopefully explained what I meant.</p>
+
+<!-- ================================================================ -->
+<a id='e3'/>
+<h1>Cast of Characters</h1>
+
+<ul>
+<li>Data Storage Technologies
+  <ul>
+  <li>Relational databases</li>
+  <li>Object databases</li>
+  <li>Object-Relational mapping</li>
+  <li>DBM databases</li>
+  <li>In-memory databases</li>
+  <li>Images</li>
+  <li>Flat files</li>
+  <li>ISAM</li>
+  <li>xBase</li>
+  <li>Gerbils with crayons</li>
+  </ul></li>
+<li><a href="http://www.jimmenard.com/index.html">Me</a></li>
+</ul>
+
+<!-- ================================================================ -->
+<a id='e4'/>
+<h1>Data Storage Decision Factors</h1>
+
+<h2>Reasons for storing data</h2>
+
+<ul>
+<li>Short-term work: sessions, state management, transactions</li>
+<li>Long-term persistence</li>
+<li>After-the-fact analysis</li>
+<li>Record keeping</li>
+<li>Rules-based behavior; flexible apps</li>
+<li>Searching</li>
+<li>Exchange with other people and processes</li>
+<!-- Recognition and comparison (users, credit histories, behaviors) -->
+</ul>
+
+<p>Each reason has its own requirements, be it speed, flexibility, or
+reliability.</p>
+
+<h2>Technology Factors</h2>
+
+<p>What to keep in mind when selecting a data storage technology. What is
+<em>good enough?</em></p>
+
+<ul>
+<li>Speed, reading and writing</li>
+<li>Longevity of data</li>
+<li>Reliability
+  <ul>
+  <li>Is it OK to drop writes on the floor?</li>
+  <li>Is failover necessary, or even possible?</li>
+  </ul></li>
+<li>Querying
+  <ul>
+  <li>Ad-hoc</li>
+  <li>Stable, known in advance</li>
+  <li>Relational (set theoretical)</li>
+  </ul></li>
+<li>Reporting
+  <ul>
+  <li>Ad-hoc</li>
+  <li>Stable, known in advance</li>
+  </ul></li>
+<li>Do you need two data stores?
+  <ul>
+  <li>Transactions</li>
+  <li>Reporting</li>
+  </ul>
+  Do you perform ad-hoc queries on both types of data?</li>
+<li>Accessibility by applications, external and internal systems</li>
+<li>Maintainability
+  <ul>
+  <li>Staffing</li>
+  <li>Could technology or company become defunct?</li> 
+  </ul></li>
+<li>ACID (Atomicity, Consistency, Isolation, Durability)</li>
+<li>Domain model and its mapping to
+  <ul>
+  <li>Data storage format (hierarchical, key/value, relational)</li>
+  <li>Data access method (tree walk, key lookup, SQL query)</li>
+  </ul>
+  Is domain model more important, or raw data, or are they equals?</li>
+<li>Platform availability (language, OS, hardware)</li>
+<li>Data store system availability (hand-held device)</li>
+<li>Where does business logic belong?</li>
+</ul>
+
+
+<!-- ================================================================ -->
+<a id='e5'/>
+<h1>Relational Databases</h1>
+
+<ul>
+<li>Based on set theory</li>
+<li>SQL
+  <ul>
+  <li>General purpose</li>
+  <li>Mostly harmless...er...portable</li>
+  <li>Good for ad-hoc queries</li>
+  <li>Not a complete programming language</li>
+  </ul></li>
+<li>Binary data handling awkward
+  <ul>
+  <li>Library/language issue</li>
+  <li>Marry database with file system</li>
+  </ul></li>
+<li>Relational Online Analytical Processing (ROLAP) vs. Multi-dimensional
+  Online Analytical Processing(MOLAP)</li>
+<li>Variations on a theme
+  <ul>
+  <li>Normalized vs. multi-dimensional denormalized</li>
+  <li><a href="http://www.intersystems.com/">InterSystems</a> Cach&eacute;
+    "post-relational" database (really an object database with SQL and
+    multidimensional data access)</li>
+  </ul></li>
+</ul>
+
+<h2>When to use</h2>
+<ul>
+<li>Ad hoc queries important</li>
+<li>Data fits relational model</li>
+<li>You already have one</li>
+</ul>
+
+<h2>When not to use</h2>
+<ul>
+<li>Raw speed is a factor
+  <ul>
+  <li>Embedded devices</li>
+  <li>High-traffic systems (DNS, telecom)</li>
+  <li>Becomes necessary to write caching code in your application or tweak
+  the database installation to wring every ounce of performance out of it</li>
+  </ul></li>
+<li>Space is a factor
+  <ul>
+  <li>Embedded devices</li>
+  <li>Embedding database in an application</li>
+  </ul></li>
+<li>Complex relational queries not necessary
+  <ul>
+  <li>Web logs</li>
+  <li>High scores</li>
+  <li>Cookies</li>
+  </ul></li>
+<li>Don't mind dropping a transaction or two</li>
+<li>Doesn't fit programming model
+  <ul>
+  <li>Objects and arbitrary graphs don't always map naturally to tuples</li>
+  <li>Synchronization between database and objects in memory
+    <ul>
+    <li>If you fetch the same database record twice, do you get the same
+    object?</li>
+    <li>If you fetch an object, do the objects it contains get fetched?</li>
+    </ul></li>
+  <li>Should your data be in structures, not objects?</li>
+  </ul></li>
+  <li>You find yourself writing the same query twice:
+  <ul>
+  <li>Once in SQL to retrieve the data</li>
+  <li>Once in your programming language to display it</li>
+  </ul>
+  Granted, the first query may filter the data. If it's a simple filter then
+  is relational really necessary?</li>
+</ul>
+
+<!-- ================================================================ -->
+<a id='e6'/>
+<h1>Object Databases</h1>
+
+<ul>
+<li>Store graph of objects</li>
+<li>Handle inheritance and circular references</li>
+<li>Generally tied to a particular OO language, though can have adaptors for
+  other languages</li>
+<li>Efficiently traverse relationships</li>
+<li>Don't need to worry about whether an object is in memory or not</li>
+<li>Handling schema changes can be difficult (see discussion in <a
+  href="#inmem">In-Memory Databases</a> below)</li>
+<li><a href="http://c2.com/cgi/wiki?LetsUseAnObjectOrientedDatabase">Let's Use
+  an Object Oriented Database</a> from the <a
+  href="http://c2.com/cgi/wiki?WikiWikiWeb">WikiWikiWeb</a>.</li>
+</ul>
+
+<h2>A few names</h2>
+
+<p>Many OO databases available, both free and proprietary</p>
+
+<ul>
+<li><a href="http://www.objectstore.net/">ObjectStore</a></li>
+<li><a href="http://www.polyhedra.com/">Polyhedra</a></li>
+<li><a href="http://www.poet.com/en/en/indexjs.html">Poet</a></li>
+<li><a href="http://www.gemstone.com/">Gemstone</a> (Smalltalk, Java)</li>
+<li><a href="http://www.equi4.com/metakit/">MetaKit</a> (for embedded
+  systems)</li>
+<li><a href="http://www.ispras.ru/~knizhnik/">GOODS</a> (distributed,
+language-neutral; clients for C++, Java, Perl, Smalltalk)</li>
+</ul>
+
+<h2>When to use</h2>
+<ul>
+<li>You want to avoid O/R mapping time and effort</li>
+<li>You don't want to write the same query twice</li>
+<li>You feel the need for speed</li>
+<li>It's objects all the way down</li>
+</ul>
+
+<h2>When not to use</h2>
+<ul>
+<li>Ad-hoc queries
+  <ul>
+  <li>I didn't research OO database reporting tools</li>
+  <li>You can always peel data off into a warehouse</li>
+  <li><a
+    href="http://www.businessobjects.com/products/reporting/crystalreports/default.asp">Crystal
+    Reports</a> does have a plug-in for OO databases</li>
+  </ul></li>
+<li>Need multi-language access</li>
+<li>Schema changes frequently</li>
+</ul>
+
+<h2>Stories</h2>
+
+<p>All <b>emphasis</b> is mine and is used purely to draw your eye to the
+interesting bits.</p>
+
+<h3>Success</h3>
+
+<p>&quot;For the past 5 years or so, the project I work on has been using an
+Object-Oriented database (Versant, storing Java objects). By all accounts,
+it has been a <b>success for us</b>. We are now looking at moving to JDO,
+keeping Versant as a choice, but being able to profile and have other database
+choices in deployment. JDO is very similar to the proprietary J/VI interface
+we have been using, but there are some slight differences.&quot;</p>
+
+<h3>Sotheby's</h3>
+
+<p>ODI's ObjectStore was in use at Sotheby's before the auction site was
+built. The original auction site code used ObjectStore. The numbers showed
+that <b>reads were much faster than writes</b>, though that was not the major
+factor in deciding not to use the system developed around it. Another problem
+was the need to write <b>custom code for every query</b>. Reporting was very
+difficult; there were no good tools back in '99 (though there may be now).
+ObjectStore is <b>still in use</b> at Sotheby's for other purposes.</p>
+
+<h3>Fast</h3>
+
+<p>Dan Woods used ODI at Time, Inc. They had a few problems and had to
+dump and reload the database. It was blazingly fast.</p>
+
+<h3>Fear</h3>
+
+<p>From <a href="http://c2.com/cgi/wiki?LetsUseAnObjectOrientedDatabase">Let's
+Use an Object Oriented Database</a>:</p>
+
+<p>&quot;Yesterday I was in the audience for a presentation given by a Content
+Management System vendor. They were very pleased of their model for content,
+<b>object this and meta that</b> and inheritance the other. And it <b>runs
+over Oracle</b>. Up goes my paw: why not use an OODBMS? Chuckles all round and
+there came out the story of another content management outfit who did <b>use
+an OODBMS, and have nearly gone bust since very few customers were prepared to
+have the thing</b> in the building. Even for web content, not legacy data,
+people won't touch an OODBMS. Astounding.&quot; &ndash; Keith Braithwaite.</p>
+
+<p>&quot;What the hell is everyone so afraid of? GemStone has <b>saved me lots
+of development work</b>. GemStone has <b>saved me lots of response time</b>. I
+intend to continue using it for <b>competitive advantage</b> over those who
+insist on doing it the hard way.&quot; &ndash; Randy Stafford</p>
+
+<h3>Order of magnitude gain</h3>
+
+<p>From <a href="http://c2.com/cgi/wiki?LetsUseAnObjectOrientedDatabase">Let's
+Use an Object Oriented Database</a>:</p>
+
+<p>&quot;I just wrote a GemStonej application that can switch between object
+persistence and relational persistence at runtime, based on a property read at
+startup. At present I'm seeing <b>an order of magnitude difference</b> in
+response time between the two persistence modes (object persistence being
+faster, of course) - and this says nothing of the <b>extra development
+effort</b> you have to go through <b>to do O/R mapping</b>. But in fairness we
+have more optimization to do on the relational side. And for a simpler domain
+model than we have, relational persistence may be OK.&quot; &ndash; Randy
+Stafford</p>
+
+<h3>Experiences</h3>
+
+<p>From <a href="http://c2.com/cgi/wiki?LetsUseAnObjectOrientedDatabase">Let's
+Use an Object Oriented Database</a>:</p>
+
+<p>&quot;My empirical touchstone here was a comparison we conducted at AC
+Nielsen in 1996. We tried every OODB on the market then, about a dozen
+including, I seem to recall, Gemstone. We found similar performance
+constraints on all. Regular OS paging mechanisms just couldn't keep up with
+the specialized disk access techniques of the RDBMSes.&quot; &ndash; Peter
+Merel</p>
+
+<p>&quot;My experience is that while GemStonej is <b>typically faster</b> than
+an RDBMS and more flexible, the <b>work required</b> to "roll your own"
+indexing, searching &amp; querying framework can be <b>complex for some
+developers</b> not accustomed to dealing with the performance problems of
+dealing with thousands to millions of objects.</p>
+
+<p>...</p>
+
+<p>&quot;I think this comes to the abstraction principle: an <b>RDBMS is a
+black box</b> with a big label on it that says: "This is REALITY. :thud of SQL
+manual falling on desk: You must think inside of this box." An <b>OODBMS says:
+"Here's a set of minimal rules</b>. Now you can create the rest of your own
+reality."</p>
+
+<p>...</p>
+
+<p>&quot;My opinion: In application areas where it pays to "think outside of
+the box", an OODBMS is the proper choice, assuming you work with people that
+can handle the power properly&quot; &ndash; Stu Charlton</p>
+
+<p>&quot;<b>Efficiently traversing relationships</b>: Relational databases
+don't do this well because it's hard to arrange locality of storage. If I read
+an employee, then his department, then his office, etc, etc... I'm going to
+have to return to the database several times. Object databases, on the other
+hand, let you cluster related data together, enabling you to traverse
+relationships more efficiently.</p>
+
+<p>&quot;So what? Well, the GemStone application I worked on was a case
+management system. It's never going to be used to grind over tables and
+generate reports. The only thing anybody ever does with it is traverse object
+relationships. I seriously doubt that it would have worked even half as well
+with a relational database behind it.&quot; &ndash; Anthony Lander</p>
+
+<!-- ================================================================ -->
+<a id='e7'/>
+<h1>Object-Relational Mapping</h1>
+
+<ul>
+<li>Rationale: much current development is object oriented, much data storage
+  is relational</li>
+<li>Impedance mismatch
+  <ul>
+  <li>Object identities are not the same as primary keys</li>
+  <li>Inheritance hierarchies don't map naturally (especially multiple
+    inheritance, mixins, or interfaces)</li>
+  <li>Foreign keys can only reference one table; how store a contained object
+    that implements some interface? What if my <code>Container</code> can
+    store <code>Things</code>, where <code>Thing</code> is an interface
+    implemented by <code>Widget</code>, <code>Gadget</code>, and
+    <code>Customer</code>?</li>
+  </ul></li>
+<li>It takes time and money to map</li>
+<li>Frameworks (language-specific)
+  <ul>
+  <li>Java: <a href="http://www.hibernate.org/">Hibernate</a>,
+    <a href="http://objectstyle.org/cayenne/index.html">Cayenne</a>,
+    <a href="http://db.apache.org/torque/">Torque</a>,
+    <a href="http://java.sun.com/products/jdo/index.jsp">JDO</a></li>
+  <li>Ruby: <a href="http://lafcadio.rubyforge.org/">Lafcadio</a>,
+    <a href="http://www.starware.one.pl/software/sds/index.html">SDS</a></li>
+  </ul></li>
+<li>Hide SQL differences between databases</li>
+<li>Some tools support different approaches at the same time:
+  <ul>
+  <li>Write mapping, generate SQL and code</li>
+  <li>Reverse-engineer database, creating mapping and code</li>
+  <li>Write code&mdash;perhaps with XDoclet hints&mdash; and generate mapping 
+  and SQL</li>
+  </ul></li>
+<li>If language supports reflection or runtime manipulation, framework can
+  hide some of the details that make persistence more transparent</li>
+<li>Can take care of a lot of busy work like deleting object trees</li>
+<li>Even a home-grown O/R framework can help a team
+  <ul>
+  <li>Cleans up the code; JDBC code not scattered everywhere</li>
+  <li>Uses design patterns</li>
+  <li>Enforces single place to look for SQL</li>
+  </ul></li>
+<li>Does not always generate the best SQL for a particular query</li>
+<li>Can turn relationships expressed awkwardly in RDBMS (many-to-many, for
+  example artists and galleries) into natural OO relationships (each side has
+  list of objects)</li>
+<li>Often, mapping is stored as XML or other human-readable format or is even
+  stored in the code itself</li>
+<li>Some frameworks let you pre-fetch related objects</li>
+<li>ROE: Smalltalk code turned in to SQL</li>
+</ul>
+
+<h2>When to use</h2>
+<ul>
+<li>When you use objects and must store objects in a RDBMS</li>
+<li>When you want to save time and effort performing the mapping</li>
+</ul>
+
+<h2>When not to use</h2>
+<ul>
+<li>Need to tweak SQL a lot (not just in one place)
+  <ul>
+  <li>Frameworks usually let you write raw SQL</li>
+  </ul></li>
+</ul>
+
+<h2>Stories</h2>
+
+<p>All <b>emphasis</b> is mine and is used purely to draw your eye to the
+interesting bits.</p>
+
+<h3>Caching</h3>
+
+<p>Daniel Seltzer worked on a high-load Oracle installation where they could
+not interject an O/R mapping. He introduced the <code>util.concurrent</code>
+classes by Doug Lee. The cache manager uses a lookup key for each object. One
+cache per JVM. He had tools to monitor the cache's performance.</p>
+
+<p>Objects expired by time. This was simpler than anything else. They slightly
+randomized the time so that everything didn't expire at the same time.</p>
+
+<h3>Cayenne</h3>
+
+<p>I chose Cayenne for the Preclick PhotoWiki, replacing a custom O/R mapping
+layer. This <b>cleaned up the code</b> and made it much <b>simpler to
+modify</b>. It also removed lots of code from the application that worried
+about the persistence state of objects.</p>
+
+<p>Cayenne performs object caching at three levels (all optional): between
+data contexts (essentially database connections), within a single JVM, and
+between JVMs.</p>
+
+<p>Cayenne <b>couldn't handle a few tricky relationships</b>. I found a few
+bugs in Cayenne having to do with foreign keys that were almost immediately
+fixed by the developer. The community was quite helpful, even if the answer
+was, "We can't do that yet. Here's a quick workaround."</p>
+
+<p>Cayenne comes with a good GUI design tool that lets you reverse engineer a
+database, create one from scratch, generate the Java code, generate the SQL
+for the database, and generate the database itself.</p>
+
+<p>There are still some meaningless coding and design requirements (from
+object's point of view), like having to specify reverse relationships.</p>
+
+<p>Cayenne is also used on the <a href="http://www.nhl.com/">NHL's
+site</a>.</p>
+
+<!-- ================================================================ -->
+<a id='e8'/>
+<h1>DBM Databases</h1>
+
+<ul>
+<li>Key/value pairs (hash tables, dictionaries)</li>
+<li>Long history in Unix</li>
+<li>Simple but effective API:
+  <ul>
+  <li><code>open()</code></li>
+  <li><code>close()</code></li>
+  <li><code>fetch(key)</code></li>
+  <li><code>delete(key)</code></li>
+  <li><code>store(key, value)</code></li>
+  <li><code>first_key()</code></li>
+  <li><code>next_key()</code></li>
+  </ul></li>
+<li>Tons of implementations and bindings for different languages</li>
+<li><a href="http://www.sleepycat.com/">Sleepycat</a> Berkeley DB
+  <ul>
+  <li>Adds ACI (no D) and commit no-sync</li>
+  <li>Adds real-time replication
+    <ul>
+    <li>Implementor chooses medium for transport of replicated data</li>
+    <li>Single master, multi slave</li>
+    <li>Can choose how well replicated the data is (can use multicast or
+    TCP/IP)</li>
+    </ul></li>
+  <li>Automatic failover via election; algorithm guarantees get best new
+    replica</li>
+  <li>Have control over everything, but intelligent defaults for 
+    everything</li>
+  <li>Many interfaces: C, Java (new API and new Java Edition), XML/XPath, and
+    more</li>
+  <li>New Java Edition (in beta)
+    <ul>
+    <li>BIND API (available both in JE and Java interface to C version of DB)
+      handles conversion between objects and byte arrays</li>
+    <li>Fully ACID</li>
+    </ul></li>
+  <li>In use <em>everywhere</em> (see stories below)</li>
+  </ul></li>
+<li>New <a href="http://www.sleepycat.com/products/je.shtml">Berkeley DB Java
+  Edition</a>, a pure-Java implementation of Berkeley DB; see <a
+  href="http://www.sys-con.com/story/?storyid=46235&amp;DE=1"><cite>Building
+  Applications with Berkeley DB Java Edition</cite></a></li>
+<li>Implementations typically fast and small (Berkeley DB compiles down to
+  350K, Java Edition to 418K)</li>
+<li>Querying typically difficult; need to create a query layer and a bunch of
+  secondary databases (different indexes (views) on the same data)</li>
+</ul>
+
+<h2>When to use</h2>
+<ul>
+<li>Speed and size are issues</li>
+<li>Good for embedding into applications</li>
+<li>You know what questions you'll be asking of the data</li>
+</ul>
+
+<h2>When not to use</h2>
+<ul>
+<li>Ad-hoc queries</li>
+</ul>
+
+<h2>Stories</h2>
+
+<p>Berkeley DB is in use everywhere. Sleepycat believes that 90% of people in
+the U.S. touch Berkeley DB every day and don't know it. Berkeley DB is used in
+Sendmail, Apache Web server, Jabber, Sun (LDAP directory servers), EMC
+(Celerra and Centera products), Electronic Clearing House, Inc., Netscape
+browser bookmark management, Mozilla news client, Google accounts, the largest
+U.S. stock market, AOL client software, RSA's Keon Secure VPN, a Sony set-top
+box, cable TV, Amazon.com (as a cache to speed retrieval of data), telecom
+industry, DNS.</p>
+
+<p>I feel like a kid in one of those '50s science films: "You see, Timmy, you
+use plastic every day! Your dog uses plastic! It's here, in the rims of your
+thick black glasses!"</p>
+
+<!-- ================================================================ -->
+<a id="inmem"/>
+<a id='e9'/>
+<h1>In-Memory Databases</h1>
+
+<ul>
+<li>Historically, memory was scarce</li>
+<li>Cache some data in memory; why not all?</li>
+<li>Current buzzword: "prevalence"</li>
+<li>Not new</li>
+<li>Many relational databases pull tables into memory</li>
+
+<li><a href="http://www.prevayler.org">Prevayler</a> getting the most press;
+  we'll concentrate on that (and ignore the project owners' haughty
+  attitude)</li>
+
+<li>Other examples: MetaKit, Polyhedra, <a
+  href="http://www.timesten.com/products/timesten/">TimesTen</a>, which has
+  been used by a few of our members</li>
+</ul>
+
+<h2>Properties</h2>
+
+<ul>
+<li>All objects in memory all the time</li>
+<li>All (Prevayler) operations implemented as serializable command</li>
+<li>Unlike OO and relational databases, prevalence layer doesn't know about
+  internals of system (classes, tables, objects)</li>
+<li>Fast: Prevayler claims queries are 3,000 - 9,000 faster than
+  MySQL/Oracle, even when fully cached in RAM and on the same machine
+  <ul>
+  <li>No SQL to build</li>
+  <li>No SQL to run</li>
+  <li>No translation between database data and object</li>
+  </ul></li>
+<li>Snapshots written to disk (don't need to halt system)
+  <ul>
+  <li><code>SnapshotPrevayler</code> handles startup/shutdown housekeeping</li>
+  <li>Snapshot starts a new transaction log</li>
+  </ul></li>
+<li>Sharing between servers happens via shared command log
+  <ul>
+  <li>One machine is the hot system</li>
+  </ul></li>
+<li>Fault tolerant: replicas can take over</li>
+<li>Similar to journaling file system</li>
+<li>Implementations are language-dependent
+  <ul>
+  <li>Java (Prevayler), Smalltalk, Ruby, Python, C#, more</li>
+  </ul></li>
+<li>Query via code, X Path, OGNL</li>
+<li>Though commands (transactions) are executed sequentially, need to worry
+  about concurrency between commands and queries.</li>
+<li>See also
+  <ul>
+  <li>Images a la Smalltalk and APL</li>
+  <li>MySQL in-memory tables</li>
+  <li>JavaSpaces</li>
+  <li>Newton's soup</li>
+  </ul></li>
+<li>Problems scaling the database between machines</li>
+<li>Load balancing is up to you</li>
+</ul>
+
+<h2>When to use</h2>
+<ul>
+<li>Data fits in memory</li>
+<li>You need the speed</li>
+<li>Object model is fairly stable</li>
+</ul>
+
+<h2>When not to use</h2>
+<ul>
+<li>Data won't fit in memory</li>
+<li>Ad-hoc queries required</li>
+<li>Object model is evolving
+  <ul>
+  <li>Some changes need translation code</li>
+  <li>Can load old classes using one class loader, then save using another</li>
+  <li>Can use the <code>Seralization readObject</code> method</li>
+  <li>Can export/import XML</li>
+  <li>There are tools being written to handle schema/version migration</li>
+  </ul></li>
+<li>Need to share data between languages (language-specific)</li>
+<li>Need to share data between data stores (can always write code to save into
+  XML or even SQL, of course)</li>
+</ul>
+
+<h2>Stories</h2>
+
+<p>All <b>emphasis</b> is mine and is used purely to draw your eye to the
+interesting bits.</p>
+
+<h3>Who uses it?</h3>
+
+<p>It took me a <b>while to find</b> links to <b>users</b> on the Prevayler
+site to <a
+href="http://www.prevayler.org/wiki.jsp?topic=PrevaylerPioneers">Prevayler
+pioneers</a> and <a
+href="http://www.prevayler.org/wiki.jsp?topic=MajorCompaniesUsingPrevalence">Major
+companies using Prevayler</a>. The latter list is short: Lehman Brothers,
+Microsoft (Ensemble Studios game company), Blizzard Entertainment,
+Petrobr&aacute;s (Brazil's largest oil company), Vivo (large Brazilian cell
+phone operator), and TV Record (third largest TV network in Brazil).</p>
+
+<h3>Too good to be true?</h3>
+
+<p>Jon Tirsen <a
+href="http://www.jroller.com/page/tirsen/20030113#a_href_http_www_neward">wrote</a>:
+&quot;The morning after (I stumbled in late and hungover actually) my
+pair-programming mate had read all about it at the Prevayler site I left open
+in the browser and already ript[sic] out our then OJB-persistence layer and
+replaced it with Prevayler. Later that day we experienced the <b>sensational
+10k performance gain</b> and we're probably <b>never going back again</b>.
+(Remember our system was very performant[sic] from the start.)&quot;</p>
+
+
+<!-- ================================================================ -->
+<a id='e10'/>
+<h1>Images</h1>
+
+<ul>
+<li>Canonical example: Smalltalk</li>
+<li>Form of in-memory database</li>
+<li>Images (snapshots) include everything: objects, code, data</li>
+<li>Can share data between applications (trivially in the same image)</li>
+<li>Can change classes and instances</li>
+<li>Replication difficult</li>
+<li>There are classes for relational database I/O; can always use file
+  system</li>
+<li>Object serialization</li>
+<li>Language dependent</li>
+<li>How load balance?</li>
+</ul>
+
+<h2>When to use</h2>
+<ul>
+<li>Want a flexible, dynamic environment</li>
+</ul>
+
+
+<h2>When not to use</h2>
+<ul>
+<li>Need to play nice with others outside the image
+  <ul>
+  <li>RPC, SOAP, sockets to the rescue</li>
+  <li>Smalltalk is good enough for Wall Street</li>
+  </ul></li>
+</ul>
+
+
+<h2>Stories</h2>
+
+<p>Smalltalk has been in use in both research and corporate environments for
+decades. The Smalltalk community always pointed towards Wall Street when asked
+where it was used. XP was invented for a Smalltalk project.</p>
+
+<p><em>Note: need to beef up this section.</em></p>
+
+
+<!-- ================================================================ -->
+<a id='e11'/>
+<h1>Flat Files</h1>
+
+<ul>
+<li>File system
+  <ul>
+  <li>Of course, most databases use file system</li>
+  </ul></li>
+<li>Tools, tools, tools!
+  <ul>
+  <li>grep, cat, Perl</li>
+  <li>Text indexing and searching (for example, <a
+    href="http://jakarta.apache.org/lucene/">Lucene</a> and <a
+    href="http://webglimpse.net/">Webglimpse/Glimpse</a>)</li>
+  </ul></li>
+<li>File-level locking easy; record-level harder</li>
+<li>Record structure
+  <ul>
+  <li>Line-level: fixed fields, tab- or comma-delimited</li>
+  <li>File-level: XML, YAML, free-form text</li>
+  <li>Intra-file level: ISAM (data files and index files)</li>
+  </ul></li>
+<li>Random querying depend upon data structure and possible pre-indexing</li>
+<li>XML
+  <ul>
+  <li>A return to the hierarchical data model; classic example is IBM's IMS
+  (Information Management System)</li>
+  <li>Random querying can be difficult if using XPath or DOM</li>
+  <li>XML-based database systems; see <a
+    href="http://www.rpbourret.com/xml/XMLDatabaseProds.htm">XML Database
+    Products</a>; includes lists of XML databases, Query Engines and
+    more.
+    <ul>
+    <li><a href="http://xml.apache.org/xindice/">Apache Xindice</a></li>
+    </ul></li>
+  <li>Some RDBMS and OODBs have XML I/O layers</li>
+  <li><a href="http://www.w3.org/XML/Query">XQuery</a> XML Query
+    language; see <a
+    href="http://www.gnu.org/software/qexo/XQuery-Intro.html">What is
+    XQuery?</a> and <a href="http://www.fatdog.com/XQuery_Intro.html">A quick
+    intro to XQuery</a> for introductions</li>
+  </ul></li>
+<li><a href="http://yaml.org/">YAML</a> (YAML Ain't Markup Language);
+  text-based structured data storage
+<pre class="code">
+---
+name: Dirk Hockeybranch
+date: 2004-04-14
+minutes spent:
+ - 1.02
+ - 1.34
+ - 0.7
+ - 0.89
+ - 0.94
+</pre>
+  <ul>
+  <li>numbers, strings, dates, text, arrays, hash maps</li>
+  <li>Entity-like references avoid repetition</li>
+  <li>Can add MIME-like data types to central registry</li>
+  <li>Human readable, machine parseable</li>
+  <li>Convenient for "just do it" approaches with simple data</li>
+  <li>Easy to implement</li>
+  <li>Implementations for Perl, Ruby, Python, PHP, OCaml, JavaScript; Java
+  coming</li>
+  </ul></li>
+<li>Inverted files
+  <ul>
+  <li>File organized into records of a single field</li>
+  <li>Entire file is both data and index</li>
+  <li>Selection string creates a boolean used to select other fields
+    from the file</li>
+  <li>Will handle "ridiculously huge" amounts of data with "miraculous
+    performance"; very efficient for static data</li>
+  <li>Significantly better performance than multi-tier app with relational
+    database</li>
+  <li>Weaknesses
+    <ul>
+    <li>Adding or deleting a single record requires a complete file 
+      reorganization</li>
+    <li>Not relational</li>
+    <li>Not mainstream or a vendor-supported product</li>
+    <li>All data must be perfectly de-normalized for best performance</li>
+    </ul></li>
+  <li>Inverted files date back to the 1970's</li>
+  </ul></li>
+</ul>
+
+<h2>When to use</h2>
+<ul>
+<li>You want data portability</li>
+<li>You need speed</li>
+<li>The <a href="http://www.pragmaticprogrammer.com/">Pragmatic
+  Programmers</a> say in their wonderful book <i>The Pragmatic Programmer</i>,
+  &quot;20. Keep Knowledge in Plain Text. Plain text won't become obsolete. It
+  helps leverage your work and simplifies debugging and testing.&quot; Of
+  course, they don't mean all data should be stored in plain text.</li>
+</ul>
+
+<h2>When not to use</h2>
+<ul>
+<li>When mixing binary and text data in the same record</li>
+<li>When you need record-level locking</li>
+</ul>
+
+<h2>Stories</h2>
+
+<h3>Speedier Terabytes</h3>
+
+<p>&quot;One of my last employers, XXXX, may have a story for you. Their
+background &ndash; a database marketing agency who provides direct mail and
+email leads to catalogers, telemarketers, mailers, or any marketing
+organization... Their <b>database was huge</b> &ndash; several terabytes. It
+was comprised of Experian's Gold File and several other consumer files,
+equally[sic] two hundred million consumer records.</p>
+
+<p>&quot;Originally the data was stored in relational tables. However,
+generating counts was a lengthy process in terms of time and computing
+resources. A decision was made to transform the database into <b>one huge
+flat file</b> (yep, start gasping for air) and <b>index it</b> using a product
+called Omnidex. Then a custom app was developed to generated counts and voila,
+we had a faster, more reliable and cheaper to operate database.</p>
+
+<p>&quot;I had come into the scene after the conversion had occurred. Being
+used to large scale ERP and DW implementations, I flipped when I heard what
+was happening. The CIO was able to convince me on the <b>performance gains</b>
+they made under the arrangement. It works. Furthermore, there was no negative
+impact on other data processing, such as ETL (we used Ab Initio).&quot;</p>
+
+<h3>Ad Campaign Data</h3>
+
+<p>Steve Jacobs wrote: &quot;At Poindexter we have built our ad server without
+a traditional database. We were a small scrappy company for a while with
+limited resources and the <b>cost of scaling a database infrastructure</b> to
+support billions of ads served per month <b>was prohibitive</b>. There are 3
+areas where a database is needed: data on what ads are in an advertiser's
+campaign, data we've gathered about the user (what ads they've seen, for
+example) and reporting data about what ads have been shown.</p>
+
+<p>&quot;For campaign data we take snapshots of the Oracle database that our
+web based campaign management tool connects to and push the most recent
+changes to the ad servers. This used to be in the form of XSL documents that
+encoded both the data and the targeting required for the campaign. The user
+data was a XML document stored in the users cookie. <b>Serving an ad</b> was
+simply by <b>performing a transformation</b> on the XML cookie. When an ad was
+chosen, the reporting information was written out to flat files. These flat
+files would then be loaded into an Oracle database on a nightly basis for
+reporting purposes.</p>
+
+<p>&quot;Eventually the <b>cost of doing the transformation with the
+style sheets became prohibitive</b> &ndash; we just couldn't get transactions
+per second we needed with XML/XSL. We've since <b>migrated</b> to actual
+<b>Java code generation</b> to replace the XSL where the Java code reads the
+users cookie. The cookie itself is no longer in XML either; we've switched to
+a <b>proprietary format</b> that is <b>faster to parse</b> for use by the Java
+code. When I first suggested to my architect that we generate Java code rather
+than XSL I prefaced it by saying, 'I can't believe I'm about to suggest this,
+but...' Nonetheless, it's worked out well, giving us a 3x performance
+improvement overall.</p>
+
+<p>&quot;I <b>don't like the fact that we've mixed data and code together in
+one big stew</b>. The benefit is that there's no parsing XML trees or the like
+&ndash; the data is all there built in to the code. The drawback is that
+changes to the code may end up meaning we have to regenerate the code/data for
+all campaigns.&quot;</p>
+
+<h3>Because It's There</h3>
+
+<p>Daniel Seltzer was on a project at a non-profit organization a few years
+ago. They lacked the development process, system admin, and money for
+traditional IT services. They ended up using the file system as the data
+store. Daniel developed a publishing tool in Ant. There was a small amount of
+metadata in a database. An Ant task periodically synched the database with
+the file system.</p>
+
+<p>They indexed the text with Lucene.</p>
+
+<h3>Sync Sort</h3>
+
+<p>Mark Uhrmacher has used <a
+href="http://www.syncsort.com/sort/info.htm">SyncSort</a> (I'm checking the
+URL) on flat files with billions of transactions.</p>
+
+
+<!-- ================================================================ -->
+<a id='e12'/>
+<h1>ISAM</h1>
+
+<ul>
+<li>Indexed Sequential Access Method; from IBM</li>
+<li>Data stored sequentially; separate index eases random access</li>
+<li>Multiple indices for multiple orderings.</li>
+<li>Orthogonal to relational storage; relational can be implemented using
+ISAM</li>
+</ul>
+
+<p>The xBASE family of databases are structured similar to ISAM, with data
+files and index files. Applications read the files directly.</p>
+
+<h2>Stories</h2>
+
+<p>&quot;When adding records with ascending adjacent keys, the add process
+would get slower and slower because overflow records were kept in an unblocked
+linked list and the next record had to be added to the end of the list.</p>
+
+<p>&quot;As a system programmer, I was called about twice a year because 'the
+computer is running slow'.  The fix is to add the records in descending key
+sequence so each record is added at the head of the linked list.  It was fun
+at first being hailed as a genius. But as Yogi Berra said, it was deja vu all
+over again.&quot;</p>
+
+
+<!-- ================================================================ -->
+<a id='e13'/>
+<h1>Resources</h1>
+
+<p>This list of resources is in addition to those presented inline. <em>I need
+to flesh out this list.</em></p>
+
+<ul>
+
+<li>The <a href="http://c2.com/cgi/wiki">Portland Pattern Repository</a> and
+  <a href="http://c2.com/cgi/wiki?WikiWikiWeb">WikiWikiWeb</a> top level pages
+  are deceptively sparse. Browse the main <a
+  href="http://c2.com/cgi/wiki?CategoryCategory">Category</a> page. Search for
+  programming terms and you'll come across an amazingly deep ocean of
+  discussion. For example, search for page titles including "relational" (49
+  pages) or "persist" (28 pages)</li>
+
+<li><a href="http://cbbrowne.com/info/total.html">Christopher Browne's Web
+  Pages</a>. Section VIII, Business Oriented Computing, contains a number of
+  good pages about various database types and implementations.</li>
+
+</ul>
+
+<!--#include virtual="/footer.html"-->

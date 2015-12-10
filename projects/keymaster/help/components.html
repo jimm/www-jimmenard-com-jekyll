@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<title>KeyMaster: Components</title>
+</head>
+<body background="images/gradient_bg.gif">
+
+<table width=600 border=0 cellpadding=0 cellspacing="0">
+	<tr>
+		<td align=LEFT width=95 valign="TOP"> <img src="images/KeyMaster.gif" width=32 height=32
+		align="bottom" alt="[Logo]" border=0> </td>
+		<td align=right width=495><font size="+6"><b>Components</b></font> <br>																														
+			<hr>
+		</td>
+	</tr>
+	<tr>
+		<td valign="TOP" width="100">
+			<font size="-2">
+			<p><a href="index.html">Contents</a></p>
+			<p><a href="introduction.html">Introduction</a></p>
+			<p><a href="getting_started.html">Getting
+				Started</a></p>
+			<p>Components</p>
+			<p><a href="main_menu.html">Main Menu</a></p>
+			<p><a href="windows.html">Windows</a></p>
+			<p><a href="movement.html">Movement</a></p>
+			<p><a href="patches.html">Patches</a></p>
+			<p><a href="editing.html">Editing</a></p>
+			<p><a href="sysex.html">SysEx Librarian</a></p>
+			<p><a href="misc.html">Miscellaneous</a></p>
+			<p><a href="ideas.html">Ideas</a></p>
+			<p><a href="midi_ref.html">MIDI Reference</a></p>
+			<p><a href="release.html">Release Notes</a></p>
+			</font>
+		</td>
+		<td valign="TOP" width="500"><a name="TOC"></a> <a name="TOC">
+			<h1>Table of Contents</h1>
+			</a>
+			<dl>
+				<dt><a href="#Introduction">Introduction</a></dt>
+				<dt><a href="#Instruments">Instruments</a></dt>
+				<dt><a href="#Songs">Songs</a></dt>
+				<dt><a href="#Chains">Chains</a></dt>
+				<dt><a href="#MIDIMsgs">Programmable MIDI Messages</a></dt>
+				<dt><a href="#ProgChgNames">Program Change Names</a></dt>
+			</dl>
+			<i>Back to the <a href="index.html">main Table of Contents</a>.</i>
+			<hr>
+			<!-- **************************************************************** -->
+			<blockquote> <i>"The time has come," the Walrus said,<br>
+				"To talk of many things:<br>
+				Of shoes - and ships - and sealing wax -<br>
+				Of cabbages - and kings -<br>
+				And why the sea is boiling hot -<br>
+				And whether pigs have wings." </i><br>
+				<br>
+				- Lewis Carroll, <cite>Through the Looking-Glass</cite> </blockquote>
+			<p>
+			<hr>
+			<a name="Introduction">
+			<h1>Introduction</h1>
+			</a> This section describes the things that make up a <strong>KeyMaster</strong>
+			document: instruments, songs, patches, chains, programmable MIDI messages,
+			and program change names.
+			<p> When you use the name of a chain, song, patch, or program change,
+				you need not type the whole name. Just use the shortest unique
+				prefix of the name. Also, you needn't worry about matching upper
+				and lower case; all name comparisons are case-insensitive.
+			<p>
+			<hr>
+			<a name="Instruments">
+			<h1>Instruments</h1>
+			</a> You have to describe your MIDI instruments to <strong>KeyMaster</strong>
+			in an <a href="editing.html#Instruments">Instrument window</a>. You
+			give each instrument a name, specify which MIDI ports it uses, describe
+			which MIDI channels it transmits and receives, and more.
+			<p> MIDI input and output <a href="patches.html#PE">patch elements</a>
+				represent instruments in a patch.
+			<p>
+			<hr>
+			<a name="Songs">
+			<h1>Songs</h1>
+			</a> A song is a collection of patches that allow you to control your
+			MIDI setup. A song can have any number of patches. You can step forward
+			and backward through the patches in a song using the
+			<a href="main_menu.html">movement menu items</a>, the keyboard, or
+			<a href="movement.html#MoveTrig">Movement Triggers</a>.
+			<p>
+			<hr>
+			<a name="Patches">
+			<h1>Patches</h1>
+			</a> A patch is a group of MIDI pathways on which sit <em>patch elements</em>
+			that can modify the MIDI data. The simplest pathway connects one MIDI
+			device directly to another.
+			<p> A patch also has an <em>enter message</em> and an <em>exit message</em>.
+				These are <a href="#MIDIMsgs">MIDI Messages</a> that can contain
+				any MIDI data such as patch changes, note on or off messages (for
+				those looong drones), and system exclusive messages.
+			<p> The complete list of patch elements, along with more in-depth
+				explanations of what they do, is found in the section on
+				<a href="patches.html#Patches">patches</a>.
+			<p>
+			<hr>
+			<a name="Chains">
+			<h1>Chains</h1>
+			</a> A chain is a list of songs. A song can appear in more than one
+			chain. One special chain called "All Songs" contains the list of all
+			songs.
+			<p> When you delete a song from a chain, the song is not gone. It
+				still exists in the "All Songs" list of all songs. Only when you
+				delete a song from "All Songs" is the song gone forever.
+			<p> For more information about moving amongst chains, songs, and patches,
+				see the <a href="movement.html">movement</a> section.
+			<hr>
+			<a name="MIDIMsgs">
+			<h1>Programmable MIDI Messages</h1>
+			</a> <strong>KeyMaster</strong> allows you to create programmable
+			MIDI messages of any length. You can put any MIDI data in a message
+			and send this data a any time via the keyboard (??), menu, or via
+			a trigger in a patch enter or exit message.
+			<p> To send a MIDI message, select "Send" from the "Message" menu
+				in the Messages list window or click the "Send" button in a
+				<a href="editing.html#Messages">Message Editor window</a>.
+				<strong>This is currently
+				the only way to send a MIDI message. I will be adding a single-key
+				send (probably bound to Alt-Fx).</strong></p>
+			See <a href="editing.html#Messages">Editing Messages</a> for more
+			information.
+			<p> You might want to peruse the section on <a href="ideas.html">ideas</a>
+				for using MIDI messages.
+			<p> <i>Some day, you will be able to open MIDI files, drag MIDI files
+				onto the editor, etc.</i>
+			<p>
+			<hr>
+			<a name="ProgChgNames">
+			<h1>Program Change Names</h1>
+			</a> <strong>NOT IMPLEMENTED YET. WILL PROBABLY HAVE GENERAL MIDI
+			NAMES BUILT-IN.</strong>
+			<p> It is often easier to refer to your synth's programs by name rather
+				than by number. <strong>KeyMaster</strong> allows you to enter
+				names for all 128 program changes on each instrument. You can
+				then refer to programs by name at almost any time.
+			<p>
+			<hr>
+			<font size="-1">Back to the <a href="index.html">main Table of Contents</a>.<br>
+			<i>Contents &copy; 1995 - 2000 by <a href="mailto:jim@jimmenard.com">Jim Menard</a>;
+			All Rights Reserved.</i></font><i></i></td>
+	</tr>
+</table>
+
+</body>
+</html>

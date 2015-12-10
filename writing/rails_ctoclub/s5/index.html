@@ -1,0 +1,923 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Ruby on Rails &ndash; An Introduction</title>
+<!-- metadata -->
+<meta name="generator" content="S5" />
+<meta name="version" content="S5 1.2a2" />
+<meta name="author" content="Jim Menard" />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+<!-- embedded styles -->
+<style type="text/css" media="all">
+</style>
+<!-- S5 JS -->
+<script src="ui/default/slides.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="layout">
+  <div id="controls"><!-- DO NOT EDIT --></div>
+  <div id="currentSlide"><!-- DO NOT EDIT --></div>
+  <div id="header"></div>
+  <div id="footer">
+    <h1>Ruby On Rails &ndash; An Introduction</h1>
+    <h2>NYC CTO Club &#8226; July 12, 2006</h2>
+  </div>
+</div>
+
+<div class="presentation">
+
+
+<div class="slide">
+<h1>Ruby on Rails</h1>
+<h3>Jim Menard</h3>
+<h4><a href="mailto:jim@jimmenard.com">jim@jimmenard.com</a></h4>
+<h4><a href="http://www.jimmenard.com/" rel="external">Shiny Things</a></h4>
+<div class="handout"></div>
+</div>
+
+
+<div class="slide">
+<h1>Agenda</h1>
+<ul>
+<li>What is this thing called Ruby on Rails?</li>
+<li>Is it hot or is it not?</li>
+<li>Design and development philosophy</li>
+<li>Architecture from Web app developer's perspective</li>
+<li>Developing and testing</li>
+<li>Deploying, scaling, and performance</li>
+<li>Small peek into the future</li>
+</ul>
+
+<div class="notes">
+<ul>
+  <li>Hot or not?
+  <ul>
+  <li>Good marketing</li>
+  <li>No direct answer here</li>
+  <li>All features and benefits add up to popularity</li>
+  </ul></li>
+</ul>
+</div>
+</div>
+
+
+<div class="slide">
+<h1>QotD</h1>
+<br/><br/><br/>
+<blockquote>"I always thought Smalltalk would beat Java, I just didn't know it
+ would be called 'Ruby' when it did."
+<p>&mdash; Kent Beck</p>
+</blockquote>
+</div>
+
+
+<div class="slide">
+<h1>What is Ruby on Rails?</h1>
+<ul>
+<li>Simple answer
+  <ul><li>A Web application development framework</li></ul></li>
+<li>My answer
+  <ul><li>A well-thought-out, consistent, practical application development framework that is a joy to use and that makes it easier to develop, test, deploy, and maintain Web applications than anything else I've used so far</li></ul></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>What is RoR? (cont'd)</h1>
+<ul>
+<li>Extracted from working apps, not built as an ivory tower exercise
+  <ul>
+  <li>This means it is practical and well-tested</li>
+  </ul></li>
+<li>Built with Ruby
+  <ul>
+  <li>Shorter, simpler, more flexible, and more maintainable code</li>
+  </ul></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Philosophy</h1>
+<ul>
+<li>Convention over configuration
+  <ul>
+  <li>Simple conventions can greatly reduce code you need to write</li>
+  <li>Sensible defaults</li>
+  <li>Limiting and freeing; can always override</li>
+  <li>Database and class naming conventions</li>
+  <li>Directory structure</li>
+  <li>RESTful URLs</li>
+  </ul></li>
+<li>DRY
+  <ul>
+  <li>Database field info is in one place: the database</li>
+  </ul></li>
+</ul>
+
+<div class="notes">
+<ul>
+<li>DRY
+  <ul>
+  <li>Java: db field defined 3x: in database, in XML, in object (3 times there, too: ivar, getter, setter)</li>
+  </ul></li>
+</ul>
+</div>
+</div>
+
+<div class="slide">
+<h1>Philosophy (cont'd)</h1>
+<ul>
+<li>Accept the database
+  <ul>
+  <li>SQL is not evil</li>
+  <li>Can break down into SQL for odd cases and performance, though default SQL is often good enough</li>
+  </ul></li>
+<li>Testing baked in</li>
+<li>Share nothing
+  <ul>
+  <li>Take state out of the application servers and push it to database, memcached, or shared network drive</li>
+  <li>Object lifecycle is very simple</li>
+  </ul></li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Ruby</h1>
+<ul>
+<li>RoR takes advantage of Ruby
+  <ul>
+  <li>Power (blocks, closures, reflection, metaprogramming, duck typing (strong, dynamic typing))</li>
+  <li>Consistency (principle of least surprise)</li>
+  </ul></li>
+<li>Programmer can take advantage of Ruby, too
+  <ul>
+  <li>Productivity</li>
+  <li>Maintainablity</li>
+  </ul></li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Architecture</h1>
+<ul>
+<li>MVC
+  <ul>
+  <li><strong>M</strong>odel: data holder and domain logic</li>
+  <li><strong>V</strong>iew: web pages</li>
+  <li><strong>C</strong>ontroller: presents model objects to views, passes view data back to model</li>
+  </ul></li>
+<li>Rails is made up of separate frameworks
+  <ul>
+  <li>Separable and useable separately</li>
+  </ul></li>
+<li>Frameworks
+  <ul>
+  <li>Active Support
+    <ul>
+    <li>Dependency, core class modification for convenience, inflection, JSON</li>
+    </ul></li>
+  </li>
+  </ul></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Architecture (cont'd)</h1>
+<ul>
+<li>Frameworks (cont'd)
+  <ul>
+  <li>Active Record
+    <ul>
+    <li><strong>M</strong>odel</li>
+    <li>Object-Relational mapping; Martin Fowler</li>
+    </ul></li>
+  <li>Action Pack
+    <ul>
+    <li><strong>V</strong>iew + <strong>C</strong>ontroller</li>
+    <li>Routes</li>
+    </ul></li>
+  <li>Action Web Service</li>
+  <li>Action Mailer</li>
+  <li>Rails
+    <ul>
+    <li>Sets up environment</li>
+    <li>Coordinates the other frameworks</li>
+    </ul></li>
+  </ul></li>
+</ul>
+
+<div class="notes">
+<ul>
+  <li>Inflection: maps between singular/plural</li>
+  <li>Active Record: "An object that wraps a row in a database table or view, encapsulates the database access, and adds domain logic on that data."</li>
+</ul>
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Architecture (cont'd)</h1>
+<ul>
+<li>Object lifecycle
+  <ul>
+  <li>Simple: <code>find</code>, <code>save</code></li>
+  <li>Read objs into memory when needed; thrown away at end of request</li>
+  <li>Don't need to worry about stale objects</li>
+  <li>Share nothing</li>
+  </ul></li>
+<li><a href="#slide32">Extending Rails</a>: components, plugins, and engines</li>
+<li>Migrations: database versioning</li>
+<li>Uses Rake: a better make</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Models and AR</h1>
+<ul>
+<li>Simplest declaration of a complete model is two lines of code, including "end"</li>
+<li>Convention over configuration: auto-read database metadata
+  <ul>
+  <li>Can override table, column, class</li>
+  <li>Legacy db integration <em>might</em> be difficult</li>
+<li>Associations: <code>has_one</code>, <code>has_many</code>, <code>belongs_to</code>, <code>has_and_belongs_to_many</code>, <code>has_many_through</code>
+  <ul>
+  <li>Eager loading (by default when define association, explicitly in <code>find()</code> call)</li>
+  </ul></li>
+</ul>
+
+<div class="notes">
+<ul>
+<li>Conventions:
+  <ul>
+  <li>Plural table name, singular class name</li>
+  <li>ID column, foreign keys, join tables</li>
+  </ul></li>
+  </ul></li>
+<li><code>has_many</code> associations act as Ruby collections</li>
+<li>when refer to association, loads rows from database; can eagerly load</li>
+</ul>
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Models and AR (cont'd)</h1>
+<ul>
+<li><code>acts_as_</code><var>{ordered list, nested set, tree, taggable}</var></li>
+<li>Validation
+  <ul>
+  <li>Existence, uniqueness, numericality, length, format, exclusion/inclusion, acceptance</li>
+  <li>Error messages auto-built</li>
+  <li>When save, validations run. If fail, save fails and error messages are built and available</li>
+  </ul></li>
+<li>Before/after callbacks
+  <ul>
+  <li>load, save, create</li>
+  </ul></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Models and AR (cont'd)</h1>
+<ul>
+<li><code><var>ModelClass</var>.find()</code>
+  <ul>
+  <li>by id</li>
+  <li>conditions, order, joins</li>
+  <li>can use raw SQL or fragments</li>
+  <li><code>find_by_<var>X</var></code>, <code>find_by_<var>X</var>_and_<var>Y</var></code> created at runtime</li>
+  </ul></li>
+<li>Transactions</li>
+<li>Observers</li>
+<li>Class inheritance: single table</li>
+</div>
+
+<div class="slide">
+<h1>Models and AR (cont'd)</h1>
+<ul>
+<li>Database abstraction
+  <ul>
+  <li>PostgreSQL, MySQL, Oracle, SQLite, DB2, Firebird, MS SQL, Sybase, Openbase</li>
+  <li>Adapters approx. 100 lines of code</li>
+  </ul></li>
+<li>Connection pool</li>
+<li>Multiple databases supported, can specify per class</li>
+</ul>
+
+<div class="notes">
+<li>Magic column names
+  <ul>
+  <li><code>id</code></li>
+  <li><code>created_</code>{<code>at</code>,<code>on</code>}, <code>updated_</code>{<code>at</code>,<code>on</code>}</li>
+  <li><code>type</code></li>
+  <li><code>position</code></li>
+  <li><code>parent_id</code></li>
+  <li><code><var>XXX</var>_id</code> (foreign keys)</li>
+  <li><code>lock_version</code> for optimistic locking</li>
+  </ul></li>
+</ul>
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Views</h1>
+<ul>
+<li>Templates</li>
+  <ul>
+  <li><code>.rhtml</code>
+    <ul>
+    <li>XHTML</li>
+    <li>Minimal Ruby in page; behavior is in controllers and models</li>
+    <li>Uses ERb, similar to PHP but with Ruby</li>
+    </ul></li>
+  <li><code>.rxml</code>
+    <ul>
+    <li>Constructs XML using Ruby code</li>
+    <li>Example use: build RSS</li>
+    </ul></li>
+  <li><code>.rjs</code> (Ruby code JavaScript generator)
+    <ul>
+    <li>Generate instructions on how to modify an already-rendered page</li>
+    <li>Create/refresh/replace DOM components</li>
+    <li>Apply AJAX effects</li>
+    </ul></li>
+</ul>
+
+<div class="notes">
+<ul>
+<li>.rxml: XML builder code uses <code>method_missing</code>; xml.foo outputs <code>&lt;foo&gt;</code></li>
+<li>.rjs: Not necessary to use RJS for AJAX</li>
+</ul>
+</div>
+</div>
+
+<div class="slide">
+<h1>Views (cont'd)</h1>
+<ul>
+<li>Large number of methods available
+  <ul>
+  <li><code>link_to</code> and friends (<code>link_to_unless_current</code>, <code>link_to_remote</code>)</li>
+  <li>forms, input fields, naming conventions to work with model objects</li>
+  <li><code>cycle</code> for even/odd CSS classes</li>
+  </ul></li>
+<li>You don't hard-code URLs, you use <code>link_to</code>, <code>image_tag</code> and friends and specify controller and action; same for <code>stylesheet_link_tag</code>, <code>javascript_include_tag</code></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Views (cont'd)</h1>
+<ul>
+<li>Partials
+  <ul>
+  <li>Views can render partials</li>
+  <li>Pass variables into partials for local use</li>
+  </ul></li>
+<li>Pagination</li>
+<li>Helpers: common code for views
+  <ul>
+  <li>Rails comes with number and currency formatting, string truncation and pluralization, highlighting substrings, more</li>
+  </ul></li>
+<li>AJAX and DHTML</li>
+</ul>
+
+<div class="notes">
+<ul>
+<li>AJAX
+  <ul><li>form submission, live updater</li></ul></li>
+<li>DHTML
+  <ul>
+  <li>effects (slide, poof)</li>
+  <li>script.aculo.us, mir.aculo.us</li>
+  <li>drag and drop</li>
+  </ul></li>
+</ul>
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Controllers</h1>
+<ul>
+<li>Present models to views, take view data and hand back to models</li>
+<li>One controller has many actions; each action roughly corresponds to a Web page and REST URL</li>
+<li>Same action can render any of HTML/XML/RSS output, based e.g. on input URL/template file extension</li>
+<li>Redirect</li>
+<li>Layouts: application-wide, per controller, or per action</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Controllers (cont'd)</h1>
+<ul>
+<li>Routes
+  <ul>
+  <li>Default mapping of URLs to controller action</li>
+  <li>Can override and manipulate URLs piece by piece</li>
+  </ul></li>
+<li>Before filters: e.g., <code>requires_login</code></li>
+<li>Can render any view or partial</li>
+<li>Scaffolding
+  <ul>
+  <li>Auto-generated CRUD screens for a model</li>
+  <li>Explicit when generate controller or implicit with 1 line code</li>
+  </ul></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Controllers (cont'd)</h1>
+<ul>
+<li><code>params</code> array contains GET/POST request values
+  <ul>
+  <li>Form input field functions' naming conventions map to model ivars</li>
+  </ul></li>
+<li>Protection against destructive GET requests: can say that action must use POST</li>
+<li><code>flash[]</code> for temporary messages like error messages or notifications</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Action Mailer</h1>
+<ul>
+<li>Sending email from app</li>
+<li>Text or HTML</li>
+<li>Can send multipart messages with attachments</li>
+<li>Can use rhtml as template for message body</li>
+<li>When testing, can config (using env file) to send emails to an array in memory</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Action Web Service</h1>
+<ul>
+<li>Add Web services to your app</li>
+<li>Brain-dead simple</li>
+<li>API class declares Web service methods with inputs and outputs</li>
+<li>Controller implements methods (can delegate instead)</li>
+<li>Can accept XML-RPC or SOAP/RPC</li>
+<li>Auto-generates WSDL</li>
+<li>Invocation scaffold</li>
+</ul>
+
+<div class="notes">
+<p>Can set namespace</p>
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Creating a Rails Project</h1>
+<ul>
+<li><code>rails appname</code></li>
+<li>Directory structure: a place for everything, and everything in its place
+  <ul>
+  <li>models, views, controllers, helpers</li>
+  <li>database scripts</li>
+  <li>documentation</li>
+  <li>configuration</li>
+  <li>testing</li>
+  <li>logs</li>
+  <li>static HTML, JavaScript, sytlesheets, 404 & 500, robots.txt
+    <ul>
+    <li>comes with JavaScript for AJAX, drag and drop, pagination, much more</li>
+    </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Creating a Rails Proj (cont'd)</h1>
+<ul>
+<li>Scripts (see next slide)</li>
+<li>Built-in pure-Ruby Web server (not fastest or best)</li>
+<li>Rakefile
+  <ul>
+  <li>Test tasks, doc tasks, db schema tasks, rails tasks (freeze, update)</li>
+  </ul></li>
+<li>Testing harness</li>
+<li>Routing</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Development and Testing</h1>
+<ul>
+<li>Scripts
+  <ul>
+  <li><code>generate</code> creates models, contollers, integration tests, mailer, migration, plugin, scaffold, session_migration, web_service
+    <ul>
+    <li>Generating a model or controller generates test cases automatically</li>
+    <li>Generating a model generates a database migration script automatically</li>
+    <li>Can write your own generators. Examples:
+      <ul>
+      <li>Localization</li>
+      <li>Login, salted login</li>
+      </ul></li>
+    <li>Finding more generators:
+       <ul>
+       <li>Use Gem's search feature</li>
+       <li><a href="http://rubyonrails.org/show/Generators" ref="external">http://rubyonrails.org/show/Generators</a></li>
+       </ul></li>
+    <li>See also <a href="#slide32">Extending Rails</a></li>
+    </ul></li>
+  </ul>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Dev. and Testing (cont'd)</h1>
+<ul>
+<li>Scripts (cont'd)
+  <ul>
+  <li><code>console</code> and <code>runner</code> scripts</li>
+  <li>Performance subdir: <code>benchmarker</code>, <code>profiler</code></li>
+  <li>Process subdir: <code>spinner</code>, <code>reaper</code>, <code>spawner</code> for Fast CGI listner management</li>
+  <li>Default WEBrick server launcher</li>
+  </ul></li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Dev. and Testing (cont'd)</h1>
+<ul>
+<li>Environments
+  <ul>
+  <li>With the flick of an env var or command line switch, connect to different database and use completely different set of configuration values</li>
+  <li>In dev env, code changes detected automatically; almost all classes refreshed for every page</li>
+  <li>...so the development cycle is "edit code or database, refresh browser"
+  <ul>
+  <li>See <a href="#slide41">Caching</a> below</li>
+  </ul></li>
+</ul></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Dev. and Testing (cont'd)</h1>
+<ul>
+<li>Available documentation
+  <ul>
+  <li>See <a href="#slide44">Resources</a></li>
+  <li>Rails mailing list very helpful</li>
+  <li>Comes with docs: gem_server</li>
+  <li>Books
+    <ul>
+    <li><cite>Agile Web Development with Rails</cite></li>
+    <li><cite>Rails Recipes</cite></li>
+    <li>New <cite>Rails Deployment Configuration</cite> book in beta</li>
+    </ul></li>
+  </ul></li>
+<li>Development Environments
+  <ul>
+  <li>Eclipse: Rad Rails (editing, app server, more)</li>
+  <li>TextMate (Mac OS X only)</li>
+  </li></ul>
+</ul>
+
+<div class="notes">
+<p>Agile Web Dev: : 2nd ed already, paper quickly becomes out of date: pragprog PDF and mlists to keep up</p>
+</div>
+</div>
+
+<div class="slide">
+<h1>Dev. and Testing (cont'd)</h1>
+<ul>
+<li>Testing
+  <ul>
+  <li>Unit tests</li>
+  <li>Controller-level tests</li>
+  <li>Web service API-level tests</li>
+  <li>Integration tests</li>
+  <li>(Probs w/multiple db conns during testing)</li>
+  </ul></li>
+<li>Fixtures define test data that is loaded as needed before each test is run
+  <ul>
+  <li>By default uses transactions to eliminate load times</li>
+  </ul></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Dev. and Testing (cont'd)</h1>
+<ul>
+<li>Migrations
+  <ul>
+  <li>Script creates/drops tables and lets you run any Ruby code you want with full access to all your Model objects</li>
+  <li>Each has <code>up</code> and <code>down</code> methods</li>
+  <li>Foreign key support lacking
+    <ul>
+    <li>I wrote support; you can have it</li>
+    </ul></li>
+  </ul>
+<li>Scaffolding</li>
+<li>Logging</li>
+<li>WEBrick (do not use), Mongrel (discussed below)</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Dev. and Testing (cont'd)</h1>
+<ul>
+<li>Rake
+  <ul>
+  <li>Db (re)create schema</li>
+  <li>Running tests</li>
+  <li>Create sessions table</li>
+  <li>Can create custom tasks</li>
+  </ul></li>
+<li>Documentation generation: RDoc</li>
+<li>Mocks: if class found in mock dir, it's used
+  <ul>
+  <li>Ruby's open nature means you can modify existing classes</li>
+  <li>Example: <code>SystemClock</code></li>
+  </ul></li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Extending Rails</h1>
+<ul>
+<li>Components, plugins, and engines</li>
+<li>Components allow you to share code across pages</li>
+<li>Plugins and engines
+  <ul>
+  <li>Allow you to share code between Rails applications</li>
+  <li>Can contain schema, models, controllers, views, behavior</li>
+  </ul></li>
+</ul>
+
+<div class="notes">
+<p>(Don't spend too much time on this section.)</p>
+</div>
+</div>
+
+<div class="slide">
+<h1>Extending Rails (cont'd)</h1>
+<ul>
+<li>Components
+  <ul>
+  <li>Made up of controllers, helpers, and views</li>
+  <li>Example: shopping cart</li>
+  <li>Does not follow file structure</li>
+  <li>Components falling out of favor</li>
+  <li>Can often use partials instead</li>
+  </ul></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Extending Rails (cont'd)</h1>
+<ul>
+<li>Plugins
+  <ul>
+  <li>Have init code, can be used to extend Rails base classes</li>
+  <li>Go into vendor/plugins directory</li>
+  <li>Examples
+    <ul>
+    <li>Extended scaffolding: works with associations</li>
+    <li><code>acts_as_chunky_bacon</code> (in other words, writing new AR class behaviors)</li>
+    <li>Email notification on errors</li>
+    <li>Common <code>before_filter</code>s</li>
+    <li>Web service infrastructure</li>
+    </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Extending Rails (cont'd)</h1>
+<ul>
+<li>Engines are more like a vertical slice of behavior
+  <ul>
+  <li>Let you add application-level behavior without affecting existing code.</li>
+  <li>Example: managing users and permissions</li>
+  <li><a href="http://rails-engines.rubyforge.org" ref="external">http://rails-engines.rubyforge.org</a></li>
+  </ul></li>
+<li><a href="http://rails-engines.org/wiki/pages/Components+vs.+Plugins+vs.+Engines" rel="external">Components vs. Plugins vs. Engines</a></li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Deployment</h1>
+<ul>
+<li>Apache, lightspeed, lighttpd, Mongrel, etc.
+  <ul>
+  <li>lighttpd ("lighty"): fast, small, Web server with good feature set</li>
+  <li>IIS possible</li>
+  </ul></li>
+<li>We'll discuss performance and scaling in a moment</li>
+<li>Mongrel
+  <ul>
+  <li>Does not use SCGI; Rails runs inside Mongrel</li>
+  <li>Don't need lighttpd or Apache</li>
+  <li>Pool of thread workers</li>
+  <li>Plugins
+    <ul>
+    <li>Clustering</li>
+    </ul></li>
+  </ul></li>
+</ul>
+</div>
+</div>
+
+<div class="slide">
+<h1>Deployment (cont'd)</h1>
+<ul>
+<li>Capistrano
+  <ul>
+  <li>Not part of Rails</li>
+  <li>You provide a "recipe" describing servers and their roles, plus shell script snippets</li>
+  <li>Allows you to roll bad version out of production and revert to previous release</li>
+  <li>Runs database migrations</li>
+  <li>Very little of Capistrano is Rails-specific</li>
+  <li>Capistrano is really a tool that executes commands in parallel on multiple servers</li>
+  <li>Uses SSH, SVN/CVS/Darcs</li>
+  <li>Task for disabling/enabling Web (flips in "maintenance" pages)</li>
+  <li>Restart</li>
+  </ul></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Deployment (cont'd)</h1>
+<ul>
+<li>Migrations</li>
+<li>Versioning of Rails itself and gems
+  <ul>
+  <li>Rake tasks
+    <ul>
+    <li>Lock to current gems (unpack into vendor/rails), unlock</li>
+    <li>Lock/unlock from edge rails</li>
+    <li>Update scripts with latest Rails version's scripts</li>
+    </ul></li>
+  </ul></li>
+<li>Cron jobs: runner script</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Performance and Scaling</h1>
+<ul>
+<li>Some well-known sites
+  <ul>
+  <li>Ruby on Rails site: 3,500&ndash;4,500 TBs/month (approx. 10&ndash;15 Mbps)</li>
+  <li>Basecamp, Backpack, Campfile, Ta-Da Lists, Writeboard</li>
+  <li>43 {Things, Places, People}</li>
+  <li>CD Baby &mdash; see <a href="http://www.oreillynet.com/pub/au/1841" ref="external">Derek Silvers' O'Reilly blogs</a></li>
+  <li>Odeo: podcast/audio files</li>
+  </ul></li>
+<li>Guidelines
+  <ul>
+  <li>Scalability means resource expansion, not speed or high performance</li>
+  <li>Measure requests per second, not users per second</li>
+  </ul></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Perf. and Scaling (cont'd)</h1>
+<ul>
+<li><a href="http://www.loudthinking.com/arc/000479.html" rel="external">It's Boring to Scale with Ruby on Rails</a>
+  <ul>
+  <li>Share nothing (state out of app servers, into db/memcached/shared network drive)</li>
+  <li>Load balance between all tiers (can be software load balancers)</li>
+  <li>This allows you to add Web and app servers without changing anything</li>
+  <li>Scaling the database is the hard part
+    <ul>
+    <li>Once get beyond master/slave setup, you start doing data partitioning</li>
+    </ul></li>
+  <li>Economic issues determine next steps &mdash; see article</li>
+  <li>Remember, Rails is only one part of the whole deployment</li>
+  </ul></li>
+</ul>
+
+<div class="notes">
+<ul>
+<li>"We've gone the easy route and merely followed what makes Yahoo!, LiveJournal, and other high-profile LAMP stacks scale high and mighty."</li>
+<li>Load balancers -&gt; web servers -&gt; load balancers -&gt; app servers -&gt; load balancers -&gt; database/memcached/shared network drive servers.</li>
+<li>"The point is that the cost per request is plummeting, but the cost of programming is not."
+</ul>
+
+</div>
+
+<div class="slide">
+<h1>Perf. and Scaling (cont'd)</h1>
+<ul>
+<li>Caching
+  <ul>
+  <li>Page caching</li>
+  <li>Action caching</li>
+  <li>Fragment caching</li>
+  <li>Can expire explicitly, implicitly, or with sweepers
+  <li>Caching can be turned on/off in environment files
+    <ul>
+    <li>By default, only enabled in production environment</li>
+    </ul></li>
+  </ul></li>
+</ul>
+
+<div class="notes">
+<ul>
+<li>Page caching
+  <ul>
+  <li>handled by Web server, for relatively static (e.g., product desc.)</li>
+  </ul></li>
+<li>Action caching
+  <ul>
+  <li>controller invoked, before filters run, but action not invoked if already cached</li>
+  </ul></li>
+<li>Fragment caching
+  <ul>
+  <li>use <code>cache()</code> method in view to surround output you want cached</li>
+  </ul></li>
+<li>In controller, use <code>caches_page</code> and <code>caches_action</code> class methods</li>
+</ul>
+</div>
+</div>
+
+<div class="slide">
+<h1>Perf. and Scaling (cont'd)</h1>
+<ul>
+<li>Sessions: on file system by default; can use database with flick of a switch (and a database migration); can use memcached</li>
+<li><a href="http://scalewithrails.com/downloads/ScaleWithRails-April2006.pdf" ref="external">Scale With Rails</a> (pdf)
+  <ul>
+  <li>Solaris, Sun T1000's, Ultrasparc T1, ZFS</li>
+  <li>Scale with Rails workshops: missed NYC, Aug. 23-24 LA, Oct. 25-26 Frankfurt</li>
+  </ul></li>
+<li><a href="http://www.oreillynet.com/ruby/blog/2006/05/post.html" rel="external">Zed on Ruby, Rails, Mongrel, and More</a></li>
+<li><a href="http://www.infoq.com/articles/Rails-Performance" rel="external">A Look at Common Performance Problems in Rails</a></li>
+<li>Ruby itself
+  <ul>
+  <li>YARV (Yet Another Ruby VM)/Rite</li>
+  <li>C and SWIG</li>
+  </ul></li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>The Future</h1>
+<ul>
+<li>Edge Rails is always available via Subversion</li>
+<li>ActiveResource
+  <ul>
+  <li>Model objects become REST-based client proxies to remote services</li>
+  <li>Maps CRUD to REST using HTTP commands GET, POST, PUT, and DELETE</li>
+  </ul></li>
+</ul>
+<pre>
+Person.find(1)      # becomes an HTTP GET
+Person.find(:all)   # ditto
+some_person.save    # (update)   HTTP POST
+Person.new.save     # (create)   HTTP PUT
+some_person.destroy #            HTTP DELETE
+</pre>
+</div>
+
+
+<div class="slide">
+<h1>Resources</h1>
+<ul>
+<li><a href="http://www.rubyonrails.org" ref="external">http://www.rubyonrails.org</a></li>
+<li><a href="http://www.rubyonrails.org/docs" ref="external">http://www.rubyonrails.org/docs</a></li>
+<li><a href="http://www.jimmenard.com/writing/rails_ctoclub/s5/index.html" ref="external">This talk online</a></li>
+<li>My del.icio.us tags
+  <ul>
+  <li><a href="http://del.icio.us/jimm/rails" ref="external">http://del.icio.us/jimm/rails</a></li>
+  <li><a href="http://del.icio.us/jimm/ruby" ref="external">http://del.icio.us/jimm/ruby</a></li>
+  </ul></li>
+</li>
+<li><a href="http://www.ruby-doc.org" ref="external">http://www.ruby-doc.org</a></li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>The End</h1>
+<br/><br/><br/>
+<blockquote>So...is it hot, or is it not?</blockquote>
+</div>
+
+</div>
+</body>
+</html>

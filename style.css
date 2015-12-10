@@ -1,0 +1,234 @@
+body {
+	background: #f6f6f6;
+	font-family: Georgia, serif;
+}
+p, li {
+	text-align: justify;
+}
+li {
+	padding-top: 0.25em;
+}
+h1 {
+	font-size: 2em;
+}
+.right {
+	text-align: right;
+}
+div.header, th {
+	background: #666;
+	color: white;
+}
+div.header {
+	border: thin solid #666;
+	background-image: url(images/b1fabric010.jpg);
+	letter-spacing: 0.05em;
+}
+div.header a:link {
+	text-decoration: none;
+	color: white;
+}
+div.header a:visited {
+	text-decoration: none;
+	color: white;
+}
+div.header a:hover {
+	text-decoration: none;
+	color: white;
+}
+div.header a:active {
+	text-decoration: none;
+	color: white;
+}
+span.home-icon {
+	float: left;
+	padding: 1.5em;
+}
+div.site-title {
+	font-size: 2.5em;
+	font-weight: bold;
+	padding-left: 0.5em;
+	padding-top: 0.5em;
+	padding-right: 0.5em;
+	padding-bottom: 0em;
+}
+span.site-subtitle {
+	font-size: 0.4em;
+	font-style: italic;
+}
+div.page-title {
+/*	float: right; */
+	margin: 0;
+	font-size: 1em;
+	font-weight: bold;
+	padding: 0.5em;
+}
+div.menu {
+	font-size: 0.8em;
+	float: left;
+	background: #ffc;
+	padding: 1em;
+	padding-top: 0;
+	margin-top: 0.5em;
+	width: 12em;
+	border: black;
+	border-style: solid;
+	border-width: thin;
+	border-color: #666;
+}
+div.menu-title {
+	background: black;
+	color: white;
+        font-size: 18px;
+	margin-left: -0.9em;
+	margin-right: -0.9em;
+	padding-left: 1em;
+}
+div.menu ul {
+	list-style-type: none;
+	list-style-position: inside;
+	margin-left: -1em;
+	padding-left: 2em;
+	text-indent: -1em;
+}
+div.menu li {
+	text-align: left;
+        font-size: 18px;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+}
+div.content {
+	text-align: justify;
+	padding-left: 12em;
+	padding-top: 0;
+	padding-right: 2em;
+}
+div.footer {
+	font-size: 0.75em;
+	font-style: italic;
+}
+div.adsense {
+	float: right;
+	margin-left: 2em;
+}
+
+/* resume */
+div.resume {
+	width: 40em;
+	margin-left: auto;
+	margin-right: auto;
+}
+span.my-name {
+	font-size: 2em;
+	font-weight: bold;
+}
+div.versions {
+	font-size: 0.8em;
+	font-style: italic;
+}
+span.company {
+	font-weight: bold
+}
+span.dates {
+}
+span.job-title {
+	font-weight: bold;
+	font-style: italic;
+	text-align: left;
+}
+span.job-client {
+	font-weight: bold;
+	text-align: left;
+}
+span.job-skill {
+	font-weight: bold;
+	text-align: left;
+}
+span.univ {
+	font-weight: bold
+}
+span.prof-org {
+	font-weight: bold
+}
+span.proj {
+	font-weight: bold
+}
+span.mag-name {
+	font-style: italic
+}
+
+/* articles */
+.article-title, .article-subtitle, .article-author {
+	text-align: center;
+}
+.article-title {
+	font-size: 3em;
+}
+.article-subtitle, .article-author {
+	font-size: 1.5em;
+}
+code {
+	color: #020;
+}
+pre.code {
+	background-color: #eee;
+	border-style: solid;
+	border-width: thin;
+	border-color: black;
+	padding-top: 0.5em;
+	padding-left: 0.5em;
+	padding-bottom: 0.5em;
+	width: 100%;
+	overflow: auto;
+}
+.listing-title {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+.listing-summary {
+	font-style: italic;
+}
+.cmd {
+	font-weight: bold;
+}
+p.article-origin {
+	font-style: italic;
+}
+p.article-origin span.citation {
+	font-weight: bold;
+}
+
+span.bm {
+	font-size: 1.2em;
+}
+
+span.rb-com {
+	color: #900;
+}
+span.rb-str {
+	color: green;
+}
+span.rb-def {
+	color: blue;
+}
+span.rb-kon {
+	color: green;
+}
+div#randsig {
+	height: 5em;
+}
+.disabled {
+	color: #888;
+}
+.toplink {
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 0.75em;
+}
+img.texthead {
+	float:left;
+	margin-right:1em;
+	vertical-align: top;
+	border: 1px solid #666;
+}

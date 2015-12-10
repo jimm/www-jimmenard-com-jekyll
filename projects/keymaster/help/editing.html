@@ -1,0 +1,237 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<title>KeyMaster: Editing</title>
+</head>
+<body background="images/gradient_bg.gif">
+
+<table width=600 border=0 cellpadding=0 cellspacing="0">
+	<tr>
+		<td align=LEFT width=95 valign="TOP"> <img src="images/KeyMaster.gif" width=32 height=32
+		align="bottom" alt="[Logo]" border=0> </td>
+		<td align=right width=495><font size="+6"><b>Editing</b></font> <br>																					
+			<hr>
+		</td>
+	</tr>
+	<tr>
+		<td valign="TOP" width="100">
+			<font size="-2">
+			<p><a href="index.html">Contents</a></p>
+			<p><a href="introduction.html">Introduction</a></p>
+			<p><a href="getting_started.html">Getting
+				Started</a></p>
+			<p><a href="components.html">Components</a></p>
+			<p><a href="main_menu.html">Main Menu</a></p>
+			<p><a href="windows.html">Windows</a></p>
+			<p><a href="movement.html">Movement</a></p>
+			<p><a href="patches.html">Patches</a></p>
+			<p>Editing</p>
+			<p><a href="sysex.html">SysEx Librarian</a></p>
+			<p><a href="misc.html">Miscellaneous</a></p>
+			<p><a href="ideas.html">Ideas</a></p>
+			<p><a
+				href="midi_ref.html">MIDI Reference</a></p>
+			<p><a href="release.html">Release Notes</a></p>
+			<font>
+		</td>
+		<td valign="TOP" width="500"><a name="TOC"></a> <a name="TOC">
+			<h1>Table of Contents</h1>
+			</a>
+			<dl>
+				<dt><a href="#general">General Editing</a></dt>
+				<dl>
+					<dt><a href="#Entering Names">Entering Names</a></dt>
+					<dt><a href="#Entering Numbers">Entering Numbers</a></dt>
+					<dt><a href="#Entering Notes">Entering Notes</a></dt>
+				</dl>
+				<dt><a href="#Instruments">Editing Instruments</a></dt>
+				<dl>
+					<dt><a href="#InstrName">Instrument Name</a></dt>
+					<dt><a href="#IsController">Is a Controller</a></dt>
+					<dt><a href="#IsMultitimbral">Is Multitimbral</a></dt>
+					<dt><a href="#ProgOffsets">Program Numbers Start at 1</a></dt>
+					<dt><a href="#SendChans">Send Channels</a></dt>
+					<dt><a href="#RcvChans">Receive Channels</a></dt>
+					<dt><a href="#IOPorts">MIDI Input/Output Port</a></dt>
+				</dl>
+				<dt><a href="#Messages">Editing Messages</a></dt>
+			</dl>
+			<i>Back to the <a href="index.html">main Table of Contents</a>.</i>
+			<hr>
+			<!-- **************************************************************** -->
+			<blockquote> <i>Most editors are failed writers - but so are most
+				writers. </i><br>
+				<br>
+				- T. S. Eliot </blockquote>
+			<hr>
+			<a name="general">
+			<h1>General Editing</h1>
+			</a> <a name="Entering Names"></a>
+			<h3>Entering Names</h3>
+			<blockquote>
+				<p>The case of a character (upper case/lower case) is significant
+					only when specifically stated. Otherwise when you have text
+					to enter (<i>e.g.</i>, a song name) either upper or lower
+					case is acceptable. Finding strings (like song and chain names)
+					is case-insensitive; the song name "My Favorite Hit" will
+					match "my favourite hit" or even "mY FaVohexadecimalRItE hIt".
+				<p>Typing any unique name prefix is sufficient. You don't have
+					to type the whole name. For example, in the <a href="windows.html#Find">Find
+					window</a>, you could type "my f" to find "My Favorite Hit"
+					(assuming no other song started with "my f". If the prefix
+					you type is not unique, the first matching object will be
+					returned.
+			</blockquote>
+			<a name="Entering Numbers"></a>
+			<h3>Entering Numbers</h3>
+			<blockquote> Numbers never contain commas, since the computer doesn't
+				understand them. Enter 1,256 as 1256.
+				<p> MIDI values for controller numbers, controller values, and,
+					note numbers range from 0 to 127. Pop-up menus contain standard
+					controller names and General MIDI patch names.
+				<p> You can enter MIDI controller values directly by moving any
+					controller. When any text field that is used to enter a controller
+					value has the focus (<i>i.e.</i>, is highlighted and accepts
+					key strokes), moving any controller on any MIDI channel enters
+					that controller's number in the text field.
+				<p>
+				<em> <b>None of the rest of this is implemented yet.</b>
+				<p> There is more than one way to specify a number. First, you
+					can just type it in. You may also use hexadecimal numbers
+					(base 16, or "hex" for short) by preceding the number with
+					"<code>0x</code>". For example, typing "<code>0x3F</code>"
+					would enter a value of 63 (since <code>0x3F</code> [base 16]
+					= 63 [base 10]). This is helpful at times since many devices'
+					MIDI implementation charts show numbers in hex.
+				<p> Another way to enter numbers is useful for synths with banks
+					of eight programs. With this method, you enter a '@' followed
+					by the bank and program number. For example, typing "@21"
+					will enter the correct program number for bank 2, program
+					1.
+				</em> </blockquote>
+			<a name="Entering Notes"></a>
+			<h3>Entering Notes</h3>
+			<blockquote> Notes can be specified by number or name. Notes names
+				are made up of pitch name, accidental, then octave number. Middle
+				C is C5. The D-sharp above the C above middle C is D#6. The B-flat
+				below middle C is Bb4. Note names are case-insensitive. A flat
+				is typed using a lower-case 'b' (since case doesn't matter, you
+				<em>could</em> use an upper-case 'B', I suppose).
+				<p> Note numbers range from 0 to 127. Middle C (C5) has a value
+					of 60 (hex <code>0x3C</code>).
+				<p> You can enter MIDI notes directly by playing them. When any
+					text field that is used to enter a note has the focus (<i>i.e.</i>,
+					is highlighted and accepts key strokes), playing a MIDI note
+					on any MIDI channel enters that note's name in the text field.
+			</blockquote>
+			<hr>
+			<a name="Instruments">
+			<h1>Editing Instruments</h1>
+			</a> To add or edit MIDI instruments, open the Instruments window
+			by selecting "Instruments" from any Window menu.
+			<p> To add a new instrument, select "New Instrument" from the Instrument
+				menu. A new instrument named "Unnamed" is created, and appears
+				in the list of instruments.
+			<p> To edit the settings of a MIDI instrument, open the Instruments
+				window, then click on an instrument name and select "Open Instrument"
+				from the Instrument menu. You can also double-click on an instrument
+				name.
+			<p> The dialog box that appears contains all of the settings that
+				describe the instrument.
+			<p> Click "Apply" to make any changes you have entered. If you close
+				the window without clicking "Apply", the instrument will not be
+				changed.
+			<p>
+			<a name="InstrName">
+			<h4>Instrument Name</h4>
+			</a>
+			<blockquote>
+				<p>You may give each instrument any name. This is the name that
+					will be used when you need to select an instrument.</p>
+			</blockquote>
+			<a name="IsController">
+			<h4>Is a Controller</h4>
+			</a>
+			<blockquote>
+				<p> Check this box if this instrument will be used to control
+					other instruments. </p>
+			</blockquote>
+			<a name="IsMultitimbral">
+			<h4>Is Multitimbral</h4>
+			</a>
+			<blockquote>
+				<p>Check this box if the instrument can send or receive on multiple
+					MIDI channels at once.</p>
+			</blockquote>
+			<a name="ProgOffsets">
+			<h4>Program Numbers Start at 1</h4>
+			</a>
+			<blockquote>
+				<p> Some MIDI instruments start counting their program change
+					commands from 0 (like MIDI does) and some start counting from
+					1 (like the Yamaha DX-7). You can let <strong>KeyMaster</strong>
+					know which way to count so it will send out the correct program
+					change command for each MIDI channel and display the right
+					program change numbers. </p>
+				<p> If you enter a program number of 3, <strong>KeyMaster</strong>
+					normally sends out MIDI program change number 3. This is fine
+					for a device that starts counting from 0. But if you type
+					in a 3, you want <strong>KeyMaster</strong> to send a 2 to
+					your DX-7 (MIDI program number 2 equals DX-7 program number
+					3). By telling <strong>KeyMaster</strong> what to do, you
+					don't have to think about this problem at all.</p>
+			</blockquote>
+			<p>
+			<a name="SendChans">
+			<h4>Send Channels</h4>
+			</a>
+			<blockquote>
+				<p> Select the MIDI channels that this instrument sends. These
+					check boxes are disabled if "Is a Controller" is not checked.
+				</p>
+				<p> Only one channel at a time is allowed if "Is Multitimbral"
+					is not checked.</p>
+			</blockquote>
+			<p>
+			<a name="RcvChans">
+			<h4>Receive Channels</h4>
+			</a>
+			<blockquote>
+				<p> Select the MIDI channels that this instrument receives. </p>
+				<p>Only one channel at a time is allowed if "Is Multitimbral"
+					is not checked.</p>
+			</blockquote>
+			<p>
+			<a name="IOPorts">
+			<h4>MIDI Input/Output Port</h4>
+			</a>
+			<blockquote>
+				<p> Select the MIDI input and output ports to which this instrument
+					is attached. An instrument's output can be the BeOS internal
+					MIDI synthesizer.</p>
+			</blockquote>
+			<p>
+			<hr>
+			<a name="Messages">
+			<h1>Editing Messages</h1>
+			</a> To see all of the MIDI messages, open the Messages <a
+href="windows.html#ListWindows">list window</a> from the Window menu.
+			<p> When you open a message, a message editing window appears. The
+				small icons in the window represent MIDI commands like patch changes,
+				controller changes, and sysex messages. You can drag any icon
+				into the text area to insert one of these commands.
+			<p>To edit a particular command within the message, double-click it.
+				An editor window specific to that MIDI command opens.
+			<p> I want to add pop-up menus for General MIDI program change names.
+			<p> <i>Some day, you will be able to open MIDI files, drag MIDI files
+				onto the editor, etc.</i>
+			<p>
+			<hr>
+			<font size="-1">Back to the <a href="index.html">main Table of Contents</a>.<br>
+			<i>Contents &copy; 1995 - 2000 by <a href="mailto:jim@jimmenard.com">Jim Menard</a>;
+			All Rights Reserved.</i> </font> </td>
+	</tr>
+</table>
+
+</body>
+</html>

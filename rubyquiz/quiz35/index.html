@@ -1,0 +1,40 @@
+<!--#set var="pagetitle" value="Ruby Quiz 35: Chess Variants" -->
+<!--#include virtual="/header.html"-->
+
+<p>Here is my solution to Ruby Quiz 35: <a
+href="http://www.rubyquiz.com/quiz35.html">Chess Variants (I)</a>. My solution
+depends upon <a href="http://bangkok.rubyforge.org">Bangkok</a>, my
+chess-game-replaying library.</p>
+
+<p>To use this solution, you need to install Bangkok (which in turn requires
+midilib) as well as the following files:</p>
+
+<ul>
+<li><a href="board.rb">board.rb</a></li>
+<li><a href="chessgame.rb">chessgame.rb</a></li>
+<li><a href="displaylistener.rb">displaylistener.rb</a></li>
+<li><a href="main.rb">main.rb</a></li>
+</ul>
+
+<p>Alternately, you can download <a
+href="playchess.tar.gz">playchess.tar.gz</a>, which contains the directory
+"playchess" that holds all four files.</p>
+
+<pre>
+% gem install bangkok
+...
+% copy_these_files_to_your_machine
+% cd playchess
+% main.rb
+[board is drawn]
+White: f4
+[board is drawn]
+Black: Nf6
+...
+</pre>
+
+<p>Back to my <a href="../">Ruby Quiz solutions page</a>.</p>
+
+
+
+<!--#include virtual="/footer.html"-->

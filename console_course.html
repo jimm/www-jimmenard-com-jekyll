@@ -1,0 +1,2544 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
+<head>
+<title>The Rails Console</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2012-03-04 14:07:07 EST"/>
+<meta name="author" content="Jim Menard"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="console_course.css" />
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+
+<h1 class="title">The Rails Console</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Agenda </a></li>
+<li><a href="#sec-2">2 The Rails Console </a>
+<ul>
+<li><a href="#sec-2.1">2.1 Console == IRB plus Rails </a></li>
+<li><a href="#sec-2.2">2.2 Opening a console </a>
+<ul>
+<li><a href="#sec-2.2.1">2.2.1 Locally </a></li>
+<li><a href="#sec-2.2.2">2.2.2 On a server </a></li>
+<li><a href="#sec-2.2.3">2.2.3 Environment </a></li>
+</ul>
+</li>
+<li><a href="#sec-2.3">2.3 Simple expressions </a></li>
+<li><a href="#sec-2.4">2.4 Find, inspect, create, save Rails objects </a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3 Ruby </a>
+<ul>
+<li><a href="#sec-3.1">3.1 Whirlwind tour </a>
+<ul>
+<li><a href="#sec-3.1.1">3.1.1 Expressions </a></li>
+<li><a href="#sec-3.1.2">3.1.2 Truthiness </a></li>
+<li><a href="#sec-3.1.3">3.1.3 Variables </a></li>
+<li><a href="#sec-3.1.4">3.1.4 Methods: Show and Tell </a></li>
+<li><a href="#sec-3.1.5">3.1.5 Strings </a></li>
+<li><a href="#sec-3.1.6">3.1.6 Symbols </a></li>
+<li><a href="#sec-3.1.7">3.1.7 Arrays and Hashes </a></li>
+<li><a href="#sec-3.1.8">3.1.8 Blocks </a></li>
+<li><a href="#sec-3.1.9">3.1.9 Modules and Classes </a></li>
+</ul>
+</li>
+<li><a href="#sec-3.2">3.2 Printing and inspecting </a></li>
+<li><a href="#sec-3.3">3.3 to_s, inspect </a></li>
+<li><a href="#sec-3.4">3.4 Iteration </a></li>
+<li><a href="#sec-3.5">3.5 Using parentheses </a></li>
+<li><a href="#sec-3.6">3.6 Hash as last argument </a></li>
+<li><a href="#sec-3.7">3.7 Finding out what you can do </a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4 Rails </a>
+<ul>
+<li><a href="#sec-4.1">4.1 What is Rails? </a></li>
+<li><a href="#sec-4.2">4.2 MVC </a></li>
+<li><a href="#sec-4.3">4.3 Rails subsystems </a></li>
+<li><a href="#sec-4.4">4.4 Code organization </a>
+<ul>
+<li><a href="#sec-4.4.1">4.4.1 app: MVC </a></li>
+<li><a href="#sec-4.4.2">4.4.2 lib </a></li>
+<li><a href="#sec-4.4.3">4.4.3 vendor </a></li>
+<li><a href="#sec-4.4.4">4.4.4 config </a></li>
+<li><a href="#sec-4.4.5">4.4.5 script </a></li>
+<li><a href="#sec-4.4.6">4.4.6 db </a></li>
+<li><a href="#sec-4.4.7">4.4.7 test </a></li>
+<li><a href="#sec-4.4.8">4.4.8 log </a></li>
+<li><a href="#sec-4.4.9">4.4.9 tmp </a></li>
+<li><a href="#sec-4.4.10">4.4.10 bin </a></li>
+</ul>
+</li>
+<li><a href="#sec-4.5">4.5 Routes </a></li>
+<li><a href="#sec-4.6">4.6 Extensions to Ruby </a>
+<ul>
+<li><a href="#sec-4.6.1">4.6.1 1.week.ago </a></li>
+<li><a href="#sec-4.6.2">4.6.2 String methods </a></li>
+</ul>
+</li>
+<li><a href="#sec-4.7">4.7 Environment Variables </a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5 ActiveRecord </a>
+<ul>
+<li><a href="#sec-5.1">5.1 CRUD: Create, Update, Delete </a></li>
+<li><a href="#sec-5.2">5.2 Associations </a>
+<ul>
+<li><a href="#sec-5.2.1">5.2.1 belongs_to, has_one, has_many, has_and_belongs_to_many </a></li>
+</ul>
+</li>
+<li><a href="#sec-5.3">5.3 Validations </a></li>
+<li><a href="#sec-5.4">5.4 Named Scopes </a></li>
+<li><a href="#sec-5.5">5.5 Callback methods </a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6 Looking at Our Rails Code </a>
+<ul>
+<li><a href="#sec-6.1">6.1 The Parts </a>
+<ul>
+<li><a href="#sec-6.1.1">6.1.1 Web pages </a></li>
+<li><a href="#sec-6.1.2">6.1.2 Workers </a></li>
+<li><a href="#sec-6.1.3">6.1.3 API </a></li>
+<li><a href="#sec-6.1.4">6.1.4 Extensions </a></li>
+</ul>
+</li>
+<li><a href="#sec-6.2">6.2 On the servers </a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7 Our Classes </a>
+<ul>
+<li><a href="#sec-7.1">7.1 The POM </a>
+<ul>
+<li><a href="#sec-7.1.1">7.1.1 Examples </a></li>
+</ul>
+</li>
+<li><a href="#sec-7.2">7.2 Users </a></li>
+<li><a href="#sec-7.3">7.3 Order, Shipping </a>
+<ul>
+<li><a href="#sec-7.3.1">7.3.1 Tender Types </a></li>
+<li><a href="#sec-7.3.2">7.3.2 Payment Process </a></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="#sec-8">8 Common Methods You'll Use </a>
+<ul>
+<li><a href="#sec-8.1">8.1 Ruby </a>
+<ul>
+<li><a href="#sec-8.1.1">8.1.1 Iteration </a></li>
+<li><a href="#sec-8.1.2">8.1.2 Array methods </a></li>
+</ul>
+</li>
+<li><a href="#sec-8.2">8.2 ActiveRecord </a>
+<ul>
+<li><a href="#sec-8.2.1">8.2.1 count </a></li>
+<li><a href="#sec-8.2.2">8.2.2 find </a></li>
+<li><a href="#sec-8.2.3">8.2.3 Dynamic Finders </a></li>
+<li><a href="#sec-8.2.4">8.2.4 update_attribute </a></li>
+<li><a href="#sec-8.2.5">8.2.5 save </a></li>
+<li><a href="#sec-8.2.6">8.2.6 reload </a></li>
+<li><a href="#sec-8.2.7">8.2.7 create </a></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="#sec-9">9 Tricks </a>
+<ul>
+<li><a href="#sec-9.1">9.1 Use variables to store results </a></li>
+<li><a href="#sec-9.2">9.2 <code>_</code> stores the previous result </a></li>
+<li><a href="#sec-9.3">9.3 Keyboard shortcuts </a></li>
+<li><a href="#sec-9.4">9.4 public_methods </a></li>
+<li><a href="#sec-9.5">9.5 Don't load too much </a></li>
+<li><a href="#sec-9.6">9.6 Use nil to avoid printing huge lists of things, or lists of huge things </a></li>
+<li><a href="#sec-9.7">9.7 map(&amp;:symbol) </a></li>
+<li><a href="#sec-9.8">9.8 Only fetch a single column </a></li>
+<li><a href="#sec-9.9">9.9 Write a method </a></li>
+<li><a href="#sec-9.10">9.10 Load and/or require code </a></li>
+<li><a href="#sec-9.11">9.11 The magic app </a></li>
+<li><a href="#sec-9.12">9.12 The magic helper </a></li>
+<li><a href="#sec-9.13">9.13 Call worker methods directly </a></li>
+<li><a href="#sec-9.14">9.14 Use mysql directly </a></li>
+<li><a href="#sec-9.15">9.15 Avoid changing anything </a></li>
+<li><a href="#sec-9.16">9.16 Hack to run db queries </a></li>
+<li><a href="#sec-9.17">9.17 Pretty-printing </a></li>
+<li><a href="#sec-9.18">9.18 ~/.irbrc </a></li>
+<li><a href="#sec-9.19">9.19 A simpler IRB prompt </a></li>
+<li><a href="#sec-9.20">9.20 See what background thinks it's supposed to do </a></li>
+<li><a href="#sec-9.21">9.21 sessions </a></li>
+<li><a href="#sec-9.22">9.22 Add-ons </a>
+<ul>
+<li><a href="#sec-9.22.1">9.22.1 Pry </a></li>
+<li><a href="#sec-9.22.2">9.22.2 Utility Belt </a></li>
+<li><a href="#sec-9.22.3">9.22.3 Wirble </a></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="#sec-10">10 Servers </a>
+<ul>
+<li><a href="#sec-10.1">10.1 One or two servers for dev, QA, testing, stage </a></li>
+<li><a href="#sec-10.2">10.2 Many servers for production </a></li>
+</ul>
+</li>
+<li><a href="#sec-11">11 Resources </a>
+<ul>
+<li><a href="#sec-11.1">11.1 Some "tips and tricks" links </a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Agenda </h2>
+<div class="outline-text-2" id="text-1">
+
+
+<dl>
+<dt>Console Super-Basics</dt><dd>
+a quick-start howto
+
+</dd>
+<dt>Ruby</dt><dd>
+a programming language
+
+</dd>
+<dt>Ruby on Rails (a.k.a. Rails)</dt><dd>
+a web application development framework
+
+</dd>
+<dt>Console</dt><dd>
+a command line interface to a Rails application
+
+</dd>
+</dl>
+
+<p><a href="http://jimmenard.com/console_course.html">http://jimmenard.com/console\_course.html</a>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> The Rails Console </h2>
+<div class="outline-text-2" id="text-2">
+
+
+
+</div>
+
+<div id="outline-container-2.1" class="outline-3">
+<h3 id="sec-2.1"><span class="section-number-3">2.1</span> Console == IRB plus Rails </h3>
+<div class="outline-text-3" id="text-2.1">
+
+
+<p>
+IRB is the Interactive Ruby Browser; comes with Ruby.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2.2" class="outline-3">
+<h3 id="sec-2.2"><span class="section-number-3">2.2</span> Opening a console </h3>
+<div class="outline-text-3" id="text-2.2">
+
+
+
+</div>
+
+<div id="outline-container-2.2.1" class="outline-4">
+<h4 id="sec-2.2.1"><span class="section-number-4">2.2.1</span> Locally </h4>
+<div class="outline-text-4" id="text-2.2.1">
+
+
+
+
+
+<pre class="src src-sh"><span style="color: #7a378b;">cd</span> path/to/ideeli/app
+script/console [environment]
+</pre>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2.2.2" class="outline-4">
+<h4 id="sec-2.2.2"><span class="section-number-4">2.2.2</span> On a server </h4>
+<div class="outline-text-4" id="text-2.2.2">
+
+
+
+
+
+<pre class="src src-sh">ssh rails@sched1.testing.ideeli.com
+./console
+</pre>
+
+
+
+
+<p>
+We'll use {sched,passenger}1.testing{1,2}.ideeli.com.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2.2.3" class="outline-4">
+<h4 id="sec-2.2.3"><span class="section-number-4">2.2.3</span> Environment </h4>
+<div class="outline-text-4" id="text-2.2.3">
+
+
+<ul>
+<li>
+Environment determines configuration settings
+<ul>
+<li>
+More details later
+</li>
+</ul>
+</li>
+<li>
+When running locally
+<ul>
+<li>
+"development" by default
+</li>
+<li>
+Override by passing name of environment on command line
+</li>
+<li>
+Could also override using RAILS_ENV
+
+</li>
+</ul>
+</li>
+</ul>
+
+
+<pre class="src src-ruby"><span style="color: #228b22;">RAILS_ENV</span>=test script/console
+</pre>
+
+
+
+<ul>
+<li>
+On ideeli servers
+<ul>
+<li>
+Our <code>console</code> script on servers auto-sets environment and cd's to RAILS_ROOT
+</li>
+</ul>
+</li>
+<li>
+On servers, <code>./console</code> sets environment automatically
+
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2.3" class="outline-3">
+<h3 id="sec-2.3"><span class="section-number-3">2.3</span> Simple expressions </h3>
+<div class="outline-text-3" id="text-2.3">
+
+
+<p>
+IRB (and the console) prints the result of whatever you type.
+</p>
+
+
+
+<pre class="src src-ruby">stick [s<span style="color: #008b8b;">:trunk</span>] ~<span style="color: #8b2252;">/src/</span>ideeli/trunk$ irb
+irb(main)<span style="color: #008b8b;">:001</span>:0&gt; 42
+=&gt; 42
+irb(main)<span style="color: #008b8b;">:002</span>:0&gt; 3 + 4
+=&gt; 7
+irb(main)<span style="color: #008b8b;">:003</span>:0&gt; <span style="color: #8b2252;">"your name"</span>.upcase
+=&gt; <span style="color: #8b2252;">"YOUR NAME"</span>
+irb(main)<span style="color: #008b8b;">:004</span>:0&gt; [1, 2, 3].first
+=&gt; 1
+irb(main)<span style="color: #008b8b;">:005</span>:0&gt; [1, 2, 3].empty?
+=&gt; <span style="color: #a0522d;">false</span>
+irb(main)<span style="color: #008b8b;">:006</span>:0&gt; 
+</pre>
+
+
+
+
+<p>
+From now on, I won't be showing the irb prompt or the output all the time.
+</p>
+<p>
+The example above showed a raw irb session. I'll assume from now on that
+you're using the console instead. The console's prompt is simpler.
+</p>
+
+
+
+<pre class="src src-ruby">script/console
+&gt;&gt; <span style="color: #b22222;"># </span><span style="color: #b22222;">this is a simple console prompt
+</span>?&gt; <span style="color: #b22222;"># </span><span style="color: #b22222;">this prompt is displayed when the previous line was incomplete
+</span></pre>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2.4" class="outline-3">
+<h3 id="sec-2.4"><span class="section-number-3">2.4</span> Find, inspect, create, save Rails objects </h3>
+<div class="outline-text-3" id="text-2.4">
+
+
+
+
+
+<pre class="src src-ruby"><span style="color: #228b22;">User</span>.find_by_login(<span style="color: #8b2252;">'ideeli_anywhere'</span>)
+<span style="color: #228b22;">User</span>.find_by_id(42)
+<span style="color: #228b22;">User</span>.find(42)
+
+u = <span style="color: #228b22;">User</span>.new(<span style="color: #008b8b;">:login</span> =&gt; <span style="color: #8b2252;">'fred'</span>, <span style="color: #008b8b;">:email</span> =&gt; <span style="color: #8b2252;">'fred@example.com'</span>)
+u.save
+<span style="color: #b22222;"># </span><span style="color: #b22222;">=&gt; false
+</span><span style="color: #b22222;"># </span><span style="color: #b22222;">(validation failed)
+</span>u.errors
+puts u.errors.first
+u.errors.full_messages
+
+o = <span style="color: #228b22;">Order</span>.first
+o.billing_title = <span style="color: #8b2252;">"My Billing Info"</span>
+o.save
+o.errors.first
+o.errors.full_messages
+
+o.reload                        <span style="color: #b22222;"># </span><span style="color: #b22222;">not necessary here; example
+</span></pre>
+
+
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Ruby </h2>
+<div class="outline-text-2" id="text-3">
+
+
+
+</div>
+
+<div id="outline-container-3.1" class="outline-3">
+<h3 id="sec-3.1"><span class="section-number-3">3.1</span> Whirlwind tour </h3>
+<div class="outline-text-3" id="text-3.1">
+
+
+
+</div>
+
+<div id="outline-container-3.1.1" class="outline-4">
+<h4 id="sec-3.1.1"><span class="section-number-4">3.1.1</span> Expressions </h4>
+<div class="outline-text-4" id="text-3.1.1">
+
+
+
+
+
+<pre class="src src-ruby">3 + 4
+<span style="color: #8b2252;">"foo"</span>
+[1, 2, 3]
+{<span style="color: #008b8b;">:name</span> =&gt; <span style="color: #8b2252;">'fred'</span>, <span style="color: #008b8b;">:age</span> =&gt; 42}
+<span style="color: #228b22;">User</span>.new
+<span style="color: #b22222;"># </span><span style="color: #b22222;">This is a comment
+</span><span style="color: #a0522d;">nil</span>
+</pre>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3.1.2" class="outline-4">
+<h4 id="sec-3.1.2"><span class="section-number-4">3.1.2</span> Truthiness </h4>
+<div class="outline-text-4" id="text-3.1.2">
+
+
+<p>
+<code>nil</code> and <code>false</code> are false, everything else is <code>true</code>.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3.1.3" class="outline-4">
+<h4 id="sec-3.1.3"><span class="section-number-4">3.1.3</span> Variables </h4>
+<div class="outline-text-4" id="text-3.1.3">
+
+
+
+
+
+<pre class="src src-ruby">x = 3
+x + 4
+a = [1, 2, 3]
+a.first
+a[0]
+</pre>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3.1.4" class="outline-4">
+<h4 id="sec-3.1.4"><span class="section-number-4">3.1.4</span> Methods: Show and Tell </h4>
+<div class="outline-text-4" id="text-3.1.4">
+
+
+<p>
+Methods can
+</p><ul>
+<li>
+Ask a question (Are you empty? What is inside you?)
+</li>
+<li>
+Give a command (Empty yourself. Save yourself to the database.)
+
+
+</li>
+</ul>
+
+
+<pre class="src src-ruby">[1, 2, 3].empty?
+[1, 2, 3].include?(7)
+
+a = [1, 2, 3]
+[1, 2, 3].first
+a.clear
+
+3 + 4
+3.+(4)
+
+<span style="color: #b22222;"># </span><span style="color: #b22222;">You can chain some methods together
+</span><span style="color: #8b2252;">"YOUR NAME"</span>.downcase.split
+<span style="color: #8b2252;">"YOUR NAME"</span>.downcase.split.first
+
+x = [1, 2, 3]
+x.push(4)
+x &lt;&lt; 5
+</pre>
+
+
+
+
+<p>
+Name gives a clue
+</p>
+<ul>
+<li>
+show_or_tell
+
+</li>
+</ul>
+
+
+<pre class="src src-ruby"><span style="color: #228b22;">User</span>.first.login
+</pre>
+
+
+
+
+<ul>
+<li>
+is_this_true?
+
+</li>
+</ul>
+
+
+<pre class="src src-ruby"><span style="color: #228b22;">User</span>.new.is_admin?
+</pre>
+
+
+
+
+<ul>
+<li>
+dangerous_modification!
+
+</li>
+</ul>
+
+
+<pre class="src src-ruby"><span style="color: #b22222;"># </span><span style="color: #b22222;">h is a Hash (a.k.a. dictionary or map)
+</span>h = {<span style="color: #008b8b;">:a</span> =&gt; 1, <span style="color: #008b8b;">:b</span> =&gt; 2}
+h.merge({<span style="color: #008b8b;">:c</span> =&gt; 3})              <span style="color: #b22222;"># </span><span style="color: #b22222;">{:a =&gt; 1, :b =&gt; 2, :c =&gt; 3}
+</span>h                               <span style="color: #b22222;"># </span><span style="color: #b22222;">{:a =&gt; 1, :b =&gt; 2}
+</span>h.merge!({<span style="color: #008b8b;">:c</span> =&gt; 3})             <span style="color: #b22222;"># </span><span style="color: #b22222;">{:a =&gt; 1, :b =&gt; 2, :c =&gt; 3}
+</span>h                               <span style="color: #b22222;"># </span><span style="color: #b22222;">{:a =&gt; 1, :b =&gt; 2, :c =&gt; 3}
+</span></pre>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3.1.5" class="outline-4">
+<h4 id="sec-3.1.5"><span class="section-number-4">3.1.5</span> Strings </h4>
+<div class="outline-text-4" id="text-3.1.5">
+
+
+
+
+
+<pre class="src src-ruby">s = <span style="color: #8b2252;">"foo"</span>
+<span style="color: #8b2252;">"xxx </span><span style="color: #a0522d;">#{s}</span><span style="color: #8b2252;"> xxx"</span>
+<span style="color: #8b2252;">"xxx </span><span style="color: #a0522d;">#{3 + 4}</span><span style="color: #8b2252;"> xxx"</span>
+<span style="color: #8b2252;">'xxx </span><span style="color: #a0522d;">#{s}</span><span style="color: #8b2252;"> xxx'</span>
+<span style="color: #8b2252;">'xxx </span><span style="color: #a0522d;">#{3 + 4}</span><span style="color: #8b2252;"> xxx'</span>
+s[0,2]
+</pre>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3.1.6" class="outline-4">
+<h4 id="sec-3.1.6"><span class="section-number-4">3.1.6</span> Symbols </h4>
+<div class="outline-text-4" id="text-3.1.6">
+
+
+<p>
+Unique names written <code>:like_this</code>. Often used as names of things.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3.1.7" class="outline-4">
+<h4 id="sec-3.1.7"><span class="section-number-4">3.1.7</span> Arrays and Hashes </h4>
+<div class="outline-text-4" id="text-3.1.7">
+
+
+
+
+
+<pre class="src src-ruby">a = [1, 2, 3]
+a.last
+a.length
+
+h = {<span style="color: #008b8b;">:name</span> =&gt; <span style="color: #8b2252;">'fred'</span>, <span style="color: #008b8b;">:age</span> =&gt; 42}
+h[<span style="color: #008b8b;">:name</span>]
+h[<span style="color: #008b8b;">:missing</span>]
+h.length
+h.keys
+h.values
+</pre>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3.1.8" class="outline-4">
+<h4 id="sec-3.1.8"><span class="section-number-4">3.1.8</span> Blocks </h4>
+<div class="outline-text-4" id="text-3.1.8">
+
+
+
+
+
+<pre class="src src-ruby">[1, 2, 3].each { |i| puts <span style="color: #8b2252;">"hello </span><span style="color: #a0522d;">#{i}</span><span style="color: #8b2252;">"</span> }
+</pre>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3.1.9" class="outline-4">
+<h4 id="sec-3.1.9"><span class="section-number-4">3.1.9</span> Modules and Classes </h4>
+<div class="outline-text-4" id="text-3.1.9">
+
+
+<p>
+A <b>module</b> holds a bunch of methods. A <b>class</b> is a module that also defines
+how to create a new thing that can use those methods and can remember things
+in variables (its <i>state</i>).
+</p>
+
+
+
+<pre class="src src-ruby"><span style="color: #7f007f;">class</span> <span style="color: #228b22;">Person</span>
+
+  attr_accessor <span style="color: #008b8b;">:name</span>, <span style="color: #008b8b;">:age</span>
+
+  <span style="color: #7f007f;">def</span> <span style="color: #0000ff;">initialize</span>(name, age)
+    <span style="color: #a0522d;">@name</span> = name
+    <span style="color: #a0522d;">@age</span> = age
+  <span style="color: #7f007f;">end</span>
+
+  <span style="color: #7f007f;">def</span> <span style="color: #0000ff;">to_s</span>
+    <span style="color: #8b2252;">"I am a </span><span style="color: #a0522d;">#{self.class}</span><span style="color: #8b2252;"> whose name is </span><span style="color: #a0522d;">#{@name}</span><span style="color: #8b2252;">. I am </span><span style="color: #a0522d;">#{@age}</span><span style="color: #8b2252;"> years old."</span>
+  <span style="color: #7f007f;">end</span>
+
+<span style="color: #7f007f;">end</span>
+
+<span style="color: #7f007f;">class</span> <span style="color: #228b22;">Musician</span> &lt; <span style="color: #228b22;">Person</span>
+
+  attr_accessor <span style="color: #008b8b;">:instrument</span>
+
+  <span style="color: #7f007f;">def</span> <span style="color: #0000ff;">initialize</span>(name, age, instrument)
+    <span style="color: #7f007f;">super</span>(name, age)
+    <span style="color: #a0522d;">@instrument</span> = instrument
+  <span style="color: #7f007f;">end</span>
+
+  <span style="color: #7f007f;">def</span> <span style="color: #0000ff;">to_s</span>
+    <span style="color: #7f007f;">super</span> + <span style="color: #8b2252;">" I play the </span><span style="color: #a0522d;">#@instrument</span><span style="color: #8b2252;">."</span>
+  <span style="color: #7f007f;">end</span>
+<span style="color: #7f007f;">end</span>
+
+p1 = <span style="color: #228b22;">Person</span>.new(<span style="color: #8b2252;">"Spongebob Squarepants"</span>, 42)
+p2 = <span style="color: #228b22;">Musician</span>.new(<span style="color: #8b2252;">"Squidward Tentacles"</span>, 99, <span style="color: #8b2252;">"clarinet"</span>)
+
+puts p1
+puts p2
+</pre>
+
+
+
+
+
+<pre class="src src-ruby"><span style="color: #7f007f;">module</span> <span style="color: #228b22;">Describer</span>
+
+  <span style="color: #7f007f;">def</span> <span style="color: #0000ff;">describe</span>
+    puts <span style="color: #8b2252;">"I am a </span><span style="color: #a0522d;">#{self.class.name}</span><span style="color: #8b2252;"> and I am </span><span style="color: #a0522d;">#{to_s}</span><span style="color: #8b2252;">"</span>
+  <span style="color: #7f007f;">end</span>
+
+<span style="color: #7f007f;">end</span>
+
+<span style="color: #7f007f;">class</span> <span style="color: #228b22;">Person</span>
+
+  include <span style="color: #228b22;">Describer</span>
+
+  <span style="color: #7f007f;">def</span> <span style="color: #0000ff;">initialize</span>
+    <span style="color: #a0522d;">@name</span> = <span style="color: #8b2252;">'fred'</span>
+  <span style="color: #7f007f;">end</span>
+
+  <span style="color: #7f007f;">def</span> <span style="color: #0000ff;">to_s</span>
+    <span style="color: #8b2252;">"named </span><span style="color: #a0522d;">#@name</span><span style="color: #8b2252;">"</span>
+  <span style="color: #7f007f;">end</span>
+<span style="color: #7f007f;">end</span>
+
+<span style="color: #7f007f;">class</span> <span style="color: #228b22;">Fish</span>
+
+  include <span style="color: #228b22;">Describer</span>
+
+  <span style="color: #7f007f;">def</span> <span style="color: #0000ff;">to_s</span>
+    <span style="color: #8b2252;">"wet"</span>
+  <span style="color: #7f007f;">end</span>
+<span style="color: #7f007f;">end</span>
+
+<span style="color: #228b22;">Person</span>.new.describe
+<span style="color: #228b22;">Fish</span>.new.describe
+</pre>
+
+
+
+
+<ul>
+<li id="sec-3.1.9.1">Class methods vs. instance methods <br/>
+
+
+
+
+<pre class="src src-ruby"><span style="color: #228b22;">Order</span>.count
+o = <span style="color: #228b22;">Order</span>.first
+o.status
+</pre>
+
+
+
+
+</li>
+<li id="sec-3.1.9.2">Method definitions <br/>
+
+
+
+
+<pre class="src src-ruby"><span style="color: #7f007f;">class</span> <span style="color: #228b22;">Order</span>
+  <span style="color: #7f007f;">def</span> <span style="color: #0000ff;">hello</span>
+    <span style="color: #8b2252;">"Hello! My id is </span><span style="color: #a0522d;">#{id}</span><span style="color: #8b2252;">"</span>
+  <span style="color: #7f007f;">end</span>
+<span style="color: #7f007f;">end</span>
+
+puts <span style="color: #228b22;">Order</span>.first.hello
+</pre>
+
+
+
+
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3.2" class="outline-3">
+<h3 id="sec-3.2"><span class="section-number-3">3.2</span> Printing and inspecting </h3>
+<div class="outline-text-3" id="text-3.2">
+
+
+
+
+
+<pre class="src src-ruby">o = <span style="color: #228b22;">Order</span>.first
+puts o.id
+puts o.status
+puts o.to_s
+puts o.inspect
+
+s = <span style="color: #8b2252;">"your name"</span>
+puts <span style="color: #8b2252;">"your name is </span><span style="color: #a0522d;">#{s}</span><span style="color: #8b2252;">"</span>
+a = [1, 2, 3, 4, 5]
+puts a
+puts a.inspect
+</pre>
+
+
+
+
+<p>
+Can skip the "puts" most of the time. Will look slightly different, but not
+enough to matter.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3.3" class="outline-3">
+<h3 id="sec-3.3"><span class="section-number-3">3.3</span> to_s, inspect </h3>
+<div class="outline-text-3" id="text-3.3">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3.4" class="outline-3">
+<h3 id="sec-3.4"><span class="section-number-3">3.4</span> Iteration </h3>
+<div class="outline-text-3" id="text-3.4">
+
+
+
+
+
+<pre class="src src-ruby">a = [1, 2, 3]
+a.each { |i| puts <span style="color: #8b2252;">"</span><span style="color: #a0522d;">#{i + 1}</span><span style="color: #8b2252;">"</span> }
+a.collect { |i| i + 2 }
+<span style="color: #228b22;">User</span>.find(<span style="color: #008b8b;">:all</span>, <span style="color: #008b8b;">:limit</span> =&gt; 10).collect { |u| u.email }
+<span style="color: #228b22;">User</span>.find(<span style="color: #008b8b;">:all</span>, <span style="color: #008b8b;">:limit</span> =&gt; 10).map(&amp;<span style="color: #008b8b;">:email</span>)
+
+h = {<span style="color: #008b8b;">:a</span> =&gt; 1, <span style="color: #008b8b;">:b</span> =&gt; 2}
+h.keys.each { |key| puts key }
+h.each { |key, val| puts <span style="color: #8b2252;">"</span><span style="color: #a0522d;">#{key}</span><span style="color: #8b2252;"> = </span><span style="color: #a0522d;">#{val}</span><span style="color: #8b2252;">"</span> }
+</pre>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3.5" class="outline-3">
+<h3 id="sec-3.5"><span class="section-number-3">3.5</span> Using parentheses </h3>
+<div class="outline-text-3" id="text-3.5">
+
+
+
+
+
+<pre class="src src-ruby"><span style="color: #228b22;">User</span>.find <span style="color: #008b8b;">:all</span>, <span style="color: #008b8b;">:limit</span> =&gt; 10
+<span style="color: #228b22;">User</span>.find(<span style="color: #008b8b;">:all</span>, <span style="color: #008b8b;">:limit</span> =&gt; 10)
+</pre>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3.6" class="outline-3">
+<h3 id="sec-3.6"><span class="section-number-3">3.6</span> Hash as last argument </h3>
+<div class="outline-text-3" id="text-3.6">
+
+
+
+
+
+<pre class="src src-ruby"><span style="color: #228b22;">User</span>.find(<span style="color: #008b8b;">:all</span>, {<span style="color: #008b8b;">:limit</span> =&gt; 10, <span style="color: #008b8b;">:offset</span> =&gt; 20})
+<span style="color: #228b22;">User</span>.find(<span style="color: #008b8b;">:all</span>, <span style="color: #008b8b;">:limit</span> =&gt; 10, <span style="color: #008b8b;">:offset</span> =&gt; 20)
+<span style="color: #228b22;">User</span>.find <span style="color: #008b8b;">:all</span>, <span style="color: #008b8b;">:limit</span> =&gt; 10, <span style="color: #008b8b;">:offset</span> =&gt; 20
+</pre>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3.7" class="outline-3">
+<h3 id="sec-3.7"><span class="section-number-3">3.7</span> Finding out what you can do </h3>
+<div class="outline-text-3" id="text-3.7">
+
+
+
+
+
+<pre class="src src-sh"><span style="color: #b22222;"># </span><span style="color: #b22222;">In the shell, not in the console
+</span>ri
+ri downcase
+</pre>
+
+
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Rails </h2>
+<div class="outline-text-2" id="text-4">
+
+
+
+</div>
+
+<div id="outline-container-4.1" class="outline-3">
+<h3 id="sec-4.1"><span class="section-number-3">4.1</span> What is Rails? </h3>
+<div class="outline-text-3" id="text-4.1">
+
+
+<p>
+Web application development framework
+</p>
+<ul>
+<li>
+Create and display Web pages
+</li>
+<li>
+Read from and write to a database
+
+</li>
+</ul>
+
+<p>In addition, you can add code to
+</p>
+<ul>
+<li>
+Run scheduled tasks
+</li>
+<li>
+Talk to other systems (e.g., CC vendor)
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-4.2" class="outline-3">
+<h3 id="sec-4.2"><span class="section-number-3">4.2</span> MVC </h3>
+<div class="outline-text-3" id="text-4.2">
+
+
+<p>
+Model, View, Controller
+</p><dl>
+<dt>Model</dt><dd>
+data and business logic
+</dd>
+<dt>View</dt><dd>
+presentation of model to outside world (Web pages, reports)
+</dd>
+<dt>Controller</dt><dd>
+get inputs from user, give to models, decide which views to
+show to user
+
+</dd>
+</dl>
+</div>
+
+</div>
+
+<div id="outline-container-4.3" class="outline-3">
+<h3 id="sec-4.3"><span class="section-number-3">4.3</span> Rails subsystems </h3>
+<div class="outline-text-3" id="text-4.3">
+
+
+<dl>
+<dt>ActiveSupport</dt><dd>
+utility and convenience methods
+</dd>
+<dt>ActiveRecord</dt><dd>
+ORM (database layer) for models
+</dd>
+<dt>ActionPack</dt><dd>
+controllers and views
+</dd>
+<dt>ActionMailer</dt><dd>
+email handling
+</dd>
+<dt>ActiveResources</dt><dd>
+REST
+
+</dd>
+</dl>
+
+<p>See the README files in each of the <code>vendor/rails/*</code> directories.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-4.4" class="outline-3">
+<h3 id="sec-4.4"><span class="section-number-3">4.4</span> Code organization </h3>
+<div class="outline-text-3" id="text-4.4">
+
+
+
+</div>
+
+<div id="outline-container-4.4.1" class="outline-4">
+<h4 id="sec-4.4.1"><span class="section-number-4">4.4.1</span> app: MVC </h4>
+<div class="outline-text-4" id="text-4.4.1">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4.4.2" class="outline-4">
+<h4 id="sec-4.4.2"><span class="section-number-4">4.4.2</span> lib </h4>
+<div class="outline-text-4" id="text-4.4.2">
+
+<ul>
+<li>
+extensions
+</li>
+<li>
+third-party interfaces
+</li>
+<li>
+workers (see below)
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-4.4.3" class="outline-4">
+<h4 id="sec-4.4.3"><span class="section-number-4">4.4.3</span> vendor </h4>
+<div class="outline-text-4" id="text-4.4.3">
+
+<p>Bundled dependencies
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-4.4.4" class="outline-4">
+<h4 id="sec-4.4.4"><span class="section-number-4">4.4.4</span> config </h4>
+<div class="outline-text-4" id="text-4.4.4">
+
+<ul>
+<li>
+Environments
+</li>
+<li>
+Database
+</li>
+<li>
+Initializers
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-4.4.5" class="outline-4">
+<h4 id="sec-4.4.5"><span class="section-number-4">4.4.5</span> script </h4>
+<div class="outline-text-4" id="text-4.4.5">
+
+<ul>
+<li>
+Running Rails
+</li>
+<li>
+Developer tools
+</li>
+<li>
+Service start/stop scripts
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-4.4.6" class="outline-4">
+<h4 id="sec-4.4.6"><span class="section-number-4">4.4.6</span> db </h4>
+<div class="outline-text-4" id="text-4.4.6">
+
+<p>Database setup
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-4.4.7" class="outline-4">
+<h4 id="sec-4.4.7"><span class="section-number-4">4.4.7</span> test </h4>
+<div class="outline-text-4" id="text-4.4.7">
+
+<p>Tests and fixtures
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-4.4.8" class="outline-4">
+<h4 id="sec-4.4.8"><span class="section-number-4">4.4.8</span> log </h4>
+<div class="outline-text-4" id="text-4.4.8">
+
+<p>Log files and, in our app, dumping ground during dev
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-4.4.9" class="outline-4">
+<h4 id="sec-4.4.9"><span class="section-number-4">4.4.9</span> tmp </h4>
+<div class="outline-text-4" id="text-4.4.9">
+
+<p>Temporary files
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-4.4.10" class="outline-4">
+<h4 id="sec-4.4.10"><span class="section-number-4">4.4.10</span> bin </h4>
+<div class="outline-text-4" id="text-4.4.10">
+
+<p>Ideeli scripts
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4.5" class="outline-3">
+<h3 id="sec-4.5"><span class="section-number-3">4.5</span> Routes </h3>
+<div class="outline-text-3" id="text-4.5">
+
+<p>Decide what URL goes to what controller's action
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-4.6" class="outline-3">
+<h3 id="sec-4.6"><span class="section-number-3">4.6</span> Extensions to Ruby </h3>
+<div class="outline-text-3" id="text-4.6">
+
+
+<p>
+ActiveSupport
+</p>
+
+</div>
+
+<div id="outline-container-4.6.1" class="outline-4">
+<h4 id="sec-4.6.1"><span class="section-number-4">4.6.1</span> 1.week.ago </h4>
+<div class="outline-text-4" id="text-4.6.1">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4.6.2" class="outline-4">
+<h4 id="sec-4.6.2"><span class="section-number-4">4.6.2</span> String methods </h4>
+<div class="outline-text-4" id="text-4.6.2">
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4.7" class="outline-3">
+<h3 id="sec-4.7"><span class="section-number-3">4.7</span> Environment Variables </h3>
+<div class="outline-text-3" id="text-4.7">
+
+
+<ul>
+<li>
+RAILS_ROOT
+</li>
+<li>
+RAILS_ENV
+
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> ActiveRecord </h2>
+<div class="outline-text-2" id="text-5">
+
+
+
+</div>
+
+<div id="outline-container-5.1" class="outline-3">
+<h3 id="sec-5.1"><span class="section-number-3">5.1</span> CRUD: Create, Update, Delete </h3>
+<div class="outline-text-3" id="text-5.1">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-5.2" class="outline-3">
+<h3 id="sec-5.2"><span class="section-number-3">5.2</span> Associations </h3>
+<div class="outline-text-3" id="text-5.2">
+
+
+
+</div>
+
+<div id="outline-container-5.2.1" class="outline-4">
+<h4 id="sec-5.2.1"><span class="section-number-4">5.2.1</span> belongs_to, has_one, has_many, has_and_belongs_to_many </h4>
+<div class="outline-text-4" id="text-5.2.1">
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-5.3" class="outline-3">
+<h3 id="sec-5.3"><span class="section-number-3">5.3</span> Validations </h3>
+<div class="outline-text-3" id="text-5.3">
+
+
+<ul>
+<li>
+Look in the model code for validations that have been defined.
+</li>
+<li>
+Validate an object manually by calling <code>object.validate</code>
+</li>
+<li>
+See if an object is valid by calling <code>object.valid?</code>
+</li>
+<li>
+Output validations by calling <code>object.errors.full_messages</code>
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-5.4" class="outline-3">
+<h3 id="sec-5.4"><span class="section-number-3">5.4</span> Named Scopes </h3>
+<div class="outline-text-3" id="text-5.4">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-5.5" class="outline-3">
+<h3 id="sec-5.5"><span class="section-number-3">5.5</span> Callback methods </h3>
+<div class="outline-text-3" id="text-5.5">
+
+
+<p>
+Callback methods give you the opportunity to do something before/after
+important events in a model's life, like being saved to the database or read
+from the database.
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Looking at Our Rails Code </h2>
+<div class="outline-text-2" id="text-6">
+
+
+
+</div>
+
+<div id="outline-container-6.1" class="outline-3">
+<h3 id="sec-6.1"><span class="section-number-3">6.1</span> The Parts </h3>
+<div class="outline-text-3" id="text-6.1">
+
+
+
+</div>
+
+<div id="outline-container-6.1.1" class="outline-4">
+<h4 id="sec-6.1.1"><span class="section-number-4">6.1.1</span> Web pages </h4>
+<div class="outline-text-4" id="text-6.1.1">
+
+
+<ul>
+<li id="sec-6.1.1.1">Views and Controllers <br/>
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-6.1.2" class="outline-4">
+<h4 id="sec-6.1.2"><span class="section-number-4">6.1.2</span> Workers </h4>
+<div class="outline-text-4" id="text-6.1.2">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-6.1.3" class="outline-4">
+<h4 id="sec-6.1.3"><span class="section-number-4">6.1.3</span> API </h4>
+<div class="outline-text-4" id="text-6.1.3">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-6.1.4" class="outline-4">
+<h4 id="sec-6.1.4"><span class="section-number-4">6.1.4</span> Extensions </h4>
+<div class="outline-text-4" id="text-6.1.4">
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-6.2" class="outline-3">
+<h3 id="sec-6.2"><span class="section-number-3">6.2</span> On the servers </h3>
+<div class="outline-text-3" id="text-6.2">
+
+
+<p>
+When you are on a server, the code is at ~/ideeli/ENVIRONMENT/current.
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Our Classes </h2>
+<div class="outline-text-2" id="text-7">
+
+
+<p>
+This section is a brief overview of the import model classes in the ideeli
+application.
+</p>
+
+</div>
+
+<div id="outline-container-7.1" class="outline-3">
+<h3 id="sec-7.1"><span class="section-number-3">7.1</span> The POM </h3>
+<div class="outline-text-3" id="text-7.1">
+
+
+<p>
+Payment Object Model
+</p>
+<ul>
+<li>
+Shopping Event Group -&gt; Shopping Event -&gt; Offer &lt;-&gt; Product -&gt; Color -&gt;
+SKU -&gt; SKU Unit
+
+</li>
+<li>
+SKU Location
+<ul>
+<li>
+DCD
+</li>
+<li>
+Virtual
+</li>
+<li>
+Dropship
+</li>
+<li>
+Gift Card
+
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<div id="outline-container-7.1.1" class="outline-4">
+<h4 id="sec-7.1.1"><span class="section-number-4">7.1.1</span> Examples </h4>
+<div class="outline-text-4" id="text-7.1.1">
+
+
+<dl>
+<dt>Product</dt><dd>
+Prada shoe
+</dd>
+<dt>Color</dt><dd>
+black or brown
+</dd>
+<dt>SKU</dt><dd>
+different sizes, holds price
+</dd>
+<dt>SKU Unit</dt><dd>
+an individual pair of shoes of a color and size
+</dd>
+<dt>Shopping Event</dt><dd>
+Gucci Pre-season, coming soon 2011-10-01, starts
+2011-10-03, ends 2011-10-06
+</dd>
+<dt>Offer</dt><dd>
+Prada shoes (product) in the Gucci Pre-season sale (shopping
+event), max 2 per user
+
+</dd>
+</dl>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-7.2" class="outline-3">
+<h3 id="sec-7.2"><span class="section-number-3">7.2</span> Users </h3>
+<div class="outline-text-3" id="text-7.2">
+
+
+<ul>
+<li>
+User -&gt; [orders, order_transactions, orbital_transactions, line_items,
+shipping_addresses, stored_credit_cards, store_credit_transactions]
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-7.3" class="outline-3">
+<h3 id="sec-7.3"><span class="section-number-3">7.3</span> Order, Shipping </h3>
+<div class="outline-text-3" id="text-7.3">
+
+
+<ul>
+<li>
+Order -&gt; [line_items, order_transactions, shopping_events]
+
+</li>
+<li>
+Order -&gt; ShipmentRequestOrder (SRO) -&gt; [line_items, skus, shipment_orders, payment_auths]
+
+</li>
+<li>
+Order -&gt; ShipmentOrder (SO)
+
+</li>
+<li>
+LineItem -&gt; SKU, multiple SKU Units, quantity, price
+
+</li>
+</ul>
+
+</div>
+
+<div id="outline-container-7.3.1" class="outline-4">
+<h4 id="sec-7.3.1"><span class="section-number-4">7.3.1</span> Tender Types </h4>
+<div class="outline-text-4" id="text-7.3.1">
+
+
+<ul>
+<li>
+Credit card (Trust Commerce, Orbital)
+
+</li>
+<li>
+Store credit, generally from return, never expires, automatically spent if
+you have credit
+
+</li>
+<li>
+Discount voucher, from marketing promotions, used once, if not all spent
+use rest of balance, expires in (say) one month
+
+</li>
+<li>
+Gift card credit, introduced end of 2010, it's a magic URL (which if
+seen can be used by somebody else, can be canceled via customer service),
+auto applied against orders, never expires
+
+</li>
+<li>
+Promotional credit, similar to discount voucher except process is
+different when release order. Typical order, if use discount voucher and
+cancel then get money back. Promotional credit, do not get that money
+back.
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-7.3.2" class="outline-4">
+<h4 id="sec-7.3.2"><span class="section-number-4">7.3.2</span> Payment Process </h4>
+<div class="outline-text-4" id="text-7.3.2">
+
+
+<p>
+When order placed, create payment allocations for each tender type. If three
+used on order, three allocations created. Freeze credits and vouchers so
+can't spend again.
+</p>
+<p>
+When generate shipment request and send to warehouse, look at each payment
+allocations and generate auths. For store cred and discount, payment auth
+does nothing except create a record. Note that payment authorization may not
+be equal: may be less than sum of payment allocation; that can happen if not
+everything is shipped at once. Sum of authorizations equals what is being
+shipped out.
+</p>
+<p>
+Tender types are applied in this order store credit, gift, promotional
+discount, credit card. Uses up one tender type before moving on to next.
+</p>
+<p>
+When warehouse says shipped, then step through payment authorizations and
+need to capture the funds. With CC use auth code recieved earlier. Others,
+we finally say they are spent.
+</p>
+<p>
+More complications: partial shipment of partial shipment request. Ignore
+this for now.
+</p>
+<p>
+"Zero shipment": don't have the stuff, sorry. Shipment comes back empty or
+"zero shipped". We have to release payment authorizations and take away
+shipment request; back in a pending shipping state.
+</p>
+</div>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> Common Methods You'll Use </h2>
+<div class="outline-text-2" id="text-8">
+
+
+<p>
+Remember that ri is your friend. Try "ri Array" or "ri Hash".
+</p>
+
+</div>
+
+<div id="outline-container-8.1" class="outline-3">
+<h3 id="sec-8.1"><span class="section-number-3">8.1</span> Ruby </h3>
+<div class="outline-text-3" id="text-8.1">
+
+
+
+</div>
+
+<div id="outline-container-8.1.1" class="outline-4">
+<h4 id="sec-8.1.1"><span class="section-number-4">8.1.1</span> Iteration </h4>
+<div class="outline-text-4" id="text-8.1.1">
+
+
+<ul>
+<li>
+<code>length</code>, <code>size</code> (those are synonyms)
+</li>
+<li>
+first, last
+</li>
+<li>
+each
+</li>
+<li>
+collect, map, select, detect
+</li>
+<li>
+sort
+
+
+</li>
+</ul>
+
+
+<pre class="src src-ruby">a = [1, 2, 3]
+puts a.length
+a.each { |num| puts <span style="color: #8b2252;">"num is </span><span style="color: #a0522d;">#{num}</span><span style="color: #8b2252;">"</span> }
+puts a.collect { |num| num + 3 }
+puts a.collect { |num| num + 3 }.join(<span style="color: #8b2252;">", "</span>)
+a = [3, 1, 2]
+puts a.sort.join(<span style="color: #8b2252;">", "</span>)
+</pre>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-8.1.2" class="outline-4">
+<h4 id="sec-8.1.2"><span class="section-number-4">8.1.2</span> Array methods </h4>
+<div class="outline-text-4" id="text-8.1.2">
+
+
+<ul>
+<li>
+join
+</li>
+<li>
+uniq
+
+
+</li>
+</ul>
+
+
+<pre class="src src-ruby">puts [1, 2, 3].join(<span style="color: #8b2252;">" - "</span>)
+puts [1, 2, 2, 2, 3].uniq
+puts [4, 2, 3, 1].sort
+puts [4, 2, 5, 3, 2, 4, 2, 1].sort.uniq.join(<span style="color: #8b2252;">" - "</span>)
+</pre>
+
+
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-8.2" class="outline-3">
+<h3 id="sec-8.2"><span class="section-number-3">8.2</span> ActiveRecord </h3>
+<div class="outline-text-3" id="text-8.2">
+
+
+
+</div>
+
+<div id="outline-container-8.2.1" class="outline-4">
+<h4 id="sec-8.2.1"><span class="section-number-4">8.2.1</span> count </h4>
+<div class="outline-text-4" id="text-8.2.1">
+
+
+
+
+<pre class="src src-ruby"><span style="color: #228b22;">Order</span>.count
+<span style="color: #228b22;">Order</span>.count <span style="color: #008b8b;">:conditions</span> =&gt; <span style="color: #8b2252;">"created_at &gt; '2011-10-22 22:05:00'"</span>
+<span style="color: #228b22;">Order</span>.count <span style="color: #008b8b;">:conditions</span> =&gt; [<span style="color: #8b2252;">"created_at &gt; ?"</span>, 1.week.ago]
+<span style="color: #228b22;">Order</span>.count <span style="color: #008b8b;">:conditions</span> =&gt; <span style="color: #8b2252;">"created_at &gt; '2011-10-06 22:05:00'"</span>, <span style="color: #008b8b;">:group</span> =&gt; <span style="color: #8b2252;">"status"</span>
+</pre>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-8.2.2" class="outline-4">
+<h4 id="sec-8.2.2"><span class="section-number-4">8.2.2</span> find </h4>
+<div class="outline-text-4" id="text-8.2.2">
+
+
+<p>
+Some examples:
+</p>
+
+
+<pre class="src src-ruby"><span style="color: #228b22;">User</span>.find(51)                  <span style="color: #b22222;"># </span><span style="color: #b22222;">find by id number
+</span><span style="color: #228b22;">User</span>.find(<span style="color: #008b8b;">:all</span>, <span style="color: #008b8b;">:conditions</span> =&gt; [<span style="color: #8b2252;">"created_at &gt; ?"</span>, 1.week.ago])
+<span style="color: #228b22;">User</span>.find(<span style="color: #008b8b;">:all</span>, <span style="color: #008b8b;">:limit</span> =&gt; 2, <span style="color: #008b8b;">:offset</span> =&gt; 10)
+<span style="color: #228b22;">User</span>.find(<span style="color: #008b8b;">:first</span>)              <span style="color: #b22222;"># </span><span style="color: #b22222;">find first order
+</span><span style="color: #228b22;">User</span>.first                     <span style="color: #b22222;"># </span><span style="color: #b22222;">same as find(:first)
+</span><span style="color: #228b22;">User</span>.find_by_email(<span style="color: #8b2252;">'fred@example.com'</span>)
+</pre>
+
+
+
+
+<ul>
+<li id="sec-8.2.2.1">:all, :first, :last <br/>
+
+<ul>
+<li id="sec-8.2.2.1.1">Class methods .all, .first, .last <br/>
+
+
+
+
+<pre class="src src-ruby"><span style="color: #228b22;">Order</span>.find(<span style="color: #008b8b;">:all</span>)
+<span style="color: #228b22;">Order</span>.all
+</pre>
+
+
+
+
+</li>
+</ul>
+</li>
+<li id="sec-8.2.2.2">:conditions <br/>
+
+</li>
+<li id="sec-8.2.2.3">:limit and :offset <br/>
+
+</li>
+<li id="sec-8.2.2.4">:order, :group <br/>
+
+</li>
+<li id="sec-8.2.2.5">:include, :joins, :select <br/>
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-8.2.3" class="outline-4">
+<h4 id="sec-8.2.3"><span class="section-number-4">8.2.3</span> Dynamic Finders </h4>
+<div class="outline-text-4" id="text-8.2.3">
+
+
+<p>
+<code>find_by_X</code>, <code>find_by_X_and_Y</code>, <code>find_all_by_X</code>
+</p>
+<ul>
+<li id="sec-8.2.3.1">Difference between find(42) and find_by_id(42) <br/>
+
+
+
+
+<pre class="src src-ruby"><span style="color: #228b22;">User</span>.find(42)                   <span style="color: #b22222;"># </span><span style="color: #b22222;">throws error if not found
+</span><span style="color: #228b22;">User</span>.find_by_id(42)             <span style="color: #b22222;"># </span><span style="color: #b22222;">returns nil if not found
+</span></pre>
+
+
+
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-8.2.4" class="outline-4">
+<h4 id="sec-8.2.4"><span class="section-number-4">8.2.4</span> update_attribute </h4>
+<div class="outline-text-4" id="text-8.2.4">
+
+
+<p>
+Performs validations, changes value, and saves to database. If you don't
+need to save to the database, then setting the attribute directly is easier.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-8.2.5" class="outline-4">
+<h4 id="sec-8.2.5"><span class="section-number-4">8.2.5</span> save </h4>
+<div class="outline-text-4" id="text-8.2.5">
+
+</div>
+
+</div>
+
+<div id="outline-container-8.2.6" class="outline-4">
+<h4 id="sec-8.2.6"><span class="section-number-4">8.2.6</span> reload </h4>
+<div class="outline-text-4" id="text-8.2.6">
+
+</div>
+
+</div>
+
+<div id="outline-container-8.2.7" class="outline-4">
+<h4 id="sec-8.2.7"><span class="section-number-4">8.2.7</span> create </h4>
+<div class="outline-text-4" id="text-8.2.7">
+
+</div>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> Tricks </h2>
+<div class="outline-text-2" id="text-9">
+
+
+
+</div>
+
+<div id="outline-container-9.1" class="outline-3">
+<h3 id="sec-9.1"><span class="section-number-3">9.1</span> Use variables to store results </h3>
+<div class="outline-text-3" id="text-9.1">
+
+
+
+
+
+<pre class="src src-ruby">se = <span style="color: #228b22;">ShoppingEvent</span>.first
+os = se.offers; <span style="color: #a0522d;">nil</span>
+p = os.first.product
+p.brand_name
+os.length
+</pre>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-9.2" class="outline-3">
+<h3 id="sec-9.2"><span class="section-number-3">9.2</span> <code>_</code> stores the previous result </h3>
+<div class="outline-text-3" id="text-9.2">
+
+
+
+
+
+<pre class="src src-ruby">3 + 4
+<span style="color: #b22222;"># </span><span style="color: #b22222;">=&gt; 7
+</span>_
+<span style="color: #b22222;"># </span><span style="color: #b22222;">=&gt; 7
+</span></pre>
+
+
+
+
+<p>
+That's an IRB thing, not Rails.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-9.3" class="outline-3">
+<h3 id="sec-9.3"><span class="section-number-3">9.3</span> Keyboard shortcuts </h3>
+<div class="outline-text-3" id="text-9.3">
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col align="left" /><col align="left" />
+</colgroup>
+<thead>
+<tr><th scope="col">Key</th><th scope="col">Behavior</th></tr>
+</thead>
+<tbody>
+<tr><td>^P</td><td>recalls previous line</td></tr>
+<tr><td>^N</td><td>recalls next line</td></tr>
+<tr><td>^A</td><td>moves to beginning of line</td></tr>
+<tr><td>^E</td><td>moves to end of line</td></tr>
+<tr><td>^F</td><td>moves forward one character</td></tr>
+<tr><td>^B</td><td>moves backward one character</td></tr>
+<tr><td>^D</td><td>deletes the next character</td></tr>
+<tr><td>ESC-f</td><td>moves forward one word</td></tr>
+<tr><td>ESC-b</td><td>moves backward one word</td></tr>
+<tr><td>ESC-d</td><td>deletes the next word</td></tr>
+<tr><td>ESC-BACKSPACE</td><td>deletes the previous word</td></tr>
+<tr><td>^W</td><td>deletes the previous "word" (back to previous space)</td></tr>
+<tr><td>^U</td><td>erases the entire line</td></tr>
+</tbody>
+</table>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-9.4" class="outline-3">
+<h3 id="sec-9.4"><span class="section-number-3">9.4</span> public_methods </h3>
+<div class="outline-text-3" id="text-9.4">
+
+
+
+
+
+<pre class="src src-ruby"><span style="color: #228b22;">User</span>.public_methods
+<span style="color: #228b22;">User</span>.public_methods - <span style="color: #228b22;">Object</span>.public_methods
+<span style="color: #228b22;">User</span>.public_methods - <span style="color: #228b22;">ActiveRecord</span>::<span style="color: #228b22;">Base</span>.public_methods
+</pre>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-9.5" class="outline-3">
+<h3 id="sec-9.5"><span class="section-number-3">9.5</span> Don't load too much </h3>
+<div class="outline-text-3" id="text-9.5">
+
+
+
+
+
+<pre class="src src-ruby"><span style="color: #228b22;">Orders</span>.find(<span style="color: #008b8b;">:all</span>, <span style="color: #008b8b;">:limit</span> =&gt; 10).each { |o| ... }
+<span style="color: #228b22;">Orders</span>.find(<span style="color: #008b8b;">:all</span>, <span style="color: #008b8b;">:limit</span> =&gt; 10, <span style="color: #008b8b;">:offset</span> =&gt; 100).each { |o| ... }
+<span style="color: #b22222;"># </span><span style="color: #b22222;">...or use conditions to limit which orders you want to find
+</span>
+<span style="color: #228b22;">User</span>.first.orders[0..2].count
+</pre>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-9.6" class="outline-3">
+<h3 id="sec-9.6"><span class="section-number-3">9.6</span> Use nil to avoid printing huge lists of things, or lists of huge things </h3>
+<div class="outline-text-3" id="text-9.6">
+
+
+
+
+
+<pre class="src src-ruby">olist = <span style="color: #228b22;">Order</span>.find(<span style="color: #008b8b;">:all</span>, <span style="color: #008b8b;">:limit</span> =&gt; 10); <span style="color: #a0522d;">nil</span>
+</pre>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-9.7" class="outline-3">
+<h3 id="sec-9.7"><span class="section-number-3">9.7</span> map(&amp;:symbol) </h3>
+<div class="outline-text-3" id="text-9.7">
+
+
+
+
+
+<pre class="src src-ruby"><span style="color: #228b22;">Order</span>.(<span style="color: #008b8b;">:all</span>, <span style="color: #008b8b;">:limit</span> =&gt; 10).map(&amp;<span style="color: #008b8b;">:id</span>)
+</pre>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-9.8" class="outline-3">
+<h3 id="sec-9.8"><span class="section-number-3">9.8</span> Only fetch a single column </h3>
+<div class="outline-text-3" id="text-9.8">
+
+
+<p>
+This uses the ActiveRecord::RetrieveColumn add-on we have added to our code
+base.
+</p>
+
+
+
+<pre class="src src-ruby"><span style="color: #b22222;"># </span><span style="color: #b22222;">these two are different
+</span><span style="color: #228b22;">Product</span>.retrieve_column(<span style="color: #008b8b;">:brand_name</span>, <span style="color: #008b8b;">:limit</span> =&gt; 20).uniq
+<span style="color: #228b22;">Product</span>.retrieve_column(<span style="color: #008b8b;">:brand_name</span>, <span style="color: #008b8b;">:limit</span> =&gt; 20, <span style="color: #008b8b;">:distint</span> =&gt; <span style="color: #a0522d;">true</span>)
+</pre>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-9.9" class="outline-3">
+<h3 id="sec-9.9"><span class="section-number-3">9.9</span> Write a method </h3>
+<div class="outline-text-3" id="text-9.9">
+
+
+<p>
+If you find yourself doing something more than once, write a function for it
+right in irb. Saves some typing
+</p>
+
+
+
+<pre class="src src-ruby"><span style="color: #7f007f;">def</span> <span style="color: #0000ff;">set_prod_brand</span>(pid, b)
+  <span style="color: #228b22;">Product</span>.find(pid).update_attribute(<span style="color: #008b8b;">:brand_name</span>, b)
+<span style="color: #7f007f;">end</span>
+
+set_prod_brand(42, <span style="color: #8b2252;">"foo"</span>)
+set_prod_brand(999, <span style="color: #8b2252;">"bar"</span>)
+
+<span style="color: #b22222;"># </span><span style="color: #b22222;">Or add one to Product yourself!
+</span><span style="color: #7f007f;">class</span> <span style="color: #228b22;">Product</span>
+
+  <span style="color: #b22222;"># </span><span style="color: #b22222;">Note: this is a stupid example since methods already exist to do this
+</span>  <span style="color: #7f007f;">def</span> <span style="color: #0000ff;">prod_brand=</span>(str)
+    update_attribute(<span style="color: #008b8b;">:brand_name</span>, str)
+  <span style="color: #7f007f;">end</span>
+<span style="color: #7f007f;">end</span>
+
+<span style="color: #228b22;">Product</span>.first.prod_brand=(<span style="color: #8b2252;">"foobar"</span>)
+</pre>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-9.10" class="outline-3">
+<h3 id="sec-9.10"><span class="section-number-3">9.10</span> Load and/or require code </h3>
+<div class="outline-text-3" id="text-9.10">
+
+
+
+
+
+<pre class="src src-ruby">load <span style="color: #8b2252;">'my_file_i_just_wrote.rb'</span>
+require <span style="color: #8b2252;">'ftools'</span>
+</pre>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-9.11" class="outline-3">
+<h3 id="sec-9.11"><span class="section-number-3">9.11</span> The magic app </h3>
+<div class="outline-text-3" id="text-9.11">
+
+
+<p>
+Models are easy to use in the console. For controllers, use the "app" magic
+variable.
+</p>
+
+
+
+<pre class="src src-ruby">app.get <span style="color: #8b2252;">'/'</span>      <span style="color: #b22222;"># </span><span style="color: #b22222;">=&gt; 302 (HTTP redirect code)
+</span>app              <span style="color: #b22222;"># </span><span style="color: #b22222;">... lots of output ...
+</span>app.class        <span style="color: #b22222;"># </span><span style="color: #b22222;">=&gt; ActionController::Integration::Session
+</span>app.assigns      <span style="color: #b22222;"># </span><span style="color: #b22222;">... lots of output ...
+</span>app.assigns.keys
+</pre>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-9.12" class="outline-3">
+<h3 id="sec-9.12"><span class="section-number-3">9.12</span> The magic helper </h3>
+<div class="outline-text-3" id="text-9.12">
+
+
+<p>
+Gives you access to view helpers. Not <i>too</i> useful for non-developers.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-9.13" class="outline-3">
+<h3 id="sec-9.13"><span class="section-number-3">9.13</span> Call worker methods directly </h3>
+<div class="outline-text-3" id="text-9.13">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-9.14" class="outline-3">
+<h3 id="sec-9.14"><span class="section-number-3">9.14</span> Use mysql directly </h3>
+<div class="outline-text-3" id="text-9.14">
+
+
+
+
+
+<pre class="src src-sh">mysql -uUSERNAME -pPASSWORD ideeli_ENVIRONMENT
+</pre>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-9.15" class="outline-3">
+<h3 id="sec-9.15"><span class="section-number-3">9.15</span> Avoid changing anything </h3>
+<div class="outline-text-3" id="text-9.15">
+
+
+<p>
+Start the console with <code>--sandbox</code> and nothing you save will persist.
+</p>
+
+
+
+<pre class="src src-sh">script/console --sandbox
+</pre>
+
+
+
+
+<p>
+Note: does not work with console because our code creates transactions that
+are committed inside our code.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-9.16" class="outline-3">
+<h3 id="sec-9.16"><span class="section-number-3">9.16</span> Hack to run db queries </h3>
+<div class="outline-text-3" id="text-9.16">
+
+
+
+
+
+<pre class="src src-ruby"><span style="color: #7f007f;">def</span> <span style="color: #0000ff;">query</span>(sql)
+  puts <span style="color: #228b22;">ActiveRecord</span>::<span style="color: #228b22;">Base</span>.connection.execute(sql).each {|r| puts r}
+<span style="color: #7f007f;">end</span>
+</pre>
+
+
+
+
+<p>
+Or just use mysql; credentials are in config/database.yml
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-9.17" class="outline-3">
+<h3 id="sec-9.17"><span class="section-number-3">9.17</span> Pretty-printing </h3>
+<div class="outline-text-3" id="text-9.17">
+
+
+
+
+
+<pre class="src src-ruby">h = {<span style="color: #008b8b;">:a</span> =&gt; 1, <span style="color: #008b8b;">:b</span> =&gt; 2}
+puts h
+require <span style="color: #8b2252;">'pp'</span>
+pp h
+</pre>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-9.18" class="outline-3">
+<h3 id="sec-9.18"><span class="section-number-3">9.18</span> ~/.irbrc </h3>
+<div class="outline-text-3" id="text-9.18">
+
+
+<p>
+Loaded when IRB starts up. However, shouldn't pollute servers with your .irbrc.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-9.19" class="outline-3">
+<h3 id="sec-9.19"><span class="section-number-3">9.19</span> A simpler IRB prompt </h3>
+<div class="outline-text-3" id="text-9.19">
+
+
+<p>
+The Rails console prompt is simple, but IRB's is verbose. To make it
+simpler, run
+</p>
+
+
+
+<pre class="src src-ruby"><span style="color: #228b22;">IRB</span>.conf[:<span style="color: #228b22;">PROMPT_MODE</span>] = :<span style="color: #228b22;">SIMPLE</span>
+</pre>
+
+
+
+
+<p>
+&hellip;which can of course go in your console.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-9.20" class="outline-3">
+<h3 id="sec-9.20"><span class="section-number-3">9.20</span> See what background thinks it's supposed to do </h3>
+<div class="outline-text-3" id="text-9.20">
+
+
+<p>
+A trick for seeing workers that will run
+</p>
+
+
+
+<pre class="src src-ruby">c = <span style="color: #228b22;">BackgrounDRb</span>::<span style="color: #228b22;">Config</span>.read_config(<span style="color: #8b2252;">"</span><span style="color: #a0522d;">#{BACKGROUNDRB_ROOT}</span><span style="color: #8b2252;">/config/backgroundrb.yml"</span>); <span style="color: #a0522d;">nil</span>
+c.keys
+c[:<span style="color: #8b2252;">"sched1.testing5.ideeli.com"</span>][<span style="color: #008b8b;">:schedules</span>][<span style="color: #008b8b;">:ims_worker</span>]
+</pre>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-9.21" class="outline-3">
+<h3 id="sec-9.21"><span class="section-number-3">9.21</span> sessions </h3>
+<div class="outline-text-3" id="text-9.21">
+
+
+<dl>
+<dt>irb</dt><dd>
+start a new subsession
+</dd>
+<dt>jobs</dt><dd>
+list subsessions
+</dd>
+<dt>fg</dt><dd>
+switch to a subsession
+</dd>
+<dt>kill</dt><dd>
+kill a subsession
+
+</dd>
+</dl>
+</div>
+
+</div>
+
+<div id="outline-container-9.22" class="outline-3">
+<h3 id="sec-9.22"><span class="section-number-3">9.22</span> Add-ons </h3>
+<div class="outline-text-3" id="text-9.22">
+
+
+
+</div>
+
+<div id="outline-container-9.22.1" class="outline-4">
+<h4 id="sec-9.22.1"><span class="section-number-4">9.22.1</span> Pry </h4>
+<div class="outline-text-4" id="text-9.22.1">
+
+<p><a href="http://pry.github.com/">Pry</a> is a Ruby gem that is a replacement for IRB. Lots of cool features for
+exploring your code:
+</p>
+<ul>
+<li>
+Source code browsing
+</li>
+<li>
+Navigation in code (<code>cd</code>, <code>ls</code>, etc.)
+</li>
+<li>
+Documentation browsing
+</li>
+<li>
+Syntax highlighting
+</li>
+<li>
+much more
+
+</li>
+</ul>
+
+<p>Thanks for the tip, David!
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-9.22.2" class="outline-4">
+<h4 id="sec-9.22.2"><span class="section-number-4">9.22.2</span> Utility Belt </h4>
+<div class="outline-text-4" id="text-9.22.2">
+
+
+<p>
+<a href="http://utilitybelt.rubyforge.org/">http://utilitybelt.rubyforge.org/</a>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-9.22.3" class="outline-4">
+<h4 id="sec-9.22.3"><span class="section-number-4">9.22.3</span> Wirble </h4>
+<div class="outline-text-4" id="text-9.22.3">
+
+
+<p>
+<a href="http://pablotron.org/software/wirble/">http://pablotron.org/software/wirble/</a>
+</p>
+</div>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-10" class="outline-2">
+<h2 id="sec-10"><span class="section-number-2">10</span> Servers </h2>
+<div class="outline-text-2" id="text-10">
+
+
+
+</div>
+
+<div id="outline-container-10.1" class="outline-3">
+<h3 id="sec-10.1"><span class="section-number-3">10.1</span> One or two servers for dev, QA, testing, stage </h3>
+<div class="outline-text-3" id="text-10.1">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-10.2" class="outline-3">
+<h3 id="sec-10.2"><span class="section-number-3">10.2</span> Many servers for production </h3>
+<div class="outline-text-3" id="text-10.2">
+
+
+<ul>
+<li>
+Unicorn / Passenger
+</li>
+<li>
+Sched nodes
+</li>
+<li>
+Cache warmers
+</li>
+<li>
+Money makers
+
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-11" class="outline-2">
+<h2 id="sec-11"><span class="section-number-2">11</span> Resources </h2>
+<div class="outline-text-2" id="text-11">
+
+
+<ul>
+<li>
+<a href="http://www.ruby-lang.org/en/documentation/">http://www.ruby-lang.org/en/documentation/</a>
+</li>
+<li>
+<a href="http://www.ruby-doc.org/core/">http://www.ruby-doc.org/core/</a>
+</li>
+<li>
+<a href="http://api.rubyonrails.org/">http://api.rubyonrails.org/</a>
+</li>
+<li>
+<a href="http://www.rubyonrails.org/">http://www.rubyonrails.org/</a>
+</li>
+<li>
+<a href="http://apidock.com/">http://apidock.com/</a>
+</li>
+<li>
+<a href="https://confluence.ideeli.com/">https://confluence.ideeli.com/</a>
+</li>
+<li>
+<a href="https://confluence.ideeli.com/display/ENG/Console+Access">https://confluence.ideeli.com/display/ENG/Console+Access</a> Mei's notes
+</li>
+<li>
+Anybody on the tech team
+</li>
+<li>
+The "ri" command
+
+</li>
+</ul>
+
+</div>
+
+<div id="outline-container-11.1" class="outline-3">
+<h3 id="sec-11.1"><span class="section-number-3">11.1</span> Some "tips and tricks" links </h3>
+<div class="outline-text-3" id="text-11.1">
+
+
+<p>
+I found these after Googling for "irb tips and tricks".
+</p>
+<ul>
+<li>
+<a href="http://www.rubyinside.com/irb-lets-bone-up-on-the-interactive-ruby-shell-1771.html">http://www.rubyinside.com/irb-lets-bone-up-on-the-interactive-ruby-shell-1771.html</a>
+</li>
+<li>
+<a href="http://errtheblog.com/posts/24-irb-mix-tape">http://errtheblog.com/posts/24-irb-mix-tape</a>
+</li>
+<li>
+<a href="http://errtheblog.com/posts/9-drop-to-irb">http://errtheblog.com/posts/9-drop-to-irb</a>
+</li>
+<li>
+<a href="http://errtheblog.com/posts/5-simpler-irb">http://errtheblog.com/posts/5-simpler-irb</a>
+</li>
+<li>
+<a href="http://stackoverflow.com/questions/123494/whats-your-favourite-irb-trick">http://stackoverflow.com/questions/123494/whats-your-favourite-irb-trick</a>
+</li>
+<li>
+<a href="http://railscasts.com/episodes/48-console-tricks">http://railscasts.com/episodes/48-console-tricks</a> (video)
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble">
+<p class="author"> Author: Jim Menard
+<a href="mailto:jmenard@ideeli.com">&lt;jmenard@ideeli.com&gt;</a>
+</p>
+<p class="date"> Date: 2012-03-04 14:07:07 EST</p>
+<p class="creator">HTML generated by org-mode 6.33x in emacs 23</p>
+</div>
+</div>
+</body>
+</html>
