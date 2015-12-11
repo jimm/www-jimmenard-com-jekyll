@@ -12,7 +12,7 @@ layout: default
 />
 
 Welcome to my skein of Web pages, featuring my
-[Open Source projects](/projects.html), budding [writing](/writing.md) career,
+[Open Source projects](/projects/), budding [writing](/writing.md) career,
 [music composition and performance](music.html), and my
 [resume](Jim_Menard_resume.html"). If you see something out of date, please
 [drop me a line](mailto:jim@jimmenard.com).
@@ -20,7 +20,7 @@ Welcome to my skein of Web pages, featuring my
 I am a language maven who enjoys [Ruby](http://www.ruby-lang.org/en/),
 [Elixir](http://elixir-lang.org/), [Clojure](http://clojure.org/) and many
 [more languages](/Jim_Menard_resume.html#technical-skills). I have created a
-number of Open Source [projects](/projects.html) such as the
+number of Open Source [projects](/projects/) such as the
 [midilib](https://github.com/jimm/midilib) Ruby gem,
 [PatchMaster](http://patchmaster.org/),
 [KeyMaster](http://jimm.github.io/keymaster/), and

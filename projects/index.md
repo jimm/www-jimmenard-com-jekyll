@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Projects
+permalink: /projects/
 ---
 
 - My [**GitHub projects**](http://github.com/jimm) not otherwise listed
@@ -38,7 +39,7 @@ title: Projects
   turned into music. Bangkok uses [midilib](http://midilib.rubyforge.org/)
 
 - The
-  [**Montastic Dashboard widget**](projects/montastic_dashboard/index.html)
+  [**Montastic Dashboard widget**](montastic_dashboard/index.html)
   for Mac OS X. [Montastic](http://www.montastic.com/) is "the free website
   monitoring service that doesn't suck."
 
@@ -47,7 +48,7 @@ title: Projects
   around 1993. It uses a hand-written parser to find Objective C code and
   turn it into ANSII C.
 
-- [**Squeak PostgreSQL**](projects/squeak_postgresql/index.html), a
+- [**Squeak PostgreSQL**](squeak_postgresql/index.html), a
   PostgreSQL database interface for [Squeak](http://www.squeak.org).
 
 - [**CheckbooX**](CheckbooX/), a Mac OS X application that mimics the
@@ -66,26 +67,26 @@ title: Projects
   CTO Club on July 10, 2001 (HTML and PDF available). (This talk has moved
   to my [Writings](writing.html) page.)
 
-- [**RuBoids**](projects/ruboids/index.html), a Ruby Boids simulation using Qt and
+- [**RuBoids**](ruboids/index.html), a Ruby Boids simulation using Qt and
   OpenGL.
 
 ## Miscellaneous
 
-My [Ruby Quiz Answers](projects/rubyquiz/).
+My [Ruby Quiz Answers](/rubyquiz/).
 
 ## Defunct Projects
 
-- [**KeyMaster**](projects/keymaster/index.html) (see
+- [**KeyMaster**](keymaster/index.html) (see
   [**PatchMaster**](http://github.com/jimm/patchmaster))
 
-- [**MIDI Through**](projects/MIDI_Through.html)
+- [**MIDI Through**](MIDI_Through.html)
 
 - [**NQXML**](http://nqxml.sourceforge.net/), a pure-Ruby XML parser. The
   project page still exists and the code is still available, but since Ruby
   now ships with [REXML](http://www.germane-software.com/software/rexml/),
   NQXML has become much less desirable.
 
-- [**DelimParser.rb**](projects/DelimParser.rb), a Ruby class that parses
+- [**DelimParser.rb**](DelimParser.rb), a Ruby class that parses
   character-delimited data files such as .CSV and tab-delimited text files.
   It handles different delimiters and quote marks as well as delimiters,
   escaped characters, and doubled quotes that appear in the data. Since Ruby
