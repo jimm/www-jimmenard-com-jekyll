@@ -187,7 +187,7 @@ certification exam. Provided developer support.
   design of an E-commerce system.
 
 - For <span class="job-client">Variagenics</span>, added features to
-  genetics sample tracking system.</li>
+  genetics sample tracking system.
 
 - For <span class="job-client">Sotheby's</span>, helped rebuild mainframe
   apps in Java.

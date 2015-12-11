@@ -12,22 +12,19 @@ layout: default
 />
 
 Welcome to my skein of Web pages, featuring my
-[Open Source projects](projects/), budding [writing](writing/) career,
+[Open Source projects](/projects.html), budding [writing](/writing.md) career,
 [music composition and performance](music.html), and my
 [resume](Jim_Menard_resume.html"). If you see something out of date, please
 [drop me a line](mailto:jim@jimmenard.com).
 
-I am a big advocate of [Ruby](http://www.ruby-lang.org/en/),
-and work on a number of Open Source projects
-including [DataVision](http://datavision.sourceforge.net).
-For a list, visit my
-[projects page](projects/).
-
-I've added an [Emacs Tips and Tricks](/emacs_tips.html) page. Over time, I
-will expand upon the list of topics there, describing each one.
-
-My blog <cite>Shiny Things</cite> has moved _again_ to
-a [new home](/blog/). I've decided to host it here again.
+I am a language maven who enjoys [Ruby](http://www.ruby-lang.org/en/),
+[Elixir](http://elixir-lang.org/), [Clojure](http://clojure.org/) and many
+[more languages](/Jim_Menard_resume.html#technical-skills). I have created a
+number of Open Source [projects](/projects.html) such as the
+[midilib](https://github.com/jimm/midilib) Ruby gem,
+[PatchMaster](http://patchmaster.org/),
+[KeyMaster](http://jimm.github.io/keymaster/), and
+[DataVision](http://datavision.sourceforge.net).
 
 # Contact Information
 
