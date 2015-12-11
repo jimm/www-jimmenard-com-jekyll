@@ -3,6 +3,8 @@ layout: default
 title: Music
 ---
 
+# Music
+
 My first piano lesson was the day before my fifth birthday. In the past, I
 often combined computers and music, like my now-defunct live performance
 software <a href="projects/keymaster/index.html">KeyMaster</a>, originally

@@ -3,6 +3,8 @@ layout: default
 title: Blog
 ---
 
+# Shiny Things
+
 <h1 class="page-heading">Posts</h1>
 
   <ul class="post-list">

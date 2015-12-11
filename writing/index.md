@@ -4,6 +4,8 @@ title: Writing
 permalink: /writing/
 ---
 
+# Writing
+
 I'm writing
 [<strong>Emacs Mastery</strong>: <em>Attaining Coding Supremacy</em>](https://leanpub.com/emacs-mastery).
 I'm considering making it freely available on the Web. Please vist the
