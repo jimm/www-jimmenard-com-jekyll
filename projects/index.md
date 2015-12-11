@@ -4,6 +4,8 @@ title: Projects
 permalink: /projects/
 ---
 
+# Projects
+
 - My [**GitHub projects**](http://github.com/jimm) not otherwise listed
   below:
   - My [Emacs initialization files](http://github.com/jimm/elisp)
