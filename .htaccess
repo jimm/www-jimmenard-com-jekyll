@@ -1,0 +1,11 @@
+Options +ExecCGI +SymLinksIfOwnerMatch
+AddHandler cgi-script .rbx
+AddHandler server-parsed .html
+ErrorDocument 404 /404.html
+Redirect permanent /faq/ http://datavision.sourceforge.net/faq/
+Redirect permanent /projects/datavision/ http://datavision.sourceforge.net/
+Redirect permanent /projects/nqxml/ http://nqxml.sourceforge.net/
+Redirect permanent /projects/rice/ http://rice.sourceforge.net/
+<IfModule headers_module>
+header set X-Clacks-Overhead "GNU Terry Pratchett"
+</IfModule>
