@@ -1,7 +1,3 @@
----
-layout: none
-permalink: .htaccess
----
 Options +ExecCGI +SymLinksIfOwnerMatch
 AddHandler cgi-script .rbx
 AddHandler server-parsed .html
