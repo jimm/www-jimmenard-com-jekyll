@@ -3,7 +3,9 @@ layout: default
 title: MIDI Ref
 ---
 
-# Table of Contents 
+# MIDI Reference
+
+## Table of Contents 
 
 - [MIDI Reference](#midi-reference)
   - [Channel Messages](#channel-messages)
