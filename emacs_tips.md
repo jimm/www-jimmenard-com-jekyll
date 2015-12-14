@@ -31,12 +31,7 @@ href="mailto:jim@jimmenard.com">let me know</a>. I'll attempt to answer your
 question, and your feedback will help me fix and improve this page.
 
 
-<h3>My .emacs file</h3>
-
-This section has been moved to [My .emacs file](#my-dot-emacs) below.
-
-
-<h3>Key Bindings</h3>
+## Key Bindings
 
 When I describe key bindings, I'll try to use the default bindings.
 Sometimes, I will make a mistake because I have redefined a number of keys.
@@ -53,37 +48,33 @@ do something that takes a Meta-command, then a Control-command. It's also
 annoying because I can use Alt for Meta in the Emacs application I use, but
 can't in the terminal window because the terminal program uses it already.
 
-<h2 id="toc">Table of Contents</h2>
+# Table of Contents
 
-<ul>
-  <li>[My .emacs file](#my-dot-emacs)</li>
-  <li>[Emacs help and info](#help-and-info)</li>
-  <li>[The Emacs Wiki](#emacswiki)</li>
-  <li> [ELPA: the Emacs Lisp Package Archive](#elpa)</li>
-  <li>[Expanding words dynamically](#dabbrev-expand)</li>
-  <li>[Bookmarks](#bookmarks)</li>
-  <li>[abbrev-mode](#abbrev-mode)</li>
-  <li>[Binding (function) keys](#keybinding)</li>
-  <li>[Snippets](#snippets)</li>
-  <li>[Skeletons](#skeletons)</li>
-  <li class="disabled"><!-- [ -->Eshell<!-- ](#eshell) --></li>
-  <li>[Tags and M-.](#tags)</li>
-  <li class="disabled"><!-- [ -->Registers<!-- ](#registers) --></li>
-  <li class="disabled"><!-- [ -->Compile<!-- ](#compile) --></li>
-  <li class="disabled"><!-- [ -->Timed events<!-- ](#timed-events) --></li>
-  <li class="disabled"><!-- [ -->Org mode<!-- ](#orgmode) --></li>
-  <li class="disabled"><!-- [ -->Encryption<!-- ](#encryption) --></li>
-  <li class="disabled"><!-- [ -->Customizing indentation<!-- ](#indentation) --></li>
-  <li class="disabled"><!-- [ -->Calendar<!-- ](#calendar) --></li>
-  <li class="disabled"><!-- [ -->Diary<!-- ](#diary) --></li>
-  <li class="disabled"><!-- [ -->Time zone, latitude, and longitude<!-- ](#tz) --></li>
-  <li class="disabled"><!-- [ -->Font lock mode and colors<!-- ](#fontlock) --></li>
-  <li class="disabled"><!-- [ -->Hex editor<!-- ](#hexedit) --></li>
-</ul>
+- [My .emacs file](#my-emacs-file)
+- [Emacs help and info](#emacs-help-and-info)
+- [The Emacs Wiki](#the-emacs-wiki)
+- [ELPA: the Emacs Lisp Package Archive](#elpa-the-emacs-lis-package-archive)
+- [Expanding words dynamically](#expanding-words-dynamically)
+- [Bookmarks](#bookmarks)
+- [abbrev-mode](#abbrev-mode)
+- [Binding (function) keys](#binding-function-keys)
+- [Snippets](#snippets)
+- [Skeletons](#skeletons)
+- <span class="disabled"><!-- [ -->Eshell<!-- ](#eshell) --></span>
+- [Tags and M-.](#tags-and-m-)
+- <span class="disabled"><!-- [ -->Registers<!-- ](#registers) --></span>
+- <span class="disabled"><!-- [ -->Compile<!-- ](#compile) --></span>
+- <span class="disabled"><!-- [ -->Timed events<!-- ](#timed-events) --></span>
+- <span class="disabled"><!-- [ -->Org mode<!-- ](#org-mode) --></span>
+- <span class="disabled"><!-- [ -->Encryption<!-- ](#encryption) --></span>
+- <span class="disabled"><!-- [ -->Customizing indentation<!-- ](#customizing-indentation) --></span>
+- <span class="disabled"><!-- [ -->Calendar<!-- ](#calendar) --></span>
+- <span class="disabled"><!-- [ -->Diary<!-- ](#diary) --></span>
+- <span class="disabled"><!-- [ -->Time zone, latitude, and longitude<!-- ](#time-zone-latitude-and-longitude) --></span>
+- <span class="disabled"><!-- [ -->Font lock mode and colors<!-- ](#font-lock-mode-and-colors) --></span>
+- <span class="disabled"><!-- [ -->Hex editor<!-- ](#hex-editor) --></span>
 
-<!-- **************************************************************** -->
-<hr/>
-<h2 id="my-dot-emacs">My .emacs file</h2>
+## My .emacs file
 
 You can see all of my Emacs configuration files online. They are checked in
 to a [git repository](http://github.com/jimm/elisp/tree/master). The main
@@ -133,10 +124,7 @@ Here's bootstrap-init.el:
 So you can see that bootstrap-init runs a "before.el" file, then my main
 customization file "emacs.el", then an "after.el" file.
 
-<div class="toplink">([Table of Contents](#toc))</div>
-<!-- **************************************************************** -->
-<hr/>
-<h2 id="help-and-info">Emacs help and info</h2>
+# Emacs help and info
 
 Emacs has extensive online help in the form of the Info program, function
 and variable comments, the Help buffer, and apropos.
@@ -170,20 +158,14 @@ backspace key) to `backward-delete-char`. I think the first version
 of Emacs I ever used (which wasn't Emacs at all, but Fine (Fine is not Emacs))
 used `C-x ?` for `help-for-help`.
 
-<div class="toplink">([Table of Contents](#toc))</div>
-<!-- **************************************************************** -->
-<hr/>
-<h2 id="emacswiki">The Emacs Wiki</h2>
+# The Emacs Wiki
 
 The [Emacs Wiki](http://www.emacswiki.org/cgi-bin/wiki?EmacsWiki) is _the_
 place to go for information about Emacs. The best **starting page** is the
 [Site Map](http://www.emacswiki.org/cgi-bin/wiki/SiteMap).
 
 
-<div class="toplink">([Table of Contents](#toc))</div>
-<!-- **************************************************************** -->
-<hr/>
-<h2 id="elpa">ELPA: the Emacs Lisp Package Archive</h2>
+# ELPA: the Emacs Lisp Package Archive
 
 The [Emacs Lisp Package Archive](http://tromey.com/elpa) (ELPA) is a package
 manager for Emacs. As of Emacs 24, it will be included as part of the base
@@ -210,10 +192,7 @@ installed on your system and to add, delete, or upgrade packages.
 I've decided to keep my elpa directory in ~/.emacs.d instead of checking
 it in to my git repo.
 
-<div class="toplink">([Table of Contents](#toc))</div>
-<!-- **************************************************************** -->
-<hr/>
-<h2 id="dabbrev-expand">Expanding words dynamically</h2>
+# Expanding words dynamically
 
 Tired of typing a `reallyLongVariableName`? After you've typed
 it once, you never have to type it again. Type the first few characters, then
@@ -274,10 +253,7 @@ have
 (setq dabbrev-case-replace nil)
 ~~~
 
-<div class="toplink">([Table of Contents](#toc))</div>
-<!-- **************************************************************** -->
-<hr/>
-<h2 id="bookmarks">Bookmarks</h2>
+# Bookmarks
 
 Bookmarks remember positions within files. They have names, and are
 remembered between your Emacs sessions. Even when the contents of a file
@@ -315,10 +291,7 @@ every time I make or delete a bookmark. Because of that, I never have to run
 (setq bookmark-save-flag 1)		; How many mods between saves
 ~~~
 
-<div class="toplink">([Table of Contents](#toc))</div>
-<!-- **************************************************************** -->
-<hr/>
-<h2 id="abbrev-mode">abbrev-mode</h2>
+# abbrev-mode
 
 Related to [`dabbrev-expand`](#dabbrev-expand), which completes words based
 on the proceeding characters, is `abbrev-mode` which takes abbreviations you
@@ -396,10 +369,7 @@ rest of the abbreviations perform simple text substitutions.
     ))
 ~~~
 
-<div class="toplink">([Table of Contents](#toc))</div>
-<!-- **************************************************************** -->
-<hr/>
-<h2 id="keybinding">Binding (function) keys</h2>
+# Binding (function) keys
 
 Customizing key bindings is easy. You can bind keys globally or per mode.
 To bind a key globally, use `global-set-key`. Here are but a few of
@@ -446,10 +416,7 @@ quotes, like this:
 (define-key global-map [\M-f5] 'apply-macro-to-region-lines)
 ~~~
 
-<div class="toplink">([Table of Contents](#toc))</div>
-<!-- **************************************************************** -->
-<hr/>
-<h2 id="snippets">Snippets</h2>
+# Snippets
 
 Use [yasnippet](http://code.google.com/p/yasnippet/), which is a template
 system that gives you TextMate-like snippets. This means that you type a
@@ -497,10 +464,7 @@ public $1 get${2:$(capitalize-first-char-of-string text)}() { return $2; }
 public void ${1:$(if (equal (downcase text) "boolean") "is" "set")}${2:$(capitalize-first-char-of-string text)}($1 value) { ${2:$(if (equal text "value") "this.value" text)} = value; }
 ~~~
 
-<div class="toplink">([Table of Contents](#toc))</div>
-<!-- **************************************************************** -->
-<hr/>
-<h2 id="skeletons">Skeletons</h2>
+# Skeletons
 
 _(Note that there are a few nice **skeleton replacements**. I've
 started using [yasnippets](http://code.google.com/p/yasnippet/) instead of
@@ -599,73 +563,32 @@ buffer. This code goes in your abbrev_defs.el file.
     ))
 ~~~
 
-<div class="toplink">([Table of Contents](#toc))</div>
-<!-- **************************************************************** -->
-<hr/>
-<h2 class="disabled" id="eshell">Eshell</h2>
+# Eshell
 
-<div class="toplink">([Table of Contents](#toc))</div>
-<!-- **************************************************************** -->
-<hr/>
-<h2 class="disabled" id="tags">Tags and M-.</h2>
+# Tags and M-.
 
 Jealous of IDE users that can jump to...[write more]
 
 Write about `tags-reset-tags-tables</code></p>
 
-<div class="toplink">([Table of Contents](#toc))</div>
-<!-- **************************************************************** -->
-<hr/>
-<h2 class="disabled" id="registers">Registers</h2>
+# Registers
 
-<div class="toplink">([Table of Contents](#toc))</div>
-<!-- **************************************************************** -->
-<hr/>
-<h2 class="disabled" id="compile">Compile</h2>
+# Compile
 
-<div class="toplink">([Table of Contents](#toc))</div>
-<!-- **************************************************************** -->
-<hr/>
-<h2 class="disabled" id="timed-events">Timed events</h2>
+# Timed events
 
-<div class="toplink">([Table of Contents](#toc))</div>
-<!-- **************************************************************** -->
-<hr/>
-<h2 class="disabled" id="orgmode">Org mode</h2>
+# Org mode
 
-<div class="toplink">([Table of Contents](#toc))</div>
-<!-- **************************************************************** -->
-<hr/>
-<h2 class="disabled" id="encryption">Encryption</h2>
+# Encryption
 
-<div class="toplink">([Table of Contents](#toc))</div>
-<!-- **************************************************************** -->
-<hr/>
-<h2 class="disabled" id="indentation">Customizing indentation</h2>
+# Customizing indentation
 
-<div class="toplink">([Table of Contents](#toc))</div>
-<!-- **************************************************************** -->
-<hr/>
-<h2 class="disabled" id="calendar">Calendar</h2>
+# Calendar
 
-<div class="toplink">([Table of Contents](#toc))</div>
-<!-- **************************************************************** -->
-<hr/>
-<h2 class="disabled" id="diary">Diary</h2>
+# Diary
 
-<div class="toplink">([Table of Contents](#toc))</div>
-<!-- **************************************************************** -->
-<hr/>
-<h2 class="disabled" id="tz">Time zone, latitude, and longitude</h2>
+# Time zone, latitude, and longitude
 
-<div class="toplink">([Table of Contents](#toc))</div>
-<!-- **************************************************************** -->
-<hr/>
-<h2 class="disabled" id="fontlock">Font lock mode and colors</h2>
+# Font lock mode and colors
 
-<div class="toplink">([Table of Contents](#toc))</div>
-<!-- **************************************************************** -->
-<hr/>
-<h2 class="disabled" id="hexedit">Hex editor</h2>
-
-<div class="toplink">([Table of Contents](#toc))</div>
+# Hex editor
