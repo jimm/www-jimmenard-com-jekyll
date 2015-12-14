@@ -24,4 +24,4 @@ driver, MongoRecord (an ActiveRecord-like framework for Mongo that is
 independent of Rails), and Rails ActiveRecord support for Mongo.
 
 Oh, yeah: here's my
-[resume](http://www.io.com/~jimm/Jim_Menard_resume.html).
+[resume](http://www.jimmenard.com/Jim_Menard_resume.html).
