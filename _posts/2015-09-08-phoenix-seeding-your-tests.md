@@ -5,7 +5,7 @@ tags: elixir, phoenix
 ---
 
 If you need to seed your test database when running
-[Phoenix](http://www.phoenixframework.org/] tests, you can require the seed
+[Phoenix](http://www.phoenixframework.org/) tests, you can require the seed
 file in `test/test_helper.exs`:
 
 {% highlight elixir %}
