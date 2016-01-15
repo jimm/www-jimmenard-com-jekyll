@@ -14,7 +14,7 @@ layout: default
 Welcome to my skein of Web pages, featuring my
 [Open Source projects](/projects/), budding [writing](/writing.md) career,
 [music composition and performance](music.html), and my
-[resume](Jim_Menard_resume.html"). If you see something out of date, please
+[resume](Jim_Menard_resume.html). If you see something out of date, please
 [drop me a line](mailto:jim@jimmenard.com).
 
 I am a language maven who enjoys [Ruby](http://www.ruby-lang.org/en/),
