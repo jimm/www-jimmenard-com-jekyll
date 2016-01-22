@@ -89,7 +89,7 @@ Here's a tech-head's view of the tools I use to create my music.
 - Apple MacBook Pro laptop
 
 - Guitar/Bass Amps:
-  - Line 6 LowDown LD400 Pro
+  - Line 6 LowDown LD400 Pro (2x10")
   - Fender Frontman 15R practice amp that I found at the town dump in
     full working condition
 
