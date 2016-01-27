@@ -36,7 +36,7 @@ public class Test {
   public Collection<String> stringCollection() {
     System.out.println("I'm creating a new list now.");
     // Don't get me started on the verbosity of the next line...
-    ArrayList<String> list = new ArrayList<String&gt;();
+    ArrayList<String> list = new ArrayList<String>();
     list.add("a");
     list.add("b");
     list.add("c");
