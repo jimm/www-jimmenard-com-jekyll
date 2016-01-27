@@ -89,5 +89,5 @@ primary mailing list.
 
 I plan to blog about three different projects I've been working on in
 Erlang: a MIDI file reader/writer, a
-[Boids](http://en.wikipedia.org/wiki/Boids] simulation, and a simple Web
+[Boids](http://en.wikipedia.org/wiki/Boids) simulation, and a simple Web
 application using Erlyweb.

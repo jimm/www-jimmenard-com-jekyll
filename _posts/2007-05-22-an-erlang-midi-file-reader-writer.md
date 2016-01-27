@@ -4,7 +4,7 @@ title: An Erlang MIDI File Reader/Writer
 tags: erlang, programming, midi
 ---
 
-I've been learning [Erlang](http://www.erlang.org/. (See
+I've been learning [Erlang](http://www.erlang.org/). (See
 [Learning a New Programming Language](../../..//2007/05/22/learning-new-programming-language.html).)
 As part of that process, I've written three programs so far: a
 [Boids](http://en.wikipedia.org/wiki/Boids) flock simulation, a simple Web
