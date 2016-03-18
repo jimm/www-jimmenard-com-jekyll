@@ -3,7 +3,6 @@ layout: default
 title: Resume
 ---
 
-<div class="resume">
 <center>
     <span class="my-name">James J. Menard</span><br />
     Fairfield, Connecticut<br />
@@ -366,8 +365,6 @@ generation capability
 
 <span class="proj">Squeak</span> (Smalltalk) <span class="proj">PostgreSQL
 interface</span>
-
-</div>
 
 
 <!--#include virtual="/footer.html"-->
