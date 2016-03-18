@@ -3,7 +3,7 @@ layout: default
 title: Resume
 ---
 
-<div class="resume"/>
+<div class="resume">
 <center>
     <span class="my-name">James J. Menard</span><br />
     Fairfield, Connecticut<br />
@@ -365,7 +365,7 @@ generation capability
 <span class="proj">KeyMaster</span> Real-time MIDI performance software
 
 <span class="proj">Squeak</span> (Smalltalk) <span class="proj">PostgreSQL
-interface</span></p>
+interface</span>
 
 </div>
 
