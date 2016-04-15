@@ -309,7 +309,7 @@ class="mag-name">MacTech</span>, March 2003 cover article.
 
 <span class="job-skill">Languages</span> Java, Ruby, Python, Scala, PHP,
 JavaScript, Bash, Lisp, Smalltalk, Objective-C, Perl, C, C++, Assembly<br/>
-_Acquainted with_: Clojure, Erlang, Elixir, Haskell, Fortran, Pascal
+_Acquainted with_: Clojure, Elixir, Erlang, Go, Haskell, Fortran, Pascal
 
 <span class="job-skill">Operating Systems</span> Unix (Linux, BSD, Solaris,
 etc.), Mac OS X, MacOS, Nextstep, BeOS, DOS, Windows, VMS
@@ -365,6 +365,3 @@ generation capability
 
 <span class="proj">Squeak</span> (Smalltalk) <span class="proj">PostgreSQL
 interface</span>
-
-
-<!--#include virtual="/footer.html"-->
