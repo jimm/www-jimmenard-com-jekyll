@@ -45,7 +45,7 @@ the quotes collection page.
 
 _[Project Euler](http://projecteuler.net/) status:_
 
-![Project Euler badge](http://projecteuler.net/profile/jmenard.png)
+![Project Euler badge](//projecteuler.net/profile/jmenard.png)
 
 <script type="text/javascript" src="/js/ajax.js"></script>
 <script language="JavaScript" type="text/javascript">

@@ -54,13 +54,14 @@ Here's a tech-head's view of the tools I use to create my music.
 
 - Korg Wavestation
 
-- A big honking seven-foot rack, affectionately called the "Think Tank. Most
-  of the equipment in it was originally mounted in a homemade, rolling,
-  chest-high rack along with a Commodore 64 running my own real time
+- A big honking seven-foot rack, affectionately called the "Think Tank".
+  Most of the equipment in it was originally mounted in a homemade, rolling,
+  chest-high rack along with a Commodore 64 running my own real
+  time
   [MIDI performance software](projects/keymaster/index.html).
   [PatchMaster](http://patchmaster.org/) is the current incarnation of that
-  software. It runs on Mac OSX, Linux, Windows, and on the
-  [JVM](http://en.wikipedia.org/wiki/Java_virtual_machine).
+  software. It runs on Mac OSX, Linux, Windows, and on
+  the [JVM](http://en.wikipedia.org/wiki/Java_virtual_machine).
   - Kurzweil K2000RS (R = rackmount, S = sampling)
   - Kurzweil 1000PX
   - Mackie LM-3204 mixer
@@ -81,6 +82,8 @@ Here's a tech-head's view of the tools I use to create my music.
 - Ibanez SR505 5-string bass
 
 - Fender Stratocaster with one humbucker and two single-coil pickups
+
+- Akai MPD 32 USB/MIDI pad controller
 
 - Yamaha U3 upright piano, but it's in the living room along with the
   ukelele, mandolin, and recorders but far away from all the electronic
