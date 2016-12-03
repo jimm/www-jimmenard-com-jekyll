@@ -1,3 +1,6 @@
+RewriteEngine On
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 Options +ExecCGI +SymLinksIfOwnerMatch
 AddHandler cgi-script .rbx
 AddHandler server-parsed .html
