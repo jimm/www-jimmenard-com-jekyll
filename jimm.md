@@ -5,31 +5,32 @@ title: Me
 
 # Personal
 
-I'm a professional [computer geek](computers.html), an amateur
-[musician and composer](music.html), and a full-time husband and
-father. How do I say this without being corny? My wife Erica and daughters
-Victoria and Claire make me feel very lucky and loved.
+I'm a professional [computer geek](computers.html), an
+amateur [musician and composer](music.html), and a full-time husband and
+father.
 
 I spend time on a number of Open Source projects
-including [DataVision](http://datavision.sourceforge.net/). For
-a list, visit my [projects page](projects/index.html).
+including [PatchMaster](http://patchmaster.org/). For a list, visit
+my [projects page](projects/index.html).
 
-I've written
+I've
+written
 [<cite>Introduction to Ruby for Mac OS X</cite>](writing/Intro_to_Ruby.html),
-the <span class="mag-name">MacTech</span> March 2003 cover article and
+the <span class="mag-name">MacTech</span> March 2003 cover article
+and
 [<cite>Building Applications with Berkeley DB Java Edition</cite>](http://www.sys-con.com/story/?storyid=46235&DE=1),
-which appears in the September 2004 issue of the
-[Java Developer's Journal](http://www.sys-con.com/java/). For the full list
-and more on my budding writing career, see the [writing page](writing/).
+which appears in the September 2004 issue of
+the [Java Developer's Journal](http://www.sys-con.com/java/). I'm also
+working on a book on Emacs. For the full list and more on my budding writing
+career, see the [writing page](writing/).
 
 <a href="projects/keymaster/index.html"><img src="images/KeyMaster.gif"
 alt="KeyMaster" border="0" width="32" height="32" /></a> I'm a computer geek
 and a musician. I'm happiest when I can combine the two.
 
 Take a peek at [what I'm doing with music](music.html), what equipment I
-use, some samples of my music (coming some day), a
-[music-related URL collection](music.html#URLcollection), and a
-[MIDI specification reference](midi_ref.html). My main instrument is
+use, some samples of my music (coming some day), and
+a [MIDI specification reference](midi_ref.html). My main instrument is
 keyboards.
 
 # Professional

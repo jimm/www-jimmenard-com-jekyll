@@ -41,7 +41,6 @@ Here are three pieces I composed that I've typeset using
 - [Equal Rites Number 3](music/equal_rites_3.pdf)
 - [Mosquito Bite Rag](music/mosquito_bite_rag.pdf)
 
-
 # Equipment Collection
 
 Here's a tech-head's view of the tools I use to create my music.
@@ -116,23 +115,27 @@ Here's a tech-head's view of the tools I use to create my music.
   [KeyMaster](http://jimm.github.io/keymaster/), a Mac OS X-only simpler
   version that is more responsive.
 
-- [Korg KRONOS Editor](https://shop.korg.com/kronosSupport)
-  (link is to the KRONOS support/downloads page)
+- Apple's [MainStage 3](http://www.apple.com/mainstage/) is useful when I
+  play with friends. We rent a rehearsal room once a week or so, and though
+  the keyboards are the same in the different rooms we rent it is nice to
+  have the same sounds, splits, transposes, etc. with me on my laptop.
 
-- [REAPER](http://reaper.fm/) Digital Audio Workstation
+- [Korg KRONOS Editor](https://shop.korg.com/kronosSupport)
+  (link is to the KRONOS support/downloads page).
+
+- [REAPER](http://reaper.fm/) Digital Audio Workstation.
 
 - [LilyPond](http://lilypond.org/web/) for music notation typesetting.
 
 - [Overtone](http://overtone.github.com/) for SuperCollider-based synthesis
-   via [Clojure](http://clojure.org/)
+   via [Clojure](http://clojure.org/).
 
 - [Tracktion 3](http://www.mackie.com/products/tracktion3/index.html), which
-  I don't use any more
+  I don't use any more.
 
 This is not a complete list of all the music software I have. Since
 switching to Mac OS X, I've downloaded a number of utilities such as
-MidiPipe, though I don't use them much.
-
+MidiPipe and SimpleSynth for testing MIDI apps I write.
 
 # Band List
 
