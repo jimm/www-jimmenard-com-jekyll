@@ -11,7 +11,7 @@ title: Resume
     <br />
     <div class="versions">
       This resume also available as
-      <a href="Jim_Menard_resume.txt">text-only</a>,
+      <a href="Jim_Menard_resume.txt">plain text</a>,
       <a href="Jim_Menard_resume.pdf">PDF</a>, and
       <a href="Jim_Menard_resume.rtf">RTF</a> (MS Word, LibreOffice,
       TexEdit).
