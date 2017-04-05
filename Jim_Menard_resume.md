@@ -10,9 +10,11 @@ title: Resume
     <a href="mailto:jim@jimmenard.com">jim@jimmenard.com</a><br />
     <br />
     <div class="versions">
-      There are also <a href="Jim_Menard_resume.txt">text-only</a>, <a
-      href="Jim_Menard_resume.rtf">RTF</a> (MS Word), and
-      <a href="Jim_Menard_resume.pdf">PDF</a> versions available.
+      This resume also available as
+      <a href="Jim_Menard_resume.txt">text-only</a>,
+      <a href="Jim_Menard_resume.pdf">PDF</a>, and
+      <a href="Jim_Menard_resume.rtf">RTF</a> (MS Word, LibreOffice,
+      TexEdit).
     </div>
 </center>
 
