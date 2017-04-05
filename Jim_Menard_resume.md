@@ -104,7 +104,10 @@ technology platform. Managed internal, vendor, and consultant deliverables.
 
 
 <div class="job-title">Consultant</div>
-<div class="job-place">Independent</span> 2009</div>
+<div class="job-place">
+  <span class="company">Independent</span>
+  2009
+</div>
 <br/>
 
 Completely redesigned, rebuilt, and deployed the back end and content
