@@ -5,14 +5,15 @@ title: Music
 
 # Music
 
-My first piano lesson was the day before my fifth birthday. In the past, I
-often combined computers and music, like my now-defunct live performance
-software <a href="projects/keymaster/index.html">KeyMaster</a>, originally
-written on the Commodore 64, ported to the Atari ST, and redesigned for the
-now-defunct [BeOS](https://en.wikipedia.org/wiki/BeOS). I've worked a bit on
-a new version for Mac OS X, but it's nowhere near usable.
+My first piano lesson was the day before my fifth birthday. I often combined
+computers and music, like in my live performance
+software [PatchMaster](https://patchmaster.org/)
+and [SeaMaster](https://github.com/jimm/seamaster). Both stem from an older
+program I wrote called KeyMaster I originally wrote on the Commodore 64 and
+used on stage for years. I later ported it to the Atari ST and rewrote for
+the now-defunct [BeOS](https://en.wikipedia.org/wiki/BeOS).
 
-The MIDI reference has moved [here](midi_ref.html). It's not a tutorial.
+My MIDI reference has moved [here](midi_ref.html). It's not a tutorial.
 Rather, it is intended as a quick overview and a reference guide.
 
 I performed in [bands](#band-list) from 1980 to 1993, and started playing
@@ -20,7 +21,9 @@ out with a band again in 2013. Everything from progressive rock to dance pop
 to electric jazz; covers and originals. Here's a video of
 [Miles at Connelly's](https://www.youtube.com/watch?v=t5yU0mX-u4w) in Times
 Square, New York City in 2013. I'm the guy with the beard and glasses stuck
-to the side of the stage.
+to the side of the stage. There's also another group of us that gets
+together every week or two to jam and learn songs from the '70's - today
+that we like and can put our own spin on.
 
 I write different kinds of stuff. Most of it is funk/dance/pop, but I also
 dabble in orchestral, Sondheim-esque pieces, game show themes, thirty-second
@@ -113,7 +116,9 @@ Here's a tech-head's view of the tools I use to create my music.
   was the BeOS version. For the latest instantiations see the cross-platform
   [PatchMaster](http://www.patchmaster.org/) and
   [KeyMaster](http://jimm.github.io/keymaster/), a Mac OS X-only simpler
-  version that is more responsive.
+  version that is more responsive. There's also the newest incarnation,
+  [SeaMaster](https://github.com/jimm/seamaster), a version of PatchMaster
+  written in C and using the PortMidi library.
 
 - Apple's [MainStage 3](http://www.apple.com/mainstage/) is useful when I
   play with friends. We rent a rehearsal room once a week or so, and though
@@ -137,41 +142,50 @@ This is not a complete list of all the music software I have. Since
 switching to Mac OS X, I've downloaded a number of utilities such as
 MidiPipe and SimpleSynth for testing MIDI apps I write.
 
+## Old Gear
+
+Just for fun, here's a list of my old gear. I can't remember everything I've
+ever owned &mdash; I started playing in bands in the late '70's &mdash; but
+here's what I remember that's not in my current setup:
+
+- Yamaha DX7
+- Yamaha TX81Z (2)
+- Yamaha RX5 drum machine
+- Yamaha CS-5
+- Alesis D4 drum synth
+- Roland SuperJupiter
+- Roland Jupiter-6
+- Korg CX3 organ
+- Farfisa organ
+- Moog Memorymoog
+- Moog Source
+- Kurzweil 2000
+- Fender Rhodes
+- Yamaha CP 70 electric grand (it was the singer's, but I got to use it)
+- Opcode Studio 5 MIDI interface
+- Roland Axis strap-on MIDI keyboard
+
 # Band List
 
 Here are the bands and orchestras I've played in over the years. Believe
 me, you've never heard of any of them.
 
 - Starfire (electronic piano, junior high)
-
 - RI Youth Orchestra (contrabass, junior high, high school)
-
 - All-State band, orchestra, jazz band; One year, both orchestra
   (contrabass) and jazz band (electric piano, high school)
-
 - Just Once (electric piano, trumpet, high school)
-
 - Once Again (electric piano, trumpet, high school)
-
 - King Lizard Revival Jass Band (trumpet, high school)
   _("Jass" is the original spelling of "Jazz")_
-
 - Camelot (conductor and music director, high school)
-
 - Guys and Dolls (conductor and music director, college)
-
 - Sinequanon (keyboards)
-
 - Artisan (keyboards)
-
 - Perfect Stranger (keyboards)
-
 - Shy264 (keyboards)
-
 - Boys With Toys (keyboards)
-
 - Optional Stop (keyboards)
-
 - Uncommon Ground (keyboards)
-
 - Miles... (keyboards)
+- _Unnamed_ (keyboards)
