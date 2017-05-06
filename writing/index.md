@@ -57,8 +57,10 @@ location.
 <a id="bride"/>
 <h2>Bride of Dark and Stormy</h2>
 
-This is one of two of my entries published in <cite>Bride of Dark and
-Stormy</cite>, the 1988 book of entries from the annual [Bulwer-Litton Fiction Contest](http://www.bulwer-lytton.com/).
+I entered a number of sentences into the
+annual [Bulwer-Lytton Fiction Contest](http://www.bulwer-lytton.com/)
+contest in 1998. Two of them were selected and published in <cite>Bride of
+Dark and Stormy</cite>, compiled by Scott Rice.
 
 > The alien stared at Captain Veronica Saunders with a warmth not unlike
 > that found on certain of Pluto's outer moons, its black, scaly claws
@@ -77,6 +79,12 @@ I had originally written "...wouldn't scream so much
 _whilst</i> being peeled," but it was changed to "while" in the book. I
 prefer "whilst", but then I do tend to be a touch sesquipedalian.
 
+The second entry:
+
+> Firmly, almost indignantly, Thornton Entwhistle straightened his toupee
+> and checked his lapels for stray specks of lint as he stood in front of
+> the firmly closed mahogany door and again rehearsed his request for a
+> legal pad all his own.
 
 <a id="code"/>
 <h2>Code</h2>
