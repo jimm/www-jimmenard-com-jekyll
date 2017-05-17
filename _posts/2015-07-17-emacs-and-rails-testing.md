@@ -4,17 +4,15 @@ title:  "Emacs and Rails Testing"
 tags: emacs, testing, programming, ruby, rails
 ---
 
-_This post was originally published on 2015-07-17
-on [The Dirty Birds](http://dirtybirds.chloeandisabel.com/), the Chloe +
-Isabel tech team blog._
-
-----
-
 I'm an inveterate Emacs user. It's been my Swiss Army chainsaw of choice for
 over 33 years. Part of the beauty of Emacs is that it's extensible and
 configurable. The relatively new[^1] package manager and ELPA package
 archive are a great start, but sometimes it's better --- or simply more fun
 --- to roll your own.
+
+> This post was originally published
+> on [The Dirty Birds](http://dirtybirds.chloeandisabel.com/), the Chloe +
+> Isabel tech team blog.
 
 I've developed a few Emacs Lisp functions that let me run our Rails
 [RSpec](http://rspec.info/) tests at varying levels of granularity and

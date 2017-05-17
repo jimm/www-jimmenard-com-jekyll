@@ -4,15 +4,13 @@ title: "Asynchronous Audits are Awesome"
 tags: performance, database, ruby, rails, programming
 ---
 
-_This post was originally published on 2017-05-03
-on [The Dirty Birds](http://dirtybirds.chloeandisabel.com/), the Chloe +
-Isabel tech team blog._
-
-----
-
 [Audited](https://github.com/collectiveidea/audited) is a Ruby gem that adds
 change logging to Rails models. It's great for figuring out what happened to
 a model or a group of related models over time.
+
+> This post was originally published
+> on [The Dirty Birds](http://dirtybirds.chloeandisabel.com/), the Chloe +
+> Isabel tech team blog.
 
 If you have an application that generates a lot of audit records they can
 start to slow down your application a bit. Not only do the audit records
