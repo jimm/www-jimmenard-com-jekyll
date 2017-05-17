@@ -6,6 +6,9 @@ permalink: /writing/
 
 # Writing
 
+Gotta link to my [blog](https://www.jimmenard.com/blog.html), though I don't
+update it as often as I should.
+
 I'm writing
 [<strong>Emacs Mastery</strong>: <em>Attaining Coding Supremacy</em>](https://leanpub.com/emacs-mastery).
 I'm considering making it freely available on the Web. Please vist the
@@ -47,12 +50,10 @@ Magazine</cite> 19.3, March 2003.
 A [Ruby talk](rubytalk/index.html) given to the New York City
 CTO Club on July 10, 2001. (HTML and PDF available.)
 
-My blog <cite>Shiny Things</cite> has moved to a [new home](http://jimmenard.blogspot.com/). I've decided to host it
-elsewhere for a few reasons. First, I'd like to allow comments. Second, I'd
-like it to be noticed. I'm vain. The posts that are here will remain here. I
-haven't decided if I will copy some or all of the posts to the new
-location.
-
+My old blog <cite>Shiny Things</cite>
+is [here](http://jimmenard.blogspot.com/). I've decided to move everything
+directly onto this site's [blog](https://www.jimmenard.com/blog.html)
+instead.
 
 <a id="bride"/>
 <h2>Bride of Dark and Stormy</h2>
@@ -76,7 +77,7 @@ for which I am eternally grateful. I lost it, for which I am eternally pissed
 off.
 
 I had originally written "...wouldn't scream so much
-_whilst</i> being peeled," but it was changed to "while" in the book. I
+_whilst_ being peeled," but it was changed to "while" in the book. I
 prefer "whilst", but then I do tend to be a touch sesquipedalian.
 
 The second entry:

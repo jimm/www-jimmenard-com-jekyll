@@ -4,6 +4,8 @@ title: A Weak Man Begs Forgiveness
 tags: humor
 ---
 
+_This attempt at humor was written while recovering from the Swine Flu._
+
 Dearest Colleagues,
 
 I write this electronically-delivered letter to you in the hopes that you
