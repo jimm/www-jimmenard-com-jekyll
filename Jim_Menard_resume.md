@@ -7,8 +7,8 @@ title: Resume
 <center>
     <span class="my-name">James J. Menard</span><br />
     Fairfield, Connecticut<br />
-    cell: (646) 206-4054<br />
     <a href="mailto:jim@jimmenard.com">jim@jimmenard.com</a><br />
+    cell: (646) 206-4054<br />
     <br />
     <div class="versions">
       There are also <a href="Jim_Menard_resume.txt">text-only</a>, <a
