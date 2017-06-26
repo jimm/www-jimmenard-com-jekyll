@@ -33,23 +33,23 @@ scalability, and responsiveness. Lead the e-commerce platform's financial
 and operations systems team including inventory, order taking, promotion
 application, shipping and tax calculation, payment, shipping fulfillment,
 and commission calculation and payment. Worked closely with Product,
-Operations, and QA to set priorities and milestones. Added multiple
-warehouse support and configurable shipment pricing and carrier override. As
-part of ongoing work to improve site reliability and scalability, found
-bottlenecks, improved performance of code and database queries, and upgraded
-tech platform. The team implemented international shipping, automated
-merchandiser payment, collect-on-ship, and more.
+Operations, and QA to set priorities and milestones. As part of ongoing work
+to improve site reliability and scalability, found bottlenecks, improved
+performance of code and database queries, and upgraded tech platform. The
+team implemented international shipping, automated merchandiser payment,
+collect-on-ship, and more.
 
-* Integrated with forum/publishing platform
+* Added multiple warehouse support and configurable shipment pricing and
+  carrier override
 * Made audit logging asynchronous, improving response times 14%
-* General technical troubleshooting
-* Documented major subsystems
+* Integrated with forum/publishing platform
 * Managed on-call schedules and performed regular issue review with QA
-* Organized and gave internal technical talks
+* Documented major subsystems
 * Restarted tech blog and wrote articles
+* Organized and gave internal technical talks
 * Gave code reviews and mentored all tech team members
 * Assessed potential vendors
-* Screened and interviewed candidates.
+* Screened and interviewed candidates
 
 
 <div class="job-title">
