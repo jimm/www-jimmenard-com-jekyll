@@ -3,6 +3,7 @@ layout: default
 title: Resume
 ---
 
+<div class="resume"/>
 <center>
     <span class="my-name">James J. Menard</span><br />
     Fairfield, Connecticut<br />
@@ -10,11 +11,9 @@ title: Resume
     <a href="mailto:jim@jimmenard.com">jim@jimmenard.com</a><br />
     <br />
     <div class="versions">
-      This resume also available as
-      <a href="Jim_Menard_resume.txt">plain text</a>,
-      <a href="Jim_Menard_resume.pdf">PDF</a>, and
-      <a href="Jim_Menard_resume.rtf">RTF</a> (MS Word, LibreOffice,
-      TexEdit).
+      There are also <a href="Jim_Menard_resume.txt">text-only</a>, <a
+      href="Jim_Menard_resume.rtf">RTF</a> (MS Word), and
+      <a href="Jim_Menard_resume.pdf">PDF</a> versions available.
     </div>
 </center>
 
@@ -28,7 +27,29 @@ title: Resume
 </div>
 <br/>
 
-Senior member of technology team.
+
+Worked with the technology team to improve platform quality, reliability,
+scalability, and responsiveness. Lead the e-commerce platform's financial
+and operations systems team including inventory, order taking, promotion
+application, shipping and tax calculation, payment, shipping fulfillment,
+and commission calculation and payment. Worked closely with Product,
+Operations, and QA to set priorities and milestones. Added multiple
+warehouse support and configurable shipment pricing and carrier override. As
+part of ongoing work to improve site reliability and scalability, found
+bottlenecks, improved performance of code and database queries, and upgraded
+tech platform. The team implemented international shipping, automated
+merchandiser payment, collect-on-ship, and more.
+
+* Integrated with forum/publishing platform
+* Made audit logging asynchronous, improving response times 14%
+* General technical troubleshooting
+* Documented major subsystems
+* Managed on-call schedules and performed regular issue review with QA
+* Organized and gave internal technical talks
+* Restarted tech blog and wrote articles
+* Gave code reviews and mentored all tech team members
+* Assessed potential vendors
+* Screened and interviewed candidates.
 
 
 <div class="job-title">
@@ -106,10 +127,7 @@ technology platform. Managed internal, vendor, and consultant deliverables.
 
 
 <div class="job-title">Consultant</div>
-<div class="job-place">
-  <span class="company">Independent</span>
-  2009
-</div>
+<div class="job-place">Independent</span> 2009</div>
 <br/>
 
 Completely redesigned, rebuilt, and deployed the back end and content
@@ -314,7 +332,7 @@ class="mag-name">MacTech</span>, March 2003 cover article.
 
 <span class="job-skill">Languages</span> Java, Ruby, Python, Scala, PHP,
 JavaScript, Bash, Lisp, Smalltalk, Objective-C, Perl, C, C++, Assembly<br/>
-_Acquainted with_: Clojure, Elixir, Erlang, Go, Haskell, Fortran, Pascal
+_Acquainted with_: Clojure, Erlang, Elixir, Haskell, Fortran, Pascal
 
 <span class="job-skill">Operating Systems</span> Unix (Linux, BSD, Solaris,
 etc.), Mac OS X, MacOS, Nextstep, BeOS, DOS, Windows, VMS
@@ -369,4 +387,9 @@ generation capability
 <span class="proj">KeyMaster</span> Real-time MIDI performance software
 
 <span class="proj">Squeak</span> (Smalltalk) <span class="proj">PostgreSQL
-interface</span>
+interface</span></p>
+
+</div>
+
+
+<!--#include virtual="/footer.html"-->
