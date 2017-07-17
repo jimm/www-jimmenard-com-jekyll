@@ -27,7 +27,7 @@ number of Open Source [projects](/projects/) such as the
 [KeyMaster](http://jimm.github.io/keymaster/), and
 [DataVision](http://datavision.sourceforge.net).
 
-[Emacs](/emacs_tips.html) is the One True Editor&trade;.
+By the way: [Emacs](/emacs_tips.html) is the One True Editor&trade;.
 
 # Contact Information
 
