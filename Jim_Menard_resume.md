@@ -28,11 +28,11 @@ title: Resume
 <br/>
 
 
-Worked with the technology team to improve platform quality, reliability,
+Work with the technology team to improve platform quality, reliability,
 scalability, and responsiveness. Lead the e-commerce platform's financial
 and operations systems team including inventory, order taking, promotion
 application, shipping and tax calculation, payment, shipping fulfillment,
-and commission calculation and payment. Worked closely with Product,
+and commission calculation and payment. Work closely with Product,
 Operations, and QA to set priorities and milestones. As part of ongoing work
 to improve site reliability and scalability, found bottlenecks, improved
 performance of code and database queries, and upgraded tech platform. The
@@ -61,8 +61,8 @@ collect-on-ship, and more.
 <br/>
 
 
-Lead and grow a team of developers focused on rapid prototyping and
-development of new applications that bring evidence-based decision making,
+Led and grew a team of developers focused on rapid prototyping and
+development of new applications that brought evidence-based decision making,
 innovation, and analytics (big data) to multiple business lines.
 
 
@@ -89,9 +89,9 @@ infrastructure redesign and migration.
 </div>
 <br/>
 
-Senior member of development team. Prototype and implement new systems and
-research technologies. Created CMS and implemented e-commerce financial
-systems.
+Senior member of development team. Prototyped and implemented new systems
+and researched technologies. Created CMS and implemented e-commerce
+financial systems.
 
 
 <div class="job-title">Director of Technology</div>
@@ -100,7 +100,7 @@ systems.
 </div>
 <br/>
 
-Provide technical guidance, R&amp;D, support, and mentorship for ideeli's
+Provided technical guidance, R&amp;D, support, and mentorship for ideeli's
 core technology platform and the team. Technical lead for multiple projects
 including development of A/B testing framework and replacement of credit
 card vendor. Created prototype rules engine implementation of
