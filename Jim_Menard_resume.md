@@ -389,9 +389,6 @@ generation capability
 <span class="proj">KeyMaster</span> Real-time MIDI performance software
 
 <span class="proj">Squeak</span> (Smalltalk) <span class="proj">PostgreSQL
-interface</span></p>
-
-</div>
-
+interface</span>
 
 <!--#include virtual="/footer.html"-->
