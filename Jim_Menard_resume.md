@@ -390,5 +390,3 @@ generation capability
 
 <span class="proj">Squeak</span> (Smalltalk) <span class="proj">PostgreSQL
 interface</span>
-
-<!--#include virtual="/footer.html"-->
