@@ -69,5 +69,6 @@ If you'd like to contact me, feel free to email me at
     y++++ UF+
     ------END GEEK CODE BLOCK------
 
-For a translation of this gibberish, visit the
-[Geek Code home page](http://www.geekcode.com/geek.html).
+For a translation of this gibberish&mdash;which I should probably update
+since it's been around 20 years since I created that&mdash;visit the
+[Geek Code](https://en.wikipedia.org/wiki/Geek_Code) Wikipedia entry.

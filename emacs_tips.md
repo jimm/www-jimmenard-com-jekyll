@@ -418,15 +418,16 @@ quotes, like this:
 
 # Snippets
 
-Use [yasnippet](http://code.google.com/p/yasnippet/), which is a template
-system that gives you TextMate-like snippets. This means that you type a
-short key, then tab, and it is expanded into fuller text. The cool part is,
-after expansion parts of the new text may be highlighted, ready for you to
-change. Each press of the tab key moves you to the next highlighted area
-where you can just start typing to replace the default value that is there.
-These snippets can do much more: each section can appear more than once (but
-you only type once and what you type appears in all the other places) and
-each section can run elisp code to modify what you type there or elsewhere.
+Use [yasnippet](https://github.com/joaotavora/yasnippet) (available on
+MELPA), which is a template system that gives you TextMate-like snippets.
+This means that you type a short key, then tab, and it is expanded into
+fuller text. The cool part is, after expansion parts of the new text may be
+highlighted, ready for you to change. Each press of the tab key moves you to
+the next highlighted area where you can just start typing to replace the
+default value that is there. These snippets can do much more: each section
+can appear more than once (but you only type once and what you type appears
+in all the other places) and each section can run elisp code to modify what
+you type there or elsewhere.
 
 It's easy to write your own snippets. Here's a simple one that turns
 "cncTAB" into "&lt;code&gt;null&lt;/code&gt;". I use it when writing
@@ -466,8 +467,8 @@ public void ${1:$(if (equal (downcase text) "boolean") "is" "set")}${2:$(capital
 
 # Skeletons
 
-_(Note that there are a few nice **skeleton replacements**. I've
-started using [yasnippets](http://code.google.com/p/yasnippet/) instead of
+_(Note that there are a few nice **skeleton replacements**. I've started
+using [yasnippets](https://github.com/joaotavora/yasnippet) instead of
 skeletons.)_
 
 Skeletons are fill-in-the-blank templates. Here's a simple example that
