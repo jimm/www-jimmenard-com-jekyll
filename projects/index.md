@@ -6,33 +6,44 @@ permalink: /projects/
 
 # Projects
 
-- My [**GitHub projects**](http://github.com/jimm) not otherwise listed
+- My [**GitHub projects**](https://github.com/jimm) not otherwise listed
   below:
-  - My [Emacs initialization files](http://github.com/jimm/elisp)
-  - [Project Euler](http://github.com/jimm/euler) solutions
-  - [Impromptu](http://github.com/jimm/elisp) experiments
-  - A [DataVision](http://github.com/jimm/DataVision) fork
-    with updated Java syntax
-  - A [Chuck](http://github.com/jimm/chuck) fork with a few
-    small new features
-  - The [source for this site](http://github.com/jimm/www-jimmenard-com)
-  - And [more](http://github.com/jimm)...
+  - My [Emacs initialization files](https://github.com/jimm/elisp)
+  - The [source for this site](https://github.com/jimm/www-jimmenard-com)
+  - My experimentation with different languages like
+    [Elixir](https://github.com/jimm/elixir),
+    [Common Lisp](https://github.com/jimm/common-lisp),
+    [Clojure](https://github.com/jimm/clojure),
+    and [Crystal](https://github.com/jimm/crystal)
+  - [Project Euler](https://github.com/jimm/euler) solutions
+  - The [full list](https://github.com/jimm?tab=repositories)
 
-- [**PatchMaster**](http://github.com/jimm/patchmaster), real time MIDI
+- [**midilib**](https://github.com/jimm/midilib), a pure-Ruby MIDI library
+  useful for reading and writing standard MIDI file and manipulating MIDI
+  event data.
+
+- [**csvlixir**](https://github.com/jimm/csvlixir), a CSV reader/writer for
+  Elixir that operates on files or strings.
+
+- [**PatchMaster**](https://github.com/jimm/patchmaster), real time MIDI
   performance software that allows a musician to totally reconfigure a MIDI
   setup instantaneously and modify the MIDI data while it's being sent.
   PatchMaster is written in Ruby and is cross-platform.
 
-- [**KeyMaster**](http://github.com/jimm/keymaster), a Mac OS X-only version
+- [**SeaMaster**](https://github.com/jimm/seamaster), a C version of
+  PatchMaster that uses the PortMidi library. Much more performant than
+  PatchMaster, but doesn't have any way of loading user-written code to
+  modify the MIDI stream.
+
+- [**KeyMaster**](https://github.com/jimm/keymaster), a Mac OS X-only version
   of PatchMaster written in Objective C. I wrote it because PatchMaster is
   frankly not fast enough to keep up with large streams of data.
 
+- [**napper**](https://github.com/jimm/napper), a JSON REST API client for
+  Elixir. 
+
 - [**DataVision**](http://datavision.sourceforge.net/), a pure-Java database
   reporting tool similar to Crystal Reports.
-
-- [**midilib**](http://midilib.rubyforge.org/), a pure-Ruby MIDI library
-  useful for reading and writing standard MIDI file and manipulating MIDI
-  event data.
 
 - [**Bangkok**](http://bangkok.rubyforge.org/) is a Ruby project that reads
   chess game descriptions and re-play the games. Notice of events (moves,
@@ -79,7 +90,7 @@ My [Ruby Quiz Answers](/rubyquiz/).
 ## Defunct Projects
 
 - [**KeyMaster**](keymaster/index.html) (see
-  [**PatchMaster**](http://github.com/jimm/patchmaster))
+  [**PatchMaster**](https://github.com/jimm/patchmaster))
 
 - [**MIDI Through**](MIDI_Through.html)
 
@@ -92,4 +103,4 @@ My [Ruby Quiz Answers](/rubyquiz/).
   character-delimited data files such as .CSV and tab-delimited text files.
   It handles different delimiters and quote marks as well as delimiters,
   escaped characters, and doubled quotes that appear in the data. Since Ruby
-  now ships with the `csv` module, DelimParser has become moot.
+  now ships with the `csv` module, DelimParser has become irrelevant.

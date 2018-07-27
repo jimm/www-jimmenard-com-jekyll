@@ -6,7 +6,7 @@ tags: audio, c++, music, programming, midi
 
 I've created a GitHub fork of [ChucK](http://chuck.cs.princeton.edu/), the
 "strongly-timed, concurrent, and on-the-fly audio programming language." In
-[my fork](http://github.com/jimm/chuck) I've started to add missing features
+[my fork](https://github.com/jimm/chuck) I've started to add missing features
 like string methods, and hope to add many more such as raw file I/O and
 perhaps some form of MIDI file I/O.
 

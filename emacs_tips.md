@@ -77,9 +77,9 @@ can't in the terminal window because the terminal program uses it already.
 ## My .emacs file
 
 You can see all of my Emacs configuration files online. They are checked in
-to a [git repository](http://github.com/jimm/elisp/tree/master). The main
+to a [git repository](https://github.com/jimm/elisp/tree/master). The main
 initialization file is
-[emacs.el](http://github.com/jimm/elisp/tree/master/emacs.el), which is
+[emacs.el](https://github.com/jimm/elisp/tree/master/emacs.el), which is
 loaded as part of a machine-specific bootstrap process.
 
 Since I use Emacs on multiple machines, I came up with a customization
@@ -175,7 +175,7 @@ When you run the installation code (instructions are on the ELPA Web
 site), it adds a bit of elisp to your .emacs file that loads the package
 manager. I've modified that code by adding the "marmalade" user-contributed
 package repository. See the top of
-my [emacs.el](http://github.com/jimm/elisp/tree/master/emacs.el).
+my [emacs.el](https://github.com/jimm/elisp/tree/master/emacs.el).
 
 <em>Note</em>: the last time I installed ELPA on a new Mac OS X system,
 the installation failed. It seems like a Catch 22: the code that loads elpa
