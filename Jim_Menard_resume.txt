@@ -27,7 +27,7 @@ Principal Engineer                              Chloe + Isabel, 2015 - Present
     o Restarted tech blog and wrote articles
     o Organized and gave internal technical talks
     o Gave code reviews and mentored all tech team members
-    o Assessed potential vendors
+    o Assessed potential vendors and acquisitions
     o Screened and interviewed candidates
 
 Sr. Dir. of Engineering and Architecture, Science             AIG, 2014 - 2015

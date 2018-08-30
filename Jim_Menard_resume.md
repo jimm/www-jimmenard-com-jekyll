@@ -27,7 +27,6 @@ title: Resume
 </div>
 <br/>
 
-
 Work with the technology team to improve platform quality, reliability,
 scalability, and responsiveness. Lead the e-commerce platform's financial
 and operations systems team including inventory, order taking, promotion
@@ -48,7 +47,7 @@ collect-on-ship, and more.
 * Restarted tech blog and wrote articles
 * Organized and gave internal technical talks
 * Gave code reviews and mentored all tech team members
-* Assessed potential vendors
+* Assessed potential vendors and acquisitions
 * Screened and interviewed candidates
 
 
