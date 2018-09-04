@@ -210,7 +210,7 @@ PUBLICATIONS AND PRESENTATIONS:
 TECHNICAL SKILLS:
 
 Languages
-    Java, Ruby, Python, Scala, PHP, JavaScript, Bash, Lisp, Smalltalk,
+    Ruby, Python, Java, Scala, PHP, JavaScript, Bash, Lisp, Smalltalk,
       Objective-C, Perl, C, C++, Assembly
     Acquainted with: Clojure, Elixir, Erlang, Go, Haskell, Fortran, Pascal
 

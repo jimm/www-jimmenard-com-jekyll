@@ -330,7 +330,7 @@ class="mag-name">MacTech</span>, March 2003 cover article.
 
 # Technical Skills
 
-<span class="job-skill">Languages</span> Java, Ruby, Python, Scala, PHP,
+<span class="job-skill">Languages</span> Ruby, Python, Java, Scala, PHP,
 JavaScript, Bash, Lisp, Smalltalk, Objective-C, Perl, C, C++, Assembly<br/>
 _Acquainted with_: Clojure, Erlang, Elixir, Haskell, Fortran, Pascal
 
