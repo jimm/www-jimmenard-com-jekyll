@@ -5,7 +5,9 @@
 
 EXPERIENCE:
 
-Principal Engineer                              Chloe + Isabel, 2015 - Present
+Principal Software Engineer                       Warby Parker, 2018 - Present
+
+Principal Engineer                                 Chloe + Isabel, 2015 - 2018
     
     Work with  the technology team  to improve platform  quality, reliability,
     scalability, and responsiveness. Lead  the e-commerce platform's financial

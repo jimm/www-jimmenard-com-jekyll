@@ -20,9 +20,15 @@ title: Resume
 
 # Experience
 
+<div class="job-title">Principal Software Engineer</div>
+<div class="job-place">
+  <span class="company">Warby Parker</span> 2018&ndash;Present
+</div>
+<br/>
+
 <div class="job-title">Principal Engineer</div>
 <div class="job-place">
-  <span class="company">Chloe + Isabel</span> 2015&ndash;Present
+  <span class="company">Chloe + Isabel</span> 2015&ndash;2018
 </div>
 <br/>
 
