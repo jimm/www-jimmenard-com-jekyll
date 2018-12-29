@@ -52,6 +52,8 @@ Here's a tech-head's view of the tools I use to create my music.
 
 - Korg Kronos X 88
 
+- Studiologic Sledge 2.0
+
 - Kurzweil Midiboard
 
 - Korg Wavestation
@@ -104,8 +106,7 @@ Here's a tech-head's view of the tools I use to create my music.
   - OAP T-122B wedge (70 lbs, a pain to carry around)
   - Home-made (by someone else) piece of crap
 
-- Three empty six-space racks from the olden days of live
-    performance
+- Three empty six-space racks from the olden days of live performance
 
 ## Software List
 
@@ -188,4 +189,4 @@ me, you've never heard of any of them.
 - Optional Stop (keyboards)
 - Uncommon Ground (keyboards)
 - Miles... (keyboards)
-- _Unnamed_ (keyboards)
+- Ellis Island (keyboards)
