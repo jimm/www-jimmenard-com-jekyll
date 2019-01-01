@@ -43,21 +43,13 @@ These sigs are randomly chosen from my
 enabled, you won't see the signatures here, but you can still see them on
 the quotes collection page.
 
-  <div id='randsig'>
-  </div>
-
-_[Project Euler](http://projecteuler.net/) status:_
-
-![Project Euler badge](//projecteuler.net/profile/jmenard.png)
+<div id='randsig'>
+</div>
 
 <script type="text/javascript" src="/js/ajax.js"></script>
 <script language="JavaScript" type="text/javascript">
   <!--
-      function gensig() {
-      getAndReplace('/random_sig.cgi', 'randsig');
-      }
-      window.onload = function() {
-      gensig();
-      }
-      // -->
+      function gensig() { getAndReplace('/random_sig.cgi', 'randsig'); }
+      window.onload = function() { gensig(); }
+  // -->
 </script>
