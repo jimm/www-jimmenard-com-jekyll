@@ -78,6 +78,10 @@ Here's a tech-head's view of the tools I use to create my music.
   - Akai ME10D MIDI "digital delay" (echoes MIDI data, optionally
     transposing it up/down one octave)
 
+- On-Stage KS7365EJ Pro Heavy-Duty Folding-Z Keyboard
+
+- Various Ultimate keyboard stands, an Ultimate speaker stand
+
 - Chapman Stick, 12-string Grand Stick&mdash;5 bass, 7 treble, classic
   tuning (I'm finally getting serious about learning to play it.)
 
