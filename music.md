@@ -25,6 +25,8 @@ to the side of the stage. There's also another group of us that gets
 together every week or two to jam and learn songs from the '70's - today
 that we like and can put our own spin on.
 
+Currently, I play keyboards in [Ellis Island](http://ellisislandrock.com/).
+
 I write different kinds of stuff. Most of it is funk/dance/pop, but I also
 dabble in orchestral, Sondheim-esque pieces, game show themes, thirty-second
 newsroom background music, and whatever else tickles my fancy.
@@ -193,4 +195,4 @@ me, you've never heard of any of them.
 - Optional Stop (keyboards)
 - Uncommon Ground (keyboards)
 - Miles... (keyboards)
-- Ellis Island (keyboards)
+- [Ellis Island](http://ellisislandrock.com/) (keyboards)
