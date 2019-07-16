@@ -43,6 +43,8 @@ experimented with and enjoy include Elixir, Erlang, Clojure, and Haskell.
 
 # Musical
 
+Currently, I play keyboards in [Ellis Island](http://ellisislandrock.com/).
+
 For a while, I was learning to play the
 [Chapman Stick](http://www.stick.com/), a ten- or twelve-stringed instrument
 that is played by tapping the fretboard with both hands. &quot;For a
