@@ -25,7 +25,8 @@ number of Open Source [projects](/projects/) such as the
 [PatchMaster](http://patchmaster.org/) music performance app,
 [CSVLixir](https://github.com/jimm/csvlixir) Elixir library,
 [KeyMaster](http://jimm.github.io/keymaster/), and
-[DataVision](http://datavision.sourceforge.net).
+[DataVision](http://datavision.sourceforge.net) (source also available
+[here](https://github.com/jimm/datavision)).
 
 By the way: [Emacs](/emacs_tips.html) is the One True Editor&trade;.
 
