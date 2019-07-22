@@ -4,11 +4,18 @@ require 'cgi'
 
 SIGS_FILE = '/home/jmenard/pim/signatures'
 
+def process(line)
+  line
+    .chomp
+    .gsub(%r{\b_(.*)_\b}, '<em>\1</em>')
+    .sub(/\s*---?\s*/, ' &mdash; ')
+end
+
 puts                            # Blank line after headers
 begin
   puts '<pre>'
   IO.foreach(SIGS_FILE) { | line |
-    puts CGI::escapeHTML(line.chomp).sub(/\s*---?\s*/, ' &mdash; ')
+    puts process(line)
   }
   puts '</pre>'
 rescue => ex
