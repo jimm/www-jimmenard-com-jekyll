@@ -5,10 +5,14 @@ require 'cgi'
 SIGS_FILE = '/home/jmenard/pim/signatures'
 
 def process(line)
-  line
-    .chomp
-    .gsub(%r{\b_(.*)_\b}, '<em>\1</em>')
-    .sub(/\s*---?\s*/, ' &mdash; ')
+  line.chomp!
+  line.sub!(/\s*---?\s*/, ' &mdash; ')
+
+  # special cases
+  if line =~ /_why the lucky stiff_/
+    return line
+  end
+  line.gsub(%r{\b_(.*)_\b}, '<em>\1</em>')
 end
 
 puts                            # Blank line after headers
