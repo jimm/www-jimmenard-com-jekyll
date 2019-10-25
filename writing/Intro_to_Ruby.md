@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Introduction to Ruby for Mac OS X
 ---
 # Introduction to Ruby for Mac OS X
 
