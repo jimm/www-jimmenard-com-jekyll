@@ -139,7 +139,7 @@ ever owned &mdash; I started playing in bands in the late '70's &mdash; but
 here's what I remember that's not in my current setup:
 
 - Alesis D4 drum synth
-- Commodore SX-64, running first Moog's Song Producer software, then
+- Commodore SX-64 running first Moog's Song Producer software, then
   my KeyMaster software
 - Farfisa organ
 - Fender Rhodes
@@ -154,7 +154,7 @@ here's what I remember that's not in my current setup:
 - Roland Jupiter-6
 - Roland SuperJupiter
 - Yamaha CP 70 electric grand (it was the singer's, but I got to use it)
-- Yamaha CS-5
+- Yamaha CS-5 mono analog synth
 - Yamaha DX7
 - Yamaha RX5 drum machine
 - Yamaha TX81Z (two of 'em)
