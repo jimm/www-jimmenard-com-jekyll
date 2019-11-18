@@ -16,6 +16,8 @@ the now-defunct [BeOS](https://en.wikipedia.org/wiki/BeOS).
 My MIDI reference has moved [here](midi_ref.html). It's not a tutorial.
 Rather, it is intended as a quick overview and a reference guide.
 
+Currently, I play keyboards in [Ellis Island](http://ellisislandrock.com/).
+
 I performed in [bands](#band-list) from 1980 to 1993, and started playing
 out with a band again in 2013. Everything from progressive rock to dance pop
 to electric jazz; covers and originals. Here's a video of
@@ -24,8 +26,6 @@ Square, New York City in 2013. I'm the guy with the beard and glasses stuck
 to the side of the stage. There's also another group of us that gets
 together every week or two to jam and learn songs from the '70's - today
 that we like and can put our own spin on.
-
-Currently, I play keyboards in [Ellis Island](http://ellisislandrock.com/).
 
 I write different kinds of stuff. Most of it is funk/dance/pop, but I also
 dabble in orchestral, Sondheim-esque pieces, game show themes, thirty-second
@@ -53,65 +53,49 @@ Here's a tech-head's view of the tools I use to create my music.
 ## Equipment List
 
 - Korg Kronos X 88
-
 - Studiologic Sledge 2.0
-
-- Kurzweil Midiboard
-
-- Korg Wavestation
-
 - A big honking seven-foot rack, affectionately called the "Think Tank".
   Most of the equipment in it was originally mounted in a homemade, rolling,
-  chest-high rack along with a Commodore 64 running my own real
-  time
-  [MIDI performance software](projects/keymaster/index.html).
-  [PatchMaster](http://patchmaster.org/) is the current incarnation of that
-  software. It runs on Mac OSX, Linux, Windows, and on
-  the [JVM](http://en.wikipedia.org/wiki/Java_virtual_machine).
+  chest-high rack along with a Commodore 64 running my own real time MIDI
+  performance software.
   - Kurzweil K2000RS (R = rackmount, S = sampling)
   - Kurzweil 1000PX
   - Mackie LM-3204 mixer
   - Yamaha MV802 mixer
-  - Emagic AMT8 MIDI interface
+  - Emagic AMT8 MIDI interface (used with my PowerBook G4)
   - Korg DRV-2000 digital reverb
   - Crest Audio FA901 power amp
   - Two rack-mount power strips
   - Custom patch bay with 12 1/2", 6 MIDI, 4 XLR, 2 1/2" TRS
   - Akai ME10D MIDI "digital delay" (echoes MIDI data, optionally
     transposing it up/down one octave)
-
 - On-Stage KS7365EJ Pro Heavy-Duty Folding-Z Keyboard
-
-- Various Ultimate keyboard stands, an Ultimate speaker stand
-
-- Chapman Stick, 12-string Grand Stick&mdash;5 bass, 7 treble, classic
-  tuning (I'm finally getting serious about learning to play it.)
-
-- Moog Etherwave Theremin
-
+- Fender Stratocaster
 - Ibanez SR505 5-string bass
-
-- Fender Stratocaster with one humbucker and two single-coil pickups
-
+- Chapman Stick, 12-string Grand Stick with 5 bass, 7 treble strings;
+  classic tuning
+- Moog Etherwave Theremin
 - Akai MPD 32 USB/MIDI pad controller
-
-- Yamaha U3 upright piano, but it's in the living room along with the
-  ukelele, mandolin, and recorders but far away from all the electronic
-  gear
-
+- M-Audio MIDISPORT 4x4 Anniversary Edition 4-in/4-out USB MIDI Interface
+- Yamaha U3 upright piano
 - Apple MacBook Pro laptop
-
-- Guitar/Bass Amps:
-  - Line 6 LowDown LD400 Pro (2x10")
-  - Fender Frontman 15R practice amp that I found at the town dump in
-    full working condition
-
 - Speakers:
   - A pair of M-Audio AV 40 monitors
   - JBL EON 515XT powered speaker
   - OAP T-122B wedge (70 lbs, a pain to carry around)
   - Home-made (by someone else) piece of crap
-
+- Guitar/Bass Amps:
+  - Line 6 LowDown LD400 Pro (2x10")
+  - Fender Frontman 15R practice amp that I found at the town dump in
+    full working condition
+- Kurzweil Midiboard (in storage)
+- Korg Wavestation (in storage)
+- Various Ultimate keyboard stands, an Ultimate speaker stand
+- Three empty six-space racks from the olden days of live performance
+- Also in the house
+  - Ukelele
+  - Mandolin
+  - Yamaha FG830 Acoustic Guitar
 - Three empty six-space racks from the olden days of live performance
 
 ## Software List
@@ -142,8 +126,8 @@ Here's a tech-head's view of the tools I use to create my music.
 - [Overtone](http://overtone.github.com/) for SuperCollider-based synthesis
    via [Clojure](http://clojure.org/).
 
-- [Tracktion 3](http://www.mackie.com/products/tracktion3/index.html), which
-  I don't use any more.
+- [Sonic Pi](https://sonic-pi.net/), a code-based music creation and
+  performance tool.
 
 This is not a complete list of all the music software I have. Since
 switching to Mac OS X, I've downloaded a number of utilities such as
@@ -155,22 +139,26 @@ Just for fun, here's a list of my old gear. I can't remember everything I've
 ever owned &mdash; I started playing in bands in the late '70's &mdash; but
 here's what I remember that's not in my current setup:
 
-- Yamaha DX7
-- Yamaha TX81Z (2)
-- Yamaha RX5 drum machine
-- Yamaha CS-5
 - Alesis D4 drum synth
-- Roland SuperJupiter
-- Roland Jupiter-6
-- Korg CX3 organ
+- Commodore SX-64, running first Moog's Song Producer software, then
+  my KeyMaster software
 - Farfisa organ
-- Moog Memorymoog
-- Moog Source
-- Kurzweil 2000
 - Fender Rhodes
-- Yamaha CP 70 electric grand (it was the singer's, but I got to use it)
+- Hohner International "electronic piano" (I think it was the International)
+  from the late 1960's &mdash; my first keyboard after my parent's piano
+- Korg CX3 organ
+- Moog Memorymoog
+- Moog Song Producer
+- Moog Source
 - Opcode Studio 5 MIDI interface
 - Roland Axis strap-on MIDI keyboard
+- Roland Jupiter-6
+- Roland SuperJupiter
+- Yamaha CP 70 electric grand (it was the singer's, but I got to use it)
+- Yamaha CS-5
+- Yamaha DX7
+- Yamaha RX5 drum machine
+- Yamaha TX81Z (two of 'em)
 
 # Band List
 
@@ -184,7 +172,7 @@ me, you've never heard of any of them.
 - Just Once (electric piano, trumpet, high school)
 - Once Again (electric piano, trumpet, high school)
 - King Lizard Revival Jass Band (trumpet, high school)
-  _("Jass" is the original spelling of "Jazz")_
+  _("Jass" is an early spelling of "Jazz")_
 - Camelot (conductor and music director, high school)
 - Guys and Dolls (conductor and music director, college)
 - Sinequanon (keyboards)
