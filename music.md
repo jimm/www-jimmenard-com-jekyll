@@ -52,14 +52,15 @@ Here's a tech-head's view of the tools I use to create my music.
 
 ## Equipment List
 
-- Korg Kronos X 88
-- Studiologic Sledge 2.0
+- [Korg Kronos X 88](https://www.korg.com/us/products/synthesizers/kronos_x/)
+- [Studiologic Sledge 2.0](https://www.studiologic-music.com/products/sledge2/)
 - A big honking seven-foot rack, affectionately called the "Think Tank".
   Most of the equipment in it was originally mounted in a homemade, rolling,
   chest-high rack along with a Commodore 64 running my own real time MIDI
   performance software.
-  - Kurzweil K2000RS (R = rackmount, S = sampling)
-  - Kurzweil 1000PX
+  - Kurzweil K2000RS (R = rackmount, S = sampling), the rackmount version of
+    [this](https://en.wikipedia.org/wiki/Kurzweil_K2000)
+  - [Kurzweil 1000PX](https://soundprogramming.net/synthesizers/kurzweil/kurzweil-1000px-professional-expander/)
   - Mackie LM-3204 mixer
   - Yamaha MV802 mixer
   - Emagic AMT8 MIDI interface (used with my PowerBook G4)
@@ -72,10 +73,10 @@ Here's a tech-head's view of the tools I use to create my music.
 - On-Stage KS7365EJ Pro Heavy-Duty Folding-Z Keyboard
 - Fender Stratocaster
 - Ibanez SR505 5-string bass
-- Chapman Stick, 12-string Grand Stick with 5 bass, 7 treble strings;
-  classic tuning
-- Moog Etherwave Theremin
-- Akai MPD 32 USB/MIDI pad controller
+- [Chapman Stick](http://stick.com/), 12-string Grand Stick with 5 bass, 7
+  treble strings; classic tuning
+- [Moog Etherwave Theremin](https://www.moogmusic.com/synthesizers?type=54)
+- [Akai MPD32](https://www.akaipro.com/mpd32) USB/MIDI pad controller
 - M-Audio MIDISPORT 4x4 Anniversary Edition 4-in/4-out USB MIDI Interface
 - Yamaha U3 upright piano
 - Apple MacBook Pro laptop
@@ -88,8 +89,8 @@ Here's a tech-head's view of the tools I use to create my music.
   - Line 6 LowDown LD400 Pro (2x10")
   - Fender Frontman 15R practice amp that I found at the town dump in
     full working condition
-- Kurzweil Midiboard (in storage)
-- Korg Wavestation (in storage)
+- [Kurzweil Midiboard](http://kurzweil.com/product/midiboard/) (in storage)
+- [Korg Wavestation](https://en.wikipedia.org/wiki/Korg_Wavestation) (in storage)
 - Various Ultimate keyboard stands, an Ultimate speaker stand
 - Three empty six-space racks from the olden days of live performance
 - Also in the house
@@ -111,6 +112,10 @@ Here's a tech-head's view of the tools I use to create my music.
   [SeaMaster](https://github.com/jimm/seamaster), a version of PatchMaster
   written in C and using the PortMidi library.
 
+- [REAPER](http://reaper.fm/) Digital Audio Workstation.
+
+- [MidiPipe](http://www.subtlesoft.square7.net/MidiPipe.html) MIDI munger.
+
 - Apple's [MainStage 3](http://www.apple.com/mainstage/) is useful when I
   play with friends. We rent a rehearsal room once a week or so, and though
   the keyboards are the same in the different rooms we rent it is nice to
@@ -119,8 +124,6 @@ Here's a tech-head's view of the tools I use to create my music.
 - [Korg KRONOS Editor](https://shop.korg.com/kronosSupport)
   (link is to the KRONOS support/downloads page).
 
-- [REAPER](http://reaper.fm/) Digital Audio Workstation.
-
 - [LilyPond](http://lilypond.org/web/) for music notation typesetting.
 
 - [Overtone](http://overtone.github.com/) for SuperCollider-based synthesis
@@ -128,10 +131,6 @@ Here's a tech-head's view of the tools I use to create my music.
 
 - [Sonic Pi](https://sonic-pi.net/), a code-based music creation and
   performance tool.
-
-This is not a complete list of all the music software I have. Since
-switching to Mac OS X, I've downloaded a number of utilities such as
-MidiPipe and SimpleSynth for testing MIDI apps I write.
 
 ## Old Gear
 
