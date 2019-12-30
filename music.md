@@ -44,7 +44,13 @@ Here are three pieces I composed that I've typeset using
 
 - [Equal Rites Main Theme](music/main_theme_piano.pdf)
 - [Equal Rites Number 3](music/equal_rites_3.pdf)
+  - [recording](https://soundcloud.com/jim-menard/at-sea) on Soundcloud
 - [Mosquito Bite Rag](music/mosquito_bite_rag.pdf)
+
+Here's another with no score yet:
+
+- [Delicate](https://soundcloud.com/jim-menard/delicate) from Equal Rites,
+  on Soundcloud
 
 # Equipment Collection
 
