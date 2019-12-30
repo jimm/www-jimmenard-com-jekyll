@@ -47,10 +47,10 @@ Here are three pieces I composed that I've typeset using
   - [recording](https://soundcloud.com/jim-menard/at-sea) on Soundcloud
 - [Mosquito Bite Rag](music/mosquito_bite_rag.pdf)
 
-Here's another with no score yet:
+Here are a few others on SoundCloud:
 
-- [Delicate](https://soundcloud.com/jim-menard/delicate) from Equal Rites,
-  on Soundcloud
+- [Delicate](https://soundcloud.com/jim-menard/delicate) from Equal Rites
+- [No Fences](https://soundcloud.com/jim-menard/no-fences-draft) (draft)
 
 # Equipment Collection
 
