@@ -173,22 +173,23 @@ here's what I remember that's not in my current setup:
 Here are the bands and orchestras I've played in over the years. Believe
 me, you've never heard of any of them.
 
-- Starfire (electronic piano, junior high)
-- RI Youth Orchestra (contrabass, junior high, high school)
-- All-State band, orchestra, jazz band; One year, both orchestra
-  (contrabass) and jazz band (electric piano, high school)
-- Just Once (electric piano, trumpet, high school)
-- Once Again (electric piano, trumpet, high school)
-- King Lizard Revival Jass Band (trumpet, high school)
-  _("Jass" is an early spelling of "Jazz")_
-- Camelot (conductor and music director, high school)
-- Guys and Dolls (conductor and music director, college)
-- Sinequanon (keyboards)
-- Artisan (keyboards)
-- Perfect Stranger (keyboards)
-- Shy264 (keyboards)
-- Boys With Toys (keyboards)
-- Optional Stop (keyboards)
-- Uncommon Ground (keyboards)
-- Miles... (keyboards)
 - [Ellis Island](http://ellisislandrock.com/) (keyboards)
+- [Miles...](https://www.youtube.com/watch?v=t5yU0mX-u4w) (keyboards)
+- Uncommon Ground (keyboards)
+- Optional Stop (keyboards)
+- Boys With Toys (keyboards)
+- Shy264 (keyboards)
+- Perfect Stranger (keyboards)
+- Artisan (keyboards)
+- Sinequanon (keyboards)
+- Guys and Dolls (conductor and music director, college)
+- Camelot (conductor and music director, high school)
+- King Lizard Revival Jass Band (trumpet, high school) _("Jass" is an early
+  spelling of "Jazz")_
+- Once Again (electric piano, trumpet, high school)
+- Just Once (electric piano, trumpet, high school)
+- All-State band, orchestra, jazz band in high school; One year, both
+  orchestra (contrabass) and jazz band (electric piano)
+- RI Youth Orchestra (contrabass, junior high, high school)
+- Central Jr. High and East Providence High School marching bands
+- Starfire (electronic piano, junior high)
