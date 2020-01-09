@@ -69,6 +69,7 @@ Here's a tech-head's view of the tools I use to create my music.
     [this](https://en.wikipedia.org/wiki/Kurzweil_K2000)
   - [Kurzweil 1000PX](https://soundprogramming.net/synthesizers/kurzweil/kurzweil-1000px-professional-expander/)
   - Mackie LM-3204 mixer
+  - Behringer U-PHORIA UMC404HD audio interface
   - Yamaha MV802 mixer
   - Emagic AMT8 MIDI interface (used with my PowerBook G4)
   - Korg DRV-2000 digital reverb
@@ -98,15 +99,17 @@ Here's a tech-head's view of the tools I use to create my music.
     full working condition
 - [Kurzweil Midiboard](http://kurzweil.com/product/midiboard/) (in storage)
 - [Korg Wavestation](https://en.wikipedia.org/wiki/Korg_Wavestation) (in storage)
-- Various Ultimate keyboard stands, an Ultimate speaker stand
+- Various Ultimate keyboard stands
+- An Ultimate speaker stand
 - Three empty six-space racks from the olden days of live performance
-- Also in the house
+- Also hanging around
   - Ukelele
   - Mandolin
   - Yamaha FG830 Acoustic Guitar
-- Three empty six-space racks from the olden days of live performance
 
 ## Software List
+
+- [REAPER](http://reaper.fm/) Digital Audio Workstation.
 
 - I wrote my own real-time performance program called
   [KeyMaster](projects/keymaster/index.html) that I used live from
@@ -117,16 +120,15 @@ Here's a tech-head's view of the tools I use to create my music.
   [KeyMaster](http://jimm.github.io/keymaster/), a Mac OS X-only simpler
   version that is more responsive. There's also the newest incarnation,
   [SeaMaster](https://github.com/jimm/seamaster), a version of PatchMaster
-  written in C and using the PortMidi library.
-
-- [REAPER](http://reaper.fm/) Digital Audio Workstation.
-
-- [MidiPipe](http://www.subtlesoft.square7.net/MidiPipe.html) MIDI munger.
+  written in C and using the PortMidi library. That's the one I'm using when
+  I need to break out software that does complex MIDI manipulation.
 
 - Apple's [MainStage 3](http://www.apple.com/mainstage/) is useful when I
   play with friends. We rent a rehearsal room once a week or so, and though
   the keyboards are the same in the different rooms we rent it is nice to
   have the same sounds, splits, transposes, etc. with me on my laptop.
+
+- [MidiPipe](http://www.subtlesoft.square7.net/MidiPipe.html) MIDI munger.
 
 - [Korg KRONOS Editor](https://shop.korg.com/kronosSupport)
   (link is to the KRONOS support/downloads page).
