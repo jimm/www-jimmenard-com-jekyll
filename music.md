@@ -151,7 +151,7 @@ here's what I remember that's not in my current setup:
 - Farfisa organ
 - Fender Rhodes
 - Hohner International "electronic piano" (I think it was the International)
-  from the late 1960's &mdash; my first keyboard after my parent's piano
+  from the late 1960's &mdash; my first keyboard after my parents' piano
 - Korg CX3 organ
 - Moog Memorymoog
 - Moog Song Producer
