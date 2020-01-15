@@ -143,13 +143,14 @@ Here's a tech-head's view of the tools I use to create my music.
 
 ## Old Gear
 
-Just for fun, here's a list of my old gear. I can't remember everything I've
-ever owned &mdash; I started playing in bands in the late '70's &mdash; but
-here's what I remember that's not in my current setup:
+Just for fun, here's a list of my old gear. I started playing in bands in
+the late '70's, but here's what I remember:
 
 - Alesis D4 drum synth
 - Commodore SX-64 running first Moog's Song Producer software, then
   my KeyMaster software
+- Conn trumpet
+- Ensoniq Mirage rack-mount software (load sounds from 3.5&quot; floppies!)
 - Farfisa organ
 - Fender Rhodes
 - Hohner International "electronic piano" (I think it was the International)
@@ -161,7 +162,7 @@ here's what I remember that's not in my current setup:
 - Opcode Studio 5 MIDI interface
 - Roland Axis strap-on MIDI keyboard
 - Roland Jupiter-6
-- Roland SuperJupiter
+- Roland MKS-80 SuperJupiter
 - Yamaha CP 70 electric grand (it was the singer's, but I got to use it)
 - Yamaha CS-5 mono analog synth
 - Yamaha DX7
