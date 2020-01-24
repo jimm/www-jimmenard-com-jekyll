@@ -161,7 +161,7 @@ the late '70's, but here's what I remember:
 - Moog Source
 - Opcode Studio 5 MIDI interface
 - Roland Axis strap-on MIDI keyboard
-- Roland Jupiter-6
+- Roland Juno 106
 - Roland MKS-80 SuperJupiter
 - Yamaha CP 70 electric grand (it was the singer's, but I got to use it)
 - Yamaha CS-5 mono analog synth
