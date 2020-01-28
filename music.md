@@ -174,7 +174,7 @@ the late '70's, but here's what I remember:
 Here are the bands and orchestras I've played in over the years. Believe
 me, you've never heard of any of them.
 
-- [Ellis Island](http://ellisislandrock.com/) (keyboards)
+- [Ellis Island](http://ellisislandrock.com/) (keyboards, occasional bass)
 - [Miles...](https://www.youtube.com/watch?v=t5yU0mX-u4w) (keyboards)
 - Uncommon Ground (keyboards)
 - Optional Stop (keyboards)
