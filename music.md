@@ -52,6 +52,7 @@ Here are a few others on SoundCloud:
 
 - [Delicate](https://soundcloud.com/jim-menard/delicate) from Equal Rites
 - [No Fences](https://soundcloud.com/jim-menard/no-fences-draft) (draft)
+- [Solar Power](https://soundcloud.com/upload) (draft)
 
 # Equipment Collection
 
