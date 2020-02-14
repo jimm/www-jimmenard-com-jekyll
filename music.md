@@ -69,9 +69,8 @@ Here's a tech-head's view of the tools I use to create my music.
     [this](https://en.wikipedia.org/wiki/Kurzweil_K2000)
   - [Kurzweil 1000PX](https://soundprogramming.net/synthesizers/kurzweil/kurzweil-1000px-professional-expander/)
   - Mackie LM-3204 mixer
-  - Behringer U-PHORIA UMC404HD audio interface
   - Yamaha MV802 mixer
-  - Emagic AMT8 MIDI interface (used with my PowerBook G4)
+  - Emagic AMT8 MIDI interface
   - Korg DRV-2000 digital reverb
   - Crest Audio FA901 power amp
   - Two rack-mount power strips
@@ -85,6 +84,7 @@ Here's a tech-head's view of the tools I use to create my music.
   treble strings; classic tuning
 - [Moog Etherwave Theremin](https://www.moogmusic.com/synthesizers?type=54)
 - [Akai MPD32](https://www.akaipro.com/mpd32) USB/MIDI pad controller
+- Behringer U-PHORIA UMC404HD audio interface
 - M-Audio MIDISPORT 4x4 Anniversary Edition 4-in/4-out USB MIDI Interface
 - Yamaha U3 upright piano
 - Apple MacBook Pro laptop
