@@ -64,8 +64,8 @@ Here's a tech-head's view of the tools I use to create my music.
 - [Studiologic Sledge 2.0](https://www.studiologic-music.com/products/sledge2/)
 - A big honking seven-foot rack, affectionately called the "Think Tank".
   Most of the equipment in it was originally mounted in a homemade, rolling,
-  chest-high rack along with a Commodore 64 running my own real time MIDI
-  performance software.
+  chest-high rack of the same name, along with a Commodore 64 running my own
+  real time MIDI performance software.
   - Kurzweil K2000RS (R = rackmount, S = sampling), the rackmount version of
     [this](https://en.wikipedia.org/wiki/Kurzweil_K2000)
   - [Kurzweil 1000PX](https://soundprogramming.net/synthesizers/kurzweil/kurzweil-1000px-professional-expander/)
@@ -112,17 +112,15 @@ Here's a tech-head's view of the tools I use to create my music.
 
 - [REAPER](http://reaper.fm/) Digital Audio Workstation.
 
-- I wrote my own real-time performance program called
-  [KeyMaster](projects/keymaster/index.html) that I used live from
-  1986&ndash;1993. Its first incarnation was on a Commodore 64, later ported
+- [SeaMaster](https://github.com/jimm/seamaster/wiki), real-time MIDI
+  performance software that I wrote. The first incarnation was
+  [KeyMaster](projects/keymaster/index.html). I used that version live from
+  1986&ndash;1993. It was first written for the Commodore 64, later ported
   to the Atari ST. I half-heartedly started a Macintosh version. The next
-  was the BeOS version. For the latest instantiations see the cross-platform
+  was the BeOS version. For later instantiations see the cross-platform
   [PatchMaster](http://www.patchmaster.org/) and
   [KeyMaster](http://jimm.github.io/keymaster/), a Mac OS X-only simpler
-  version that is more responsive. There's also the newest incarnation,
-  [SeaMaster](https://github.com/jimm/seamaster), a version of PatchMaster
-  written in C and using the PortMidi library. That's the one I'm using when
-  I need to break out software that does complex MIDI manipulation.
+  version that is more responsive.
 
 - Apple's [MainStage 3](http://www.apple.com/mainstage/) is useful when I
   play with friends. We rent a rehearsal room once a week or so, and though
@@ -135,9 +133,6 @@ Here's a tech-head's view of the tools I use to create my music.
   (link is to the KRONOS support/downloads page).
 
 - [LilyPond](http://lilypond.org/web/) for music notation typesetting.
-
-- [Overtone](http://overtone.github.com/) for SuperCollider-based synthesis
-   via [Clojure](http://clojure.org/).
 
 - [Sonic Pi](https://sonic-pi.net/), a code-based music creation and
   performance tool.
@@ -168,7 +163,8 @@ the late '70's, but here's what I remember:
 - Yamaha CS-5 mono analog synth
 - Yamaha DX7
 - Yamaha RX5 drum machine
-- Yamaha TX81Z (two of 'em)
+- Yamaha TX81Z (Two of 'em. You could set the text to display when they
+  powered up. I had the two of mine say "Welcome to the" and "Think Tank!")
 
 # Band List
 
