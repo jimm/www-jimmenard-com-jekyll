@@ -156,7 +156,7 @@ the late '70's, but here's what I remember:
 - Moog Song Producer
 - Moog Source
 - Opcode Studio 5 MIDI interface
-- Roland Axis strap-on MIDI keyboard
+- Roland AXIS-1 strap-on MIDI keyboard
 - Roland Juno 106
 - Roland MKS-80 SuperJupiter
 - Yamaha CP 70 electric grand (it was the singer's, but I got to use it)
