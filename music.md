@@ -61,7 +61,6 @@ Here's a tech-head's view of the tools I use to create my music.
 ## Equipment List
 
 - [Korg Kronos X 88](https://www.korg.com/us/products/synthesizers/kronos_x/)
-- [Studiologic Sledge 2.0](https://www.studiologic-music.com/products/sledge2/)
 - A big honking seven-foot rack, affectionately called the "Think Tank".
   Most of the equipment in it was originally mounted in a homemade, rolling,
   chest-high rack of the same name, along with a Commodore 64 running my own
@@ -78,7 +77,8 @@ Here's a tech-head's view of the tools I use to create my music.
   - Custom patch bay with 12 1/2", 6 MIDI, 4 XLR, 2 1/2" TRS
   - Akai ME10D MIDI "digital delay" (echoes MIDI data, optionally
     transposing it up/down one octave)
-- On-Stage KS7365EJ Pro Heavy-Duty Folding-Z Keyboard
+- [Kurzweil Midiboard](http://kurzweil.com/product/midiboard/)
+- [Korg Wavestation](https://en.wikipedia.org/wiki/Korg_Wavestation)
 - Fender Stratocaster
 - Ibanez SR505 5-string bass
 - [Chapman Stick](http://stick.com/), 12-string Grand Stick with 5 bass, 7
@@ -98,8 +98,7 @@ Here's a tech-head's view of the tools I use to create my music.
   - Line 6 LowDown LD400 Pro (2x10")
   - Fender Frontman 15R practice amp that I found at the town dump in
     full working condition
-- [Kurzweil Midiboard](http://kurzweil.com/product/midiboard/) (in storage)
-- [Korg Wavestation](https://en.wikipedia.org/wiki/Korg_Wavestation) (in storage)
+- On-Stage KS7365EJ Pro Heavy-Duty Folding-Z Keyboard
 - Various Ultimate keyboard stands
 - An Ultimate speaker stand
 - Three empty six-space racks from the olden days of live performance
@@ -159,6 +158,7 @@ the late '70's, but here's what I remember:
 - Roland AXIS-1 strap-on MIDI keyboard
 - Roland Juno 106
 - Roland MKS-80 SuperJupiter
+- Studiologic Sledge 2.0
 - Yamaha CP 70 electric grand (it was the singer's, but I got to use it)
 - Yamaha CS-5 mono analog synth
 - Yamaha DX7
@@ -168,8 +168,8 @@ the late '70's, but here's what I remember:
 
 # Band List
 
-Here are the bands and orchestras I've played in over the years. Believe
-me, you've never heard of any of them.
+Here are the bands and orchestras I've played in over the years, in reverse
+chronological order. Believe me, you've never heard of any of them.
 
 - [Ellis Island](http://ellisislandrock.com/) (keyboards, occasional bass)
 - [Miles...](https://www.youtube.com/watch?v=t5yU0mX-u4w) (keyboards)
@@ -189,5 +189,6 @@ me, you've never heard of any of them.
 - All-State band, orchestra, jazz band in high school; One year, both
   orchestra (contrabass) and jazz band (electric piano)
 - RI Youth Orchestra (contrabass, junior high, high school)
-- Central Jr. High and East Providence High School marching bands
+- Central Jr. High and East Providence High School concert and marching
+  bands (trumpet)
 - Starfire (electronic piano, junior high)
