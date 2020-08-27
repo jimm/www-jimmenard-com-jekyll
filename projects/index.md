@@ -18,9 +18,29 @@ permalink: /projects/
   - [Project Euler](https://github.com/jimm/euler) solutions
   - The [full list](https://github.com/jimm?tab=repositories)
 
+- [**KeyMaster**](https://github.com/jimm/keymaster), real time MIDI
+  performance software that allows a musician to totally reconfigure a MIDI
+  setup instantaneously and modify the MIDI data while it's being sent.
+  Written in C and using the cross-platform PortMidi and wxWidgets
+  libraries. Much more performant than PatchMaster, but doesn't have any way
+  of loading user-written code to modify the MIDI stream.
+
 - [**midilib**](https://github.com/jimm/midilib), a pure-Ruby MIDI library
   useful for reading and writing standard MIDI file and manipulating MIDI
   event data.
+
+- [**pmserver**](https://github.com/jimm/pmserver), a program that listens
+  for text commands and can send and receive MIDI data throughPortMidi. It
+  works with one input and one output device at a time. Reads commands from
+  the terminal or stdin. Can read and write MIDI to files.
+
+- [**crystal_port_midi**](https://github.com/jimm/crystal_port_midi), a
+  wrapper around the cross-platform PortMidi library for the Crystal
+  language.
+
+- [**Kronut**](https://github.com/jimm/kronut), a Korg Kronos set list slot
+  name and comment editor. In the future, it may grow to be a set list
+  editor as well. Kronut runs as a command-line program.
 
 - [**csvlixir**](https://github.com/jimm/csvlixir), a CSV reader/writer for
   Elixir that operates on files or strings.
@@ -29,15 +49,6 @@ permalink: /projects/
   performance software that allows a musician to totally reconfigure a MIDI
   setup instantaneously and modify the MIDI data while it's being sent.
   PatchMaster is written in Ruby and is cross-platform.
-
-- [**SeaMaster**](https://github.com/jimm/seamaster), a C version of
-  PatchMaster that uses the PortMidi library. Much more performant than
-  PatchMaster, but doesn't have any way of loading user-written code to
-  modify the MIDI stream.
-
-- [**KeyMaster**](https://github.com/jimm/keymaster), a Mac OS X-only version
-  of PatchMaster written in Objective C. I wrote it because PatchMaster is
-  frankly not fast enough to keep up with large streams of data.
 
 - [**napper**](https://github.com/jimm/napper), a JSON REST API client for
   Elixir. 
