@@ -212,22 +212,23 @@ PUBLICATIONS AND PRESENTATIONS:
 TECHNICAL SKILLS:
 
 Languages
-    Ruby, Python, Java, Scala, PHP, JavaScript, Bash, Lisp, Smalltalk,
-      Objective-C, Perl, C, C++, Assembly
+
+    Ruby, Python, Java, Scala, PHP, JavaScript, Bash, Common Lisp,
+      Smalltalk, Objective-C, Perl, C, C++, Assembly
     Acquainted with: Clojure, Elixir, Erlang, Go, Haskell, Fortran, Pascal
 
 Operating Systems
-    Unix (Linux, BSD, Solaris, etc.), Mac OS X, MacOS, Nextstep, BeOS, DOS,
-    Windows, VMS
+    Unix (Linux, BSD, Solaris, etc.), macOS, Nextstep, BeOS, DOS, Windows,
+      VMS
 
 Databases
-    MySQL, PostgreSQL, Oracle, MongoDB, Sybase, Informix
+    MySQL, PostgreSQL, SQLite, Oracle, MongoDB, Sybase, Informix
 
 Frameworks and Tools
-    JRuby, Ruby on Rails, Sinatra, J2EE, Spring, Hibernate, Tapestry,
-    Cayenne, JSP, Servlets, JDBC, Ant, Maven, JUnit/XUnit, RMI, CORBA,
-    (X)HTML, CSS, AJAX, XML, XML-RPC, SOAP, WSDL, BPEL, ICE, Apache, Tomcat,
-    WebLogic, Prevayler, LaTeX, Yaws, Erlyweb, more
+    JRuby, Ruby on Rails, Sinatra, Flask, J2EE, Spring, Hibernate, Tapestry,
+      Cayenne, JSP, Servlets, JDBC, Ant, Maven, JUnit/XUnit, RMI, CORBA,
+      (X)HTML, CSS, AJAX, XML, XML-RPC, SOAP, WSDL, BPEL, ICE, Apache,
+      Tomcat, WebLogic, Prevayler, LaTeX, Yaws, Erlyweb, more
 
 
 EDUCATION:
@@ -239,7 +240,6 @@ University of Rochester, Bachelor of Arts - May, 1983
 PROFESSIONAL ORGANIZATIONS:
 
 New York CTO Club
-Connecticut CTO Club
 
 
 INDEPENDENT PROJECTS:
