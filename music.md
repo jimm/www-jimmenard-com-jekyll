@@ -77,7 +77,8 @@ Here's a tech-head's view of the tools I use to create my music.
   - Custom patch bay with 12 1/2", 6 MIDI, 4 XLR, 2 1/2" TRS
   - Akai ME10D MIDI "digital delay" (echoes MIDI data, optionally
     transposing it up/down one octave)
-- [Kurzweil Midiboard](http://kurzweil.com/product/midiboard/)
+- [Kurzweil Midiboard](http://kurzweil.com/product/midiboard/) "Limited
+  Edition"
 - [Korg Wavestation](https://en.wikipedia.org/wiki/Korg_Wavestation)
 - Fender Stratocaster
 - Ibanez SR505 5-string bass
@@ -142,6 +143,7 @@ Just for fun, here's a list of my old gear. I started playing in bands in
 the late '70's, but here's what I remember:
 
 - Alesis D4 drum synth
+- Alesis HR-16
 - Commodore SX-64 running first Moog's Song Producer software, then
   my KeyMaster software
 - Conn trumpet
