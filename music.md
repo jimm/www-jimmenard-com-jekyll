@@ -112,15 +112,15 @@ Here's a tech-head's view of the tools I use to create my music.
 
 - [REAPER](http://reaper.fm/) Digital Audio Workstation.
 
-- [SeaMaster](https://github.com/jimm/seamaster/wiki), real-time MIDI
-  performance software that I wrote. The first incarnation was
+- [KeyMaster](https://github.com/jimm/keymaster/wiki), real-time MIDI
+  performance software that I wrote. The first incarnation was also called
   [KeyMaster](projects/keymaster/index.html). I used that version live from
   1986&ndash;1993. It was first written for the Commodore 64, later ported
   to the Atari ST. I half-heartedly started a Macintosh version. The next
   was the BeOS version. For later instantiations see the cross-platform
   [PatchMaster](http://www.patchmaster.org/) and
-  [KeyMaster](http://jimm.github.io/keymaster/), a Mac OS X-only simpler
-  version that is more responsive.
+  [keymaster_objc](http://jimm.github.io/keymaster_objc/), a Mac OS X-only
+  simpler version.
 
 - Apple's [MainStage 3](http://www.apple.com/mainstage/) is useful when I
   play with friends. We rent a rehearsal room once a week or so, and though
