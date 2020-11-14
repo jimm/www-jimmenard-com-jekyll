@@ -61,6 +61,8 @@ Here's a tech-head's view of the tools I use to create my music.
 ## Equipment List
 
 - [Korg Kronos X 88](https://www.korg.com/us/products/synthesizers/kronos_x/)
+- [ASM Hydrasynth](https://www.ashunsoundmachines.com/hydrasynth-key)
+- [Korg Wavestation](https://en.wikipedia.org/wiki/Korg_Wavestation)
 - A big honking seven-foot rack, affectionately called the "Think Tank".
   Most of the equipment in it was originally mounted in a homemade, rolling,
   chest-high rack of the same name, along with a Commodore 64 running my own
@@ -77,7 +79,6 @@ Here's a tech-head's view of the tools I use to create my music.
   - Custom patch bay with 12 1/2", 6 MIDI, 4 XLR, 2 1/2" TRS
   - Akai ME10D MIDI "digital delay" (echoes MIDI data, optionally
     transposing it up/down one octave)
-- [Korg Wavestation](https://en.wikipedia.org/wiki/Korg_Wavestation)
 - Fender Stratocaster
 - Ibanez SR505 5-string bass
 - [Chapman Stick](http://stick.com/), 12-string Grand Stick with 5 bass, 7
