@@ -77,8 +77,6 @@ Here's a tech-head's view of the tools I use to create my music.
   - Custom patch bay with 12 1/2", 6 MIDI, 4 XLR, 2 1/2" TRS
   - Akai ME10D MIDI "digital delay" (echoes MIDI data, optionally
     transposing it up/down one octave)
-- [Kurzweil Midiboard](http://kurzweil.com/product/midiboard/) "Limited
-  Edition"
 - [Korg Wavestation](https://en.wikipedia.org/wiki/Korg_Wavestation)
 - Fender Stratocaster
 - Ibanez SR505 5-string bass
@@ -153,6 +151,7 @@ the late '70's, but here's what I remember:
 - Hohner International "electronic piano" (I think it was the International)
   from the late 1960's &mdash; my first keyboard after my parents' piano
 - Korg CX3 organ
+- Kurzweil Midiboard "Limited Edition"
 - Moog Memorymoog
 - Moog Song Producer
 - Moog Source
