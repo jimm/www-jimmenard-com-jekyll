@@ -2,7 +2,7 @@
 
 require 'cgi'
 
-SIGS_FILE = '/home/jmenard/pim/signatures'
+SIGS_FILE = File.join(ENV['pim'], 'signatures')
 
 def process(line)
   line.chomp!
