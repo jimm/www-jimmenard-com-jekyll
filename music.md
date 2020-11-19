@@ -56,10 +56,17 @@ Here are a few others on SoundCloud:
 
 # Equipment Collection
 
-Here's a tech-head's view of the tools I use to create my music. For a
-snapshot of what it looked like in late 2020, see my
-[Cake Day Battlestation](https://www.reddit.com/r/MusicBattlestations/comments/jnbhe4/cake_day_battlestation/)
-Reddit post.
+Here's a tech-head's view of the tools I use to create my music. Here's what
+my home "studio" looked like in late 2020:
+
+<a href="images/battlestation.jpg">
+  <img
+    src="images/battlestation.jpg"
+    class="inline-image"
+    alt="My Music Battlestation, 2020"
+    title="My Music Battlestation, 2020"
+  />
+</a>
 
 ## Equipment List
 
