@@ -35,22 +35,3 @@ By the way: [Emacs](/emacs_tips.html) is the One True Editor&trade;.
 Email:
 [jim@jimmenard.com](mailto:jim@jimmenard.com),
 [jim.menard@gmail.com](mailto:jim.menard@gmail.com)
-
-
-## Random sig-o'-the-moment:
-
-These sigs are randomly chosen from my
-[signature quotes collection](sigs.html). If you don't have JavaScript
-enabled, you won't see the signatures here, but you can still see them on
-the quotes collection page.
-
-<div id='randsig'>
-</div>
-
-<script type="text/javascript" src="/js/ajax.js"></script>
-<script language="JavaScript" type="text/javascript">
-  <!--
-      function gensig() { getAndReplace('/random_sig.cgi', 'randsig'); }
-      window.onload = function() { gensig(); }
-  // -->
-</script>
