@@ -108,7 +108,7 @@ my home "studio" looked like in late 2020:
   - Line 6 LowDown LD400 Pro (2x10")
   - Fender Frontman 15R practice amp that I found at the town dump in
     full working condition
-- On-Stage KS7365EJ Pro Heavy-Duty Folding-Z Keyboard
+- On-Stage KS7365EJ Pro Heavy-Duty Folding-Z Keyboard stand
 - Various Ultimate keyboard stands
 - An Ultimate speaker stand
 - Three empty six-space racks from the olden days of live performance
