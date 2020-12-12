@@ -6,36 +6,36 @@ title: Music
 # Music
 
 My first piano lesson was the day before my fifth birthday. I often combined
-computers and music, like in my live performance
-software [PatchMaster](https://patchmaster.org/)
-and [SeaMaster](https://github.com/jimm/seamaster). Both stem from an older
-program I wrote called KeyMaster I originally wrote on the Commodore 64 and
-used on stage for years. I later ported it to the Atari ST and rewrote for
-the now-defunct [BeOS](https://en.wikipedia.org/wiki/BeOS).
+computers and music, like in my live performance software
+[KeyMaster](https://github.com/jimm/keymaster). That program stems from an
+older program I wrote called KeyMaster that I originally wrote on the
+Commodore 64 and used on stage for years. I later ported it to the Atari ST
+and rewrote it for the now-defunct
+[BeOS](https://en.wikipedia.org/wiki/BeOS).
 
 My MIDI reference has moved [here](midi_ref.html). It's not a tutorial.
 Rather, it is intended as a quick overview and a reference guide.
 
 Currently, I play keyboards in [Ellis Island](http://ellisislandrock.com/).
 
-I performed in [bands](#band-list) from 1980 to 1993, and started playing
-out with a band again in 2013. Everything from progressive rock to dance pop
-to electric jazz; covers and originals. Here's a video of
+I performed in [bands](#band-list) from 1980 to 1993, went on a hiatus, and
+started playing out again in 2013. Over the years, I've played everything
+from progressive rock to dance pop to electric jazz and R&amp;B; covers and
+originals. Here's a video of
 [Miles at Connelly's](https://www.youtube.com/watch?v=t5yU0mX-u4w) in Times
-Square, New York City in 2013. I'm the guy with the beard and glasses stuck
-to the side of the stage. There's also another group of us that gets
-together every week or two to jam and learn songs from the '70's - today
-that we like and can put our own spin on.
+Square, New York City in 2013. I'm the guy with the beard and glasses off
+at the side of the stage.
 
 I write different kinds of stuff. Most of it is funk/dance/pop, but I also
 dabble in orchestral, Sondheim-esque pieces, game show themes, thirty-second
 newsroom background music, and whatever else tickles my fancy.
 
-Perhaps some day I'll post some snippets of my music. Aside from the typeset
-pieces below and the sequencer and MIDI files of the music I've done on my
-own, I only have one crappy cassette of a bunch of works-in-progress from
-the late '80s. It's dated but good stuff. The sound quality is horrendous.
-Also, the tape broke so I'll need to repair it one day.
+Aside from the typeset pieces below and the sequencer and MIDI files of the
+music I've done on my own, I have thrown a few things up on Soundcloud for
+the fun of it. Out of all of the original songs we did in the late '80's, I
+only have one crappy cassette of a bunch of works-in-progress . It's dated
+but really good stuff. The sound quality is horrendous. Also, the tape broke
+so I'll need to repair it one day.
 
 # Compositions
 
@@ -56,8 +56,8 @@ Here are a few others on SoundCloud:
 
 # Equipment Collection
 
-Here's a tech-head's view of the tools I use to create my music. Here's what
-my home "studio" looked like in late 2020:
+Here's what my home "studio" looked like in late 2020. The Midiboard has
+since moved on to another home.
 
 <a href="images/battlestation.jpg">
   <img
@@ -69,6 +69,8 @@ my home "studio" looked like in late 2020:
 </a>
 
 ## Equipment List
+
+Here's a tech-head's view of the tools I use to create my music. 
 
 - [Korg Kronos X 88](https://www.korg.com/us/products/synthesizers/kronos_x/)
 - [ASM Hydrasynth](https://www.ashunsoundmachines.com/hydrasynth-key)
