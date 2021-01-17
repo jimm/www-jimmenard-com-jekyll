@@ -13,9 +13,6 @@ Commodore 64 and used on stage for years. I later ported it to the Atari ST
 and rewrote it for the now-defunct
 [BeOS](https://en.wikipedia.org/wiki/BeOS).
 
-My MIDI reference has moved [here](midi_ref.html). It's not a tutorial.
-Rather, it is intended as a quick overview and a reference guide.
-
 Currently, I play keyboards in [Ellis Island](http://ellisislandrock.com/).
 
 I performed in [bands](#band-list) from 1980 to 1993, went on a hiatus, and
@@ -37,6 +34,9 @@ only have one crappy cassette of a bunch of works-in-progress . It's dated
 but really good stuff. The sound quality is horrendous. Also, the tape broke
 so I'll need to repair it one day.
 
+My MIDI reference has moved [here](midi_ref.html). It's not a tutorial.
+Rather, it is intended as a quick overview and a reference guide.
+
 # Compositions
 
 Here are three pieces I composed that I've typeset using
@@ -57,7 +57,7 @@ Here are a few others on SoundCloud:
 # Equipment Collection
 
 Here's what my home "studio" looked like in late 2020. The Midiboard has
-since moved on to another home.
+since moved on to another home and I've added the Alesis SR18.
 
 <a href="images/battlestation.jpg">
   <img
@@ -82,8 +82,8 @@ Here's a tech-head's view of the tools I use to create my music.
   - Kurzweil K2000RS (R = rackmount, S = sampling), the rackmount version of
     [this](https://en.wikipedia.org/wiki/Kurzweil_K2000)
   - [Kurzweil 1000PX](https://soundprogramming.net/synthesizers/kurzweil/kurzweil-1000px-professional-expander/)
-  - Mackie LM-3204 mixer
-  - Yamaha MV802 mixer
+  - [Mackie LM-3204](https://gearsource.com/stock-item/mackie-lm3204-16-stereo-channel-32-mono-console/)
+    mixer
   - Emagic AMT8 MIDI interface
   - Korg DRV-2000 digital reverb
   - Crest Audio FA901 power amp
@@ -91,6 +91,9 @@ Here's a tech-head's view of the tools I use to create my music.
   - Custom patch bay with 12 1/2", 6 MIDI, 4 XLR, 2 1/2" TRS
   - Akai ME10D MIDI "digital delay" (echoes MIDI data, optionally
     transposing it up/down one octave)
+- Alesis SR18 drum machine
+- Yamaha MV802 mixer, which used to be in the Think Tank. I now use it live,
+  so it's in a two-space rack gig bag.
 - Fender Stratocaster
 - Ibanez SR505 5-string bass
 - [Chapman Stick](http://stick.com/), 12-string Grand Stick with 5 bass, 7
@@ -119,6 +122,20 @@ Here's a tech-head's view of the tools I use to create my music.
   - Mandolin
   - Yamaha FG830 Acoustic Guitar
 
+## Live Setup
+
+Here's what I use when I play live with [Ellis Island](https://ellisislandrock.com/).
+Everything here is from the above equipment list.
+
+- Kronos
+- Hydrasynth
+- On-Stage stand
+- MV802 mixer
+- JBL powered speaker
+- SR18 (when two of us play small gigs only, not with the full band)
+- Ibanez bass (only for the few gigs where I've had to sub for the bass
+  player)
+
 ## Software List
 
 - [REAPER](http://reaper.fm/) Digital Audio Workstation.
@@ -133,15 +150,25 @@ Here's a tech-head's view of the tools I use to create my music.
   [keymaster_objc](http://jimm.github.io/keymaster_objc/), a Mac OS X-only
   simpler version.
 
+- ASM's Hydrasynth Patch Manager and Firmware Updater
+  ([download page](https://www.ashunsoundmachines.com/downloads))
+
+- [MidiPipe](http://www.subtlesoft.square7.net/MidiPipe.html) MIDI munger.
+  
+- [Kronut](https://github.com/jimm/kronut), a set list slot text editor for
+  the Kronos. It's software I wrote that lets me use my editor (Emacs) to
+  edit set list slot titles and notes text.
+
+- [Korg KRONOS Editor](https://shop.korg.com/kronosSupport)
+  (link is to the KRONOS support/downloads page). I've had troubles using
+  this editor; the design it uses for edit space / memory is extremely
+  confusing and I've more often erased / ruined set lists than successfully
+  edited them.
+
 - Apple's [MainStage 3](http://www.apple.com/mainstage/) is useful when I
   play with friends. We rent a rehearsal room once a week or so, and though
   the keyboards are the same in the different rooms we rent it is nice to
   have the same sounds, splits, transposes, etc. with me on my laptop.
-
-- [MidiPipe](http://www.subtlesoft.square7.net/MidiPipe.html) MIDI munger.
-
-- [Korg KRONOS Editor](https://shop.korg.com/kronosSupport)
-  (link is to the KRONOS support/downloads page).
 
 - [LilyPond](http://lilypond.org/web/) for music notation typesetting.
 
@@ -178,7 +205,7 @@ the late '70's, but here's what I remember:
 - Yamaha DX7
 - Yamaha RX5 drum machine
 - Yamaha TX81Z (Two of 'em. You could set the text to display when they
-  powered up. I had the two of mine say "Welcome to the" and "Think Tank!")
+  powered up. I had the two of mine say `Welcome to the` / `Think Tank!`)
 
 # Band List
 
