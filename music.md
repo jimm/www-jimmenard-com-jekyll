@@ -89,6 +89,7 @@ Here's a tech-head's view of the tools I use to create my music.
   - Crest Audio FA901 power amp
   - Two rack-mount power strips
   - Custom patch bay with 12 1/2", 6 MIDI, 4 XLR, 2 1/2" TRS
+  - Sedna 13 port rack mount USB hub
   - Akai ME10D MIDI "digital delay" (echoes MIDI data, optionally
     transposing it up/down one octave)
 - Alesis SR18 drum machine
