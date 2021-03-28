@@ -22,9 +22,8 @@ I am a language maven who enjoys [Ruby](http://www.ruby-lang.org/en/),
 [more languages](/Jim_Menard_resume.html#technical-skills). I have created a
 number of Open Source [projects](/projects/) such as the
 [midilib](https://github.com/jimm/midilib) Ruby gem,
-[PatchMaster](http://patchmaster.org/) music performance app,
-[CSVLixir](https://github.com/jimm/csvlixir) Elixir library,
-[KeyMaster](http://jimm.github.io/keymaster/), and
+[KeyMaster](https://github.com/jimm/keymaster) music performance app,
+[CSVLixir](https://github.com/jimm/csvlixir) Elixir library, and
 [DataVision](http://datavision.sourceforge.net) (source also available
 [here](https://github.com/jimm/datavision)).
 

@@ -8,10 +8,11 @@ title: Music
 My first piano lesson was the day before my fifth birthday. I often combined
 computers and music, like in my live performance software
 [KeyMaster](https://github.com/jimm/keymaster). That program stems from an
-older program I wrote called KeyMaster that I originally wrote on the
-Commodore 64 and used on stage for years. I later ported it to the Atari ST
-and rewrote it for the now-defunct
-[BeOS](https://en.wikipedia.org/wiki/BeOS).
+older program I wrote with the same name that I originally wrote on the
+Commodore 64 and used on stage for years. I later ported it to the Atari ST,
+rewrote it for the now-defunct [BeOS](https://en.wikipedia.org/wiki/BeOS),
+and wrote a Ruby version called
+[PatchMaster](https://github.com/jimm/patchmaster/).
 
 Currently, I play keyboards in [Ellis Island](http://ellisislandrock.com/).
 
