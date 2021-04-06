@@ -5,7 +5,7 @@ title: Music
 
 # Music
 
-My first piano lesson was the day before my fifth birthday. I often combined
+My first piano lesson was the day before my fifth birthday. I often combine
 computers and music, like in my live performance software
 [KeyMaster](https://github.com/jimm/keymaster). That program stems from an
 older program I wrote with the same name that I originally wrote on the
@@ -16,13 +16,13 @@ and wrote a Ruby version called
 
 Currently, I play keyboards in [Ellis Island](http://ellisislandrock.com/).
 
-I performed in [bands](#band-list) from 1980 to 1993, went on a hiatus, and
-started playing out again in 2013. Over the years, I've played everything
-from progressive rock to dance pop to electric jazz and R&amp;B; covers and
-originals. Here's a video of
-[Miles at Connelly's](https://www.youtube.com/watch?v=t5yU0mX-u4w) in Times
-Square, New York City in 2013. I'm the guy with the beard and glasses off
-at the side of the stage.
+I performed in [bands](#band-list) from 1980 to 1993, went on a hiatus,
+and started playing out again in 2013. Over the years, I've played
+everything from progressive rock to dance pop to electric jazz and R&amp;B;
+covers and originals. Here's a video of [Miles at
+Connelly's](https://www.youtube.com/watch?v=t5yU0mX-u4w) in Times Square,
+New York City in 2013. I'm the guy with the beard and glasses off at the
+side of the stage.
 
 I write different kinds of stuff. Most of it is funk/dance/pop, but I also
 dabble in orchestral, Sondheim-esque pieces, game show themes, thirty-second
@@ -53,12 +53,13 @@ Here are a few others on SoundCloud:
 
 - [Delicate](https://soundcloud.com/jim-menard/delicate) from Equal Rites
 - [No Fences](https://soundcloud.com/jim-menard/no-fences-draft) (draft)
-- [Solar Power](https://soundcloud.com/upload) (draft)
+- [Solar Power](https://soundcloud.com/jim-menard/solar-power) (draft)
 
 # Equipment Collection
 
-Here's what my home "studio" looked like in late 2020. The Midiboard has
-since moved on to another home and I've added the Alesis SR18.
+Here's what my home "studio" looked like in late 2020. When I play live I
+take the Kronos and the Hydrasynth. The Midiboard has since moved on to
+another home and I've added an Alesis SR18 drum machine.
 
 <a href="images/battlestation.jpg">
   <img
@@ -70,8 +71,6 @@ since moved on to another home and I've added the Alesis SR18.
 </a>
 
 ## Equipment List
-
-Here's a tech-head's view of the tools I use to create my music. 
 
 - [Korg Kronos X 88](https://www.korg.com/us/products/synthesizers/kronos_x/)
 - [ASM Hydrasynth](https://www.ashunsoundmachines.com/hydrasynth-key)
@@ -96,21 +95,22 @@ Here's a tech-head's view of the tools I use to create my music.
 - Alesis SR18 drum machine
 - Yamaha MV802 mixer, which used to be in the Think Tank. I now use it live,
   so it's in a two-space rack gig bag.
-- Fender Stratocaster
-- Ibanez SR505 5-string bass
-- [Chapman Stick](http://stick.com/), 12-string Grand Stick with 5 bass, 7
-  treble strings; classic tuning
+- Things with strings:
+  - Fender Stratocaster
+  - Yamaha FG830 Acoustic Guitar
+  - Ibanez SR505 5-string bass
+  - [Chapman Stick](http://stick.com/), 12-string Grand Stick with 5 bass, 7
+    treble strings; classic tuning
 - [Moog Etherwave Theremin](https://www.moogmusic.com/synthesizers?type=54)
 - [Akai MPD32](https://www.akaipro.com/mpd32) USB/MIDI pad controller
 - Behringer U-PHORIA UMC404HD audio interface
 - M-Audio MIDISPORT 4x4 Anniversary Edition 4-in/4-out USB MIDI Interface
-- Yamaha U3 upright piano
 - Apple MacBook Pro laptop
 - Speakers:
   - A pair of M-Audio AV 40 monitors
   - JBL EON 515XT powered speaker
   - OAP T-122B wedge (70 lbs, a pain to carry around)
-  - Home-made (by someone else) piece of crap
+  - Secondhand home-made (by someone else) 12" + horn
 - Guitar/Bass Amps:
   - Line 6 LowDown LD400 Pro (2x10")
   - Fender Frontman 15R practice amp that I found at the town dump in
@@ -120,21 +120,21 @@ Here's a tech-head's view of the tools I use to create my music.
 - An Ultimate speaker stand
 - Three empty six-space racks from the olden days of live performance
 - Also hanging around
+  - Yamaha U3 upright piano (in a different room)
   - Ukelele
   - Mandolin
-  - Yamaha FG830 Acoustic Guitar
 
 ## Live Setup
 
-Here's what I use when I play live with [Ellis Island](https://ellisislandrock.com/).
-Everything here is from the above equipment list.
+Here's what I use when I play live with [Ellis
+Island](https://ellisislandrock.com/). Everything here is from the above
+equipment list.
 
 - Kronos
 - Hydrasynth
 - On-Stage stand
 - MV802 mixer
 - JBL powered speaker
-- SR18 (when two of us play small gigs only, not with the full band)
 - Ibanez bass (only for the few gigs where I've had to sub for the bass
   player)
 
