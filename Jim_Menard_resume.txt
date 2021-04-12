@@ -20,7 +20,7 @@ Principal Software Engineer                          Warby Parker, 2018 - 2021
     monitoring.  Lead  consulting  team  in  implementation  of  card  present
     tap-to-pay for retail locations. As  a member of the Architecture Council,
     lead creation of  API framework design practices  and discussed technology
-    orginization-wide practices and policies.
+    organization-wide practices and policies.
 
 Principal Engineer                                 Chloe + Isabel, 2015 - 2018
     

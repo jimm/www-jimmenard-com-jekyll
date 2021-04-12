@@ -43,7 +43,7 @@ multiple talks on various technologies. Lead team in increasing test
 coverage, PR review process improvements, and increased monitoring. Lead
 consulting team in implementation of card present tap-to-pay for retail
 locations. As a member of the Architecture Council, lead creation of API
-framework design practices and discussed technology orginization-wide
+framework design practices and discussed technology organization-wide
 practices and policies.
 
 
