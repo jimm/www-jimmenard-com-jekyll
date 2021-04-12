@@ -1,11 +1,26 @@
 			      James J. Menard
                            Fairfield, Connecticut
-         e: jim@jimmenard.com, h: (203) 254-2755, c: (646) 206-4054
+                   e: jim@jimmenard.com, c: (646) 206-4054
 
 
 EXPERIENCE:
 
-Principal Software Engineer                       Warby Parker, 2018 - Present
+Senior Software Engineer                            Tsu Social, 2021 - Present
+
+Principal Software Engineer                          Warby Parker, 2018 - 2021
+
+    As  an  SRE Principal  Engineer,  rewrote  retail print  queue  management
+    services  and  installation  scripts  and implemented  an  AWS  EC2  image
+    management process.  As the  Retail and  Vision Services  team's Principal
+    Engineer, responsible  for inter-  and intra-team technical  design review
+    and decisions, code quality and maintainability, technical mentorship, and
+    developer   onboarding.   Organized   team  architecture   and   technical
+    discussions and gave multiple talks  on various technologies. Lead team in
+    increasing test  coverage, PR  review process improvements,  and increased
+    monitoring.  Lead  consulting  team  in  implementation  of  card  present
+    tap-to-pay for retail locations. As  a member of the Architecture Council,
+    lead creation of  API framework design practices  and discussed technology
+    orginization-wide practices and policies.
 
 Principal Engineer                                 Chloe + Isabel, 2015 - 2018
     

@@ -20,11 +20,32 @@ title: Resume
 
 # Experience
 
-<div class="job-title">Principal Software Engineer</div>
+<div class="job-title">Senior Software Engineer</div>
 <div class="job-place">
-  <span class="company">Warby Parker</span> 2018&ndash;Present
+  <span class="company">Tsu Social</span> 2021&ndash;Present
 </div>
 <br/>
+
+
+<div class="job-title">Principal Software Engineer</div>
+<div class="job-place">
+  <span class="company">Warby Parker</span> 2018&ndash;2021
+</div>
+<br/>
+
+As an SRE Principal Engineer, rewrote retail print queue management services
+and installation scripts and implemented an AWS EC2 image management
+process. As the Retail and Vision Services team's Principal Engineer,
+responsible for inter- and intra-team technical design review and decisions,
+code quality and maintainability, technical mentorship, and developer
+onboarding. Organized team architecture and technical discussions and gave
+multiple talks on various technologies. Lead team in increasing test
+coverage, PR review process improvements, and increased monitoring. Lead
+consulting team in implementation of card present tap-to-pay for retail
+locations. As a member of the Architecture Council, lead creation of API
+framework design practices and discussed technology orginization-wide
+practices and policies.
+
 
 <div class="job-title">Principal Engineer</div>
 <div class="job-place">
