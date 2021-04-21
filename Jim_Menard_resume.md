@@ -22,7 +22,7 @@ title: Resume
 
 <div class="job-title">Senior Software Engineer</div>
 <div class="job-place">
-  <span class="company">Tsu Social</span> 2021&ndash;Present
+  <span class="company">Display Social</span> 2021&ndash;Present
 </div>
 <br/>
 
@@ -33,18 +33,18 @@ title: Resume
 </div>
 <br/>
 
-As an SRE Principal Engineer, rewrote retail print queue management services
-and installation scripts and implemented an AWS EC2 image management
-process. As the Retail and Vision Services team's Principal Engineer,
-responsible for inter- and intra-team technical design review and decisions,
-code quality and maintainability, technical mentorship, and developer
-onboarding. Organized team architecture and technical discussions and gave
-multiple talks on various technologies. Lead team in increasing test
-coverage, PR review process improvements, and increased monitoring. Lead
-consulting team in implementation of card present tap-to-pay for retail
-locations. As a member of the Architecture Council, lead creation of API
-framework design practices and discussed technology organization-wide
-practices and policies.
+As the Retail and Vision Services team's Principal Engineer, responsible for
+inter- and intra-team technical design review and decisions, code quality
+and maintainability, technical mentorship, and developer onboarding.
+Organized team architecture and technical discussions and gave multiple
+talks on various technologies. Lead team in increasing test coverage, PR
+review process improvements, and increased monitoring. Lead consulting team
+in implementation of card present tap-to-pay for retail locations. As a
+member of the Architecture Council, lead creation of API framework design
+practices and discussed technology organization-wide practices and policies.
+Earlier as an SRE Principal Engineer, rewrote retail print queue management
+services and installation scripts and implemented an AWS EC2 image
+management process.
 
 
 <div class="job-title">Principal Engineer</div>
