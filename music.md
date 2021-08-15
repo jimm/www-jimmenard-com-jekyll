@@ -72,7 +72,7 @@ another home and I've added an Alesis SR18 drum machine.
 
 ## Equipment List
 
-- [Korg Kronos X 88](https://www.korg.com/us/products/synthesizers/kronos_x/)
+- [Korg Kronos LS 88](https://www.korg.com/us/products/synthesizers/kronos2_ls/)
 - [ASM Hydrasynth](https://www.ashunsoundmachines.com/hydrasynth-key)
 - [Korg Wavestation](https://en.wikipedia.org/wiki/Korg_Wavestation)
 - A big honking seven-foot rack, affectionately called the "Think Tank".
@@ -159,7 +159,7 @@ equipment list.
   
 - [Kronut](https://github.com/jimm/kronut), a set list slot text editor for
   the Kronos. It's software I wrote that lets me use my editor (Emacs) to
-  edit set list slot titles and notes text.
+  edit set lists.
 
 - [Korg KRONOS Editor](https://shop.korg.com/kronosSupport)
   (link is to the KRONOS support/downloads page). I've had troubles using
