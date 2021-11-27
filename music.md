@@ -59,7 +59,7 @@ Here are a few others on SoundCloud:
 
 Here's what my home "studio" looked like in late 2020. When I play live I
 take the Kronos and the Hydrasynth. The Midiboard has since moved on to
-another home and I've added an Alesis SR18 drum machine.
+another home.
 
 <a href="images/battlestation.jpg">
   <img
@@ -92,7 +92,6 @@ another home and I've added an Alesis SR18 drum machine.
   - Sedna 13 port rack mount USB hub
   - Akai ME10D MIDI "digital delay" (echoes MIDI data, optionally
     transposing it up/down one octave)
-- Alesis SR18 drum machine
 - Yamaha MV802 mixer, which used to be in the Think Tank. I now use it live,
   so it's in a two-space rack gig bag.
 - Things with strings:
@@ -183,7 +182,8 @@ Just for fun, here's a list of my old gear. I started playing in bands in
 the late '70's, but here's what I remember:
 
 - Alesis D4 drum synth
-- Alesis HR-16
+- Alesis HR-16 drum machine
+- Alesis SR18 drum machine
 - Commodore SX-64 running first Moog's Song Producer software, then
   my KeyMaster software
 - Conn trumpet
