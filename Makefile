@@ -19,7 +19,7 @@ build: _includes/sigs.html
 	jekyll build
 
 _includes/sigs.html: $(SIGS_FILE) bin/sigs.rb
-	bin/sigs.rb > $@
+	bundle exec bin/sigs.rb > $@
 
 server:
 	jekyll server
