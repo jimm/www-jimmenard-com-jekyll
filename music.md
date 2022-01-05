@@ -74,6 +74,7 @@ another home.
 
 - [Korg Kronos LS 88](https://www.korg.com/us/products/synthesizers/kronos2_ls/)
 - [ASM Hydrasynth](https://www.ashunsoundmachines.com/hydrasynth-key)
+- [Korg wavestate](https://www.korg.com/us/products/synthesizers/wavestate/)
 - [Korg Wavestation](https://en.wikipedia.org/wiki/Korg_Wavestation)
 - A big honking seven-foot rack, affectionately called the "Think Tank".
   Most of the equipment in it was originally mounted in a homemade, rolling,
@@ -202,7 +203,7 @@ the late '70's, but here's what I remember:
 - Roland Juno 106
 - Roland MKS-80 SuperJupiter
 - Studiologic Sledge 2.0
-- Yamaha CP 70 electric grand (it was the singer's, but I got to use it)
+- Yamaha CP-80 electric grand (it was the singer's, but I got to use it)
 - Yamaha CS-5 mono analog synth
 - Yamaha DX7
 - Yamaha RX5 drum machine
