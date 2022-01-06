@@ -1,4 +1,5 @@
 SRC = _site/
+WEB_USER = jimm
 WEB_SERVER = jimm.opalstacked.com
 WEB_DIR = apps/jimmenard
 SIGS_FILE = $(pim)/signatures
@@ -14,6 +15,7 @@ SIGS_FILE = $(pim)/signatures
 publish: build
 	rsync -qrlpt --filter='- .DS_Store' --filter='- .localized' --filter='- bin' \
 	    $(SRC) $(WEB_SERVER):$(WEB_DIR)
+	ssh $(WEB_USER)@$(WEB_SERVER) find $(WEB_DIR) -type d -exec chmod 755 {} \\\;
 
 build: _includes/sigs.html
 	jekyll build
