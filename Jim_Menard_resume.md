@@ -22,14 +22,14 @@ title: Resume
 
 <div class="job-title">Senior Software Engineer</div>
 <div class="job-place">
-  <span class="company">Display Social</span> 2021&ndash;Present
+  <span class="company">Infinite Reality</span> 2021&ndash;Present
 </div>
 <br/>
 
 
 <div class="job-title">Principal Software Engineer</div>
 <div class="job-place">
-  <span class="company">Warby Parker</span> 2018&ndash;2021
+  <span class="company">Warby Parker</span> 2018&ndash;Present
 </div>
 <br/>
 
@@ -358,22 +358,21 @@ class="mag-name">MacTech</span>, March 2003 cover article.
 # Technical Skills
 
 <span class="job-skill">Languages</span> Ruby, Python, Java, Scala, PHP,
-JavaScript, Bash, Common Lisp, Smalltalk, Objective-C, Perl, C, C++,
-Assembly<br/> _Acquainted with_: Clojure, Erlang, Elixir, Haskell, Fortran,
-Pascal
+JavaScript, Bash, Lisp, Smalltalk, Objective-C, Perl, C, C++, Assembly<br/>
+_Acquainted with_: Clojure, Erlang, Elixir, Haskell, Fortran, Pascal
 
 <span class="job-skill">Operating Systems</span> Unix (Linux, BSD, Solaris,
-etc.), macOS, Nextstep, BeOS, DOS, Windows, VMS
+etc.), Mac OS X, MacOS, Nextstep, BeOS, DOS, Windows, VMS
 
 
-<span class="job-skill">Databases</span> MySQL, PostgreSQL, SQLite, Oracle,
-MongoDB, Sybase, Informix
+<span class="job-skill">Databases</span> MySQL, PostgreSQL, Oracle, MongoDB,
+Sybase, Informix
 
 <span class="job-skill">Frameworks and Tools</span> JRuby, Ruby on Rails,
-Sinatra, Flask, J2EE, Spring, Hibernate, Tapestry, Cayenne, JSP, Servlets,
-JDBC, Ant, Maven, JUnit/XUnit, RMI, CORBA, (X)HTML, CSS, AJAX, XML, SOAP,
-XML-RPC, WSDL, BPEL, ICE, Apache, Tomcat, WebLogic, Prevayler, LaTeX, Yaws,
-Erlyweb, more
+Sinatra, J2EE, Spring, Hibernate, Tapestry, Cayenne, JSP, Servlets, JDBC,
+Ant, Maven, JUnit/XUnit, RMI, CORBA, (X)HTML, CSS, AJAX, XML, SOAP, XML-RPC,
+WSDL, BPEL, ICE, Apache, Tomcat, WebLogic, Prevayler, LaTeX, Yaws, Erlyweb,
+more
 
 
 # Education
@@ -387,6 +386,8 @@ Major: Mathematics, with a concentration in Computer Science
 # Professional Organizations
 
 <span class="prof-org">New York CTO Club</span>
+
+<span class="prof-org">Connecticut CTO Club</span>
 
 
 # Independent Projects
