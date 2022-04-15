@@ -29,7 +29,7 @@ title: Resume
 
 <div class="job-title">Principal Software Engineer</div>
 <div class="job-place">
-  <span class="company">Warby Parker</span> 2018&ndash;Present
+  <span class="company">Warby Parker</span> 2018&ndash;2021
 </div>
 <br/>
 
