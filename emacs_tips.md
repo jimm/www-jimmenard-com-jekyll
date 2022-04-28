@@ -102,7 +102,7 @@ a link to ~/.emacs.d/elisp/iamplify/mercury/dot_emacs:
 
 Here's bootstrap-init.el:
 
-~~~ emacs-elisp
+~~~ emacs-lisp
 ;;; *my-emacs-lib-dir* must be defined
 
 (defun bootstrap-file (domain machine file-name)
