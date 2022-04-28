@@ -2,7 +2,7 @@
 title: Shiny Things
 email: jim@jimmenard.com
 description: > # this means to ignore newlines until "baseurl:"
-  Jim likes shiny things. Technology is shiny.
+  Jim likes shiny things. Technology is shiny. So are synth knobs.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://jimmenard.com" # the base hostname & protocol for your site
 twitter_username: jmenard42
