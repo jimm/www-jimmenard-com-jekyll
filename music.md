@@ -123,7 +123,7 @@ another home.
   - OAP T-122B wedge (70 lbs, a pain to carry around)
   - Secondhand home-made (by someone else) 12" + horn
 - Guitar/Bass Amps:
-  - Line 6 LowDown LD400 Pro (2x10")
+  - Line 6 LowDown LD400 Pro (2x10" + horn)
   - Fender Frontman 15R practice amp that I found at the town dump in
     full working condition
 - On-Stage KS7365EJ Pro Heavy-Duty Folding-Z Keyboard stand
