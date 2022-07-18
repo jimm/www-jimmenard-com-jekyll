@@ -228,16 +228,17 @@ PUBLICATIONS AND PRESENTATIONS:
 TECHNICAL SKILLS:
 
 Languages
-    Ruby, Python, Java, Scala, PHP, JavaScript, Bash, Lisp, Smalltalk,
-      Objective-C, Perl, C, C++, Assembly
-    Acquainted with: Clojure, Elixir, Erlang, Go, Haskell, Fortran, Pascal
+
+    Ruby, Python, Elixir, Java, Scala, PHP, JavaScript, Bash, Common Lisp,
+      Smalltalk, Objective-C, Perl, C, C++, Assembly
+    Acquainted with: Clojure, Crystal, Erlang, Go, Haskell, Fortran, Pascal
 
 Operating Systems
     Unix (Linux, BSD, Solaris, etc.), Mac OS X, MacOS, Nextstep, BeOS, DOS,
     Windows, VMS
 
 Databases
-    MySQL, PostgreSQL, Oracle, MongoDB, Sybase, Informix
+    MySQL, PostgreSQL, SQLite, Oracle, MongoDB, Sybase, Informix
 
 Frameworks and Tools
     JRuby, Ruby on Rails, Sinatra, J2EE, Spring, Hibernate, Tapestry,
