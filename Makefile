@@ -18,10 +18,10 @@ publish: build
 	ssh $(WEB_USER)@$(WEB_SERVER) find $(WEB_DIR) -type d -exec chmod 755 {} \\\;
 
 build: _includes/sigs.html
-	jekyll build
+	bundle exec jekyll build
 
 _includes/sigs.html: $(SIGS_FILE) bin/sigs.rb
 	bundle exec bin/sigs.rb > $@
 
 server:
-	jekyll server
+	bundle exec jekyll server
