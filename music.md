@@ -205,6 +205,7 @@ the late '70's, but here's what I remember:
 - Hohner International "electronic piano" (I think it was the International)
   from the late 1960's &mdash; my first keyboard after my parents' piano
 - Korg CX3 organ
+- Korg Delta
 - Kurzweil Midiboard "Limited Edition"
 - Moog Memorymoog
 - Moog Song Producer
