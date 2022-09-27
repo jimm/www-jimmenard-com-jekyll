@@ -120,13 +120,14 @@ another home.
 - Speakers:
   - A pair of M-Audio AV 40 monitors
   - JBL EON 515XT powered speaker
+  - Mackie SRM150 150W 5.25 inch powered speaker
   - OAP T-122B wedge (70 lbs, a pain to carry around)
   - Secondhand home-made (by someone else) 12" + horn
 - Guitar/Bass Amps:
   - Line 6 LowDown LD400 Pro (2x10" + horn)
   - Fender Frontman 15R practice amp that I found at the town dump in
     full working condition
-- On-Stage KS7365EJ Pro Heavy-Duty Folding-Z Keyboard stand
+- On-Stage KS7365EJ Pro Heavy-Duty Folding-Z Keyboard stand (two tier)
 - Various Ultimate keyboard stands
 - An Ultimate speaker stand
 - Three empty six-space racks from the olden days of live performance
@@ -144,8 +145,11 @@ equipment list.
 - Kronos
 - Hydrasynth
 - On-Stage stand
-- MV802 mixer
-- JBL powered speaker
+- Key Largo mixer
+- Monitor / Speaker with stand
+  - If using a sound system, the Mackie powered speaker for a personal
+    keyboard monitor, atop a mic stand
+  - If not, the JBL EON atop an Ultimate speaker stand
 - Ibanez bass (only for the few gigs where I've had to sub for the bass
   player)
 
