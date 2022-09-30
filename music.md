@@ -15,6 +15,8 @@ and wrote a Ruby version called
 [PatchMaster](https://github.com/jimm/patchmaster/).
 
 Currently, I play keyboards in [Ellis Island](http://ellisislandrock.com/).
+We made a [demo video](https://www.youtube.com/watch?v=MN8Sgid2x30) in 2022.
+Check it out!
 
 I performed in [bands](#band-list) from 1980 to 1993, went on a hiatus,
 and started playing out again in 2013. Over the years, I've played
@@ -140,7 +142,8 @@ another home.
 
 Here's what I use when I play live with [Ellis
 Island](https://ellisislandrock.com/). Everything here is from the above
-equipment list.
+equipment list. You can see it in action
+[here](https://www.youtube.com/watch?v=MN8Sgid2x30).
 
 - Kronos
 - Hydrasynth
