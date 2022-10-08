@@ -26,6 +26,17 @@ title: Resume
 </div>
 <br/>
 
+As lead of the back end API team, responsible for enhancing the API and
+business logic behind the Display Social networking app and later the
+Infinite Reality multi-tenant metaverse platform. Improved performance
+(e.g., bringing some operations from over 30 seconds to sub-second, reducing
+caching size requirements by 80%, creating usage-limiting logic). Improved
+search results. Led technical discussions and wrote architecture design
+docs, including design of multi-tenant metaverse back end models. Led the
+team in API standardization and documentation work, tech debt payment, and
+major version upgrades. Created tickets and assigned work to team members.
+Led team meetings and alert triage reviews. Interviewed candidates.
+
 
 <div class="job-title">Principal Software Engineer</div>
 <div class="job-place">
@@ -306,7 +317,7 @@ estimates. Introduced structured design and development practices.
 
 <div class="job-title">Software Engineer</div>
 <div class="job-place">
-  <span class="company">Bolt Beranek &amp; Newman</span> 1995
+  <span class="company">Bolt Beranek &amp; Newman</span> 1995&ndash;1995
 </div>
 <br/>
 
@@ -370,9 +381,9 @@ etc.), Mac OS X, MacOS, Nextstep, BeOS, DOS, Windows, VMS
 MongoDB, Sybase, Informix
 
 <span class="job-skill">Frameworks and Tools</span> Ruby on Rails, Sinatra,
-Flask, JRuby, J2EE, Spring, Hibernate, Mongo, Babble, JDBC, Ant, Maven,
-JUnit/XUnit, RMI, CORBA, (X)HTML, CSS, AJAX, XML, SOAP, XML-RPC, WSDL, BPEL,
-ICE, Apache, Tomcat, WebLogic, Prevayler, LaTeX, Yaws, Erlyweb, more
+Flask, JRuby, J2EE, Spring, Hibernate, Tapestry, JSP, JDBC, Ant, Maven,
+JUnit/XUnit, RMI, CORBA, (X)HTML, CSS, AJAX, XML, XML-RPC, SOAP, WSDL,
+Apache, Tomcat, WebLogic, LaTeX, more
 
 
 # Education

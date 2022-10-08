@@ -7,6 +7,18 @@ EXPERIENCE:
 
 Senior Software Engineer                      Infinite Reality, 2021 - Present
 
+    As lead of  the back end API  team, responsible for enhancing  the API and
+    business  logic behind  the Display  Social networking  app and  later the
+    Infinite  Reality multi-tenant  metaverse  platform. Improved  performance
+    (e.g.,  bringing  some operations  from  over  30 seconds  to  sub-second,
+    reducing caching size requirements by 80%, creating usage-limiting logic).
+    Improved search results. Led  technical discussions and wrote architecture
+    design docs, including  design of multi-tenant metaverse  back end models.
+    Led  the team  in API  standardization and  documentation work,  tech debt
+    payment, and major version upgrades.  Created tickets and assigned work to
+    team  members. Led  team meetings  and alert  triage reviews.  Interviewed
+    candidates.
+
 Principal Software Engineer                          Warby Parker, 2018 - 2021
 
     As the Retail  and Vision Services team's  Principal Engineer, responsible
@@ -195,7 +207,7 @@ Associate Director                  Cambridge Technology Partners, 1996 - 1998
 Project Leader, Macintosh Development
                                  MCI/News Corp. Internet Ventures, 1995 - 1996
 
-Software Engineer                                  Bolt Beranek & Newman, 1995
+Software Engineer                           Bolt Beranek & Newman, 1995 - 1995
 
 Associate                                       Marble Associates, 1993 - 1994
 
@@ -241,10 +253,10 @@ Databases
     MySQL, PostgreSQL, SQLite, Oracle, MongoDB, Sybase, Informix
 
 Frameworks and Tools
-    JRuby, Ruby on Rails, Sinatra, J2EE, Spring, Hibernate, Tapestry,
-    Cayenne, JSP, Servlets, JDBC, Ant, Maven, JUnit/XUnit, RMI, CORBA,
-    (X)HTML, CSS, AJAX, XML, XML-RPC, SOAP, WSDL, BPEL, ICE, Apache, Tomcat,
-    WebLogic, Prevayler, LaTeX, Yaws, Erlyweb, more
+
+    Ruby on Rails, Sinatra, Flask, JRuby, J2EE, Spring, Hibernate, Tapestry,
+    JSP, JDBC, Ant, Maven, JUnit/XUnit, RMI, CORBA, (X)HTML, CSS, AJAX, XML,
+    XML-RPC, SOAP, WSDL, Apache, Tomcat, WebLogic, LaTeX, more
 
 
 EDUCATION:
