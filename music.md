@@ -51,7 +51,8 @@ Here are three pieces I composed that I've typeset using
     on Soundcloud
 - [Mosquito Bite Rag](music/mosquito_bite_rag.pdf)
 
-Here are a few others on SoundCloud:
+Here are a few of the other songs on my
+[SoundCloud page](https://soundcloud.com/jim-menard):
 
 - [Delicate](https://soundcloud.com/jim-menard/delicate) from Equal Rites
 - [No Fences](https://soundcloud.com/jim-menard/no-fences-draft) (draft)
@@ -212,6 +213,7 @@ the late '70's, but here's what I remember:
 - Hohner International "electronic piano" (I think it was the International)
   from the late 1960's &mdash; my first keyboard after my parents' piano
 - Korg CX3 organ
+- Korg Poly-61
 - Korg Delta
 - Kurzweil Midiboard "Limited Edition"
 - Moog Memorymoog
