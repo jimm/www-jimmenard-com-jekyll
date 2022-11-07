@@ -217,7 +217,7 @@ the late '70's, but here's what I remember:
 - Korg Delta
 - Kurzweil Midiboard "Limited Edition"
 - Moog Memorymoog
-- Moog Song Producer
+- Moog Song Producer (software + MIDI interface)
 - Moog Source
 - Opcode Studio 5 MIDI interface
 - Roland AXIS-1 strap-on MIDI keyboard
