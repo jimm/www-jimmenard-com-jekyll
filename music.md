@@ -88,7 +88,6 @@ another home.
 
 - [Korg Kronos LS 88](https://www.korg.com/us/products/synthesizers/kronos2_ls/)
 - [ASM Hydrasynth](https://www.ashunsoundmachines.com/hydrasynth-key)
-- [Korg wavestate](https://www.korg.com/us/products/synthesizers/wavestate/)
 - [Korg Wavestation](https://en.wikipedia.org/wiki/Korg_Wavestation)
 - A big honking seven-foot rack, affectionately called the "Think Tank".
   Most of the equipment in it was originally mounted in a homemade, rolling,
@@ -212,6 +211,7 @@ the late '70's, but here's what I remember:
 - Fender Rhodes
 - Hohner International "electronic piano" (I think it was the International)
   from the late 1960's &mdash; my first keyboard after my parents' piano
+- Korg wavestate
 - Korg CX3 organ
 - Korg Poly-61
 - Korg Delta
