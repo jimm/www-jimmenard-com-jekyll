@@ -398,8 +398,6 @@ Major: Mathematics, with a concentration in Computer Science
 
 <span class="prof-org">New York CTO Club</span>
 
-<span class="prof-org">Connecticut CTO Club</span>
-
 
 # Independent Projects
 
