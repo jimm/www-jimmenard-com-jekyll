@@ -172,8 +172,6 @@ equipment list. You can see it in action
 
 - ASM's Hydrasynth Patch Manager and Firmware Updater
   ([download page](https://www.ashunsoundmachines.com/downloads))
-
-- [MidiPipe](http://www.subtlesoft.square7.net/MidiPipe.html) MIDI munger.
   
 - [Kronut](https://github.com/jimm/kronut), a set list slot text editor for
   the Kronos. It's software I wrote that lets me use my editor (Emacs) to
@@ -190,10 +188,9 @@ equipment list. You can see it in action
   the keyboards are the same in the different rooms we rent it is nice to
   have the same sounds, splits, transposes, etc. with me on my laptop.
 
-- [LilyPond](http://lilypond.org/web/) for music notation typesetting.
+- [MidiPipe](http://www.subtlesoft.square7.net/MidiPipe.html) MIDI munger.
 
-- [Sonic Pi](https://sonic-pi.net/), a code-based music creation and
-  performance tool.
+- [LilyPond](http://lilypond.org/web/) for music notation typesetting.
 
 ## Old Gear
 
