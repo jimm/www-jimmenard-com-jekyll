@@ -60,17 +60,6 @@ Here are a few of the other songs on my
 
 # Equipment Collection
 
-Here's the schematic for my home studio and my live rig.
-
-<a href="images/studio.png">
-  <img
-    src="images/studio.png"
-    class="inline-image"
-    alt="Schematic: My Home Studio and Live Rig, 2022"
-    title="Schematic: My Home Studio and Live Rig, 2022"
-  />
-</a>
-
 Here's what my home "studio" looked like in late 2020. When I play live I
 take the Kronos and the Hydrasynth. The Midiboard has since moved on to
 another home.
@@ -81,6 +70,17 @@ another home.
     class="inline-image"
     alt="My Music Battlestation, 2020"
     title="My Music Battlestation, 2020"
+  />
+</a>
+
+Here's the schematic for my home studio and my live rig.
+
+<a href="images/studio.png">
+  <img
+    src="images/studio.png"
+    class="inline-image"
+    alt="Schematic: My Home Studio and Live Rig, 2022"
+    title="Schematic: My Home Studio and Live Rig, 2022"
   />
 </a>
 
