@@ -213,7 +213,7 @@ the late '70's, but here's what I remember:
 - Korg Poly-61
 - Korg Delta
 - Kurzweil Midiboard "Limited Edition"
-- Moog Memorymoog
+- Moog Memorymoog Plus
 - Moog Song Producer (software + MIDI interface)
 - Moog Source
 - Opcode Studio 5 MIDI interface
