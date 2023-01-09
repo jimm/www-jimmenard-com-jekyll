@@ -17,15 +17,13 @@ Welcome to my skein of Web pages, featuring my
 [resume](Jim_Menard_resume.html). If you see something out of date, please
 [drop me a line](mailto:jim@jimmenard.com).
 
-I am a language maven who enjoys [Ruby](http://www.ruby-lang.org/en/),
-[Elixir](http://elixir-lang.org/), [Clojure](http://clojure.org/) and many
-[more languages](/Jim_Menard_resume.html#technical-skills). I have created a
+I am a programming language maven who enjoys Ruby, Python, Elixir,
+Lisp, and many [more languages](/Jim_Menard_resume.html#technical-skills). I have created a
 number of Open Source [projects](/projects/) such as the
 [midilib](https://github.com/jimm/midilib) Ruby gem,
-[KeyMaster](https://github.com/jimm/keymaster) music performance app,
+[KeyMaster](https://github.com/jimm/keymaster) MIDI live performance app,
 [CSVLixir](https://github.com/jimm/csvlixir) Elixir library, and
-[DataVision](http://datavision.sourceforge.net) (source also available
-[here](https://github.com/jimm/datavision)).
+[DataVision](https://github.com/jimm/datavision).
 
 By the way: [Emacs](/emacs_tips.html) is the One True Editor&trade;.
 
