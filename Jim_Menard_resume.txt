@@ -241,8 +241,8 @@ TECHNICAL SKILLS:
 
 Languages
 
-    Ruby, Python, Elixir, Java, Scala, PHP, JavaScript, Bash, Common Lisp,
-      Smalltalk, Objective-C, Perl, C, C++, Assembly
+    Ruby, Python, Elixir, Bash, JavaScript/TypeScript, C/C++, Java, Scala,
+      PHP, Common Lisp, Smalltalk, Objective-C, Perl, Assembly
     Acquainted with: Clojure, Crystal, Erlang, Go, Haskell, Fortran, Pascal
 
 Operating Systems
@@ -272,13 +272,12 @@ New York CTO Club
 
 INDEPENDENT PROJECTS:
 
-PatchMaster: MIDI processing and patching system
+KeyMaster: Real-time MIDI performance software
+midilib: Pure-Ruby MIDI file and event manipulation library
 DataVision: Cross-platform graphical database reporting tool
 NQXML: XML parser written in Ruby
 Rice: Information and Content Exchange (ICE) protocol reference
       implementation in Ruby
 TwICE: ICE protocol reference implementation in Java
-midilib: Pure-Ruby MIDI file and event manipulation library
 Bangkok: Ruby chess game replayer with music generation capability
-KeyMaster: Real-time MIDI performance software
 Squeak (Smalltalk) PostgreSQL interface

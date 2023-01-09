@@ -368,9 +368,9 @@ class="mag-name">MacTech</span>, March 2003 cover article.
 
 # Technical Skills
 
-<span class="job-skill">Languages</span> Ruby, Python, Elixir, Java, Scala,
-PHP, JavaScript, Bash, Common Lisp, Smalltalk, Objective-C, Perl, C, C++,
-Assembly<br/>
+<span class="job-skill">Languages</span> Ruby, Python, Elixir, Bash,
+JavaScript/TypeScript, C/C++, Java, Scala, PHP, Common Lisp, Smalltalk,
+Objective-C, Perl, Assembly<br/>
 _Acquainted with_: Clojure, Crystal, Erlang, Go, Haskell, Fortran, Pascal
 
 <span class="job-skill">Operating Systems</span> Unix (Linux, BSD, Solaris,
@@ -401,7 +401,10 @@ Major: Mathematics, with a concentration in Computer Science
 
 # Independent Projects
 
-<span class="proj">PatchMaster</span> MIDI processing and patching system
+<span class="proj">KeyMaster</span> Real-time MIDI performance software
+
+<span class="proj">midilib</span> Pure-Ruby MIDI file and event manipulation
+library
 
 <span class="proj">DataVision</span> Cross-platform graphical database
 reporting tool
@@ -414,13 +417,8 @@ protocol reference implementation in Ruby
 <span class="proj">TwICE</span> ICE protocol reference implementation in
 Java
 
-<span class="proj">midilib</span> Pure-Ruby MIDI file and event manipulation
-library
-
 <span class="proj">Bangkok</span> Ruby chess game replayer with music
 generation capability
-
-<span class="proj">KeyMaster</span> Real-time MIDI performance software
 
 <span class="proj">Squeak</span> (Smalltalk) <span class="proj">PostgreSQL
 interface</span>
