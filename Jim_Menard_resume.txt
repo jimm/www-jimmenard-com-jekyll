@@ -5,7 +5,7 @@
 
 EXPERIENCE:
 
-Senior Software Engineer                      Infinite Reality, 2021 - Present
+Senior Software Engineer                         Infinite Reality, 2021 - 2023
 
     As lead of  the back end API  team, responsible for enhancing  the API and
     business  logic behind  the Display  Social networking  app and  later the
@@ -15,9 +15,9 @@ Senior Software Engineer                      Infinite Reality, 2021 - Present
     Improved search results. Led  technical discussions and wrote architecture
     design docs, including  design of multi-tenant metaverse  back end models.
     Led  the team  in API  standardization and  documentation work,  tech debt
-    payment, and major version upgrades.  Created tickets and assigned work to
-    team  members. Led  team meetings  and alert  triage reviews.  Interviewed
-    candidates.
+    payment, and major platform version upgrades. Created tickets and assigned
+    work  to  team  members.  Led  team meetings  and  alert  triage  reviews.
+    Interviewed candidates.
 
 Principal Software Engineer                          Warby Parker, 2018 - 2021
 

@@ -27,15 +27,15 @@ title: Resume
 <br/>
 
 As lead of the back end API team, responsible for enhancing the API and
-business logic behind the Display Social networking app and later the
-Infinite Reality multi-tenant metaverse platform. Improved performance
-(e.g., bringing some operations from over 30 seconds to sub-second, reducing
-caching size requirements by 80%, creating usage-limiting logic). Improved
-search results. Led technical discussions and wrote architecture design
-docs, including design of multi-tenant metaverse back end models. Led the
-team in API standardization and documentation work, tech debt payment, and
-major version upgrades. Created tickets and assigned work to team members.
-Led team meetings and alert triage reviews. Interviewed candidates.
+business logic behind the Display Social networking app and later the Infinite
+Reality multi-tenant metaverse platform. Improved performance (e.g., bringing
+some operations from over 30 seconds to sub-second, reducing caching size
+requirements by 80%, creating usage-limiting logic). Improved search results.
+Led technical discussions and wrote architecture design docs, including design
+of multi-tenant metaverse back end models. Led the team in API standardization
+and documentation work, tech debt payment, and major platform version
+upgrades. Created tickets and assigned work to team members. Led team meetings
+and alert triage reviews. Interviewed candidates.
 
 
 <div class="job-title">Principal Software Engineer</div>

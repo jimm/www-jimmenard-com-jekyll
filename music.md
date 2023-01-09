@@ -222,7 +222,7 @@ the late '70's, but here's what I remember:
 - Roland MKS-80 SuperJupiter
 - Studiologic Sledge 2.0
 - Yamaha CP-80 electric grand (it was the singer's, but I got to use it)
-- Yamaha CS-5 mono analog synth
+- Yamaha CS-10 mono analog synth
 - Yamaha DX7
 - Yamaha RX5 drum machine
 - Yamaha TX81Z (Two of 'em. You could set the text to display when they
