@@ -308,7 +308,7 @@ estimates. Introduced structured design and development practices.
 </div>
 <br/>
 
-<div class="job-title">Project Leader, Macintosh Devleopment</div>
+<div class="job-title">Project Leader, Macintosh Development</div>
 <div class="job-place">
   <span class="company">MCI/News Corp. Internet Ventures</span>
   1995&ndash;1996
