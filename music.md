@@ -165,17 +165,18 @@ equipment list. You can see it in action
   [KeyMaster](projects/keymaster/index.html). I used that version live from
   1986&ndash;1993. It was first written for the Commodore 64, later ported
   to the Atari ST. I half-heartedly started a Macintosh version. The next
-  was the BeOS version. For later instantiations see the cross-platform
-  [PatchMaster](http://www.patchmaster.org/) and
+  was the BeOS version, then a Ruby version
+  ([PatchMaster](https://github.com/jimm/patchmaster/)), next
   [keymaster_objc](http://jimm.github.io/keymaster_objc/), a Mac OS X-only
-  simpler version.
-
-- ASM's Hydrasynth Patch Manager and Firmware Updater
-  ([download page](https://www.ashunsoundmachines.com/downloads))
+  simpler version, and finally the cross-platform GUI version written in C++
+  using wxWidgets ([KeyMaster](https://github.com/jimm/keymaster/wiki)).
   
 - [Kronut](https://github.com/jimm/kronut), a set list slot text editor for
   the Kronos. It's software I wrote that lets me use my editor (Emacs) to
-  edit set lists.
+  edit single set list slot descriptions and entire set lists.
+
+- ASM's Hydrasynth Patch Manager and Firmware Updater
+  ([download page](https://www.ashunsoundmachines.com/downloads))
 
 - [Korg KRONOS Editor](https://shop.korg.com/kronosSupport)
   (link is to the KRONOS support/downloads page). I've had troubles using
