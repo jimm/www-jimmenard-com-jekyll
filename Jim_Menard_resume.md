@@ -22,7 +22,7 @@ title: Resume
 
 <div class="job-title">Senior Software Engineer</div>
 <div class="job-place">
-  <span class="company">Infinite Reality</span> 2021&ndash;Present
+  <span class="company">Infinite Reality</span> 2021&ndash;2023
 </div>
 <br/>
 
