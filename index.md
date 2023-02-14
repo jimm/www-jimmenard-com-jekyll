@@ -32,3 +32,6 @@ By the way: [Emacs](/emacs_tips.html) is the One True Editor&trade;.
 Email:
 [jim@jimmenard.com](mailto:jim@jimmenard.com),
 [jim.menard@gmail.com](mailto:jim.menard@gmail.com)
+
+Mastodon:
+<a rel="me" href="https://sunny.garden/@jimm">@jimm</a>
