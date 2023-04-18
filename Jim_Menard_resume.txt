@@ -5,6 +5,8 @@
 
 EXPERIENCE:
 
+Staff Software Engineer                               SeatGeek, 2023 - Present
+
 Senior Software Engineer                         Infinite Reality, 2021 - 2023
 
     As lead of  the back end API  team, responsible for enhancing  the API and

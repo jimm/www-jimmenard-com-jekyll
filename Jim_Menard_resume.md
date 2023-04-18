@@ -20,6 +20,12 @@ title: Resume
 
 # Experience
 
+<div class="job-title">Staff Software Engineer</div>
+<div class="job-place">
+  <span class="company">SeatGeek</span> 2023&ndash;Present
+</div>
+<br/>
+
 <div class="job-title">Senior Software Engineer</div>
 <div class="job-place">
   <span class="company">Infinite Reality</span> 2021&ndash;2023
