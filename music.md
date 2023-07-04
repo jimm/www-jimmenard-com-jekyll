@@ -138,27 +138,51 @@ Here's the schematic for my home studio and my live rig.
   - Ukelele
   - Mandolin
 
-## Live Setup
+## Live Rig
 
 Here's what I use when I play live with [Ellis
 Island](https://ellisislandrock.com/). Everything here is from the above
 equipment list. You can see it in action
-[here](https://www.youtube.com/watch?v=MN8Sgid2x30).
+[here](https://www.youtube.com/watch?v=MN8Sgid2x30), though that video was
+made before I started hooking up the synths with MIDI.
 
-- Kronos
-- Hydrasynth
+- Korg Kronos
+- ASM Hydrasynth
 - On-Stage stand
-- Key Largo mixer
-- Monitor / Speaker with stand
-  - If using a sound system, the Mackie powered speaker for a personal
-    keyboard monitor, atop a mic stand
-  - If not, the JBL EON atop an Ultimate speaker stand
-- Ibanez bass (only for the few gigs where I've had to sub for the bass
-  player)
+- Audio
+  - Key Largo mixer providing stereo XLR or 1/4" to the house
+  - If needed, a monitor or powered speaker on a stand
+    - When using a sound system that doesn't have a separate monitor for me,
+      I use the Mackie powered speaker sitting atop a mic stand for a
+      personal keyboard monitor
+    - When I need to project sound out in a small venue with no sound
+      system, I use the JBL EON atop an Ultimate speaker stand
+- MIDI
+  - iPad using an Apple Camera (USB data to Thunderbolt) adapter to connect
+    to a USB hub
+  - USB cables from the Kronos and the Hydrasynth USB B outputs into the hub
+  - The iPad is running [Midiflow](https://www.midiflow.com/) and
+    [BandHelper](https://bandhelper.com/)
+    - Midiflow routes the MIDI between the Kronos and the Hydrasynth. I also
+      use it to filter out clock messages in both directions and and modify
+      the velocity curve when going from the Hydrasynth to the Kronos
+    - BandHelper sends MIDI program changes to the Kronos which is in set list
+      mode, and the Kronos combinations used by the set list optionally send
+      program changes to the Hydrasynth
+- Optional / Rare
+  - Ibanez bass (only for the few gigs where I've had to sub for the bass
+    player)
+  - Line 6 amp for the bass
+
+I've dabbled with WIDI (Bluetooth MIDI) but had some latency problems that
+have got to be caused by the way I was routing things. If I just set up WIDI
+between the two synths everything works fine, but when I introduce the iPad
+with Midiflow and Bandhelper, there's a delay when I use the Hydrasynth to
+play the Kronos.
 
 ## Software List
 
-- [REAPER](http://reaper.fm/) Digital Audio Workstation.
+- [REAPER](http://reaper.fm/) Digital Audio Workstation (DAW).
 
 - [KeyMaster](https://github.com/jimm/keymaster/wiki), real-time MIDI
   performance software that I wrote. The first incarnation was also called
@@ -184,10 +208,11 @@ equipment list. You can see it in action
   confusing and I've more often erased / ruined set lists than successfully
   edited them.
 
-- Apple's [MainStage 3](http://www.apple.com/mainstage/) is useful when I
-  play with friends. We rent a rehearsal room once a week or so, and though
-  the keyboards are the same in the different rooms we rent it is nice to
-  have the same sounds, splits, transposes, etc. with me on my laptop.
+- Apple's [MainStage 3](http://www.apple.com/mainstage/) was useful when I
+  play with friends. We used to rent a rehearsal room once a week or so, and
+  though the keyboards are the same in the different rooms we rent it was
+  nice to have the same sounds, splits, transposes, etc. with me on my
+  laptop.
 
 - [MidiPipe](http://www.subtlesoft.square7.net/MidiPipe.html) MIDI munger.
 
@@ -196,7 +221,7 @@ equipment list. You can see it in action
 ## Old Gear
 
 Just for fun, here's a list of my old gear. I started playing in bands in
-the late '70's, but here's what I remember:
+the late '70's. Here's what I remember:
 
 - Alesis D4 drum synth
 - Alesis HR-16 drum machine
@@ -235,6 +260,7 @@ Here are the bands and orchestras I've played in over the years, in reverse
 chronological order. Believe me, you've never heard of any of them.
 
 - [Ellis Island](http://ellisislandrock.com/) (keyboards, occasional bass)
+  - Our [2022 demo video](https://www.youtube.com/watch?v=MN8Sgid2x30)
 - [Miles...](https://www.youtube.com/watch?v=t5yU0mX-u4w) (keyboards)
 - Uncommon Ground (keyboards)
 - Optional Stop (keyboards)
@@ -245,8 +271,8 @@ chronological order. Believe me, you've never heard of any of them.
 - Sinequanon (keyboards)
 - Guys and Dolls (conductor and music director, college)
 - Camelot (conductor and music director, high school)
-- King Lizard Revival Jass Band (trumpet, high school) _("Jass" is an early
-  spelling of "Jazz")_
+- King Lizard Revival Jass Band (trumpet) _("Jass" is an early spelling of
+  "Jazz")_
 - Once Again (electric piano, trumpet, high school)
 - Just Once (electric piano, trumpet, high school)
 - All-State band, orchestra, jazz band in high school; One year, both
