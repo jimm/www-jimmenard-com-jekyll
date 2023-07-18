@@ -120,7 +120,7 @@ Here's the schematic for my home studio and my live rig.
 - M-Audio MIDISPORT 4x4 Anniversary Edition 4-in/4-out USB MIDI Interface
 - Apple MacBook Pro laptop
 - Speakers:
-  - A pair of M-Audio AV 40 monitors
+  - A pair of Mackie CR-X5 powered monitors
   - JBL EON 515XT powered speaker
   - Mackie SRM150 150W 5.25 inch powered speaker
   - OAP T-122B wedge (70 lbs, a pain to carry around)
