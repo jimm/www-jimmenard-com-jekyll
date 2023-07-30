@@ -95,7 +95,6 @@ Here's the schematic for my home studio and my live rig.
   real time MIDI performance software.
   - Kurzweil K2000RS (R = rackmount, S = sampling), the rackmount version of
     [this](https://en.wikipedia.org/wiki/Kurzweil_K2000)
-  - [Kurzweil 1000PX](https://soundprogramming.net/synthesizers/kurzweil/kurzweil-1000px-professional-expander/)
   - [Mackie LM-3204](https://gearsource.com/stock-item/mackie-lm3204-16-stereo-channel-32-mono-console/)
     mixer
   - Emagic AMT8 MIDI interface
@@ -238,7 +237,8 @@ the late '70's. Here's what I remember:
 - Korg CX3 organ
 - Korg Poly-61
 - Korg Delta
-- Kurzweil Midiboard "Limited Edition"
+- Kurzweil 1000PX
+- Kurzweil Midiboard _Limited Edition_
 - Moog Memorymoog Plus
 - Moog Song Producer (software + MIDI interface)
 - Moog Source
