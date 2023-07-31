@@ -225,6 +225,7 @@ the late '70's. Here's what I remember:
 - Alesis D4 drum synth
 - Alesis HR-16 drum machine
 - Alesis SR18 drum machine
+- ASM Hydrasynth Keybaord (49-key)
 - Commodore SX-64 running first Moog's Song Producer software, then
   my KeyMaster software
 - Conn trumpet
