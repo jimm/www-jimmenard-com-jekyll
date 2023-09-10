@@ -18,13 +18,10 @@ Currently, I play keyboards in [Ellis Island](http://ellisislandrock.com/).
 We made a [demo video](https://www.youtube.com/watch?v=MN8Sgid2x30) in 2022.
 Check it out!
 
-I performed in [bands](#band-list) from 1980 to 1993, went on a hiatus,
-and started playing out again in 2013. Over the years, I've played
+I performed in [bands](#band-list) from 1980 to January 1993, went on a
+hiatus, and started playing out again in 2013. Over the years, I've played
 everything from progressive rock to dance pop to electric jazz and R&amp;B;
-covers and originals. Here's a video of [Miles at
-Connelly's](https://www.youtube.com/watch?v=t5yU0mX-u4w) in Times Square,
-New York City in 2013. I'm the guy with the beard and glasses off at the
-side of the stage.
+covers and originals.
 
 I write different kinds of stuff. Most of it is funk/dance/pop, but I also
 dabble in orchestral, Sondheim-esque pieces, game show themes, thirty-second
@@ -32,10 +29,10 @@ newsroom background music, and whatever else tickles my fancy.
 
 Aside from the typeset pieces below and the sequencer and MIDI files of the
 music I've done on my own, I have thrown a few things up on Soundcloud for
-the fun of it. Out of all of the original songs we did in the late '80's, I
-only have one crappy cassette of a bunch of works-in-progress . It's dated
-but really good stuff. The sound quality is horrendous. Also, the tape broke
-so I'll need to repair it one day.
+the fun of it --- none of it production quality. Out of all of the original
+songs we did in the late '80's, I only have one crappy cassette of a bunch
+of works-in-progress . It's dated but really good stuff. The sound quality
+is horrendous. Also, the tape broke so I'll need to repair it one day.
 
 My MIDI reference has moved [here](midi_ref.html). It's not a tutorial.
 Rather, it is intended as a quick overview and a reference guide.
@@ -62,7 +59,7 @@ Here are a few of the other songs on my
 
 Here's what my home "studio" looked like in late 2020. When I play live I
 take the Kronos and the Hydrasynth. The Midiboard has since moved on to
-another home.
+another home, and I've added a Waldorf Iridium.
 
 <a href="images/battlestation.jpg">
   <img
@@ -87,7 +84,8 @@ Here's the schematic for my home studio and my live rig.
 ## Equipment List
 
 - [Korg Kronos LS 88](https://www.korg.com/us/products/synthesizers/kronos2_ls/)
-- [ASM Hydrasynth](https://www.ashunsoundmachines.com/hydrasynth-key)
+- [ASM Hydrasynth Deluxe](https://www.ashunsoundmachines.com/hydrasynth-deluxe)
+- [Waldorf Iridium Keyboard](https://waldorfmusic.com/iridium-keyboard-en/) Keyboard
 - [Korg Wavestation](https://en.wikipedia.org/wiki/Korg_Wavestation)
 - A big honking seven-foot rack, affectionately called the "Think Tank".
   Most of the equipment in it was originally mounted in a homemade, rolling,
@@ -146,7 +144,7 @@ equipment list. You can see it in action
 made before I started hooking up the synths with MIDI.
 
 - Korg Kronos
-- ASM Hydrasynth
+- ASM Hydrasynth Deluxe
 - On-Stage stand
 - Audio
   - Key Largo mixer providing stereo XLR or 1/4" to the house
