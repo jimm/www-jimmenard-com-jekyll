@@ -57,16 +57,15 @@ Here are a few of the other songs on my
 
 # Equipment Collection
 
-Here's what my home "studio" looked like in late 2020. When I play live I
-take the Kronos and the Hydrasynth. The Midiboard has since moved on to
-another home, and I've added a Waldorf Iridium.
+Here's what my home "studio" looks like in 2023. When I play live I take the
+Kronos and the Hydrasynth.
 
-<a href="images/battlestation.jpg">
+<a href="images/home-studio-2023.jpg">
   <img
-    src="images/battlestation.jpg"
+    src="images/home-studio-2023.jpg"
     class="inline-image"
-    alt="My Music Battlestation, 2020"
-    title="My Music Battlestation, 2020"
+    alt="My Home Studio, 2023"
+    title="My Home Studio, 2023"
   />
 </a>
 
