@@ -102,19 +102,26 @@ Here's the schematic for my home studio and my live rig.
   - Sedna 13 port rack mount USB hub
   - Akai ME10D MIDI "digital delay" (echoes MIDI data, optionally
     transposing it up/down one octave)
-- Yamaha MV802 mixer, which used to be in the Think Tank. I now use it live,
-  so it's in a two-space rack gig bag.
+- Yamaha MV802 mixer, which used to be in the Think Tank. It's a backup
+  stage submixer, so it's in a two-space rack gig bag.
 - Things with strings:
   - Fender Stratocaster
   - Yamaha FG830 Acoustic Guitar
   - Ibanez SR505 5-string bass
   - [Chapman Stick](http://stick.com/), 12-string Grand Stick with 5 bass, 7
     treble strings; classic tuning
-- [Moog Etherwave Theremin](https://www.moogmusic.com/synthesizers?type=54)
-- [Akai MPD32](https://www.akaipro.com/mpd32) USB/MIDI pad controller
 - Behringer U-PHORIA UMC404HD audio interface
 - M-Audio MIDISPORT 4x4 Anniversary Edition 4-in/4-out USB MIDI Interface
+- Radial Key Largo keyboard mixer, USB interface, and performance pedal
+- ART SPLITMix4 passive splitter/mixer
+- MEE Audio MX2 in-ear monitors
+- Xviv U4 in-ear wireless system
+- iPad on which I run [Midiflow](https://www.midiflow.com/) and
+  [BandHelper](https://bandhelper.com/) (more info below)
 - Apple MacBook Pro laptop
+- [Moog Etherwave Theremin](https://www.moogmusic.com/synthesizers?type=54)
+- [Akai MPD32](https://www.akaipro.com/mpd32) USB/MIDI pad controller
+
 - Speakers:
   - A pair of Mackie CR-X5 powered monitors
   - JBL EON 515XT powered speaker
@@ -147,12 +154,21 @@ made before I started hooking up the synths with MIDI.
 - On-Stage stand
 - Audio
   - Key Largo mixer providing stereo XLR or 1/4" to the house
+  - MEE Audio MX2 in-ear monitors (IEM)
+  - Xviv U4 in-ear wireless system
+  - ART SPLITMix4 passive splitter/mixer
+    - The Key Largo L/R go into this, as does my house monitor send (via
+      1/4" or an XLR -> 1/4" adapter)
+    - Outputs go to the Xviv IEM send and thus into the IEMs
+    - I can also send a separate output to a powered speaker if needed, for
+      example during rehearsals for the rest of the band
   - If needed, a monitor or powered speaker on a stand
     - When using a sound system that doesn't have a separate monitor for me,
       I use the Mackie powered speaker sitting atop a mic stand for a
       personal keyboard monitor
     - When I need to project sound out in a small venue with no sound
       system, I use the JBL EON atop an Ultimate speaker stand
+  - Xviv U4 in-ear wireless system
 - MIDI
   - iPad using an Apple Camera (USB data to Thunderbolt) adapter to connect
     to a USB hub
@@ -163,8 +179,9 @@ made before I started hooking up the synths with MIDI.
       use it to filter out clock messages in both directions and and modify
       the velocity curve when going from the Hydrasynth to the Kronos
     - BandHelper sends MIDI program changes to the Kronos which is in set list
-      mode, and the Kronos combinations used by the set list optionally send
-      program changes to the Hydrasynth
+      mode
+    - I have the Kronos combinations for each song send program changes to
+      the Hydrasynth if needed
 - Optional / Rare
   - Ibanez bass (only for the few gigs where I've had to sub for the bass
     player)
@@ -173,8 +190,8 @@ made before I started hooking up the synths with MIDI.
 I've dabbled with WIDI (Bluetooth MIDI) but had some latency problems that
 have got to be caused by the way I was routing things. If I just set up WIDI
 between the two synths everything works fine, but when I introduce the iPad
-with Midiflow and Bandhelper, there's a delay when I use the Hydrasynth to
-play the Kronos.
+with Midiflow and BandHelper, there's a delay when I use the Hydrasynth to
+play the Kronos. So I don't do that.
 
 ## Software List
 
