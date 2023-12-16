@@ -254,6 +254,7 @@ the late '70's. Here's what I remember:
   from the late 1960's &mdash; my first keyboard after my parents' piano
 - Korg wavestate
 - Korg CX3 organ
+- Korg Kronos 88 X (I sold that and changed to the LS which is much lighter)
 - Korg Poly-61
 - Korg Delta
 - Kurzweil 1000PX
