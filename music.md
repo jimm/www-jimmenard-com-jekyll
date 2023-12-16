@@ -84,7 +84,7 @@ Here's the schematic for my home studio and my live rig.
 
 - [Korg Kronos LS 88](https://www.korg.com/us/products/synthesizers/kronos2_ls/)
 - [ASM Hydrasynth Deluxe](https://www.ashunsoundmachines.com/hydrasynth-deluxe)
-- [Waldorf Iridium Keyboard](https://waldorfmusic.com/iridium-keyboard-en/) Keyboard
+- [Waldorf Iridium Keyboard](https://waldorfmusic.com/iridium-keyboard-en/)
 - [Korg Wavestation](https://en.wikipedia.org/wiki/Korg_Wavestation)
 - A big honking seven-foot rack, affectionately called the "Think Tank".
   Most of the equipment in it was originally mounted in a homemade, rolling,
