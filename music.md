@@ -195,6 +195,10 @@ play the Kronos. So I don't do that.
 
 ## Software List
 
+- [BandHelper](https://bandhelper.com/).
+
+- [Midiflow](https://www.midiflow.com/) for the iPad.
+
 - [REAPER](http://reaper.fm/) Digital Audio Workstation (DAW).
 
 - [KeyMaster](https://github.com/jimm/keymaster/wiki), real-time MIDI
