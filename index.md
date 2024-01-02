@@ -11,18 +11,17 @@ layout: default
   title="Me, as rendered by Nitrozac of Geek Culture/The Joy of Tech"
 />
 
-> Ruby and Smalltalk and dynamic runtimes,
-> Emacs and shell scripts and UNIX command lines,
-> Macros and lambdas and networking pings,
+> Ruby and Smalltalk and dynamic runtimes,  
+> Emacs and shell scripts and UNIX command lines,  
+> Macros and lambdas and networking pings,  
 > These are a few of my favorite things.
 >
-> MIDI and waveforms and Cm9 chords,
-> Pitch modulation and aftertouch keyboards,
-> Splitting and layering organs and strings,
+> MIDI and waveforms and Cm9 chords,  
+> Pitch modulation and aftertouch keyboards,  
+> Splitting and layering organs and strings,  
 > These are a few of my favorite things.
 >
 > &mdash; me
-
 
 Welcome to my skein of Web pages, featuring my
 [Open Source projects](/projects/), bits of [writing](/writing),
