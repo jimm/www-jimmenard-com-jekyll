@@ -84,7 +84,6 @@ Here's the schematic for my home studio and my live rig.
 
 - [Korg Kronos LS 88](https://www.korg.com/us/products/synthesizers/kronos2_ls/)
 - [ASM Hydrasynth Deluxe](https://www.ashunsoundmachines.com/hydrasynth-deluxe)
-- [Waldorf Iridium Keyboard](https://waldorfmusic.com/iridium-keyboard-en/)
 - [Korg Wavestation](https://en.wikipedia.org/wiki/Korg_Wavestation)
 - A big honking seven-foot rack, affectionately called the "Think Tank".
   Most of the equipment in it was originally mounted in a homemade, rolling,
@@ -267,6 +266,7 @@ the late '70's. Here's what I remember:
 - Roland Juno 106
 - Roland MKS-80 SuperJupiter
 - Studiologic Sledge 2.0
+- Waldorf Iridium 49-key
 - Yamaha CP-80 electric grand (it was the singer's, but I got to use it)
 - Yamaha CS-10 mono analog synth
 - Yamaha DX7
