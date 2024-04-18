@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 10gen Shifting Emphasis to the Database
-tags: 10gen, mongo, rails, ruby, opensource, cloud, personal
+tags: 10gen mongo rails ruby opensource cloud personal
 ---
 
 [10gen](http://www.10gen.com) has announced that it is

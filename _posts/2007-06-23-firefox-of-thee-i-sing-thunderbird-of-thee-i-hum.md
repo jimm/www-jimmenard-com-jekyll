@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Firefox - Of Thee I Sing; Thunderbird - Of Thee I Hum
-tags: edit, firefox, opensource, text
+tags: edit firefox opensource text
 ---
 
 _or: Don't Fence Me In --- or: Freedom, by George Michaels_

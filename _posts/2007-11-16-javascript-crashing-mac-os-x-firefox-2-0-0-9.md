@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JavaScript Crashing Mac OS X Firefox 2.0.0.9
-tags: osx, firefox, javascript
+tags: osx firefox javascript
 ---
 
 Recently I upgraded to Firefox 2.0.0.9 on Mac OS X. Ever since then, Firefox

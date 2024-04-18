@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scala Baby-Steps
-tags: database, programming, scala, java
+tags: database programming scala java
 ---
 
 I'm starting to learn [Scala](http://scala.epfl.ch/). It's a statically- and

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Speedier Erlang
-tags: erlang, programming
+tags: erlang programming
 ---
 
 In the comments to

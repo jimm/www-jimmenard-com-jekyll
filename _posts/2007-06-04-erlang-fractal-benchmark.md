@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Erlang Fractal Benchmark
-tags: erlang, programming
+tags: erlang programming
 ---
 
 While looking at a simple

@@ -319,3 +319,16 @@ div.job-place {
     margin-left: 8%;
     border: 1px solid black;
 }
+
+/**
+ * Blog
+ */
+ div.post-tags-div {
+   float: right;
+   background-color: $grey-color-light;
+   width: 33%;
+   ul {
+     margin-left: 1em;
+     padding-right: 1em;
+   }
+}

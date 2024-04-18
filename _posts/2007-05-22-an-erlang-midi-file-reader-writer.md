@@ -1,7 +1,7 @@
 ---
 layout: post
 title: An Erlang MIDI File Reader/Writer
-tags: erlang, programming, midi
+tags: erlang programming midi
 ---
 
 I've been learning [Erlang](http://www.erlang.org/). (See

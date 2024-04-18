@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Feeling Left Behind
-tags: science, humor, personal
+tags: science humor personal
 ---
 
 A few months ago, a study surfaced on Reddit that stated that the ability to

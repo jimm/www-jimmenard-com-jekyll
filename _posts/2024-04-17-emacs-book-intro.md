@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Emacs Book Intro"
-tags: programming, emacs, writing
+tags: programming emacs writing
 ---
 
 Here's something I wrote for the introduction to the Emacs book I started

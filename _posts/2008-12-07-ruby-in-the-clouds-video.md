@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ruby in the Clouds Video
-tags: 10gen, ruby, cloud, video
+tags: 10gen ruby cloud video
 ---
 
 The videos of most of the RubyConf 2008 talks are now available online at

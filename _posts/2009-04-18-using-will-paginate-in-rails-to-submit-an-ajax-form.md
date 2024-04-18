@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Using will_paginate in Rails to Submit an AJAX Form
-tags: ajax, rails, ruby, programming
+tags: ajax rails ruby programming
 ---
 
 I'm using [will_paginate](http://wiki.github.com/mislav/will_paginate) for a

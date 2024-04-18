@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Phoenix - Seeding Your Tests
-tags: elixir, phoenix, testing, database
+tags: elixir phoenix testing database
 ---
 
 If you need to seed your test database when running

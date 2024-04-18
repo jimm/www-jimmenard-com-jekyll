@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Time Keeps On Slipping, So Freeze It
-tags: testing, ruby, programming
+tags: testing ruby programming
 ---
 
 A friend of a friend has

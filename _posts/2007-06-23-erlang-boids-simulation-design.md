@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Erlang Boids Simulation Design
-tags: erlang, programming
+tags: erlang programming
 ---
 
 As one of my [Erlang](http://www.erlang.org/) programming exercises, I

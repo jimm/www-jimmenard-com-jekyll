@@ -7,6 +7,20 @@ title: Blog
 
 <h1 class="page-heading">Posts</h1>
 
+  <!-- blog TOC -->
+  <div class="post-tags-div">
+    <ul class="post-tags-list">
+      {% for tag in site.tags %}
+      <h3>{{ tag[0] }}</h3>
+      <ul>
+        {% for post in tag[1] %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+      {% endfor %}
+    </ul>
+  </div>
+
   <ul class="post-list">
     {% for post in site.posts %}
     <li>

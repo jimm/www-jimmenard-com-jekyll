@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 10gen Officially Includes Ruby and Rails
-tags: 10gen, mongo, rails, ruby, programming, cloud
+tags: 10gen mongo rails ruby programming cloud
 ---
 
 For the last four months I've been sequestered deep in the heart of the

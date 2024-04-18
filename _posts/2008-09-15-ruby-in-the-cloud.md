@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ruby In the Cloud
-tags: 10gen, ruby, opensource, cloud
+tags: 10gen ruby opensource cloud
 ---
 
 I'll be giving the talk "Ruby In the Cloud" at RubyConf 2008 in November.

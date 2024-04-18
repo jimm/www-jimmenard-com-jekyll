@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Learning a New Programming Language
-tags: erlang, programming
+tags: erlang programming
 ---
 
 I'm a self-professed language maven. I love learning new programming

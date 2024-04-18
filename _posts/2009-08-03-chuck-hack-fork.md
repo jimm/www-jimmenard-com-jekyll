@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ChucK Hack Fork
-tags: audio, c++, music, programming, midi
+tags: audio c++ music programming midi
 ---
 
 I've created a GitHub fork of [ChucK](http://chuck.cs.princeton.edu/), the

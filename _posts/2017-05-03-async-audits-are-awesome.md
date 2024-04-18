@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Asynchronous Audits are Awesome"
-tags: performance, database, ruby, rails, programming
+tags: performance database ruby rails programming
 ---
 
 [Audited](https://github.com/collectiveidea/audited) is a Ruby gem that adds

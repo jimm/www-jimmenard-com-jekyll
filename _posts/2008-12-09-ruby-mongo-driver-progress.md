@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ruby Mongo Driver Progress
-tags: 10gen, database, mongo, ruby, programming, clojure, cloud
+tags: 10gen database mongo ruby programming clojure cloud
 ---
 
 Over the last few days I've added a few features to the

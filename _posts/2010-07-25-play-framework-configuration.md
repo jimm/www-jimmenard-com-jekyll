@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Play Framework Configuration
-tags: rails, programming, opensource, frameworks, video, java
+tags: rails programming opensource frameworks video java
 ---
 
 I've been using the [Play framework](http://www.playframework.org/) for a

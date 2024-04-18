@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ruby Mongo driver
-tags: 10gen, database, mongo, ruby, programming, opensource, cloud, java
+tags: 10gen database mongo ruby programming opensource cloud java
 ---
 
 I've been working on a

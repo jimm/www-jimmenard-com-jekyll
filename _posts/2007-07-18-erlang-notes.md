@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Erlang Notes
-tags: erlang, humor
+tags: erlang humor
 ---
 
 Two [Erlang](http://www.erlang.org/)-related notes, neither about the

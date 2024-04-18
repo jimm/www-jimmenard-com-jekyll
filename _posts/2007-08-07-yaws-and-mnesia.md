@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Yaws and Mnesia
-tags: database, erlang
+tags: database erlang
 ---
 
 I'm playing with translating a small Web application from

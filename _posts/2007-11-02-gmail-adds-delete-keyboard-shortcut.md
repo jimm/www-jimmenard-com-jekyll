@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Gmail Adds "Delete" Keyboard Shortcut
-tags: email, google
+tags: email google
 ---
 
 Today my GMail account was upgraded to the new interface. The contacts

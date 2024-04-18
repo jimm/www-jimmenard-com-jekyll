@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Star Ship Dave
-tags: humor, personal
+tags: humor personal
 ---
 
 Occasionally movies, TV shows, and ads are filmed around where I work in

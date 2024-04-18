@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Doing Homework With a Wii
-tags: games, humor, kids
+tags: games humor kids
 ---
 
 My younger daughter just said to me, "Dad, I know how to cheat at homework

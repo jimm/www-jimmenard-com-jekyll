@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rails Without ActiveRecord
-tags: 10gen, database, mongo, rails, ruby, programming, opensource, cloud
+tags: 10gen database mongo rails ruby programming opensource cloud
 ---
 
 When we announced Rails support for the [10gen](http://www.10gen.com) cloud

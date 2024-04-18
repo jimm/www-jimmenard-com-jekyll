@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Java's Enhanced For Loop Mystery
-tags: programming, java
+tags: programming java
 ---
 
 I like Java 5's new enhanced for loop. It makes the code that iterates over

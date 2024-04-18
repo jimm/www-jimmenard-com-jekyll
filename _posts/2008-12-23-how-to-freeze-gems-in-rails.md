@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How To Freeze Gems In Rails
-tags: rails, ruby, programming
+tags: rails ruby programming
 ---
 
 Here's how to freeze any gem into your Rails app. This is a simplified

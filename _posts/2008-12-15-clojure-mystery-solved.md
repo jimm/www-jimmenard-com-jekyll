@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Clojure Mystery Solved
-tags: 10gen, database, mongo, programming, clojure
+tags: 10gen database mongo programming clojure
 ---
 
 I figured out [what was wrong](file:../../2008/12/clojure.html) with the

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: text2midi App Uses midilib
-tags: rails, ruby, midi
+tags: rails ruby midi
 ---
 
 Gabriel G has released [text2midi](http://text2midi.herokugarden.com), a

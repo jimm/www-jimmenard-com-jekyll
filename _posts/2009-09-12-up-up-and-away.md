@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Up, Up, and Away
-tags: programming, filesystem, unix, shell
+tags: programming filesystem unix shell
 ---
 
 Let's say you are in a subdirectory, and there's a Makefile in a parent

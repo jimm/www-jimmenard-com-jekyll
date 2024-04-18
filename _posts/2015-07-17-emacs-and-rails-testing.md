@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Emacs and Rails Testing"
-tags: emacs, testing, programming, ruby, rails
+tags: emacs testing programming ruby rails
 ---
 
 I'm an inveterate Emacs user. It's been my Swiss Army chainsaw of choice for
