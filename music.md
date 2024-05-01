@@ -57,8 +57,9 @@ Here are a few of the other songs on my
 
 # Equipment Collection
 
-Here's what my home "studio" looks like in 2023. When I play live I take the
-Kronos and the Hydrasynth.
+Here's what my home "studio" looks like in 2023. Since then, the Iridium has
+been replaced with a 3rd Wave. When I play live I take the Kronos and the
+Hydrasynth.
 
 <a href="images/home-studio-2023.jpg">
   <img
