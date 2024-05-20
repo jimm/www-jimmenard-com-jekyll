@@ -150,25 +150,13 @@ equipment list. You can see it in action
 [here](https://www.youtube.com/watch?v=MN8Sgid2x30), though that video was
 made before I started hooking up the synths with MIDI.
 
-- Korg Kronos
-- ASM Hydrasynth Deluxe
+- Korg Kronos, sustain pedal, expression pedal used for volume, switch used
+  for Leslie simulation speed
+- ASM Hydrasynth Deluxe, sustain pedal, expression pedal (optional)
 - On-Stage stand
 - Audio
   - Key Largo mixer providing stereo XLR or 1/4" to the house
   - MEE Audio MX2 in-ear monitors (IEM)
-  - Xviv U4 in-ear wireless system
-  - ART SPLITMix4 passive splitter/mixer
-    - The Key Largo L/R go into this, as does my house monitor send (via
-      1/4" or an XLR -> 1/4" adapter)
-    - Outputs go to the Xviv IEM send and thus into the IEMs
-    - I can also send a separate output to a powered speaker if needed, for
-      example during rehearsals for the rest of the band
-  - If needed, a monitor or powered speaker on a stand
-    - When using a sound system that doesn't have a separate monitor for me,
-      I use the Mackie powered speaker sitting atop a mic stand for a
-      personal keyboard monitor
-    - When I need to project sound out in a small venue with no sound
-      system, I use the JBL EON atop an Ultimate speaker stand
   - Xviv U4 in-ear wireless system
 - MIDI
   - iPad using an Apple Camera (USB data to Thunderbolt) adapter to connect
