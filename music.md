@@ -14,25 +14,27 @@ rewrote it for the now-defunct [BeOS](https://en.wikipedia.org/wiki/BeOS),
 and wrote a Ruby version called
 [PatchMaster](https://github.com/jimm/patchmaster/).
 
-Currently, I play keyboards in [Ellis Island](http://ellisislandrock.com/).
-We made a [demo video](https://www.youtube.com/watch?v=MN8Sgid2x30) in 2022.
-Check it out!
+Currently, I play keyboards in [Ellis Island](http://ellisislandrock.com/),
+a cover band based in Connecticut. Check out our [Spring 20204 demo
+video](https://www.youtube.com/watch?v=Uf8QA3BE5fU) contains eight 30-second
+snippets.
 
-I performed in [bands](#band-list) from 1980 to January 1993, went on a
+I played in [bands](#band-list) from circa 1975 to January 1993, went on a
 hiatus, and started playing out again in 2013. Over the years, I've played
 everything from progressive rock to dance pop to electric jazz and R&amp;B;
 covers and originals.
 
 I write different kinds of stuff. Most of it is funk/dance/pop, but I also
-dabble in orchestral, Sondheim-esque pieces, game show themes, thirty-second
-newsroom background music, and whatever else tickles my fancy.
+dabble in orchestral styles, Sondheim-esque pieces, game show themes,
+thirty-second newsroom background music, and whatever else tickles my fancy.
 
 Aside from the typeset pieces below and the sequencer and MIDI files of the
 music I've done on my own, I have thrown a few things up on Soundcloud for
 the fun of it --- none of it production quality. Out of all of the original
 songs we did in the late '80's, I only have one crappy cassette of a bunch
 of works-in-progress . It's dated but really good stuff. The sound quality
-is horrendous. Also, the tape broke so I'll need to repair it one day.
+is horrendous. Also, the tape broke so I'll need to repair it one day and
+digitize it.
 
 My MIDI reference has moved [here](midi_ref.html). It's not a tutorial.
 Rather, it is intended as a quick overview and a reference guide.
@@ -76,8 +78,8 @@ Here's the schematic for my home studio and my live rig.
   <img
     src="images/studio.png"
     class="inline-image"
-    alt="Schematic: My Home Studio and Live Rig, 2022"
-    title="Schematic: My Home Studio and Live Rig, 2022"
+    alt="Schematic: My Home Studio and Live Rig, 2024"
+    title="Schematic: My Home Studio and Live Rig, 2024"
   />
 </a>
 
@@ -232,7 +234,7 @@ the late '70's. Here's what I remember:
 - Alesis D4 drum synth
 - Alesis HR-16 drum machine
 - Alesis SR18 drum machine
-- ASM Hydrasynth Keybaord (49-key)
+- ASM Hydrasynth Keyboard (49-key)
 - Commodore SX-64 running first Moog's Song Producer software, then
   my KeyMaster software
 - Conn trumpet
