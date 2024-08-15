@@ -162,13 +162,18 @@ made before I started hooking up the synths with MIDI.
   - Xviv U4 in-ear wireless system
 - MIDI
   - iPad using an Apple Camera (USB data to Thunderbolt) adapter to connect
-    to a USB hub
-  - USB cables from the Kronos and the Hydrasynth USB B outputs into the hub
+    to a USB hub or a cable (see the next item)
+  - One of these, depending on my mood
+    - All USB
+      - USB cables from the Kronos and the Hydrasynth USB B outputs into the hub
+      - Hub plugs into the iPad; iPad acts as the hub host
+    - 5-pin DIN between synths, USB from iPad to Kronos to send prog changes
   - The iPad is running [Midiflow](https://www.midiflow.com/) and
     [BandHelper](https://bandhelper.com/)
-    - Midiflow routes the MIDI between the Kronos and the Hydrasynth. I also
-      use it to filter out clock messages in both directions and and modify
-      the velocity curve when going from the Hydrasynth to the Kronos
+    - Midiflow routes the MIDI between the Kronos and the Hydrasynth when
+      I'm using the USB hub. I also use it to filter out clock messages in
+      both directions and and modify the velocity curve when going from the
+      Hydrasynth to the Kronos
     - BandHelper sends MIDI program changes to the Kronos which is in set list
       mode
     - I have the Kronos combinations for each song send program changes to
@@ -234,6 +239,7 @@ the late '70's. Here's what I remember:
 - Alesis D4 drum synth
 - Alesis HR-16 drum machine
 - Alesis SR18 drum machine
+- Alesis MMT-8 hardware sequencer
 - ASM Hydrasynth Keyboard (49-key)
 - Commodore SX-64 running first Moog's Song Producer software, then
   my KeyMaster software
