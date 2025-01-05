@@ -53,11 +53,16 @@
 
     <div class="footer-col-wrapper">
       <div class="footer-col">
-        <p>Site contents &copy; 1995-{{ "now" | date: "%Y" }} by Jim Menard.
-          All rights reserved.</p>
+        <p>Site contents &copy; 1995&ndash;<span id="current-year"></span>
+          by Jim Menard. All rights reserved.</p>
       </div>
     </div>
 
   </div>
+
+  <script>
+    let year = (new Date()).getFullYear();
+    document.getElementById("current-year").innerHTML = year;
+  </script>
 
 </footer>

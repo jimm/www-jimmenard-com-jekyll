@@ -45,5 +45,11 @@ Email:
 [jim@jimmenard.com](mailto:jim@jimmenard.com),
 [jim.menard@gmail.com](mailto:jim.menard@gmail.com)
 
+Bluesky:
+<a rel="me" href="https://bsky.app/profile/jimmenard.com">@jimmenard.com</a>
+
+Instagram:
+<a rel="me" href="https://www.instagram.com/jmenard42/">@jmenard42</a>
+
 Mastodon:
 <a rel="me" href="https://sunny.garden/@jimm">@jimm</a>
