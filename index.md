@@ -5,10 +5,10 @@ layout: default
 # Welcome
 
 <img
-  src="images/jim_128.png"
+  src="images/jim-dithered.png"
   class="texthead"
-  alt="Portrait by Nitrozac of Geek Culture/The Joy of Tech"
-  title="Me, as rendered by Nitrozac of Geek Culture/The Joy of Tech"
+  alt="Dithered headshot"
+  title="Me, dithered"
 />
 
 > Ruby and Smalltalk and dynamic runtimes,  
