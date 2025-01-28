@@ -8,10 +8,10 @@ title: Emacs
 I am an [Emacs](http://www.gnu.org/software/emacs/emacs.html) lover. I have
 been using Emacs since 1981 or so, and I ain't stopping now. For me, it is
 the most productive environment for developing software in almost any
-language and organizing notes. I also use Emacs as a personal
-information manager.
+language and organizing notes. I also use Emacs as a personal information
+manager.
 
-I'm writing
+I started writing, but will honestly never finish
 [**Emacs Mastery**: _Attaining Coding Supremacy_](https://leanpub.com/emacs-mastery).
 Parts of it come from this page. Please vist the book's Leanpub page, review
 the table of contents there, and [let me know](mailto:jim@jimmenard.com)
