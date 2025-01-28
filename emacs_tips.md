@@ -5,10 +5,11 @@ title: Emacs
 
 # Emacs Tips and Tricks
 
-I am an [Emacs](http://www.gnu.org/software/emacs/emacs.html) man. I have
+I am an [Emacs](http://www.gnu.org/software/emacs/emacs.html) lover. I have
 been using Emacs since 1981 or so, and I ain't stopping now. For me, it is
 the most productive environment for developing software in almost any
-language. I also use Emacs as a personal information manager.
+language and organizing notes. I also use Emacs as a personal
+information manager.
 
 I'm writing
 [**Emacs Mastery**: _Attaining Coding Supremacy_](https://leanpub.com/emacs-mastery).
