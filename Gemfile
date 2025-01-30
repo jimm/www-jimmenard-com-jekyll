@@ -5,3 +5,4 @@ gem 'bigdecimal'                # for jekyll
 gem 'csv'                       # for jekyll
 gem 'jekyll'
 gem 'webrick'
+gem 'logger'
