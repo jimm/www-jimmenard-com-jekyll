@@ -22,9 +22,20 @@ title: Resume
 
 <div class="job-title">Staff Software Engineer</div>
 <div class="job-place">
-  <span class="company">SeatGeek</span> 2023&ndash;Present
+  <span class="company">SeatGeek</span> 2023&ndash;2025
 </div>
 <br/>
+
+As a Staff Software Engineer on the Fandom team, acted as a technical
+advisor and mentor, solved technical problems, improved subsystem
+responsiveness and capacity, and guided or led projects that improved code
+quality and maintainability. Responsible for cross-team technical
+coordination and system design. Contributed to several codebases in six
+different languages. Optimized hotspots and increasing system responsiveness
+and capacity via SQL query rewrites (one became 22,700% faster!), caching,
+and code reorganization. Wrote internal technical proposals and
+documentation. Interviewed candidates.
+
 
 <div class="job-title">Senior Software Engineer</div>
 <div class="job-place">
@@ -208,31 +219,12 @@ unit tests. Presented talks at conferences and user groups.
 </div>
 <br/>
 
-Assumed leadership of tech team when VP of Engineering left the company.
-Designed, implemented, documented, and deployed new and improved features
-for company's core software platform, public and private Web services,
-financial and sales reports, software deployment tools, e-commerce
-enhancements, video feeds, branded Web sites, and more. Redesigned core
-technology platform and implemented core subsystems. Helped select new
-production hosting facility and planned and led production server and
-software transfer. Led e-commerce vendor selection. Introduced new
-technologies such as Subversion, Ruby, and Rails to team. Fixed MP3 encoding
-problems and many other technical issues. Acted as DBA and sysadmin. Met
-with potential clients and partners as company's technical representative.
-Performed R&amp;D. Took part in VC due diligence process.
-
 
 <div class="job-title">Open Source Project Leader</div>
 <div class="job-place">
   <span class="company">ActiveBPEL</span> 2004&ndash;2005
 </div>
 <br/>
-
-Project leader and community advocate for ActiveBPEL's open source BPEL
-engine. Liaison between Active Endpoints and the open source community.
-Managed developer relations, code releases, and Web site. Created code
-samples and tutorials. Taught BPEL Essentials course. Created BPEL
-certification exam. Provided developer support.
 
 
 <div class="job-title">Consultant</div>
@@ -241,48 +233,12 @@ certification exam. Provided developer support.
 </div>
 <br/>
 
-- Redesigned and implemented <span class="job-client">Preclick</span>'s
-  PhotoWiki. Designed and implemented the Instant Photo Messaging server and
-  prototype client. Member of Preclick Technical Advisory Board.
-
-- For <span class="job-client">Expert Foods</span>, added Amazon interface,
-  bug tracking system, and source code control.
-
-- For <span class="job-client">Warner Music Group</span>, selected and
-  installed an Open Source guaranteed file delivery mechanism and worked on
-  design of an E-commerce system.
-
-- For <span class="job-client">Variagenics</span>, added features to
-  genetics sample tracking system.
-
-- For <span class="job-client">Sotheby's</span>, helped rebuild mainframe
-  apps in Java.
-
-- For <span class="job-client">3Path</span>, selected and installed an Open
-  Source reporting system.
-
-- For the <span class="job-client">Information and Content Exchange (ICE)
-  Authoring Group</span>, developed two Open Source ICE reference
-  implementations.
-
-- As an <span class="job-client">independent</span>, developed multiple Open
-  Source projects and published "Building Applications With Berkeley DB Java
-  Edition" and "Introduction to Ruby for Mac OS X".
-
 
 <div class="job-title">Chief Technology Officer</div>
 <div class="job-place">
   <span class="company">Strategic Legal Resources</span> 2000&ndash;2001
 </div>
 <br/>
-
-Founding member of startup executive team tasked with technical vision,
-prototype, implementation, and delivery of a B2C Web service. Through
-mergers and acquisitions, took responsibility for infrastructure of $20M
-company. Enabled expansion from three offices to six. Evaluated, integrated,
-consolidated, and replaced disparate front- and back-office systems. Created
-new VPN, email, and financial systems. Managed desktop, server, and Web site
-support.
 
 
 <div class="job-title">Vice President, Application Engineering</div>
@@ -291,22 +247,12 @@ support.
 </div>
 <br/>
 
-Designed and implemented Sothebys.com b2b and b2c E-commerce auction site
-subsystems. Coordinated internal and contract technical resources. Increased
-site performance tenfold. Worked with business users to derive and simplify
-business and auction rules. Evaluated new technologies and developed
-prototypes. Acted as mentor to technology team.
-
 
 <div class="job-title">Director of Technology</div>
 <div class="job-place">
   <span class="company">New Media Productions</span> 1998&ndash;1999
 </div>
 <br/>
-
-Managed, directed, and grew technology department. Designed reference and
-framework architectures. Prepared and presented technical designs and work
-estimates. Introduced structured design and development practices.
 
 <div class="job-title">Associate Director</div>
 <div class="job-place">

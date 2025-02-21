@@ -5,7 +5,17 @@
 
 EXPERIENCE:
 
-Staff Software Engineer                               SeatGeek, 2023 - Present
+Staff Software Engineer                                  SeatGeek, 2023 - 2025
+
+    As a  Staff Software  Engineer on  the Fandom team,  acted as  a technical
+    advisor  and   mentor,  solved  technical  problems,   improved  subsystem
+    responsiveness and capacity, and guided or led projects that improved code
+    quality   and  maintainability.   Responsible  for   cross-team  technical
+    coordination and  system design. Contributed  to several codebases  in six
+    different   languages.   Optimized    hotspots   and   increasing   system
+    responsiveness and  capacity via  SQL query  rewrites (one  became 22,700%
+    faster!),  caching,  and  code reorganization.  Wrote  internal  technical
+    proposals and documentation. Interviewed candidates.
 
 Senior Software Engineer                         Infinite Reality, 2021 - 2023
 
@@ -27,20 +37,19 @@ Principal Software Engineer                          Warby Parker, 2018 - 2021
     for  inter- and  intra-team technical  design review  and decisions,  code
     quality   and  maintainability,   technical   mentorship,  and   developer
     onboarding. Organized team architecture and technical discussions and gave
-    multiple  talks on  various  technologies. Lead  team  in increasing  test
-    coverage, PR  review process improvements, and  increased monitoring. Lead
+    multiple  talks  on various  technologies.  Led  team in  increasing  test
+    coverage, PR  review process  improvements, and increased  monitoring. Led
     consulting team  in implementation of  card present tap-to-pay  for retail
-    locations. As a  member of the Architecture Council, lead  creation of API
+    locations. As  a member of the  Architecture Council, led creation  of API
     framework  design  practices  and discussed  technology  organization-wide
     practices  and policies.  Earlier as  an SRE  Principal Engineer,  rewrote
     retail  print  queue  management  services and  installation  scripts  and
     implemented an AWS EC2 image management process.
 
-
 Principal Engineer                                 Chloe + Isabel, 2015 - 2018
     
-    Work with  the technology team  to improve platform  quality, reliability,
-    scalability, and responsiveness. Lead  the e-commerce platform's financial
+    Worked with the technology team  to improve platform quality, reliability,
+    scalability, and  responsiveness. Led the e-commerce  platform's financial
     and operations  systems team including inventory,  order taking, promotion
     application, shipping and tax  calculation, payment, shipping fulfillment,
     and  commission  calculation  and  payment.  Work  closely  with  Product,
@@ -134,75 +143,15 @@ Ruby and Rails Implementation Engineer	                    10gen, 2008 - 2009
 
 Senior Director of Technology                            iAmplify, 2006 - 2008
 
-    Assumed leadership of  tech team when VP of  Engineering left the company.
-    Designed, implemented, documented, and  deployed new and improved features
-    for  company's core software  platform, public  and private  Web services,
-    financial  and  sales   reports,  software  deployment  tools,  e-commerce
-    enhancements, video  feeds, branded Web  sites, and more.  Redesigned core
-    technology  platform and  implemented core  subsystems. Helped  select new
-    production  hosting facility  and planned  and led  production  server and
-    software  transfer.  Led   e-commerce  vendor  selection.  Introduced  new
-    technologies  such as  Subversion,  Ruby,  and Rails  to  team. Fixed  MP3
-    encoding  problems and  many  other  technical issues.  Acted  as DBA  and
-    sysadmin. Met  with potential clients and partners  as company's technical
-    representative.  Performed R&D.  Took part  in VC  due  diligence process.
-
 Open Source Project Leader                       Active Endpoints, 2004 - 2005
-
-    Project leader  and community advocate  for ActiveBPEL's open  source BPEL
-    engine. Liaison  between Active Endpoints  and the open  source community.
-    Managed  developer relations, code  releases, and  Web site.  Created code
-    samples  and  tutorials.  Taught  BPEL  Essentials  course.  Created  BPEL
-    certification exam. Provided developer support.
 
 Consultant                                            Independent, 2001 - 2005
 
-    o Redesigned   and   implemented   Preclick's   PhotoWiki.   Designed  and
-      implemented  the Instant  Photo Messaging  server and  prototype client.
-      Member of Preclick Technical Advisory Board.
-
-    o For Expert Foods, added Amazon interface, bug tracking system, and
-      source code control.
-
-    o For Warner Music Group, selected and installed an Open Source guaranteed
-      file delivery mechanism and worked on design of an E-commerce system.
-
-    o For Variagenics, added features to genetics sample tracking system.
-
-    o For Sotheby's, helped rebuild mainframe apps in Java.
-
-    o For 3Path, selected and installed an Open Source reporting system.
-
-    o For the Information and Content Exchange (ICE) Authoring Group,
-      developed two Open Source ICE reference implementations.
-
-    o As an independent, developed multiple Open Source projects and published
-      "Building Applications With Berkeley  DB Java Edition" and "Introduction
-      to Ruby for Mac OS X".
-
 Chief Technology Officer                Strategic Legal Resources, 2000 - 2001
-
-    Founding member  of startup executive  team tasked with  technical vision,
-    prototype,  implementation, and  delivery of  a B2C  Web  service. Through
-    mergers and  acquisitions, took responsibility for  infrastructure of $20M
-    company.  Enabled   expansion  from  three  offices   to  six.  Evaluated,
-    integrated,  consolidated, and replaced  disparate front-  and back-office
-    systems. Created  new VPN, email, and financial  systems. Managed desktop,
-    server, and Web site support.
 
 Vice President, Application Engineering                 Sotheby's, 1999 - 2000
 
-    Designed and implemented SOTHEBYS.COM  b2b and b2c E-commerce auction site
-    subsystems.  Coordinated   internal  and  contract   technical  resources.
-    Increased site  performance tenfold. Worked with business  users to derive
-    and simplify  business and auction  rules. Evaluated new  technologies and
-    developed prototypes. Acted as mentor to technology team.
-
 Director of Technology                      New Media Productions, 1998 - 1999
-
-    Managed, directed, and grew  the technology department. Designed reference
-    and framework architectures. Prepared  and presented technical designs and
-    work estimates. Introduced structured design and development practices.
 
 Associate Director                  Cambridge Technology Partners, 1996 - 1998
 
