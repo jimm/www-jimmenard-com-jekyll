@@ -296,7 +296,6 @@ unit tests. Presented talks at conferences and user groups.
 
 # Publications and Presentations
 
-
 &quot;Ruby in the Clouds&quot;, presented at RubyConf 2008.
 
 &quot;Ruby on Rails - An Introduction&quot;, online, presented to NY CTO
