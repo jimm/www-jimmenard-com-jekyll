@@ -132,7 +132,7 @@ life cycle, project management, and QA processes for software development
 and operations teams. Removed operational single points of failure. Improved
 system uptime, reliability, and fault tolerance. Led R&amp;D and
 architectural redesign and replacement of core systems with more
-appropriate, scalable technologies. Lead data center and server
+appropriate, scalable technologies. Led data center and server
 infrastructure redesign and migration.
 
 
