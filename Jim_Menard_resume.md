@@ -319,10 +319,10 @@ class="mag-name">MacTech</span>, March 2003 cover article.
 
 # Technical Skills
 
-<span class="job-skill">Languages</span> Ruby, Python, Elixir, Bash,
-JavaScript/TypeScript, C/C++, Java, Scala, PHP, Common Lisp, Smalltalk,
+<span class="job-skill">Languages</span> Ruby, Python, Bash, Go, Elixir,
+JavaScript/TypeScript, C/C++, Java, PHP, Common Lisp, Smalltalk,
 Objective-C, Perl, Assembly<br/>
-_Acquainted with_: Clojure, Crystal, Erlang, Go, Haskell, Fortran, Pascal
+_Acquainted with_: Clojure, Crystal, Erlang, Scala, Haskell, Fortran
 
 <span class="job-skill">Operating Systems</span> Unix (Linux, BSD, Solaris,
 etc.), Mac OS X, MacOS, Nextstep, BeOS, DOS, Windows, VMS

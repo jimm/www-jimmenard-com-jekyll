@@ -192,9 +192,9 @@ TECHNICAL SKILLS:
 
 Languages
 
-    Ruby, Python, Elixir, Bash, JavaScript/TypeScript, C/C++, Java, Scala,
+    Ruby, Python, Bash, Go, Elixir, JavaScript/TypeScript, C/C++, Java,
       PHP, Common Lisp, Smalltalk, Objective-C, Perl, Assembly
-    Acquainted with: Clojure, Crystal, Erlang, Go, Haskell, Fortran, Pascal
+    Acquainted with: Clojure, Crystal, Erlang, Scala, Haskell, Fortran
 
 Operating Systems
     Unix (Linux, BSD, Solaris, etc.), Mac OS X, MacOS, Nextstep, BeOS, DOS,
