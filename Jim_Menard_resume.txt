@@ -47,7 +47,7 @@ Principal Software Engineer                          Warby Parker, 2018 - 2021
     implemented an AWS EC2 image management process.
 
 Principal Engineer                                 Chloe + Isabel, 2015 - 2018
-    
+
     Worked with the technology team  to improve platform quality, reliability,
     scalability, and  responsiveness. Led the e-commerce  platform's financial
     and operations  systems team including inventory,  order taking, promotion
@@ -72,7 +72,7 @@ Principal Engineer                                 Chloe + Isabel, 2015 - 2018
     o Screened and interviewed candidates
 
 Sr. Dir. of Engineering and Architecture, Science             AIG, 2014 - 2015
-    
+
     Led  and grew  a  team  of developers  focused  on  rapid prototyping  and
     development  of  new  applications that  brought  evidence-based  decision
     making, innovation, and analytics (big data) to multiple business lines.
@@ -214,7 +214,7 @@ EDUCATION:
 
 University of Rochester, Bachelor of Arts - May, 1983
     Major: Mathematics, with a concentration in Computer Science
-				       
+
 
 PROFESSIONAL ORGANIZATIONS:
 
