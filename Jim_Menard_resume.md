@@ -11,5 +11,5 @@ Markdown, and OpenDocument.
 <object data="{{ site.url }}{{ site.baseurl }}/Jim_Menard_resume.pdf"
         width="900" height="1000" type="application/pdf">
     <p>Oops! Your browser doesn't support inline PDFs!</p>
-    <p><a href="Jim_Menard_resume.pdf">Download Jim_Menard_resume.pdf Instead</a></p>
+    <p>Download <a href="Jim_Menard_resume.pdf">Jim_Menard_resume.pdf</a> instead</p>
 </object>
