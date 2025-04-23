@@ -16,8 +16,7 @@ and wrote a Ruby version called
 
 Currently, I play keyboards in [Ellis Island](http://ellisislandrock.com/),
 a cover band based in Connecticut. Check out our [Spring 20204 demo
-video](https://www.youtube.com/watch?v=Uf8QA3BE5fU) contains eight 30-second
-snippets.
+video](https://www.youtube.com/watch?v=Uf8QA3BE5fU).
 
 I played in [bands](#band-list) from circa 1975 to January 1993, went on a
 hiatus, and started playing out again in 2013. Over the years, I've played
@@ -113,12 +112,13 @@ Here's the schematic for my home studio and my live rig.
   - Ibanez SR505 5-string bass
   - [Chapman Stick](http://stick.com/), 12-string Grand Stick with 5 bass, 7
     treble strings; classic tuning
+- Line 6 XH Stomp XL for the Strat
 - Behringer U-PHORIA UMC404HD audio interface
 - M-Audio MIDISPORT 4x4 Anniversary Edition 4-in/4-out USB MIDI Interface
 - Radial Key Largo keyboard mixer, USB interface, and performance pedal
 - ART SPLITMix4 passive splitter/mixer
 - MEE Audio MX2 in-ear monitors
-- Xviv U4 in-ear wireless system
+- Xvive U4 in-ear wireless system
 - iPad on which I run [Midiflow](https://www.midiflow.com/) and
   [BandHelper](https://bandhelper.com/) (more info below)
 - Apple MacBook Pro laptop
@@ -155,19 +155,22 @@ made before I started hooking up the synths with MIDI.
 - Korg Kronos, sustain pedal, expression pedal used for volume, switch used
   for Leslie simulation speed
 - ASM Hydrasynth Deluxe, sustain pedal, expression pedal (optional)
-- On-Stage stand
+- On-Stage stand for the keyboards
+- Fender Stratocaster
 - Audio
+  - Line 6 XH Stomp XL for the strat
   - Key Largo mixer providing stereo XLR or 1/4" to the house
   - MEE Audio MX2 in-ear monitors (IEM)
-  - Xviv U4 in-ear wireless system
+  - Xvive U4 in-ear wireless system
 - MIDI
   - iPad using an Apple Camera (USB data to Thunderbolt) adapter to connect
     to a USB hub or a cable (see the next item)
   - One of these, depending on my mood
-    - All USB
+    - All USB (default)
       - USB cables from the Kronos and the Hydrasynth USB B outputs into the hub
       - Hub plugs into the iPad; iPad acts as the hub host
-    - 5-pin DIN between synths, USB from iPad to Kronos to send prog changes
+    - 5-pin DIN between synths, USB from iPad to Kronos to send prog
+      changes. This is a backup in case the iPad dies
   - The iPad is running [Midiflow](https://www.midiflow.com/) and
     [BandHelper](https://bandhelper.com/)
     - Midiflow routes the MIDI between the Kronos and the Hydrasynth when
@@ -177,14 +180,14 @@ made before I started hooking up the synths with MIDI.
     - BandHelper sends MIDI program changes to the Kronos which is in set list
       mode
     - I have the Kronos combinations for each song send program changes to
-      the Hydrasynth if needed
+      the Hydrasynth and the HX Stomp XL when needed
 - Optional / Rare
   - Ibanez bass (only for the few gigs where I've had to sub for the bass
     player)
   - Line 6 amp for the bass
 
 I've dabbled with WIDI (Bluetooth MIDI) but had some latency problems that
-have got to be caused by the way I was routing things. If I just set up WIDI
+must be caused by the way I was routing things. If I just set up WIDI
 between the two synths everything works fine, but when I introduce the iPad
 with Midiflow and BandHelper, there's a delay when I use the Hydrasynth to
 play the Kronos. So I don't do that.
