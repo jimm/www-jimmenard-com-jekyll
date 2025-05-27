@@ -25,6 +25,9 @@ permalink: /projects/
   libraries. Much more performant than PatchMaster, but doesn't have any way
   of loading user-written code to modify the MIDI stream.
 
+- [**JUCE KeyMaster**](https://github.com/jimm/juce-keymaster), the more
+  modern [[https://juce.com/][JUCE]] version of KeyMaster.
+
 - [**midilib**](https://github.com/jimm/midilib), a pure-Ruby MIDI library
   useful for reading and writing standard MIDI file and manipulating MIDI
   event data.
