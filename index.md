@@ -45,6 +45,9 @@ Email:
 [jim@jimmenard.com](mailto:jim@jimmenard.com),
 [jim.menard@gmail.com](mailto:jim.menard@gmail.com)
 
+Github:
+<a rel="me" href="https://github.com/jimm">jimm</a>
+
 Bluesky:
 <a rel="me" href="https://bsky.app/profile/jimmenard.com">@jimmenard.com</a>
 
