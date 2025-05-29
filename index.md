@@ -23,11 +23,12 @@ layout: default
 >
 > &mdash; me
 
-Welcome to my skein of Web pages, featuring my
-[Open Source projects](/projects/), bits of [writing](/writing),
-[music composition and performance](music.html), and my
-[resume](Jim_Menard_resume.html). If you see something out of date, please
-[drop me a line](mailto:jim@jimmenard.com).
+Welcome to my skein of Web pages, featuring
+my [Open Source projects](/projects/),
+[music composition and performance](music.html),
+my [resume](Jim_Menard_resume.html),
+and some bits of [writing](/writing).
+If you see something out of date, please [drop me a line](mailto:jim@jimmenard.com).
 
 I am a programming language maven who enjoys Ruby, Python, Elixir,
 Lisp, and many [more languages](/Jim_Menard_resume.html#technical-skills). I have created a

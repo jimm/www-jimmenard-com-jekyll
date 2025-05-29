@@ -6,15 +6,72 @@ permalink: /writing/
 
 # Writing
 
-Gotta link to my [blog](https://www.jimmenard.com/blog.html), though I don't
-update it as often as I should.
-
-I'm writing
-[<strong>Emacs Mastery</strong>: <em>Attaining Coding Supremacy</em>](https://leanpub.com/emacs-mastery).
+Years ago I started writing
+[<strong>Emacs Mastery</strong>: <em>Attaining Coding
+Supremacy</em>](https://leanpub.com/emacs-mastery), though I'll probably
+never complete it.
 I'm considering making it freely available on the Web. Please vist the
 book's Leanpub page, review the table of contents there, and
 [let me know](mailto:jim@jimmenard.com) what else you think the book should
-cover.
+cover. Here is the introduction:
+
+> Emacs is a master craftsman's tool. No, wait --- Emacs is an empty canvas,
+> complete with brushes, paints (oil and acrylic), charcoal, scrapers,
+> sponges, turpentine, and a nuclear-powered color wheel.
+>
+> Since I'm a musician and not a woodworker or painter, here's an analogy I
+> can get behind: Emacs is a synthesizer. At first, you play the presets and
+> have fun making music. You don't need all those knobs, but you do wonder
+> what they're for. One day you're unhappy with the preset bass sound you're
+> using --- it needs a sharper attack, a longer decay, and a brighter sound.
+> You tweak a few knobs. They don't do what you want at first, but after a bit
+> of reading the manual (ugh!) you start to understand what some of them do
+> and you achieve that sound you were looking for.
+>
+> After reading more of the manual you begin to understand how the synth
+> creates sounds and what's really going on when you turn those knobs. You
+> start finding things that the synth can do that you never imagined it
+> could. Not only that, getting the sounds you want is easier so you're
+> spending less time tweaking knobs and more time making music.
+>
+> Meanwhile, you've come across terms like "subtractive synthesis",
+> "wavetables", and "frequency modulation" so you start reading up on what
+> those things mean. You're learning how sound synthesis works and that there
+> are different ways of creating sounds. This knowledge helps you create new
+> sounds and textures, opening up a universe of sound explosions you use to
+> create mega-hit after mega-hit making you so mega-rich you mega-retire and
+> give all your money to charity. A combination music/philanthropy prize is
+> named after you and statues to you are erected everywhere.
+>
+> That's Emacs.
+>
+> I've been using Emacs since about 1982, and I still discover new things it
+> can do or new ways to be more efficient. It may not be possible to know all
+> there is to know about Emacs, but that's not the point. The point is to have
+> a tool that helps me create what I want and be more efficient so I can
+> create more. And knobs. Lots of knobs.
+>
+> Emacs Mastery: Attaining Coding Supremacy (unpublished) by Jim Menard
+
+[<cite>Introduction to Ruby for Mac OS X</cite>](Intro_to_Ruby.html) was
+originally published as the cover article in <cite>MacTech Magazine</cite>
+19.3, March 2003.
+
+<cite>Building Applications with Berkeley DB Java Edition</cite> appeared in
+the September 2004 issue of the <cite>Java Developer's Journal</cite>.
+Unfortunately, it's no longer available. I did find a copy of the article on
+some other site, but it's not formatted correctly at all. See below for a
+link to the code that accompanies the article.
+
+<cite>Unit Testing with OCUnit</cite> was published on O'Reilly's
+<cite>MacDevCenter</cite> on April 23, 2004. As with the previous article,
+it's no longer avaiable. See below for a link to the code that accompanies
+the article. The article was later picked up by OSNews. An update to the
+article: the latest release of [TestKit](http://testkit.sourceforge.net/)
+supports XCode.
+
+Gotta link to my [blog](https://www.jimmenard.com/blog.html), though I don't
+update it as often as I should.
 
 [The Polyglot Programmer](complangs.html), a talk given to the
 Connecticut CTO Club in March of 2012 and again at a Brown Bag Talk
@@ -26,34 +83,12 @@ The talk
 given to the New York City CTO Club in July of 2006. _Hint:_ hover your
 mouse over the lower right corner of the slides for a control panel.
 
-[<cite>Building Applications with Berkeley DB Java Edition</cite>](http://java.sys-con.com/node/46235)
-appeared in the September 2004 issue of the
-[Java Developer's Journal](http://java.sys-con.com/). See below for a link
-to the code that accompanies the article.
-
-[<cite>Unit
-Testing with OCUnit</cite>](http://www.macdevcenter.com/pub/a/mac/2004/04/23/ocunit.html)
-was published on O'Reilly's [MacDevCenter](http://www.macdevcenter.com/) on April 23, 2004. See
-below for a link to the code that accompanies the article. There are some
-comments from readers at the end of the article. The article was picked up by
-[OSNews](http://www.osnews.com/story.php?news_id=6823). An update
-to the article: the latest release of [TestKit](http://testkit.sourceforge.net/) supports XCode.
-
 The discusson/talk [Alternate Data Storage
 Technologies](alternate_storage.html) was given to the New York City CTO Club on April 14, 2004.
 (HTML only.)
 
-[<cite>Introduction to Ruby for Mac OS
-X</cite>](Intro_to_Ruby.html) was originally published as the cover article in <cite>MacTech
-Magazine</cite> 19.3, March 2003.
-
 A [Ruby talk](rubytalk/index.html) given to the New York City
 CTO Club on July 10, 2001. (HTML and PDF available.)
-
-My old blog <cite>Shiny Things</cite>
-is [here](http://jimmenard.blogspot.com/). I've decided to move everything
-directly onto this site's [blog](https://www.jimmenard.com/blog.html)
-instead.
 
 <a id="bride"/>
 <h2>Bride of Dark and Stormy</h2>
