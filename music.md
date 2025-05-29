@@ -7,18 +7,19 @@ title: Music
 
 My first piano lesson was the day before my fifth birthday. I often combine
 computers and music, like in my live performance software
-[KeyMaster](https://github.com/jimm/keymaster). That program stems from an
-older program I wrote with the same name that I originally wrote on the
-Commodore 64 and used on stage for years. I later ported it to the Atari ST,
-rewrote it for the now-defunct [BeOS](https://en.wikipedia.org/wiki/BeOS),
-and wrote a Ruby version called
+[KeyMaster](https://github.com/jimm/keymaster) and its newer, more modern
+sibling [JUCE KeyMaster](https://github.com/jimm/juce-keymaster). These
+programs stem from an older program I wrote with the same name that I
+originally wrote and ran on the Commodore 64 and used on stage for years. I
+later ported it to the Atari ST, rewrote it for the now-defunct
+[BeOS](https://en.wikipedia.org/wiki/BeOS), and wrote a Ruby version called
 [PatchMaster](https://github.com/jimm/patchmaster/).
 
-Currently, I play keyboards in [Ellis Island](http://ellisislandrock.com/),
-a cover band based in Connecticut. Check out our [Spring 20204 demo
+I play keyboards in [Ellis Island](http://ellisislandrock.com/), a cover
+band based in Connecticut. Check out our [Spring 20204 demo
 video](https://www.youtube.com/watch?v=Uf8QA3BE5fU).
 
-I played in [bands](#band-list) from circa 1975 to January 1993, went on a
+I've been in [bands](#band-list) from circa 1975 to January 1993, went on a
 hiatus, and started playing out again in 2013. Over the years, I've played
 everything from progressive rock to dance pop to electric jazz and R&amp;B;
 covers and originals.
@@ -31,7 +32,7 @@ Aside from the typeset pieces below and the sequencer and MIDI files of the
 music I've done on my own, I have thrown a few things up on Soundcloud for
 the fun of it --- none of it production quality. Out of all of the original
 songs we did in the late '80's, I only have one crappy cassette of a bunch
-of works-in-progress . It's dated but really good stuff. The sound quality
+of works-in-progress. It's dated but really good stuff. The sound quality
 is horrendous. Also, the tape broke so I'll need to repair it one day and
 digitize it.
 
