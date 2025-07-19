@@ -281,7 +281,8 @@ remember:
 Here are the bands and orchestras I've played in over the years, in reverse
 chronological order. Believe me, you've never heard of any of them.
 
-- [Ellis Island](http://ellisislandrock.com/) (keyboards, occasional bass)
+- [Ellis Island](http://ellisislandrock.com/) (keyboards, some guiter,
+  rarely bass)
   - Our [2022 demo video](https://www.youtube.com/watch?v=MN8Sgid2x30)
 - [Miles...](https://www.youtube.com/watch?v=t5yU0mX-u4w) (keyboards)
 - Uncommon Ground (keyboards)
