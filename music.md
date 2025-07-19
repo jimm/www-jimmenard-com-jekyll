@@ -60,8 +60,7 @@ Here are a few of the other songs on my
 # Equipment Collection
 
 Here's what my home "studio" looks like in 2023. Since then, the Iridium has
-been replaced with a 3rd Wave. When I play live I take the Kronos and the
-Hydrasynth.
+been sold. When I play live I take the Kronos and the Hydrasynth.
 
 <a href="images/home-studio-2023.jpg">
   <img
@@ -87,7 +86,6 @@ Here's the schematic for my home studio and my live rig.
 
 - [Korg Kronos LS 88](https://www.korg.com/us/products/synthesizers/kronos2_ls/)
 - [ASM Hydrasynth Deluxe](https://www.ashunsoundmachines.com/hydrasynth-deluxe)
-- [Groove Synthesis 3rd Wave](https://www.groovesynthesis.com/3rdwave/)
 - [Korg Wavestation](https://en.wikipedia.org/wiki/Korg_Wavestation)
 - A big honking seven-foot rack, affectionately called the "Think Tank".
   Most of the equipment in it was originally mounted in a homemade, rolling,
@@ -237,8 +235,9 @@ play the Kronos. So I don't do that.
 
 ## Old Gear
 
-Just for fun, here's a list of my old gear. I started playing in bands in
-the late '70's. Here's what I remember:
+Just for fun, here's a list of all of the other gear I've owned throughout
+the years. I started playing in bands in the late '70's. Here's what I
+remember:
 
 - Alesis D4 drum synth
 - Alesis HR-16 drum machine
@@ -251,6 +250,7 @@ the late '70's. Here's what I remember:
 - Ensoniq Mirage rack-mount software (load sounds from 3.5&quot; floppies!)
 - Farfisa organ
 - Fender Rhodes
+- Groove Synthesis 3rd Wave
 - Hohner International "electronic piano" (I think it was the International)
   from the late 1960's &mdash; my first keyboard after my parents' piano
 - Korg wavestate
