@@ -3,6 +3,7 @@ WEB_USER = jimm
 WEB_SERVER = jimm.opalstacked.com
 WEB_DIR = apps/jimmenard
 SIGS_FILE = $(pim)/signatures
+RESUME = $(writing)/resume/Jim_Menard_resume.pdf
 
 .PHONY: publish build server test
 
@@ -19,9 +20,12 @@ publish: build
 
 build: _includes/sigs.html
 	bundle exec jekyll build
+	cp $(RESUME) $(SRC)
 
 _includes/sigs.html: $(SIGS_FILE) bin/sigs.rb
 	bundle exec bin/sigs.rb > $@
 
 server:
+	mkdir -p $(SRC)
+	cp $(RESUME) $(SRC)
 	bundle exec jekyll server
