@@ -247,7 +247,7 @@ remember:
 - Commodore SX-64 running first Moog's Song Producer software, then
   my KeyMaster software
 - Conn trumpet
-- Ensoniq Mirage rack-mount software (load sounds from 3.5&quot; floppies!)
+- Ensoniq Mirage rack-mount sampler (loaded sounds from 3.5&quot; floppies!)
 - Farfisa organ
 - Fender Rhodes
 - Groove Synthesis 3rd Wave
