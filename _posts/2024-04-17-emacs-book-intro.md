@@ -4,9 +4,9 @@ title: "Emacs Book Intro"
 tags: programming emacs writing
 ---
 
-Here's something I wrote for the introduction to the Emacs book I started
+_Here's something I wrote for the introduction to the Emacs book I started
 years ago and will never, ever finish writing ("Emacs Mastery: Attaining
-Coding Supremacy"):
+Coding Supremacy"):_
 
 Emacs is a master craftsman's tool. No, wait --- Emacs is an empty canvas,
 complete with brushes, paints (oil and acrylic), charcoal, scrapers,
