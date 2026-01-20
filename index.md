@@ -38,6 +38,8 @@ number of Open Source [projects](/projects/) such as the
 [CSVLixir](https://github.com/jimm/csvlixir) Elixir library, and
 [DataVision](https://github.com/jimm/datavision).
 
+I play keyboards in [Ellis Island](https://ellisislandrock.com/).
+
 By the way: [Emacs](/emacs_tips.html) is the One True Editor&trade;.
 
 # Contact Information

@@ -270,7 +270,7 @@ remember:
 - Studiologic Sledge 2.0
 - Waldorf Iridium 49-key
 - Yamaha CP-80 electric grand (it was the singer's, but I got to use it)
-- Yamaha CS-10 mono analog synth
+- Yamaha CS-10 mono analog synth (or was it a CS-5?)
 - Yamaha DX7
 - Yamaha RX5 drum machine
 - Yamaha TX81Z (Two of 'em. You could set the text to display when they
