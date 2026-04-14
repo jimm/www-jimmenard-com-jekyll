@@ -14,7 +14,7 @@ SIGS_FILE = $(pim)/signatures
 # directory and re-add --del
 publish: build
 	rsync -qrlpt --filter='- .DS_Store' --filter='- .localized' --filter='- bin' \
-	    $(SRC) $(WEB_SERVER):$(WEB_DIR)
+	$(SRC) $(WEB_SERVER):$(WEB_DIR)
 	ssh $(WEB_USER)@$(WEB_SERVER) find $(WEB_DIR) -type d -exec chmod 755 {} \\\;
 
 build: _includes/sigs.html
@@ -26,5 +26,5 @@ _includes/sigs.html: $(SIGS_FILE) bin/sigs.rb
 
 server:
 	mkdir -p $(SRC)
-  bin/copy_resume_pdf.sh
+	bin/copy_resume_pdf.sh
 	bundle exec jekyll server

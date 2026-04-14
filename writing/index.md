@@ -9,11 +9,8 @@ permalink: /writing/
 Years ago I started writing
 [<strong>Emacs Mastery</strong>: <em>Attaining Coding
 Supremacy</em>](https://leanpub.com/emacs-mastery), though I'll probably
-never complete it.
-I'm considering making it freely available on the Web. Please vist the
-book's Leanpub page, review the table of contents there, and
-[let me know](mailto:jim@jimmenard.com) what else you think the book should
-cover. Here is the introduction:
+never complete it. I'm considering making it freely available on the Web.
+Here is the introduction:
 
 > Emacs is a master craftsman's tool. No, wait --- Emacs is an empty canvas,
 > complete with brushes, paints (oil and acrylic), charcoal, scrapers,
