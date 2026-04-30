@@ -14,3 +14,4 @@ elif [ -f "$DL_RESUME" ] ; then
 elif [ -f "$DL_RESUME_SPACES" ] ; then
     cp "$DL_RESUME_SPACES" "$DEST"
 fi
+chmod 644 "$DEST"
