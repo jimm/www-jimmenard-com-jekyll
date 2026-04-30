@@ -34,7 +34,9 @@ I am a programming language maven who enjoys Ruby, Python, Elixir,
 Lisp, and many [more languages](/Jim_Menard_resume.html#technical-skills). I have created a
 number of Open Source [projects](/projects/) such as the
 [midilib](https://github.com/jimm/midilib) Ruby gem,
-[KeyMaster](https://github.com/jimm/keymaster) MIDI live performance app,
+[JUCE KeyMaster](https://github.com/jimm/juce-keymaster) MIDI live performance
+app that uses [JUCE](https://juce.com/), the older C++/PortMIDI-based
+[KeyMaster](https://github.com/jimm/keymaster),
 [CSVLixir](https://github.com/jimm/csvlixir) Elixir library, and
 [DataVision](https://github.com/jimm/datavision).
 
