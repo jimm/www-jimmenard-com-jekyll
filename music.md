@@ -71,17 +71,6 @@ been sold. When I play live I take the Kronos and the Hydrasynth.
   />
 </a>
 
-Here's the schematic for my home studio and my live rig.
-
-<a href="images/studio.png">
-  <img
-    src="images/studio.png"
-    class="inline-image"
-    alt="Schematic: My Home Studio and Live Rig, 2024"
-    title="Schematic: My Home Studio and Live Rig, 2024"
-  />
-</a>
-
 ## Equipment List
 
 - [Korg Kronos LS 88](https://www.korg.com/us/products/synthesizers/kronos2_ls/)

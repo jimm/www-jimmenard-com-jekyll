@@ -18,4 +18,4 @@ for path in "${RESUME_LOCS[@]}" ; do
         exit 0
     fi
 done
-echo no resume found to copy
+echo "warning: no resume found to copy"
