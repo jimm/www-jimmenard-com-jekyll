@@ -145,14 +145,14 @@ equipment list. You can see it in action in our short demo video
 - On-Stage stand for the keyboards
 - Fender Stratocaster
 - Audio
-  - Line 6 HX Stomp XL for the strat
   - Key Largo mixer providing stereo XLR or 1/4" to the house
+  - Line 6 HX Stomp XL for the strat
   - MEE Audio MX2 in-ear monitors (IEM)
   - Xvive U45 in-ear wireless system
 - MIDI
   - iPad using an Apple Camera (USB data to Thunderbolt) adapter to connect
     to a USB hub
-    - USB cables from the hub to the Kronos, Hydrasynth, and HX Stomp
+    - USB cables from the hub to the Kronos, Hydrasynth, and HX Stomp XL
   - The iPad is running [Midiflow](https://www.midiflow.com/) and
     [BandHelper](https://bandhelper.com/)
     - Midiflow routes the MIDI between the Kronos, Hydrasynth, and Stomp
@@ -219,15 +219,15 @@ play the Kronos. So I don't do that.
   edited them.
 
 - Apple's [MainStage 3](http://www.apple.com/mainstage/) was useful when I
-  play with friends. We used to rent a rehearsal room once a week or so, and
-  though the keyboards are the same in the different rooms we rent it was
-  nice to have the same sounds, splits, transposes, etc. with me on my
-  laptop.
-
-- [MidiPipe](http://www.subtlesoft.square7.net/MidiPipe.html) MIDI munger.
+  played casually with friends. We used to rent a rehearsal room once a week
+  or so, and the keyboards could be different in the different rooms we
+  rent, so it was nice to have the same sounds, splits, transposes, etc.
+  with me on my laptop.
 
 - [LilyPond](http://lilypond.org/web/) and
   [MuseScore](https://musescore.org/) for music notation typesetting.
+
+- [MidiPipe](http://www.subtlesoft.square7.net/MidiPipe.html) MIDI munger.
 
 ## Old Gear
 
