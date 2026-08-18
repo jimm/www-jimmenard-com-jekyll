@@ -279,15 +279,15 @@ chronological order. Believe me, you've never heard of any of them.
 
 - [Ellis Island](http://ellisislandrock.com/) (keyboards, some guiter,
   rarely bass)
-  - Our [2022 demo video](https://www.youtube.com/watch?v=MN8Sgid2x30)
+  - Our [Spring 20204 demo video](https://www.youtube.com/watch?v=Uf8QA3BE5fU)
 - [Miles...](https://www.youtube.com/watch?v=t5yU0mX-u4w) (keyboards)
-- Uncommon Ground (keyboards)
-- Optional Stop (keyboards)
-- Boys With Toys (keyboards)
-- Shy264 (keyboards)
-- Perfect Stranger (keyboards)
-- Artisan (keyboards)
-- Sinequanon (keyboards)
+- Uncommon Ground (keyboards, electric jazz)
+- Optional Stop (keyboards, covers)
+- Boys With Toys (keyboards, all originals)
+- Shy264 (keyboards, covers)
+- Perfect Stranger (keyboards, covers)
+- Artisan (keyboards, covers)
+- Sinequanon (keyboards, covers: prog rock and more)
 - Guys and Dolls (conductor and music director, college)
 - Camelot (conductor and music director, high school)
 - King Lizard Revival Jass Band (trumpet) _("Jass" is an early spelling of
