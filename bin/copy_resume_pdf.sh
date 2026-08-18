@@ -19,6 +19,7 @@ if [ -f "$resume_path" ] ; then
     cp "$resume_path" "$DEST"
     chmod 644 "$DEST"
 else
+    echo resume_path = "$resume_path"
     echo "warning: no resume found to copy"
     exit 1
 fi
