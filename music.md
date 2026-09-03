@@ -75,6 +75,7 @@ I play live I take the Kronos and the Hydrasynth.
 
 - [Korg Kronos LS 88](https://www.korg.com/us/products/synthesizers/kronos2_ls/)
 - [ASM Hydrasynth Deluxe](https://www.ashunsoundmachines.com/hydrasynth-deluxe)
+- [ASM Leviasynth Keyboard](https://www.ashunsoundmachines.com/leviasynth-key)
 - [Korg Wavestation](https://en.wikipedia.org/wiki/Korg_Wavestation)
 - A big honking seven-foot rack, affectionately called the "Think Tank".
   Most of the equipment in it was originally mounted in a homemade, rolling,
@@ -209,7 +210,7 @@ play the Kronos. So I don't do that.
   Very useful when paired with the Kronos documentation, which is referenced
   in the `AGENTS.md` file.
 
-- ASM's Hydrasynth Patch Manager and Firmware Updater
+- ASM's Patch Manager and Firmware Updater
   ([download page](https://www.ashunsoundmachines.com/downloads))
 
 - [Korg KRONOS Editor](https://shop.korg.com/kronosSupport)
