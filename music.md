@@ -59,8 +59,9 @@ Here are a few of the other songs on my
 
 # Equipment Collection
 
-Here's what my home "studio" looked like in 2023. The Iridium is gone. When
-I play live I take the Kronos and the Hydrasynth.
+Here's what my home "studio" looked like in 2023. The Iridium has been
+replaced with a Leviasynth. When I play live I take the Kronos and the
+Hydrasynth.
 
 <a href="images/home-studio-2023.jpg">
   <img
